@@ -1,0 +1,11 @@
+﻿User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /NETLIFY_DEPLOYMENT.md
+Disallow: /.gitignore
+Disallow: /_redirects
+Disallow: /netlify.toml
+
+Sitemap: https://greenfixexterior-care.co.uk/sitemap.xml
+Disallow: /thank-you
+Disallow: /googlec72ca5999f108be1
