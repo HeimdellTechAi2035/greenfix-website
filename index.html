@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="preload" as="image" href="hero image.png">
+    <link rel="preload" as="image" href="hero-1200w.webp" type="image/webp">
     <meta property="og:title" content="External Maintenance Preston & Lancashire | Greenfix Exterior Care">
     <meta property="og:description" content="Reliable external maintenance and exterior property care for landlords, letting agents, HMOs, serviced accommodation, businesses, and homeowners across Preston and Lancashire.">
     <meta property="og:type" content="website">
@@ -1213,7 +1213,7 @@
     <header>
         <div class="header-content">
             <a href="#" class="logo">
-                <img src="Screenshot 2026-05-16 154245.png" alt="GreenFix Exterior Care - professional garden maintenance and exterior property care, Preston, Lancashire" width="200" height="60" loading="lazy">
+                <img src="Screenshot 2026-05-16 154245.png" alt="GreenFix Exterior Care - professional garden maintenance and exterior property care, Preston, Lancashire" width="200" height="60" loading="eager">
             </a>
             <a href="tel:07447804597" class="phone-link">📞 Call GreenFix</a>
             <a href="https://portal.greenfixexterior-care.co.uk" class="phone-link">Client Portal</a>
@@ -1223,7 +1223,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img id="hero-image" src="hero image.png" alt="GreenFix Exterior Care - external property care for letting agents, property managers and landlords in Preston, Lancashire" width="1200" height="630" loading="eager">
+            <picture>
+                <source type="image/webp" srcset="hero-480w.webp 480w, hero-800w.webp 800w, hero-1200w.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 800px) 80vw, 1200px">
+                <img id="hero-image" src="hero-1200w.webp" alt="GreenFix Exterior Care - external property care for letting agents, property managers and landlords in Preston, Lancashire" width="1200" height="630" loading="eager" fetchpriority="high" style="width:100%;height:auto;object-fit:cover;">
+            </picture>
             <h1>Making External Maintenance Easy Across Preston &amp; Lancashire</h1>
             <p class="hero-description">Greenfix Exterior Care helps landlords, letting agents, property managers, HMOs, serviced accommodation operators, businesses, and homeowners across Preston and Lancashire keep gardens, gutters, fences, bin stores, communal areas, car parks, and outdoor spaces maintained without the hassle. Approved clients can request jobs, track progress, view proof photos, and manage regular exterior maintenance through our secure client portal.</p>
             <div class="button-group">
