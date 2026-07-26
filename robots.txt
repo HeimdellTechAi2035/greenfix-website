@@ -7,5 +7,6 @@ Disallow: /_redirects
 Disallow: /netlify.toml
 
 Sitemap: https://greenfixexterior-care.co.uk/sitemap.xml
+Allow: /llms.txt
 Disallow: /thank-you
 Disallow: /googlec72ca5999f108be1
