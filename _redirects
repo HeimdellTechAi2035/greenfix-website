@@ -1,1 +1,51 @@
+# Serve clean (extensionless) URLs matching the canonical/schema URLs used across the site
+# 200 = rewrite (URL bar keeps the clean path), not a redirect
 
+/about-greenfix  /about-greenfix.html  200
+/airbnb-property-maintenance  /airbnb-property-maintenance.html  200
+/before-after  /before-after.html  200
+/bin-store-cleaning-preston  /bin-store-cleaning-preston.html  200
+/care-home-grounds-maintenance-preston  /care-home-grounds-maintenance-preston.html  200
+/church-grounds-maintenance-preston  /church-grounds-maintenance-preston.html  200
+/commercial-maintenance  /commercial-maintenance.html  200
+/driveway-cleaning-preston  /driveway-cleaning-preston.html  200
+/end-of-tenancy-garden-tidy-preston  /end-of-tenancy-garden-tidy-preston.html  200
+/estate-agent-services  /estate-agent-services.html  200
+/estate-grounds-maintenance-lancashire  /estate-grounds-maintenance-lancashire.html  200
+/event-venue-grounds-maintenance-preston  /event-venue-grounds-maintenance-preston.html  200
+/factory-warehouse-grounds-maintenance  /factory-warehouse-grounds-maintenance.html  200
+/fence-repairs-preston  /fence-repairs-preston.html  200
+/garden-clearance-leyland  /garden-clearance-leyland.html  200
+/garden-clearance-penwortham  /garden-clearance-penwortham.html  200
+/garden-clearance-preston  /garden-clearance-preston.html  200
+/garden-maintenance-bamber-bridge  /garden-maintenance-bamber-bridge.html  200
+/garden-maintenance-blackburn  /garden-maintenance-blackburn.html  200
+/garden-maintenance-blackpool  /garden-maintenance-blackpool.html  200
+/garden-maintenance-chorley  /garden-maintenance-chorley.html  200
+/garden-maintenance-freckleton  /garden-maintenance-freckleton.html  200
+/garden-maintenance-fulwood  /garden-maintenance-fulwood.html  200
+/garden-maintenance-kirkham  /garden-maintenance-kirkham.html  200
+/garden-maintenance-leyland  /garden-maintenance-leyland.html  200
+/garden-maintenance-longton  /garden-maintenance-longton.html  200
+/garden-maintenance-penwortham  /garden-maintenance-penwortham.html  200
+/garden-maintenance-preston  /garden-maintenance-preston.html  200
+/garden-maintenance-walton-le-dale  /garden-maintenance-walton-le-dale.html  200
+/gate-repairs-preston  /gate-repairs-preston.html  200
+/grass-cutting-leyland  /grass-cutting-leyland.html  200
+/grass-cutting-preston  /grass-cutting-preston.html  200
+/gutter-clearing-preston  /gutter-clearing-preston.html  200
+/hedge-trimming-preston  /hedge-trimming-preston.html  200
+/hmo-exterior-maintenance-preston  /hmo-exterior-maintenance-preston.html  200
+/jet-washing-preston  /jet-washing-preston.html  200
+/landlord-garden-clearance-preston  /landlord-garden-clearance-preston.html  200
+/letting-agent-services  /letting-agent-services.html  200
+/patio-cleaning-preston  /patio-cleaning-preston.html  200
+/pub-restaurant-grounds-maintenance-preston  /pub-restaurant-grounds-maintenance-preston.html  200
+/school-nursery-grounds-maintenance-preston  /school-nursery-grounds-maintenance-preston.html  200
+/shop-retail-exterior-maintenance-preston  /shop-retail-exterior-maintenance-preston.html  200
+/thank-you  /thank-you.html  200
+/weed-control-preston  /weed-control-preston.html  200
+/window-cleaning-preston  /window-cleaning-preston.html  200
+
+# Custom 404
+/*  /404.html  404

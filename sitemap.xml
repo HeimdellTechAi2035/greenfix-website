@@ -7,21 +7,9 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://greenfixexterior-care.co.uk/hero-commercial-grounds.png</image:loc>
-      <image:title>GreenFix commercial grounds and exterior maintenance in Preston and Lancashire</image:title>
-      <image:caption>Commercial grounds maintenance for estates, care homes, churches, venues, and commercial sites.</image:caption>
+      <image:title>GreenFix domestic and commercial garden and exterior maintenance in Preston and Lancashire</image:title>
+      <image:caption>Garden maintenance for homes, plus grounds maintenance for estates, care homes, churches, venues, and commercial sites.</image:caption>
     </image:image>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/letting-agent-services</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/estate-agent-services</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/commercial-maintenance</loc>
@@ -67,12 +55,6 @@
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/before-after</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/airbnb-property-maintenance</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -145,24 +127,6 @@
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/gate-repairs-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/landlord-garden-clearance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/end-of-tenancy-garden-tidy-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/hmo-exterior-maintenance-preston</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -250,5 +214,65 @@
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/school-nursery-grounds-maintenance-preston</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/pub-restaurant-grounds-maintenance-preston</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/shop-retail-exterior-maintenance-preston</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/window-cleaning-preston</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/letting-agent-services</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/estate-agent-services</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/airbnb-property-maintenance</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/landlord-garden-clearance-preston</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/end-of-tenancy-garden-tidy-preston</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/hmo-exterior-maintenance-preston</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

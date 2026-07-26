@@ -5,6 +5,8 @@ Disallow: /NETLIFY_DEPLOYMENT.md
 Disallow: /.gitignore
 Disallow: /_redirects
 Disallow: /netlify.toml
+Disallow: /KEYWORD_SEO_GEO_AUDIT.md
+Disallow: /SEO_GEO_VEO_AUDIT_REPORT.md
 
 Sitemap: https://greenfixexterior-care.co.uk/sitemap.xml
 Allow: /llms.txt
