@@ -18,7 +18,7 @@ curl -X POST http://localhost:8888/.netlify/functions/admin-notify \
 
 Direct function test (deployed)
 1. Deploy to Netlify. Ensure Netlify environment variables include at minimum:
-   - `ADMIN_NOTIFICATION_EMAIL` = greenfix.exterior.care@gmail.com
+   - `ADMIN_NOTIFICATION_EMAIL` = admin@greenfixexterior-care.co.uk
   - `APP_BASE_URL` = https://portal.greenfixexterior-care.co.uk
    - `RESEND_API_KEY` (if using Resend)
    - `EMAIL_FROM`
