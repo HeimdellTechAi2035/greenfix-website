@@ -48,7 +48,7 @@ The current homepage is broadly average for local SEO and AI search readiness. T
 - Nearby areas are included in content and the `Areas We Cover` section.
 - NAP is consistent on the homepage and in JSON-LD:
   - Business name: `GreenFix Exterior Care`
-  - Email: `greenfix.exterior.care@gmail.com`
+  - Email: `admin@greenfixexterior-care.co.uk`
   - Phone: `07447804597`
   - Website: `https://greenfixexterior-care.co.uk/`
 - There is an `Areas We Cover` section with the requested towns.
@@ -108,7 +108,7 @@ The current homepage is broadly average for local SEO and AI search readiness. T
 - The main CTA is visible above the fold.
 - The client portal is explained, but the path to request access could be clearer.
 - The portal login button does link to `https://portal.greenfixexterior-care.co.uk` correctly.
-- The email is correctly shown as `greenfix.exterior.care@gmail.com`.
+- The email is correctly shown as `admin@greenfixexterior-care.co.uk`.
 - The homepage CTA mix is good, but the page has too many separate CTA sections that dilute focus.
 
 ## Technical SEO Findings
