@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /NETLIFY_DEPLOYMENT.md
@@ -11,8 +11,10 @@ Disallow: /SEO_GEO_AI_AUDIT_REPORT.md
 Disallow: /TESTING_ADMIN_NOTIFICATIONS.md
 Disallow: /.env.example
 Disallow: /format_navbar.py
+Disallow: /scripts/
 
 Sitemap: https://greenfixexterior-care.co.uk/sitemap.xml
 Allow: /llms.txt
+Allow: /assets/
 Disallow: /thank-you
 Disallow: /googlec72ca5999f108be1

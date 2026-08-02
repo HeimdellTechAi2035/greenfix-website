@@ -21,3 +21,7 @@ build/
 # Editor backups
 *~
 *.bak
+
+# Python bytecode cache
+__pycache__/
+*.pyc

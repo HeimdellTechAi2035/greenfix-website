@@ -1,278 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://greenfixexterior-care.co.uk/</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://greenfixexterior-care.co.uk/hero-commercial-grounds.png</image:loc>
-      <image:title>GreenFix domestic and commercial garden and exterior maintenance in Preston and Lancashire</image:title>
-      <image:caption>Garden maintenance for homes, plus grounds maintenance for estates, care homes, churches, venues, and commercial sites.</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/grounds-maintenance</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/garden-maintenance</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/lawn-mowing</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/hedge-trimming</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/garden-tidy-ups</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/pressure-washing</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/window-cleaning</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/exterior-structural-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/repairs-and-maintenance</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/brick-repointing</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/brick-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/garden-wall-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/fence-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/gate-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/patio-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/paving-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/slab-relaying</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/roof-tile-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/drain-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/drainage-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/window-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/door-repairs</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/commercial-maintenance</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/factory-warehouse-grounds-maintenance</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/care-home-grounds-maintenance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/church-grounds-maintenance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/estate-grounds-maintenance-lancashire</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/event-venue-grounds-maintenance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/about-greenfix</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/before-after</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/grass-cutting-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/gutter-clearing-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-clearance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/jet-washing-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/driveway-cleaning-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/patio-cleaning-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/fence-repairs-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/weed-control-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/hedge-trimming-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/bin-store-cleaning-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/gate-repairs-preston</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-penwortham</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-leyland</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-chorley</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-fulwood</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-bamber-bridge</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-walton-le-dale</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-longton</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-freckleton</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-kirkham</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-blackpool</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-maintenance-blackburn</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-clearance-penwortham</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/garden-clearance-leyland</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://greenfixexterior-care.co.uk/grass-cutting-leyland</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/school-nursery-grounds-maintenance-preston</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/pub-restaurant-grounds-maintenance-preston</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/shop-retail-exterior-maintenance-preston</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/window-cleaning-preston</loc>
-    <lastmod>2026-07-26</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/about-greenfix</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/letting-agent-services</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/before-after</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/estate-agent-services</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/blog</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/airbnb-property-maintenance</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-often-should-you-cut-your-lawn</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/landlord-garden-clearance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-much-does-garden-maintenance-cost</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/end-of-tenancy-garden-tidy-preston</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/blog/whats-included-in-a-grounds-maintenance-contract</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://greenfixexterior-care.co.uk/hmo-exterior-maintenance-preston</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://greenfixexterior-care.co.uk/blog/best-time-of-year-to-trim-hedges</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/garden-completely-overgrown-where-to-start</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/can-pressure-washing-damage-patio-or-driveway</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-often-should-windows-be-cleaned</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/fence-needs-repairing-or-replacing</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-wont-my-gate-close-properly</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-much-does-brick-repointing-cost</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/what-causes-bricks-to-crack-or-spall</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/garden-wall-leaning-is-it-dangerous</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-is-my-patio-sinking-or-cracking</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-to-fix-a-pothole-or-sunken-driveway</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-do-patio-slabs-become-uneven-over-time</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/how-do-i-know-if-i-have-a-slipped-roof-tile</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-is-my-drain-blocked-again-after-clearing-it</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-does-my-garden-stay-waterlogged-after-rain</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-wont-my-window-close-properly</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/blog/why-does-my-door-stick-or-drag-on-the-floor</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
