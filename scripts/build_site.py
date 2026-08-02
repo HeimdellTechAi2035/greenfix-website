@@ -863,7 +863,7 @@ def render_header():
     <header>
         <div class="header-content">
             <a href="/" class="logo">
-                <img src="{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="190" height="52" loading="eager">
+                <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="190" height="52" loading="eager">
             </a>
             <div class="header-actions">
                 <a href="tel:{PHONE_TEL}" class="phone-link">\U0001F4DE Call GreenFix</a>
