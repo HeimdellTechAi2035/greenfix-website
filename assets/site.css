@@ -39,10 +39,13 @@ header {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0.85rem 1.25rem;
+}
+
+.header-row {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .logo {
@@ -50,9 +53,11 @@ header {
   align-items: center;
   text-decoration: none;
   height: 52px;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 .logo img { height: 100%; width: auto; max-width: 190px; }
+.phone-link-short { display: none; }
 
 .phone-link {
   display: inline-flex;
@@ -95,8 +100,6 @@ header {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    flex-basis: 100%;
-    order: 3;
     border-top: 1px solid var(--border-grey);
     padding-top: 0.5rem;
     margin-top: 0.5rem;
@@ -149,8 +152,6 @@ header {
 @media (max-width: 1079px) {
   .primary-nav.is-open {
     display: block;
-    flex-basis: 100%;
-    order: 3;
     border-top: 1px solid var(--border-grey);
     margin-top: 0.5rem;
     padding-top: 0.5rem;
@@ -176,6 +177,17 @@ header {
     color: var(--grey);
     border-bottom: 1px solid var(--border-grey);
   }
+}
+
+@media (max-width: 480px) {
+  .header-content { padding: 0.6rem 0.85rem; }
+  .header-row { gap: 0.5rem; }
+  .logo { height: 38px; }
+  .header-actions { gap: 0.4rem; }
+  .phone-link { padding: 0.45rem 0.6rem; font-size: 0.85rem; }
+  .phone-link-full { display: none; }
+  .phone-link-short { display: inline; }
+  .nav-toggle { padding: 0.45rem 0.6rem; font-size: 0.85rem; }
 }
 
 /* ---------- Breadcrumb ---------- */
@@ -308,6 +320,25 @@ p { color: var(--grey); }
 }
 .trust-strip span { white-space: nowrap; }
 .trust-strip strong { color: var(--dark-green); }
+
+/* Map embed */
+.map-embed {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 56.25%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* Final CTA */
 .final-cta { background: var(--dark-green); color: var(--white); text-align: center; }
@@ -461,6 +492,7 @@ textarea { resize: vertical; min-height: 100px; }
   overflow: hidden;
   border: 1px solid var(--border-grey);
 }
+.gf-chat-panel[hidden] { display: none; }
 .gf-chat-header {
   background: linear-gradient(135deg, var(--dark-green) 0%, var(--light-green) 100%);
   color: var(--white);

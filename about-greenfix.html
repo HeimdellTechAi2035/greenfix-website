@@ -44,6 +44,12 @@
     "addressRegion": "Lancashire",
     "addressCountry": "GB"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "53.77025605",
+    "longitude": "-2.69715175"
+  },
+  "hasMap": "https://www.google.com/maps?cid=7185723301089874500",
   "areaServed": [
     "Preston",
     "Lancashire",
@@ -110,12 +116,14 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">
-                <img src="/Screenshot 2026-05-16 154245.png" alt="GreenFix Exterior Care logo" width="190" height="52" loading="eager">
-            </a>
-            <div class="header-actions">
-                <a href="tel:+447447804597" class="phone-link">📞 Call GreenFix</a>
-                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+            <div class="header-row">
+                <a href="/" class="logo">
+                    <img src="/Screenshot 2026-05-16 154245.png" alt="GreenFix Exterior Care logo" width="190" height="52" loading="eager">
+                </a>
+                <div class="header-actions">
+                    <a href="tel:+447447804597" class="phone-link">📞 <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+                </div>
             </div>
             <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
                 <div class="nav-item">
@@ -219,7 +227,18 @@
         </div>
     </section>
 
-    <section class="section-grey" id="complaints">
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">Find Us</h2>
+            <p class="lede center" style="margin-bottom:1.5rem;">Based in Preston, covering Lancashire, Wigan and Greater Manchester.</p>
+            <div class="map-embed">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37729.2863786744!2d-2.69715175!3d53.77025604999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x922e72176a362ef%3A0x63b8d1454fb59244!2sgreenfix%20exterior%20care!5e0!3m2!1sen!2suk!4v1785711212449!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="GreenFix Exterior Care on Google Maps"></iframe>
+            </div>
+            <p class="center" style="margin-top:1rem;"><a href="https://www.google.com/maps?cid=7185723301089874500" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
+        </div>
+    </section>
+
+    <section class="section-white" id="complaints">
         <div class="container">
             <h2 class="center">Complaints Procedure</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">We aim to get every job right first time. If something isn't right, here's what happens:</p>

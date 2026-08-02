@@ -35,6 +35,20 @@ FACEBOOK = "https://www.facebook.com/profile.php?id=61589641812157"
 PORTAL_URL = "https://portal.greenfixexterior-care.co.uk"
 LOGO_IMG = "Screenshot 2026-05-16 154245.png"
 
+# Geo/map data — sourced from the live Google Business Profile listing for
+# "greenfix exterior care" so the embed, schema geo and Maps link all agree
+# with each other and with GBP (a real E-E-A-T/local-SEO consistency signal).
+GEO_LATITUDE = "53.77025605"
+GEO_LONGITUDE = "-2.69715175"
+GOOGLE_MAPS_CID = "7185723301089874500"
+GOOGLE_MAPS_SHARE_URL = f"https://www.google.com/maps?cid={GOOGLE_MAPS_CID}"
+GOOGLE_MAPS_EMBED_SRC = (
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37729.2863786744"
+    "!2d-2.69715175!3d53.77025604999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+    "!3m3!1m2!1s0x922e72176a362ef%3A0x63b8d1454fb59244!2sgreenfix%20exterior%20care"
+    "!5e0!3m2!1sen!2suk!4v1785711212449!5m2!1sen!2suk"
+)
+
 COMPLAINTS_STEPS = [
     ("Contact us", f"Call or WhatsApp {PHONE_DISPLAY}, or email {EMAIL}, as soon as possible after noticing the issue. Please describe the problem and include photos if you can."),
     ("We respond within 24 hours", "We'll acknowledge your complaint and arrange to inspect the work, in person or from photos."),
@@ -761,6 +775,12 @@ def local_business_schema():
             "addressRegion": ADDRESS_REGION,
             "addressCountry": "GB",
         },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": GEO_LATITUDE,
+            "longitude": GEO_LONGITUDE,
+        },
+        "hasMap": GOOGLE_MAPS_SHARE_URL,
         "areaServed": AREA_SERVED,
         "foundingDate": FOUNDED,
         "priceRange": "$$",
@@ -862,12 +882,14 @@ def render_header():
     return f"""    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">
-                <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="190" height="52" loading="eager">
-            </a>
-            <div class="header-actions">
-                <a href="tel:{PHONE_TEL}" class="phone-link">\U0001F4DE Call GreenFix</a>
-                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+            <div class="header-row">
+                <a href="/" class="logo">
+                    <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="190" height="52" loading="eager">
+                </a>
+                <div class="header-actions">
+                    <a href="tel:{PHONE_TEL}" class="phone-link">\U0001F4DE <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+                </div>
             </div>
             <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
                 {render_nav_item(grounds["label"], grounds["slugs"])}
@@ -1380,7 +1402,18 @@ def render_about():
         </div>
     </section>
 
-    <section class="section-grey" id="complaints">
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">Find Us</h2>
+            <p class="lede center" style="margin-bottom:1.5rem;">Based in {ADDRESS_LOCALITY}, covering {ADDRESS_REGION}, Wigan and Greater Manchester.</p>
+            <div class="map-embed">
+                <iframe src="{GOOGLE_MAPS_EMBED_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{esc(BUSINESS_NAME)} on Google Maps"></iframe>
+            </div>
+            <p class="center" style="margin-top:1rem;"><a href="{GOOGLE_MAPS_SHARE_URL}" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
+        </div>
+    </section>
+
+    <section class="section-white" id="complaints">
         <div class="container">
             <h2 class="center">Complaints Procedure</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">We aim to get every job right first time. If something isn't right, here's what happens:</p>
