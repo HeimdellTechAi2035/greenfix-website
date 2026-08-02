@@ -299,8 +299,8 @@
 
     <section class="section-white" id="quote-form">
         <div class="form-container">
-            <h2 class="center">Request a Free Quote</h2>
-            <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing and we'll respond with pricing within 24 hours.</p>
+            <h2 class="center">Request a Free Quote or Book a Site Visit</h2>
+            <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing, and a preferred date if you'd like us to come and see you — we'll confirm by phone within 24 hours.</p>
             <form class="quote-form" name="quote-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm">
                 <input type="hidden" name="form-name" value="quote-request" />
                 <input type="text" name="bot-field" class="bot-field" />
@@ -319,6 +319,22 @@
                 <div class="form-group">
                     <label for="message">What work needs doing? <span class="required">*</span></label>
                     <textarea id="message" name="message" required placeholder="E.g., lawn mowing round, hedge trimming, brick repointing, fence repair, blocked drain, roof tile repair..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="visit-date">Preferred Visit Date <span style="font-weight:400;color:var(--grey);">(optional)</span></label>
+                    <input type="date" id="visit-date" name="preferred_visit_date" min="2026-08-02">
+                </div>
+                <div class="form-group">
+                    <label for="visit-time">Preferred Time of Day</label>
+                    <select id="visit-time" name="preferred_time_of_day">
+                        <option value="">No preference</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="either">Either — whatever's soonest</option>
+                    </select>
+                </div>
+                <div class="form-note">
+                    <strong>Booking a visit?</strong> A preferred date isn't a guaranteed slot — we'll call or text you to confirm it works before it's locked in.
                 </div>
                 <div class="form-group">
                     <label>Property Type</label>

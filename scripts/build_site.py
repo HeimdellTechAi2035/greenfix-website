@@ -1110,10 +1110,13 @@ def build_service_pages():
         write_page(f"{service['slug']}.html", html)
 
 
+import datetime as _datetime
+TODAY_ISO = _datetime.date.today().isoformat()
+
 QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
         <div class="form-container">
-            <h2 class="center">Request a Free Quote</h2>
-            <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing and we'll respond with pricing within 24 hours.</p>
+            <h2 class="center">Request a Free Quote or Book a Site Visit</h2>
+            <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing, and a preferred date if you'd like us to come and see you — we'll confirm by phone within 24 hours.</p>
             <form class="quote-form" name="quote-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm">
                 <input type="hidden" name="form-name" value="quote-request" />
                 <input type="text" name="bot-field" class="bot-field" />
@@ -1132,6 +1135,22 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
                 <div class="form-group">
                     <label for="message">What work needs doing? <span class="required">*</span></label>
                     <textarea id="message" name="message" required placeholder="E.g., lawn mowing round, hedge trimming, brick repointing, fence repair, blocked drain, roof tile repair..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="visit-date">Preferred Visit Date <span style="font-weight:400;color:var(--grey);">(optional)</span></label>
+                    <input type="date" id="visit-date" name="preferred_visit_date" min="{TODAY_ISO}">
+                </div>
+                <div class="form-group">
+                    <label for="visit-time">Preferred Time of Day</label>
+                    <select id="visit-time" name="preferred_time_of_day">
+                        <option value="">No preference</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="either">Either — whatever's soonest</option>
+                    </select>
+                </div>
+                <div class="form-note">
+                    <strong>Booking a visit?</strong> A preferred date isn't a guaranteed slot — we'll call or text you to confirm it works before it's locked in.
                 </div>
                 <div class="form-group">
                     <label>Property Type</label>
@@ -2361,6 +2380,15 @@ def build_chatbot_kb():
         "a": f"Call or WhatsApp {PHONE_DISPLAY}, email {EMAIL}, or use the quote form on this page — we respond within 24 hours.",
     })
 
+    # Booking a site visit
+    entries.append({
+        "k": ["book", "booking", "visit", "appointment", "schedule", "arrange", "come",
+              "see", "date", "meeting", "slot", "when", "available"],
+        "a": ('Yes — fill in the quote form on this page and add your preferred date and time of day. '
+              'It\'s not a guaranteed slot until we confirm by phone, but we\'ll get back to you within 24 hours. '
+              '<a href="/#quote-form" style="color:inherit;text-decoration:underline;font-weight:700;">Jump to the booking form &rarr;</a>'),
+    })
+
     # What do you do (general)
     grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
     repairs = next(c for c in CLUSTERS if c["key"] == "repairs")
@@ -2446,12 +2474,17 @@ CHATBOT_JS_TEMPLATE = """// GreenFix FAQ chatbot — rule-based keyword matching
       for (var j = 0; j < tokens.length; j++) {
         if (entry.k.indexOf(tokens[j]) !== -1) score++;
       }
-      if (score > bestScore) { bestScore = score; best = entry; }
+      // >= (not >) so that on a tie, the later entry wins. General-intent
+      // entries (contact, booking, insurance, areas) are appended after the
+      // per-service/per-post FAQ entries specifically so they win ties
+      // against FAQs that coincidentally share a word (e.g. "visit").
+      if (score >= bestScore && score > 0) { bestScore = score; best = entry; }
     }
     return bestScore >= 1 ? best : null;
   }
 
   var QUICK_REPLIES = [
+    "Book a site visit",
     "What services do you offer?",
     "How much does it cost?",
     "What areas do you cover?",
