@@ -55,7 +55,7 @@ GOOGLE_MAPS_EMBED_SRC = (
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2360.157296838098"
     "!2d-2.7206403999999997!3d53.7332732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
     "!3m3!1m2!1s0x922e72176a362ef%3A0x63b8d1454fb59244!2sgreenfix%20exterior%20care"
-    "!5e0!3m2!1sen!2suk!4v1785749165878!5m2!1sen!2suk"
+    "!5e0!3m2!1sen!2suk!4v1785751584980!5m2!1sen!2suk"
 )
 
 COMPLAINTS_STEPS = [
