@@ -41,11 +41,15 @@ LOGO_IMG = "Screenshot 2026-05-16 154245.png"
 STREET_ADDRESS = "11 Lowercroft"
 POSTAL_LOCALITY = "Preston"
 POSTAL_CODE = "PR1 9DJ"
-HOURS_DISPLAY = "Monday - Friday, 9:00am - 5:00pm"
+HOURS_DISPLAY = "Monday - Saturday, 9:00am - 5:00pm (12:00-1:00pm lunch)"
+OPENING_HOURS_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 OPENING_HOURS_SPEC = [
     {"@type": "OpeningHoursSpecification",
-     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-     "opens": "09:00", "closes": "17:00"},
+     "dayOfWeek": OPENING_HOURS_DAYS,
+     "opens": "09:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification",
+     "dayOfWeek": OPENING_HOURS_DAYS,
+     "opens": "13:00", "closes": "17:00"},
 ]
 GEO_LATITUDE = "53.77025605"
 GEO_LONGITUDE = "-2.69715175"
