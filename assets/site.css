@@ -339,6 +339,7 @@ p { color: var(--grey); }
   width: 100%;
   height: 100%;
 }
+.map-embed--compact { max-width: 420px; padding-top: 45%; box-shadow: none; border: 1px solid #444; }
 
 /* Final CTA */
 .final-cta { background: var(--dark-green); color: var(--white); text-align: center; }
@@ -360,6 +361,11 @@ footer { background: var(--charcoal); color: var(--white); padding: 2.5rem 1.25r
 .footer-col li { margin-bottom: 0.45rem; }
 .footer-col a { color: #c9d2ce; text-decoration: none; font-size: 0.88rem; }
 .footer-col a:hover { color: var(--white); text-decoration: underline; }
+.footer-map { max-width: 1200px; margin: 0 auto 1.5rem; text-align: center; }
+.footer-map h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 0.75rem; }
+.footer-map p { margin-top: 0.6rem; }
+.footer-map a { color: #c9d2ce; text-decoration: none; font-size: 0.88rem; }
+.footer-map a:hover { color: var(--white); text-decoration: underline; }
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;

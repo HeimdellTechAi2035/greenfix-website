@@ -38,6 +38,9 @@ LOGO_IMG = "Screenshot 2026-05-16 154245.png"
 # Geo/map data — sourced from the live Google Business Profile listing for
 # "greenfix exterior care" so the embed, schema geo and Maps link all agree
 # with each other and with GBP (a real E-E-A-T/local-SEO consistency signal).
+STREET_ADDRESS = "11 Lowcroft"
+POSTAL_LOCALITY = "Penwortham"
+POSTAL_CODE = "PR1 9DJ"
 GEO_LATITUDE = "53.77025605"
 GEO_LONGITUDE = "-2.69715175"
 GOOGLE_MAPS_CID = "7185723301089874500"
@@ -771,8 +774,10 @@ def local_business_schema():
         "image": f"{DOMAIN}/hero-commercial-grounds.png",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": ADDRESS_LOCALITY,
+            "streetAddress": STREET_ADDRESS,
+            "addressLocality": POSTAL_LOCALITY,
             "addressRegion": ADDRESS_REGION,
+            "postalCode": POSTAL_CODE,
             "addressCountry": "GB",
         },
         "geo": {
@@ -957,6 +962,14 @@ def render_footer():
                     <li><a href="{PORTAL_URL}">Client Portal</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="footer-map">
+            <h4>Find Us</h4>
+            <p>{STREET_ADDRESS}, {POSTAL_LOCALITY}, {ADDRESS_LOCALITY}, {POSTAL_CODE}</p>
+            <div class="map-embed map-embed--compact">
+                <iframe src="{GOOGLE_MAPS_EMBED_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{esc(BUSINESS_NAME)} on Google Maps"></iframe>
+            </div>
+            <p><a href="{GOOGLE_MAPS_SHARE_URL}" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
         </div>
         <div class="footer-bottom">
             <p><strong>{BUSINESS_NAME}</strong> &mdash; Property maintenance and construction repairs across Preston, Lancashire, Wigan and Greater Manchester.</p>
@@ -1370,6 +1383,7 @@ def render_about():
         <div class="container">
             <h2>Who We Are</h2>
             <p class="lede">{BUSINESS_NAME} has been serving Preston and Lancashire since {FOUNDED}. We cover two sides of keeping a property looking good and working properly: regular grounds and garden care, and exterior construction repairs &mdash; brickwork, fencing, gates, paving, roofing, drainage, windows and doors. We've completed {JOBS_COUNT} jobs and built our reputation on turning up when we say we will and doing the job properly.</p>
+            <p class="lede" style="margin-top:1rem;"><strong>Address:</strong> {STREET_ADDRESS}, {POSTAL_LOCALITY}, {ADDRESS_LOCALITY}, {POSTAL_CODE}</p>
         </div>
     </section>
 
@@ -1402,18 +1416,7 @@ def render_about():
         </div>
     </section>
 
-    <section class="section-grey">
-        <div class="container">
-            <h2 class="center">Find Us</h2>
-            <p class="lede center" style="margin-bottom:1.5rem;">Based in {ADDRESS_LOCALITY}, covering {ADDRESS_REGION}, Wigan and Greater Manchester.</p>
-            <div class="map-embed">
-                <iframe src="{GOOGLE_MAPS_EMBED_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{esc(BUSINESS_NAME)} on Google Maps"></iframe>
-            </div>
-            <p class="center" style="margin-top:1rem;"><a href="{GOOGLE_MAPS_SHARE_URL}" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
-        </div>
-    </section>
-
-    <section class="section-white" id="complaints">
+    <section class="section-grey" id="complaints">
         <div class="container">
             <h2 class="center">Complaints Procedure</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">We aim to get every job right first time. If something isn't right, here's what happens:</p>
