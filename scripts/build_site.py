@@ -32,7 +32,6 @@ TRAINED = "Fully trained, experienced team"
 FACEBOOK = "https://www.facebook.com/profile.php?id=61589641812157"
 LINKEDIN = "https://www.linkedin.com/company/greenfix-exterior-care/"
 TIKTOK = "https://www.tiktok.com/@greenfixpreston"
-PORTAL_URL = "https://portal.greenfixexterior-care.co.uk"
 LOGO_IMG = "Screenshot 2026-05-16 154245.png"
 
 # Geo/map data — sourced from the live Google Business Profile listing for
@@ -1079,6 +1078,7 @@ def render_header():
                 {sector_links}
                     </div>
                 </div>
+                <a href="/pricing-guide">Pricing</a>
                 <a href="/blog">Blog</a>
                 <a href="/about-greenfix">About</a>
                 <a href="/before-after">Gallery</a>
@@ -1128,6 +1128,8 @@ def render_footer():
                 <ul>
                     <li><a href="/about-greenfix">About GreenFix</a></li>
                     <li><a href="/about-greenfix#complaints">Complaints Procedure</a></li>
+                    <li><a href="/pricing-guide">Pricing Guide</a></li>
+                    <li><a href="/knowledge-base">Knowledge Base</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/before-after">Before &amp; After Gallery</a></li>
                     <li><a href="tel:{PHONE_TEL}">\U0001F4DE {PHONE_DISPLAY}</a></li>
@@ -1135,7 +1137,6 @@ def render_footer():
                     <li><a href="{FACEBOOK}" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                     <li><a href="{LINKEDIN}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     <li><a href="{TIKTOK}" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-                    <li><a href="{PORTAL_URL}">Client Portal</a></li>
                 </ul>
             </div>
         </div>
@@ -1457,7 +1458,7 @@ def render_homepage():
             <p class="hero-desc">GreenFix Exterior Care keeps properties looking after themselves and in good repair &mdash; from lawn mowing and hedge trimming to brickwork, fencing, roofing, drainage and general exterior repairs. One reliable contractor for the outside of your property.</p>
             <div class="button-group">
                 <a href="#quote-form" class="btn btn-primary">Request a Free Quote</a>
-                <a href="{PORTAL_URL}" class="btn btn-secondary">Client Portal Login</a>
+                <a href="tel:{PHONE_TEL}" class="btn btn-secondary">\U0001F4DE Call {PHONE_DISPLAY}</a>
             </div>
         </div>
     </section>
@@ -1687,6 +1688,272 @@ def render_gallery():
 
 def build_gallery():
     write_page("before-after.html", render_gallery())
+
+
+# ---------------------------------------------------------------------------
+# Pricing guide — every service's guide price in one place, with an
+# OfferCatalog schema block (concrete, citable facts — matches Google's own
+# May 2026 AI-search guidance: clear specific facts, not special AI markup).
+# ---------------------------------------------------------------------------
+
+def offer_catalog_schema():
+    items = []
+    for s in SERVICES:
+        item = {
+            "@type": "Offer",
+            "name": s["h1"].split(" in ")[0],
+            "url": f"{DOMAIN}/{s['slug']}",
+            "priceCurrency": "GBP",
+        }
+        m = re.search(r"\d+(\.\d+)?", s["price"])
+        if m and not s["price"].lower().startswith(("quotation",)):
+            item["price"] = m.group(0)
+            item["description"] = f"{s['price']} — {s['price_note']}"
+        else:
+            item["description"] = s["price"]
+        items.append(item)
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "OfferCatalog",
+        "name": "GreenFix Exterior Care — Service Pricing",
+        "provider": {"@id": BUSINESS_ID},
+        "itemListElement": items,
+    }, indent=2)
+
+
+def render_pricing_guide():
+    schema = "\n".join([
+        f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
+        f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("Pricing Guide", None)])}\n    </script>',
+        f'    <script type="application/ld+json">\n{offer_catalog_schema()}\n    </script>',
+    ])
+    head = render_head(
+        title="Pricing Guide | All Service Prices | GreenFix",
+        description="Guide prices for every GreenFix service in one place — grounds and garden care, and exterior repairs, across Preston.",
+        canonical_path="/pricing-guide",
+        extra_schema=schema,
+    )
+    breadcrumb = render_breadcrumb_html([("Home", "/"), ("Pricing Guide", None)])
+
+    def price_row(slug):
+        s = SERVICE_BY_SLUG[slug]
+        name = s["h1"].split(" in ")[0]
+        return (f'<div class="card"><h3><a href="/{slug}" style="color:inherit;text-decoration:none;">{esc(name)}</a></h3>'
+                f'<p style="color:var(--dark-green);font-weight:700;">{esc(s["price"])}</p>'
+                f'<p style="font-size:0.85rem;">{esc(s["price_note"])}</p></div>')
+
+    grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
+    repairs = next(c for c in CLUSTERS if c["key"] == "repairs")
+    grounds_rows = "\n                ".join(price_row(s) for s in grounds["slugs"])
+    repairs_rows = "\n                ".join(price_row(s) for s in repairs["slugs"])
+
+    body = f"""{breadcrumb}
+    <section id="main-content" class="hero">
+        <div class="hero-content">
+            <h1>Pricing Guide</h1>
+            <p class="tagline">Every GreenFix service, one guide price each</p>
+            <p class="hero-desc">All figures below are guide prices only, confirmed after a free assessment of the actual job. Nothing here is a fixed quote until we've seen the work.</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="center">Grounds &amp; Garden Care</h2>
+            <div class="grid grid-3">
+                {grounds_rows}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">Repairs &amp; Maintenance</h2>
+            <div class="grid grid-3">
+                {repairs_rows}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="center">How Our Pricing Works</h2>
+            <div class="grid grid-2">
+                <div class="faq-item">
+                    <h3>Why "from" prices, not fixed prices?</h3>
+                    <p>Garden size, property access, and how much work is actually needed all affect the real cost. The "from" figure is the honest starting point for a straightforward job of that type — most jobs are quoted individually.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is the assessment free?</h3>
+                    <p>Yes. We look at the actual job — in person or from photos/description — and confirm a firm price before any work starts. There's no obligation to go ahead.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What does "Quotation Required" mean?</h3>
+                    <p>Some jobs (structural repairs, planned maintenance programmes, drone inspections) vary too much in scope for a single guide figure to be meaningful — these are priced individually every time.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there any hidden extras?</h3>
+                    <p>No. The price we confirm after assessment is the price you pay, unless the scope of the job changes once work is underway — and we'd always discuss that with you first.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Get a Free Quote</h2>
+            <p>Call {PHONE_DISPLAY} or use our quote form &mdash; we respond within 24 hours.</p>
+            <div class="button-group">
+                <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
+                <a href="/#quote-form" class="btn btn-secondary">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
+"""
+    return render_page(head_html=head, body_html=body)
+
+
+def build_pricing_guide():
+    write_page("pricing-guide.html", render_pricing_guide())
+
+
+# ---------------------------------------------------------------------------
+# Knowledge base — a single consolidated, comprehensive reference page
+# (services, areas, expertise, pricing, policies, FAQs) alongside llms.txt,
+# so both AI systems and human visitors have one canonical place to find
+# every verifiable fact about the business.
+# ---------------------------------------------------------------------------
+
+KNOWLEDGE_BASE_FAQS = [
+    ("Is GreenFix a gardening company or a construction company?",
+     "Both — GreenFix covers grounds and garden care as well as exterior construction and structural repairs, for homes and businesses."),
+    ("What areas does GreenFix cover?",
+     "Preston."),
+    ("Is GreenFix insured?",
+     f"Yes, GreenFix holds {INSURANCE} and is a {WASTE_CARRIER}."),
+    ("How much does a service cost?",
+     "Every service has a guide 'from' price on its own page and on the Pricing Guide; the final price depends on the job and is confirmed after a free assessment. Some larger jobs are quotation-only."),
+    ("Does GreenFix work with businesses as well as homeowners?",
+     "Yes — care homes, churches, schools, pubs, restaurants, shops, factories, warehouses, estates and event venues, alongside residential customers."),
+    ("What happens if I'm not happy with the work?",
+     "Contact GreenFix directly (phone, WhatsApp or email) as soon as possible. They respond within 24 hours, inspect the work, and correct it at no extra charge where they're at fault."),
+    ("How do I book a job or get a quote?",
+     "Call or WhatsApp, email, or use the quote form on the homepage — include a preferred date if you'd like a site visit booked in."),
+    ("What are GreenFix's opening hours?",
+     f"{HOURS_DISPLAY}."),
+]
+
+
+def render_knowledge_base():
+    schema = "\n".join([
+        f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
+        f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("Knowledge Base", None)])}\n    </script>',
+        f'    <script type="application/ld+json">\n{faq_schema(KNOWLEDGE_BASE_FAQS)}\n    </script>',
+    ])
+    head = render_head(
+        title="Knowledge Base | GreenFix Exterior Care",
+        description="A single reference page for every verifiable fact about GreenFix Exterior Care — services, pricing, service area, credentials, policies and FAQs.",
+        canonical_path="/knowledge-base",
+        extra_schema=schema,
+    )
+    breadcrumb = render_breadcrumb_html([("Home", "/"), ("Knowledge Base", None)])
+
+    grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
+    repairs = next(c for c in CLUSTERS if c["key"] == "repairs")
+    all_service_names = ", ".join(SERVICE_BY_SLUG[s]["h1"].split(" in ")[0] for s in grounds["slugs"] + repairs["slugs"])
+    sector_names = ", ".join(label for _, label in SECTORS)
+
+    faqs_html = "\n                ".join(
+        f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in KNOWLEDGE_BASE_FAQS
+    )
+
+    body = f"""{breadcrumb}
+    <section id="main-content" class="hero">
+        <div class="hero-content">
+            <h1>Knowledge Base</h1>
+            <p class="tagline">Every verifiable fact about {BUSINESS_NAME} in one place</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>Business Overview</h2>
+            <p class="lede">{BUSINESS_NAME} is a property maintenance and construction repair contractor, new for {FOUNDED}, covering grounds and garden care and exterior construction repairs for homes and businesses across Preston.</p>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2>Services</h2>
+            <p class="lede">{esc(all_service_names)}.</p>
+            <p class="lede" style="margin-top:0.75rem;">Full guide prices for every service: <a href="/pricing-guide">Pricing Guide</a>.</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>Service Area</h2>
+            <p class="lede">Preston.</p>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2>Who We Work With</h2>
+            <p class="lede">Homeowners and residential properties, plus: {esc(sector_names)}.</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>Expertise &amp; Credentials</h2>
+            <div class="trust-strip">
+                <span>✓ <strong>{INSURANCE}</strong></span>
+                <span>✓ <strong>{TRAINED}</strong></span>
+                <span>✓ <strong>{WASTE_CARRIER}</strong></span>
+                <span>✓ <strong>New for {FOUNDED}</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2>Policies &amp; Processes</h2>
+            <p class="lede">Guide prices are confirmed after a free assessment before any work starts. Full complaints procedure: <a href="/about-greenfix#complaints">see the Complaints Procedure</a>.</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="center">Frequently Asked Questions</h2>
+            <div class="grid grid-2">
+                {faqs_html}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">Machine-Readable Version</h2>
+            <p class="lede center">A plaintext version of this data, for AI systems and crawlers, is available at <a href="/llms.txt">/llms.txt</a>.</p>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Get a Free Quote</h2>
+            <p>Call {PHONE_DISPLAY} or use our quote form &mdash; we respond within 24 hours.</p>
+            <div class="button-group">
+                <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
+                <a href="/#quote-form" class="btn btn-secondary">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
+"""
+    return render_page(head_html=head, body_html=body)
+
+
+def build_knowledge_base():
+    write_page("knowledge-base.html", render_knowledge_base())
 
 
 # ---------------------------------------------------------------------------
@@ -2463,6 +2730,8 @@ def build_redirects():
         lines.append(f"{clean}  /{fname}  200")
     lines.append("/about-greenfix  /about-greenfix.html  200")
     lines.append("/before-after  /before-after.html  200")
+    lines.append("/pricing-guide  /pricing-guide.html  200")
+    lines.append("/knowledge-base  /knowledge-base.html  200")
     lines.append("/thank-you  /thank-you.html  200")
     lines.append("/blog  /blog/index.html  200")
     for post in BLOG_POSTS:
@@ -2486,6 +2755,8 @@ def build_sitemap():
         urls.append(("/" + fname[:-5], "0.8"))
     urls.append(("/about-greenfix", "0.6"))
     urls.append(("/before-after", "0.6"))
+    urls.append(("/pricing-guide", "0.8"))
+    urls.append(("/knowledge-base", "0.7"))
     urls.append(("/blog", "0.7"))
     for post in BLOG_POSTS:
         urls.append((f"/blog/{post['slug']}", "0.7"))
@@ -2894,6 +3165,8 @@ def main():
     build_homepage()
     build_about()
     build_gallery()
+    build_pricing_guide()
+    build_knowledge_base()
     build_sector_pages()
     build_blog()
     build_redirects()

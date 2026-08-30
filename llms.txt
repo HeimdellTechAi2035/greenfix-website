@@ -76,6 +76,8 @@ TikTok: https://www.tiktok.com/@greenfixpreston
 - Drone Property Inspections: https://greenfixexterior-care.co.uk/drone-property-inspections
 - About GreenFix: https://greenfixexterior-care.co.uk/about-greenfix
 - Complaints Procedure: https://greenfixexterior-care.co.uk/about-greenfix#complaints
+- Pricing Guide (every service's guide price in one place): https://greenfixexterior-care.co.uk/pricing-guide
+- Knowledge Base (single consolidated reference: services, area, credentials, policies, FAQs): https://greenfixexterior-care.co.uk/knowledge-base
 - Recent Work: https://greenfixexterior-care.co.uk/before-after
 - Blog (FAQ-style advice articles, one per service): https://greenfixexterior-care.co.uk/blog
 - Commercial Property Maintenance: https://greenfixexterior-care.co.uk/commercial-maintenance
