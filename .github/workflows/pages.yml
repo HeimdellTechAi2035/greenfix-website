@@ -34,7 +34,15 @@ jobs:
             --exclude '.github/' \
             --exclude '_site/' \
             --exclude 'netlify/' \
+            --exclude 'functions/' \
+            --exclude 'lib/' \
+            --exclude 'scripts/' \
             --exclude 'node_modules/' \
+            --exclude '.env*' \
+            --exclude '*.php' \
+            --exclude '*.py' \
+            --exclude '*.bat' \
+            --exclude '*.md' \
             --exclude 'netlify.toml' \
             --exclude 'package.json' \
             --exclude 'package-lock.json' \
