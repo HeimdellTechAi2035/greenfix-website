@@ -1,0 +1,65 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Prepare static artifact
+        run: |
+          set -Eeuo pipefail
+          mkdir -p _site
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '_site/' \
+            --exclude 'netlify/' \
+            --exclude 'node_modules/' \
+            --exclude 'netlify.toml' \
+            --exclude 'package.json' \
+            --exclude 'package-lock.json' \
+            ./ _site/
+          touch _site/.nojekyll
+
+          find _site -type f -name '*.html' \
+            ! -name 'index.html' \
+            ! -name '404.html' \
+            ! -name 'thank-you.html' \
+            -print0 |
+          while IFS= read -r -d '' page; do
+            pretty="${page%.html}"
+            mkdir -p "$pretty"
+            cp "$page" "$pretty/index.html"
+          done
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
