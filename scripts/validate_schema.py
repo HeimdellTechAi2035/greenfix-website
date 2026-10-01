@@ -11,7 +11,17 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
-SKIP = {"404.html", "thank-you.html", "googlec72ca5999f108be1.html"}
+SKIP = {
+    "404.html",
+    "thank-you.html",
+    "googlec72ca5999f108be1.html",
+    # noindex HTML redirect stubs, not content pages
+    "garden-maintenance-preston.html",
+    "driveway-cleaning-preston.html",
+    "window-cleaning-preston.html",
+    "estate-agent-services.html",
+    "garden-clearance-penwortham.html",
+}
 
 REQUIRED_TAGS = [
     ('<title>', "title"),

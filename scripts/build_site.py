@@ -32,12 +32,22 @@ TRAINED = "Fully trained, experienced team"
 FACEBOOK = "https://www.facebook.com/profile.php?id=61589641812157"
 LINKEDIN = "https://www.linkedin.com/company/greenfix-exterior-care/"
 TIKTOK = "https://www.tiktok.com/@greenfixpreston"
-LOGO_IMG = "Screenshot 2026-05-16 154245.png"
+LOGO_IMG = "greenfix-exterior-care-logo.webp"
+OG_IMAGE = "hero-commercial-grounds-1200.jpg"
+LEGAL_NAME = "Greenfix Exterior Care Ltd"
+COMPANY_NUMBER = "17241761"
+COMPANIES_HOUSE_URL = (
+    "https://find-and-update.company-information.service.gov.uk/company/"
+    + COMPANY_NUMBER
+)
 
 # Geo/map data — sourced from the live Google Business Profile listing for
 # "greenfix exterior care" so the embed, schema geo and Maps link all agree
 # with each other and with GBP (a real E-E-A-T/local-SEO consistency signal).
-STREET_ADDRESS = "11 Lowercroft"
+STREET_ADDRESS = "11 Lower Croft"
+# Visible NAP. Penwortham is the registered-office locality on the Companies
+# House record for this address; schema locality stays Preston (see 4A).
+DISPLAY_ADDRESS = "11 Lower Croft, Penwortham, Preston PR1 9DJ"
 POSTAL_LOCALITY = "Preston"
 POSTAL_CODE = "PR1 9DJ"
 HOURS_DISPLAY = "Monday - Saturday, 9:00am - 5:00pm (12:00-1:00pm lunch)"
@@ -148,8 +158,8 @@ SERVICES = [
         h1="Garden Maintenance in Preston",
         tagline="Regular, reliable garden care for your home",
         price="From £40", price_note="per visit, guide price only",
-        meta_title="Garden Maintenance Preston | From £40 | GreenFix",
-        meta_description="Garden maintenance in Preston for homeowners. Mowing, edging, weeding and seasonal upkeep, on a one-off or regular basis. From £40.",
+        meta_title="Garden Maintenance Preston | Regular & One-Off from £40 | GreenFix",
+        meta_description="Garden maintenance in Preston: mowing, edging, weeding, hedges and seasonal upkeep, weekly, fortnightly or one-off. From £40 per visit.",
         intro="GreenFix keeps residential gardens tidy, healthy and under control across Preston. That covers the everyday jobs that keep a garden looking cared-for between the bigger seasonal work: mowing and edging, weeding beds and borders, light pruning, and general upkeep. Book a one-off visit or set up a regular round — whichever suits how you use your garden.",
         cards=[
             ("Regular or One-Off", "Set up a fortnightly or monthly round, or book a single visit when your garden needs bringing back under control."),
@@ -229,8 +239,8 @@ SERVICES = [
         h1="Garden Tidy-Ups in Preston",
         tagline="A full reset for an overgrown or neglected garden",
         price="From £80", price_note="per visit, guide price only",
-        meta_title="Garden Tidy-Ups Preston | From £80 | GreenFix",
-        meta_description="Garden tidy-ups in Preston. A full one-off reset for overgrown gardens — clearing, cutting back and waste removal. From £80.",
+        meta_title="Garden Tidy Up & Clearance Preston | From £80 | GreenFix",
+        meta_description="Overgrown garden? One-off garden tidy-ups and clearances in Preston: cutting back, weeding, mowing and waste taken away. From £80.",
         intro="A garden tidy-up is a one-off reset, not a routine visit: for gardens that have been left, overgrown, or need bringing back under control before regular maintenance can take over. We clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything we clear — leaving a garden that's actually manageable again.",
         cards=[
             ("Full Garden Reset", "Overgrown beds, borders and lawns cleared and cut back in a single visit, not a partial tidy."),
@@ -256,8 +266,8 @@ SERVICES = [
         h1="Pressure Washing in Preston",
         tagline="Restore patios, driveways and paths",
         price="From £95", price_note="per visit, guide price only",
-        meta_title="Pressure Washing Preston | From £95 | GreenFix",
-        meta_description="Professional pressure washing in Preston. Patios, driveways, paths and walls cleaned of moss, algae and grime. From £95.",
+        meta_title="Driveway & Patio Pressure Washing Preston | From £95 | GreenFix",
+        meta_description="Driveway, patio and path pressure washing in Preston. Moss, algae and grime removed from block paving, flags and concrete. From £95.",
         intro="GreenFix pressure washes patios, driveways, paths and exterior walls across Preston, removing built-up moss, algae, grime and staining. This is a cleaning service — restoring the surface you already have to look its best — not a structural repair. If a surface is actually cracked, sunken or damaged rather than just dirty, see our patio repairs, paving repairs or slab relaying pages instead.",
         cards=[
             ("Patios & Driveways", "Block paving, slabs, concrete and tarmac cleaned of moss, algae, oil marks and general grime."),
@@ -283,8 +293,8 @@ SERVICES = [
         h1="Window Cleaning in Preston",
         tagline="Domestic and commercial window cleaning",
         price="Free Quote", price_note="price depends on property size and frequency",
-        meta_title="Window Cleaning Preston | GreenFix",
-        meta_description="Domestic and commercial window cleaning in Preston. Regular rounds or one-off cleans, frames and sills included. Free quote.",
+        meta_title="Window Cleaning Preston | Homes & Businesses | GreenFix",
+        meta_description="Domestic and commercial window cleaning in Preston, inside and out. Regular rounds or one-off cleans, frames and sills included. Free quote.",
         intro="GreenFix provides window cleaning for homes and businesses across Preston, as a regular round or a one-off clean. Frames and sills are cleaned as standard, not just the glass, so you get a genuinely finished result rather than streak-free panes surrounded by grubby frames.",
         cards=[
             ("Domestic Rounds", "Regular monthly or fortnightly window cleaning for houses, or a one-off clean when you need it."),
@@ -311,8 +321,8 @@ SERVICES = [
         h1="Exterior Structural Repairs in Preston",
         tagline="Masonry, walls and structural brickwork put right",
         price="Quotation Required", price_note="every structural job is assessed individually",
-        meta_title="Exterior Structural Repairs Preston | GreenFix",
-        meta_description="Exterior structural repairs in Preston: brickwork, garden walls and masonry. Every job assessed and quoted individually. Call for a survey.",
+        meta_title="Exterior House Repairs Preston | Brickwork, Walls & Masonry | GreenFix",
+        meta_description="Exterior house repairs in Preston: brickwork, garden walls, masonry and structural fixes for homes and businesses. Every job surveyed and quoted.",
         intro="Exterior structural repairs cover the bigger masonry and brickwork jobs — cracked or failing brickwork, leaning or unstable garden walls, and other structural issues on the outside of a property. Because the scope of a structural repair varies so much from one property to the next, we assess every job individually before quoting rather than working to a fixed guide price. If you know exactly what needs doing, our brick repointing, brick repairs and garden wall repairs pages cover the more specific, defined jobs.",
         cards=[
             ("Free Site Assessment", "We visit, assess the extent of the issue, and explain what's actually needed before any work starts."),
@@ -365,8 +375,8 @@ SERVICES = [
         h1="Brick Repointing in Preston",
         tagline="Restoring worn or crumbling mortar joints",
         price="From £30 per m²", price_note="guide price only, confirmed after assessment",
-        meta_title="Brick Repointing Preston | From £30/m² | GreenFix",
-        meta_description="Brick repointing in Preston. Repair eroded or crumbling mortar joints and restore weatherproofing. From £30 per m².",
+        meta_title="Brick Repointing Preston | Crumbling Mortar Fixed from £30/m²",
+        meta_description="Mortar between your bricks crumbling? GreenFix repoints eroded joints in Preston to restore weatherproofing. From £30 per m².",
         intro="Repointing repairs the mortar joints between bricks, not the bricks themselves. Over time, mortar erodes, crumbles or falls out, letting water into the wall and weakening it. We rake out the damaged mortar and repoint with a matching mix, restoring both the weatherproofing and the appearance of the brickwork. If the bricks themselves are cracked or damaged rather than the mortar, see our brick repairs page instead.",
         cards=[
             ("Mortar Joint Repair", "Eroded, crumbling or missing mortar raked out and repointed to stop water getting into the wall."),
@@ -473,8 +483,8 @@ SERVICES = [
         h1="Gate Repairs in Preston",
         tagline="Hinges, latches and gate alignment fixed",
         price="From £65", price_note="guide price only, confirmed after assessment",
-        meta_title="Gate Repairs Preston | From £65 | GreenFix",
-        meta_description="Gate repairs in Preston. Sticking, sagging or damaged gates, hinges and latches repaired for homes and businesses. From £65.",
+        meta_title="Gate Repairs Preston | Sagging & Sticking Gates Fixed from £65",
+        meta_description="Gate won't close or latch? GreenFix repairs sagging, sticking and damaged garden and driveway gates, hinges and latches in Preston. From £65.",
         intro="A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem rather than something that needs a full replacement. We repair and adjust garden and boundary gates, timber and metal, for homes and businesses across Preston — fixing hinges, latches, and alignment so the gate opens, closes and locks the way it should.",
         cards=[
             ("Hinges & Latches", "Worn, rusted or broken hinges and latches replaced so the gate operates smoothly again."),
@@ -554,8 +564,8 @@ SERVICES = [
         h1="Slab Relaying in Preston",
         tagline="Lifting and relaying uneven or poorly-laid slabs",
         price="From £95", price_note="guide price only, confirmed after assessment",
-        meta_title="Slab Relaying Preston | From £95 | GreenFix",
-        meta_description="Slab relaying in Preston — uneven or poorly-laid patio and path slabs lifted, re-based and relaid level. From £95.",
+        meta_title="Slab Relaying Preston | Uneven Patio Slabs Relaid from £95",
+        meta_description="Uneven, rocking or puddling patio and path slabs lifted, re-based and relaid level in Preston. From £95 guide price, confirmed after a free look.",
         intro="Slab relaying is about levelling: lifting existing slabs that have become uneven, don't drain properly, or were poorly laid in the first place, and relaying them on a corrected, properly-fallen base. Unlike patio or paving repairs, the slabs themselves aren't necessarily damaged — the problem is how they're sitting, not the slab material.",
         cards=[
             ("Uneven & Rocking Slabs", "Slabs that rock, sit unevenly, or have settled at different heights lifted and relaid level."),
@@ -662,8 +672,8 @@ SERVICES = [
         h1="Window Repairs in Preston",
         tagline="Frames, seals and hardware repaired — not cleaning",
         price="From £65", price_note="guide price only, confirmed after assessment",
-        meta_title="Window Repairs Preston | From £65 | GreenFix",
-        meta_description="Window repairs in Preston — damaged frames, failed seals, hinges and handles fixed. From £65. This is repair work, not window cleaning.",
+        meta_title="Window Repairs Preston | Frames, Seals & Handles from £65",
+        meta_description="Window won't close or seal? GreenFix fixes damaged frames, failed seals, hinges and handles in Preston. From £65. Repair work, not cleaning.",
         intro="Window repairs fix the window itself — damaged or rotten frames, failed glazing seals letting in draughts, and worn or broken hinges and handles that stop a window opening, closing or locking properly. This is a repair service, distinct from our window cleaning page, which covers cleaning glass, frames and sills rather than fixing them.",
         cards=[
             ("Frame Repairs", "Damaged or rotten window frame sections repaired, avoiding the cost of a full window replacement where possible."),
@@ -895,9 +905,15 @@ def cluster_label(slug):
     return None
 
 
+def sector_url(fname):
+    """Extensionless canonical path for a sector page file."""
+    slug = fname[:-5] if fname.endswith(".html") else fname
+    return f"/{slug}"
+
+
 def render_head(*, title, description, canonical_path, og_image=None, extra_schema="", preload_image=None):
     canonical = f"{DOMAIN}{canonical_path}"
-    og_image = og_image or f"{DOMAIN}/hero-commercial-grounds.png"
+    og_image = og_image or f"{DOMAIN}/{OG_IMAGE}"
     preload_html = (
         f'\n    <link rel="preload" as="image" href="{preload_image}" type="image/webp">'
         if preload_image else ""
@@ -927,23 +943,25 @@ def render_head(*, title, description, canonical_path, og_image=None, extra_sche
 
 
 def local_business_schema():
+    """Sitewide LocalBusiness block. areaServed stays Preston only until
+    extra towns are confirmed by the owner."""
     data = {
         "@context": "https://schema.org",
         "@type": ["HomeAndConstructionBusiness", "GeneralContractor", "LandscapingBusiness"],
         "@id": BUSINESS_ID,
         "name": BUSINESS_NAME,
+        "legalName": LEGAL_NAME,
+        "alternateName": ["GreenFix", "GreenFix Property Care"],
         "description": (
-            "GreenFix Exterior Care is a property maintenance and construction "
-            "repair contractor serving homeowners and businesses across Preston, "
-            "Preston — covering grounds and "
-            "garden care alongside structural, brick, roofing, drainage and "
-            "exterior repair services."
+            "Property maintenance and exterior repair contractor in Preston, "
+            "Lancashire: grounds and garden care plus brick, fence, gate, patio, "
+            "paving, roof tile, drain, window and door repairs for homes and businesses."
         ),
         "url": DOMAIN + "/",
         "telephone": PHONE_TEL,
         "email": EMAIL,
         "logo": f"{DOMAIN}/{LOGO_IMG}",
-        "image": f"{DOMAIN}/hero-commercial-grounds.png",
+        "image": f"{DOMAIN}/{OG_IMAGE}",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": STREET_ADDRESS,
@@ -954,16 +972,26 @@ def local_business_schema():
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": GEO_LATITUDE,
-            "longitude": GEO_LONGITUDE,
+            "latitude": float(GEO_LATITUDE),
+            "longitude": float(GEO_LONGITUDE),
         },
         "hasMap": GOOGLE_MAPS_SHARE_URL,
         "openingHoursSpecification": OPENING_HOURS_SPEC,
-        "areaServed": AREA_SERVED,
+        "areaServed": [{"@type": "City", "name": name} for name in AREA_SERVED],
         "foundingDate": FOUNDED,
-        "priceRange": "$$",
-        "sameAs": [FACEBOOK, LINKEDIN, TIKTOK],
-        "knowsAbout": [s["h1"].split(" in ")[0] for s in SERVICES],
+        "priceRange": "££",
+        "currenciesAccepted": "GBP",
+        "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "Companies House",
+            "value": COMPANY_NUMBER,
+        },
+        "sameAs": [FACEBOOK, LINKEDIN, TIKTOK, COMPANIES_HOUSE_URL],
+        "hasCredential": [{
+            "@type": "EducationalOccupationalCredential",
+            "name": "Environment Agency registered waste carrier",
+            "credentialCategory": "Registration",
+        }],
     }
     return json.dumps(data, indent=2)
 
@@ -1055,7 +1083,7 @@ def render_header():
     grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
     repairs = next(c for c in CLUSTERS if c["key"] == "repairs")
     sector_links = "\n                ".join(
-        f'<a href="/{fname}">{esc(label)}</a>' for fname, label in SECTORS
+        f'<a href="{sector_url(fname)}">{esc(label)}</a>' for fname, label in SECTORS
     )
     return f"""    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
@@ -1100,7 +1128,7 @@ def render_footer():
         )
 
     sector_lis = "\n                    ".join(
-        f'<li><a href="/{fname}">{esc(label)}</a></li>' for fname, label in SECTORS
+        f'<li><a href="{sector_url(fname)}">{esc(label)}</a></li>' for fname, label in SECTORS
     )
 
     return f"""    <footer>
@@ -1142,7 +1170,7 @@ def render_footer():
         </div>
         <div class="footer-map">
             <h4>Find Us</h4>
-            <p>{STREET_ADDRESS}, {POSTAL_LOCALITY}, {POSTAL_CODE}</p>
+            <p>{DISPLAY_ADDRESS}</p>
             <p>Open: {HOURS_DISPLAY}</p>
             <div class="map-embed map-embed--compact">
                 <iframe src="{GOOGLE_MAPS_EMBED_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{esc(BUSINESS_NAME)} on Google Maps"></iframe>
@@ -1152,6 +1180,7 @@ def render_footer():
         <div class="footer-bottom">
             <p><strong>{BUSINESS_NAME}</strong> &mdash; Property maintenance and construction repairs across Preston.</p>
             <p>{INSURANCE} &middot; {TRAINED} &middot; {WASTE_CARRIER} &middot; Prices shown are guide prices only.</p>
+            <p>{LEGAL_NAME} &middot; {DISPLAY_ADDRESS} &middot; <a href="tel:{PHONE_TEL}">07447 804597</a> &middot; <a href="mailto:{EMAIL}">{EMAIL}</a> &middot; Registered in England &amp; Wales, company no. {COMPANY_NUMBER}</p>
         </div>
     </footer>
 """
@@ -1194,7 +1223,7 @@ def render_blog_callout(service_slug):
 
 def render_page(*, head_html, body_html, extra_script=""):
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 {head_html}
 </head>
@@ -1330,7 +1359,7 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
         <div class="form-container">
             <h2 class="center">Request a Free Quote or Book a Site Visit</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing, and a preferred date if you'd like us to come and see you — we'll confirm by phone within 24 hours.</p>
-            <form class="quote-form" name="quote-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm">
+            <form class="quote-form" name="quote-request" method="POST" action="https://forms.heimdell-tech-ai.co.uk/greenfix/quote-request" id="quoteForm">
                 <input type="hidden" name="form-name" value="quote-request" />
                 <input type="text" name="bot-field" class="bot-field" />
                 <div class="form-group">
@@ -1426,7 +1455,7 @@ def render_homepage():
     repairs_cards = "\n                ".join(service_card(s) for s in repairs["slugs"])
 
     sector_cards = "\n                ".join(
-        f'<a class="card" style="text-decoration:none;display:block;" href="/{fname}"><h3>{esc(label)}</h3></a>'
+        f'<a class="card" style="text-decoration:none;display:block;" href="{sector_url(fname)}"><h3>{esc(label)}</h3></a>'
         for fname, label in SECTORS
     )
 
@@ -1440,8 +1469,8 @@ def render_homepage():
     ])
 
     head = render_head(
-        title="Property Maintenance & Construction Repairs Preston | GreenFix",
-        description="GreenFix Exterior Care: grounds & garden maintenance and exterior repairs for homes and businesses across Preston.",
+        title="Garden Maintenance & Exterior Repairs in Preston | GreenFix",
+        description="Grounds and garden care plus fence, gate, brick, patio and drain repairs for Preston homes and businesses. £5M insured. Free quotes: 07447 804597.",
         canonical_path="/",
         extra_schema=schema,
         preload_image="/hero-commercial-1200w.webp",
@@ -1543,7 +1572,7 @@ def render_about():
     ])
     head = render_head(
         title="About GreenFix | Property Maintenance & Construction Preston",
-        description=f"About {BUSINESS_NAME} — property maintenance and construction repairs for homes and businesses across Preston since {FOUNDED}.",
+        description=f"About {BUSINESS_NAME} — property maintenance and construction repairs for homes and businesses across Preston, new for {FOUNDED}.",
         canonical_path="/about-greenfix",
         extra_schema=schema,
     )
@@ -1552,7 +1581,7 @@ def render_about():
     <section id="main-content" class="hero">
         <div class="hero-content">
             <h1>About GreenFix Exterior Care</h1>
-            <p class="tagline">Property Maintenance &amp; Construction Repairs Since {FOUNDED}</p>
+            <p class="tagline">Property Maintenance &amp; Construction Repairs, New for {FOUNDED}</p>
         </div>
     </section>
 
@@ -1560,7 +1589,7 @@ def render_about():
         <div class="container">
             <h2>Who We Are</h2>
             <p class="lede">{BUSINESS_NAME} launched in {FOUNDED}, covering two sides of keeping a property looking good and working properly: regular grounds and garden care, and exterior construction repairs &mdash; brickwork, fencing, gates, paving, roofing, drainage, windows and doors. We're built on turning up when we say we will and doing the job properly, every time.</p>
-            <p class="lede" style="margin-top:1rem;"><strong>Address:</strong> {STREET_ADDRESS}, {POSTAL_LOCALITY}, {POSTAL_CODE}</p>
+            <p class="lede" style="margin-top:1rem;"><strong>Address:</strong> {DISPLAY_ADDRESS}</p>
             <p class="lede" style="margin-top:0.35rem;"><strong>Hours:</strong> {HOURS_DISPLAY}</p>
         </div>
     </section>
@@ -1965,8 +1994,8 @@ SECTOR_PAGES = [
         filename="commercial-maintenance.html",
         h1="Commercial Property Maintenance in Preston",
         tagline="Grounds care and exterior repairs for commercial premises",
-        meta_title="Commercial Property Maintenance Preston | GreenFix",
-        meta_description="Commercial property maintenance in Preston: grounds care, car park upkeep, and exterior repairs for offices, retail units and business premises.",
+        meta_title="Commercial Property Maintenance & Repairs Preston | GreenFix",
+        meta_description="Commercial property maintenance and repairs in Preston: grounds care, car parks, fencing, drainage and exterior fixes for offices, units and retail.",
         intro="GreenFix provides property maintenance for commercial premises across Preston, covering both grounds care (car park borders, communal grounds, general tidiness) and exterior repairs (fencing, paving, brickwork, drainage) that keep a business premises presentable and in good repair.",
         cards=[
             ("Grounds & Exterior Upkeep", "Scheduled grounds maintenance and exterior tidiness for offices, retail units and business premises."),
@@ -2034,8 +2063,8 @@ SECTOR_PAGES = [
         filename="church-grounds-maintenance-preston.html",
         h1="Church Grounds Maintenance in Preston",
         tagline="Churchyard care and respectful exterior upkeep",
-        meta_title="Church Grounds Maintenance Preston | GreenFix",
-        meta_description="Church grounds maintenance in Preston — churchyard care, path repairs and respectful exterior upkeep around services and events.",
+        meta_title="Church & Churchyard Grounds Maintenance Preston | GreenFix",
+        meta_description="Churchyard grass, hedges, paths and boundary walls kept tidy around services, weddings and funerals. Church grounds maintenance across Preston.",
         intro="GreenFix maintains churchyards and church grounds across Preston, working reliably and respectfully around services and events. That covers regular grounds care as well as the masonry and path repairs that older church buildings and boundary walls often need.",
         cards=[
             ("Churchyard Grounds Care", "Grass cutting, hedge trimming and grounds tidiness for churchyards and parish grounds."),
@@ -2311,8 +2340,9 @@ BLOG_POSTS = [
     dict(
         slug="best-time-of-year-to-trim-hedges",
         title="When Is the Best Time of Year to Trim Hedges?",
+        meta_title="When Is the Best Time to Cut Hedges in the UK?",
         service="hedge-trimming",
-        meta_description="The best time of year to trim hedges in the UK, and why timing matters for both hedge health and nesting birds.",
+        meta_description="The best time to trim most UK hedges, and the nesting season (roughly March–August) when you should check carefully for birds first.",
         answer="Most UK hedges are best trimmed in late spring/early summer and again in early autumn, avoiding the main bird nesting season (roughly March to August) for anything more than light, careful trimming.",
         body=[
             "Timing matters for two reasons. First, hedges respond differently depending on when they're cut — cutting right after a flush of new growth helps keep a tidy shape without checking the plant's growth too hard, while cutting too late in the season on some species can remove the next year's flowering wood. Second, many hedges provide nesting habitat for birds, and it's an offence under UK law to damage or destroy an active bird's nest, so hedge cutting is generally avoided or done very carefully during the nesting season.",
@@ -2383,8 +2413,9 @@ BLOG_POSTS = [
     dict(
         slug="how-much-does-brick-repointing-cost",
         title="How Much Does Brick Repointing Cost?",
+        meta_title="How Much Does Brick Repointing Cost in 2026? (UK Guide)",
         service="brick-repointing",
-        meta_description="Guide prices for brick repointing in the UK, priced per square metre, and what affects the cost of the job.",
+        meta_description="Brick repointing typically starts from about £30 per m² (GreenFix guide price). See what changes the cost: mortar type, access, wall condition.",
         answer="Brick repointing is typically priced per square metre of wall, from around £30 per m² as a guide price, with the final cost depending on how much of the wall needs repointing and how accessible it is.",
         body=[
             "Repointing is priced by area rather than as a flat fee because the amount of work scales directly with how much wall needs doing — a small patch of failed mortar around a single window is a much smaller job than repointing an entire elevation. The condition of the existing mortar matters too: raking out mortar that's already crumbling and loose is quicker than removing mortar that's still largely sound but just needs refreshing.",
@@ -2419,8 +2450,9 @@ BLOG_POSTS = [
     dict(
         slug="why-is-my-patio-sinking-or-cracking",
         title="Why Is My Patio Sinking or Cracking?",
+        meta_title="Why Is My Patio Sinking or Cracking? Causes & Fixes | GreenFix",
         service="patio-repairs",
-        meta_description="Why patio slabs sink, crack or become loose over time, and how patio repairs differ from patio cleaning.",
+        meta_description="Sinking or cracked patio? The usual causes are a weak sub-base, water and tree roots. Learn what can be fixed and what needs relaying.",
         answer="Patios sink or crack when the base underneath fails — through poor original installation, ground movement, or water washing out the material the slabs are bedded on — rather than through a problem with the slabs themselves.",
         body=[
             "A patio is only as stable as what's underneath it. If the sub-base wasn't properly compacted when the patio was laid, or if water has found a way to erode the bedding material over the years, individual slabs lose their support and start to rock, sink, or crack under normal weight. Tree roots growing underneath a patio can cause similar movement, lifting some slabs while others stay in place.",
@@ -2443,8 +2475,9 @@ BLOG_POSTS = [
     dict(
         slug="why-do-patio-slabs-become-uneven-over-time",
         title="Why Do Patio Slabs Become Uneven Over Time?",
+        meta_title="Why Do Patio Slabs Go Uneven? Causes & Fixes | GreenFix",
         service="slab-relaying",
-        meta_description="Why patio and path slabs become uneven or hold water over time, and how slab relaying differs from a full patio repair.",
+        meta_description="Patio slabs rock, sink or hold water when the base shifts or was laid badly. Here's why it happens and when relaying beats a full repair.",
         answer="Slabs become uneven when the ground or bedding material underneath settles unevenly over time — the slabs themselves are often still perfectly sound, they're just no longer sitting level or draining correctly.",
         body=[
             "This is a subtly different problem from a damaged patio. Ground settles at different rates in different spots, especially where drainage isn't even across an area, and over several years this can leave a patio or path with slabs at slightly different heights, or with a \"fall\" (slope) that no longer directs rainwater away from the house the way it should have originally. None of this necessarily means the slabs are cracked or broken — they're simply not sitting the way they were laid.",
@@ -2503,8 +2536,12 @@ BLOG_POSTS = [
     dict(
         slug="why-does-my-door-stick-or-drag-on-the-floor",
         title="Why Does My Door Stick or Drag on the Floor?",
+        # The article explains hinge wear, loose screws, seasonal swelling and
+        # frame alignment. It does not list five causes, so the title does not
+        # claim a count.
+        meta_title="Why Does My Door Stick or Drag? Common Causes | GreenFix",
         service="door-repairs",
-        meta_description="Why exterior doors stick or drag on the floor, and whether it's a repair job or a sign the door needs replacing.",
+        meta_description="An exterior door that sticks or drags usually has dropped hinges, a swollen frame or settlement. How to tell which, and when it needs a repair.",
         answer="A door that sticks or drags on the floor is almost always a hinge or frame alignment problem, not a sign the door itself has grown or changed shape — the door has usually dropped slightly on worn hinges rather than the door being the wrong size.",
         body=[
             "Doors are heavy, and they hang entirely on their hinges. Over time, hinges wear, screws holding them can work loose in the frame, and the door gradually drops on the hinge side — often by only a few millimetres, but enough to catch on the floor or stick against the frame on the opposite side. This is why an exterior door that closed perfectly for years can start sticking without anything obvious having changed.",
@@ -2534,7 +2571,7 @@ def render_blog_post(post):
         "publisher": {"@type": "Organization", "name": BUSINESS_NAME,
                        "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/{LOGO_IMG}"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": f"{DOMAIN}{canonical_path}"},
-        "image": f"{DOMAIN}/hero-commercial-grounds.png",
+        "image": f"{DOMAIN}/{OG_IMAGE}",
     }
 
     schema = "\n".join([
@@ -2544,7 +2581,7 @@ def render_blog_post(post):
     ])
 
     head = render_head(
-        title=f"{post['title']} | GreenFix Blog",
+        title=post.get("meta_title") or f"{post['title']} | GreenFix Blog",
         description=post["meta_description"],
         canonical_path=canonical_path,
         extra_schema=schema,
@@ -2702,7 +2739,7 @@ RETIRED_301_MAP = [
     ("/gate-repairs-preston", "/gate-repairs"),
     ("/window-cleaning-preston", "/window-cleaning"),
     ("/letting-agent-services", "/"),
-    ("/estate-agent-services", "/"),
+    ("/estate-agent-services", "/residential-property-maintenance"),
     ("/airbnb-property-maintenance", "/"),
     ("/landlord-garden-clearance-preston", "/"),
     ("/end-of-tenancy-garden-tidy-preston", "/"),
@@ -2745,9 +2782,64 @@ def build_redirects():
     print(f"wrote _redirects ({len(lines)} lines)")
 
 
+# Pages whose <title> or meta description changed on 2026-10-01.
+# Everything else keeps the previous sitemap lastmod. Redirect stubs are
+# not listed: they are noindex aliases, not pages to crawl.
+SITEMAP_LASTMOD = "2026-08-30"
+SITEMAP_LASTMOD_REFRESHED = "2026-10-01"
+SITEMAP_REFRESHED_PATHS = {
+    "/",
+    "/about-greenfix",
+    "/gate-repairs",
+    "/exterior-structural-repairs",
+    "/brick-repointing",
+    "/slab-relaying",
+    "/church-grounds-maintenance-preston",
+    "/commercial-maintenance",
+    "/pressure-washing",
+    "/garden-maintenance",
+    "/window-cleaning",
+    "/window-repairs",
+    "/garden-tidy-ups",
+    "/blog/how-much-does-brick-repointing-cost",
+    "/blog/best-time-of-year-to-trim-hedges",
+    "/blog/why-do-patio-slabs-become-uneven-over-time",
+    "/blog/why-is-my-patio-sinking-or-cracking",
+    "/blog/why-does-my-door-stick-or-drag-on-the-floor",
+}
+
+# Dead URLs Google still lists. GitHub Pages ignores _redirects and
+# .htaccess, so each old path is an HTML file. The Pages workflow copies
+# name.html to name/index.html, which is what answers /name.
+GITHUB_PAGES_REDIRECTS = [
+    ("garden-maintenance-preston.html", "/garden-maintenance", "Garden Maintenance Preston"),
+    ("driveway-cleaning-preston.html", "/pressure-washing", "Driveway Cleaning Preston"),
+    ("window-cleaning-preston.html", "/window-cleaning", "Window Cleaning Preston"),
+    ("estate-agent-services.html", "/residential-property-maintenance", "Estate Agent Services"),
+    ("garden-clearance-penwortham.html", "/garden-tidy-ups", "Garden Clearance Penwortham"),
+]
+
+
+def build_github_pages_redirects():
+    for filename, target_path, label in GITHUB_PAGES_REDIRECTS:
+        target = f"{DOMAIN}{target_path}"
+        html = f"""<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Moved: {esc(label)} | GreenFix</title>
+<link rel="canonical" href="{target}">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url={target}">
+<script>location.replace("{target}");</script>
+</head>
+<body><p>This page has moved to <a href="{target}">{esc(label)}</a>.</p></body>
+</html>
+"""
+        write_page(filename, html)
+
+
 def build_sitemap():
-    from datetime import date
-    today = date.today().isoformat()
     urls = [("/", "1.0")]
     for service in SERVICES:
         urls.append((f"/{service['slug']}", "0.8"))
@@ -2763,9 +2855,10 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
+        lastmod = SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS else SITEMAP_LASTMOD
         entries.append(f"""  <url>
     <loc>{DOMAIN}{path}</loc>
-    <lastmod>{today}</lastmod>
+    <lastmod>{lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>{priority}</priority>
   </url>""")
@@ -3170,6 +3263,7 @@ def main():
     build_sector_pages()
     build_blog()
     build_redirects()
+    build_github_pages_redirects()
     build_sitemap()
     print("Done.")
 
