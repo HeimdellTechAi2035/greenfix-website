@@ -24,7 +24,9 @@ PHONE_TEL = "+447447804597"
 EMAIL = "admin@greenfixexterior-care.co.uk"
 ADDRESS_LOCALITY = "Preston"
 ADDRESS_REGION = "Lancashire"
-AREA_SERVED = ["Preston"]
+# Penwortham, Fulwood and Leyland confirmed by the owner on 2 Oct 2026.
+AREA_SERVED = ["Preston", "Penwortham", "Fulwood", "Leyland"]
+AREA_SERVED_TEXT = "Preston, Lancashire, including Penwortham, Fulwood and Leyland"
 FOUNDED = "2026"
 INSURANCE = "£5M Public Liability Insurance"
 WASTE_CARRIER = "Environment Agency registered Waste Carrier"
@@ -96,11 +98,11 @@ CLUSTERS = [
         "key": "repairs",
         "label": "Repairs & Maintenance",
         "slugs": ["exterior-structural-repairs", "repairs-and-maintenance",
-                  "brick-repointing", "brick-repairs", "garden-wall-repairs",
+                  "brick-repointing", "lime-repointing", "brick-repairs", "garden-wall-repairs",
                   "fence-repairs", "fence-panel-replacement", "gate-repairs", "patio-repairs",
                   "paving-repairs", "slab-relaying", "roof-tile-repairs",
                   "drain-repairs", "drainage-repairs", "window-repairs",
-                  "door-repairs", "residential-property-maintenance",
+                  "door-repairs", "porch-repairs", "residential-property-maintenance",
                   "planned-preventative-maintenance", "drone-property-inspections"],
     },
 ]
@@ -376,7 +378,7 @@ SERVICES = [
         tagline="Restoring worn or crumbling mortar joints",
         price="From £30 per m²", price_note="guide price only, confirmed after assessment",
         meta_title="Brick Repointing Preston | Crumbling Mortar Fixed from £30/m²",
-        meta_description="Mortar between your bricks crumbling? GreenFix repoints eroded joints in Preston to restore weatherproofing. From £30 per m².",
+        meta_description="Mortar between your bricks crumbling? GreenFix repoints eroded joints in Preston to restore weatherproofing, including lime mortar on request. From £30 per m².",
         intro="Repointing repairs the mortar joints between bricks, not the bricks themselves. Over time, mortar erodes, crumbles or falls out, letting water into the wall and weakening it. We rake out the damaged mortar and repoint with a matching mix, restoring both the weatherproofing and the appearance of the brickwork. If the bricks themselves are cracked or damaged rather than the mortar, see our brick repairs page instead.",
         cards=[
             ("Mortar Joint Repair", "Eroded, crumbling or missing mortar raked out and repointed to stop water getting into the wall."),
@@ -393,8 +395,10 @@ SERVICES = [
              "We match the mortar mix and colour to the existing pointing as closely as possible for a consistent finish."),
             ("How is repointing priced?",
              "From £30 per m² as a guide price, confirmed once we've assessed the area and extent of the work needed."),
+            ("Do you offer lime mortar repointing?",
+             "Yes. We repoint in lime mortar on request, which is often the right choice for older, softer brickwork. See our lime repointing page for details."),
         ],
-        related=["brick-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
+        related=["lime-repointing", "brick-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
         schema_desc="Brick repointing to repair eroded or crumbling mortar joints, priced per square metre, across Preston.",
     ),
     dict(
@@ -699,8 +703,8 @@ SERVICES = [
         h1="Door Repairs in Preston",
         tagline="Sticking, damaged or draughty exterior doors fixed",
         price="From £65", price_note="guide price only, confirmed after assessment",
-        meta_title="Door Repairs Preston | From £65 | GreenFix",
-        meta_description="Exterior door repairs in Preston — sticking doors, damaged frames, hinges and locks fixed. From £65.",
+        meta_title="Door & Porch Repairs Preston | From £65 | GreenFix",
+        meta_description="Sticking doors, damaged frames, hinges, locks and porch repairs in Preston. Door repairs from £65 guide price, confirmed after a free assessment.",
         intro="A sticking, dragging or draughty exterior door is usually a hinge, frame, or alignment problem rather than something needing a full replacement. We repair external doors for homes and businesses across Preston — fixing hinges, locks, damaged frame sections, and worn weatherproofing seals so the door opens, closes and locks properly again.",
         cards=[
             ("Sticking & Dragging Doors", "Doors that stick, drag on the floor, or won't close properly adjusted and re-hung correctly."),
@@ -717,9 +721,61 @@ SERVICES = [
              "Yes, we repair all exterior doors, domestic and commercial."),
             ("How much does a door repair cost?",
              "From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than a damaged frame section."),
+            ("Do you repair porches as well?",
+             "Yes. We carry out porch repairs too. See our porch repairs page; porch work is quoted after a free assessment."),
         ],
-        related=["window-repairs", "gate-repairs", "repairs-and-maintenance"],
+        related=["porch-repairs", "window-repairs", "gate-repairs", "repairs-and-maintenance"],
         schema_desc="Repair of sticking, damaged or draughty exterior doors for homes and businesses across Preston.",
+    ),
+    dict(
+        slug="porch-repairs", cluster="repairs",
+        h1="Porch Repairs in Preston",
+        tagline="Damaged, leaking or draughty porches put right",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Porch Repairs Preston | Free Quote | GreenFix",
+        meta_description="Porch repairs in Preston for homes and businesses: damaged frames, sticking porch doors, failed seals and weatherproofing. Free assessment and quote.",
+        intro="A porch takes the brunt of the weather at the front of the house, so frames, doors and seals wear out faster than the rest of the property. GreenFix repairs porches for homes and businesses across Preston, alongside our door and window repair work, so you deal with one contractor for the whole job. Every porch is different, so we look at the problem first and give you a clear quote before any work starts.",
+        cards=[
+            ("Porch Doors", "Sticking, dropped or draughty porch doors adjusted and repaired so they open, close and lock properly."),
+            ("Frames & Seals", "Damaged frame sections and failed seals repaired to stop draughts and water getting in."),
+            ("Weatherproofing", "Leaks and gaps around the porch traced and sealed, so the space stays dry."),
+            ("Free Assessment", "We look at the porch first and quote in writing before starting, so you know the cost up front."),
+        ],
+        faqs=[
+            ("Do you repair porches?",
+             "Yes. GreenFix carries out porch repairs for homes and businesses across Preston, alongside our door and window repairs."),
+            ("How much does a porch repair cost?",
+             "Porch repairs are quoted after a free assessment, because the cost depends on what needs fixing. Call or WhatsApp photos to 07447804597 for a quick first view."),
+            ("Can you repair the porch door at the same time?",
+             "Yes. Porch doors are repaired the same way as other exterior doors: hinges, locks, frames and seals."),
+        ],
+        related=["door-repairs", "window-repairs", "roof-tile-repairs", "repairs-and-maintenance"],
+        schema_desc="Porch repairs for homes and businesses in Preston, including porch doors, frames, seals and weatherproofing.",
+    ),
+    dict(
+        slug="lime-repointing", cluster="repairs",
+        h1="Lime Repointing in Preston",
+        tagline="Lime mortar repointing for older brickwork",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Lime Repointing Preston | Lime Mortar Pointing | GreenFix",
+        meta_description="Lime mortar repointing in Preston for older and softer brickwork. Eroded joints raked out and repointed in lime. Free assessment and quote.",
+        intro="Lime repointing replaces worn mortar joints with a lime-based mortar instead of a modern cement mix. Lime is softer and more breathable than cement, which is why it's generally used on older, softer brickwork: it lets moisture escape through the joints rather than through the bricks. GreenFix repoints in lime mortar on request across Preston. We assess the wall first, rake out the failed mortar and repoint in lime, and give you a clear quote before work starts.",
+        cards=[
+            ("Lime Mortar on Request", "Joints repointed in lime mortar rather than a cement mix, where that's what the brickwork needs."),
+            ("Raked Out Properly", "Failed and crumbling mortar raked out to a sound depth before repointing."),
+            ("Breathable Joints", "Lime lets moisture escape through the joints, helping protect softer bricks from damp and frost damage."),
+            ("Free Assessment", "We look at the wall first and quote before starting, so you know the cost up front."),
+        ],
+        faqs=[
+            ("Do you offer lime repointing?",
+             "Yes. GreenFix repoints in lime mortar on request across Preston."),
+            ("Why use lime mortar instead of cement?",
+             "Lime mortar is softer and more breathable than cement, so it's generally used on older, softer brickwork. A hard cement mortar can trap moisture and cause the bricks around it to crack or spall."),
+            ("How much does lime repointing cost?",
+             "Lime repointing is quoted after a free assessment of the wall. Standard brick repointing has a guide price from £30 per m²; see our brick repointing page."),
+        ],
+        related=["brick-repointing", "brick-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
+        schema_desc="Lime mortar repointing for older and softer brickwork in Preston.",
     ),
     dict(
         slug="internal-window-cleaning", cluster="grounds",
@@ -943,8 +999,8 @@ def render_head(*, title, description, canonical_path, og_image=None, extra_sche
 
 
 def local_business_schema():
-    """Sitewide LocalBusiness block. areaServed stays Preston only until
-    extra towns are confirmed by the owner."""
+    """Sitewide LocalBusiness block. areaServed lists Preston plus the towns
+    the owner confirmed on 2 Oct 2026 (Penwortham, Fulwood, Leyland)."""
     data = {
         "@context": "https://schema.org",
         "@type": ["HomeAndConstructionBusiness", "GeneralContractor", "LandscapingBusiness"],
@@ -977,7 +1033,10 @@ def local_business_schema():
         },
         "hasMap": GOOGLE_MAPS_SHARE_URL,
         "openingHoursSpecification": OPENING_HOURS_SPEC,
-        "areaServed": [{"@type": "City", "name": name} for name in AREA_SERVED],
+        "areaServed": [
+            {"@type": "City" if name == "Preston" else "Place", "name": name}
+            for name in AREA_SERVED
+        ],
         "foundingDate": FOUNDED,
         "priceRange": "££",
         "currenciesAccepted": "GBP",
@@ -1085,6 +1144,9 @@ def render_header():
     sector_links = "\n                ".join(
         f'<a href="{sector_url(fname)}">{esc(label)}</a>' for fname, label in SECTORS
     )
+    town_links = "\n                ".join(
+        f'<a href="/{t["slug"]}">{esc(t["name"])}</a>' for t in TOWN_PAGES
+    )
     return f"""    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <div class="header-content">
@@ -1104,6 +1166,12 @@ def render_header():
                     <span class="nav-label" tabindex="0">Sectors We Work With</span>
                     <div class="mega-panel">
                 {sector_links}
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <span class="nav-label" tabindex="0">Areas</span>
+                    <div class="mega-panel">
+                {town_links}
                     </div>
                 </div>
                 <a href="/pricing-guide">Pricing</a>
@@ -1130,6 +1198,9 @@ def render_footer():
     sector_lis = "\n                    ".join(
         f'<li><a href="{sector_url(fname)}">{esc(label)}</a></li>' for fname, label in SECTORS
     )
+    town_lis = "\n                    ".join(
+        f'<li><a href="/{t["slug"]}">{esc(t["name"])}</a></li>' for t in TOWN_PAGES
+    )
 
     return f"""    <footer>
         <div class="footer-grid">
@@ -1149,6 +1220,10 @@ def render_footer():
                 <h4>Sectors We Work With</h4>
                 <ul>
                     {sector_lis}
+                </ul>
+                <h4 style="margin-top:1.25rem;">Areas We Cover</h4>
+                <ul>
+                    {town_lis}
                 </ul>
             </div>
             <div class="footer-col">
@@ -1428,7 +1503,7 @@ HOMEPAGE_FAQS = [
     ("Do you only do garden work, or repairs as well?",
      "Both. GreenFix covers grounds and garden care (mowing, hedges, tidy-ups, pressure washing) and exterior property repairs (brickwork, fencing, gates, paving, roofing, drainage, windows and doors) for homes and businesses."),
     ("What areas do you cover?",
-     f"Preston."),
+     f"{AREA_SERVED_TEXT}."),
     ("Are you insured?",
      f"Yes, {BUSINESS_NAME} holds {INSURANCE} and is a {WASTE_CARRIER}."),
     ("How does pricing work?",
@@ -1461,6 +1536,12 @@ def render_homepage():
 
     faqs_html = "\n                ".join(
         f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in HOMEPAGE_FAQS
+    )
+
+    town_cards = "\n                ".join(
+        f'<a class="card" style="text-decoration:none;display:block;" href="/{t["slug"]}">'
+        f'<h3>{esc(t["name"])}</h3><p>{esc(t["card"])}</p></a>'
+        for t in TOWN_PAGES
     )
 
     schema = "\n".join([
@@ -1540,6 +1621,16 @@ def render_homepage():
             <h2 class="center">Frequently Asked Questions</h2>
             <div class="grid grid-2">
                 {faqs_html}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="center">Areas We Cover</h2>
+            <p class="lede center" style="margin-bottom:1.5rem;">We work across {AREA_SERVED_TEXT}.</p>
+            <div class="grid grid-3">
+                {town_cards}
             </div>
         </div>
     </section>
@@ -1856,7 +1947,7 @@ KNOWLEDGE_BASE_FAQS = [
     ("Is GreenFix a gardening company or a construction company?",
      "Both — GreenFix covers grounds and garden care as well as exterior construction and structural repairs, for homes and businesses."),
     ("What areas does GreenFix cover?",
-     "Preston."),
+     f"{AREA_SERVED_TEXT}."),
     ("Is GreenFix insured?",
      f"Yes, GreenFix holds {INSURANCE} and is a {WASTE_CARRIER}."),
     ("How much does a service cost?",
@@ -1921,7 +2012,7 @@ def render_knowledge_base():
     <section class="section-white">
         <div class="container">
             <h2>Service Area</h2>
-            <p class="lede">Preston.</p>
+            <p class="lede">{AREA_SERVED_TEXT}. See our <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a> pages.</p>
         </div>
     </section>
 
@@ -2288,6 +2379,234 @@ def render_sector_page(sector):
 def build_sector_pages():
     for sector in SECTOR_PAGES:
         write_page(sector["filename"], render_sector_page(sector))
+
+
+# ---------------------------------------------------------------------------
+# Town pages — Penwortham, Fulwood and Leyland, confirmed by the owner on
+# 2 Oct 2026. No local jobs, reviews or street lists are claimed: add real
+# examples only once they exist and the customer has agreed.
+# ---------------------------------------------------------------------------
+
+TOWN_PAGES = [
+    dict(
+        slug="penwortham", name="Penwortham",
+        card="Our home base: garden care and exterior repairs minutes away.",
+        meta_title="Garden Maintenance & Exterior Repairs Penwortham | GreenFix",
+        meta_description="GreenFix is based in Penwortham. Garden maintenance, tidy-ups, hedge trimming, fence, gate, patio and brick repairs for local homes. Free quotes.",
+        h1="Garden maintenance and exterior repairs in Penwortham",
+        intro="GreenFix Exterior Care is based in Penwortham, so local homes and businesses get a contractor who's minutes away, not across the county. We look after gardens and grounds and carry out exterior repairs, from a one-off tidy-up of an overgrown garden to fixing a gate that won't latch.",
+        services_heading="What we do in Penwortham",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40 a visit: mowing, edging, weeding and seasonal upkeep, weekly, fortnightly or one-off."),
+            ("Garden tidy-ups and clearance", "/garden-tidy-ups", "from £80: overgrown gardens cut back, cleared and the waste taken away."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, and lawn mowing from £20."),
+            ("Pressure washing", "/pressure-washing", "from £95: driveways, patios and paths cleared of moss and algae."),
+            ("Fence and gate repairs", "/fence-repairs", "from £85 and £65: broken panels, rotten posts, sagging or sticking gates."),
+            ("Brick repointing", "/brick-repointing", "from £30/m², and patio repairs and slab relaying from £95."),
+        ],
+        price_note="All prices are guide prices, confirmed after a free look at the job.",
+        extra_heading="Why local homeowners use GreenFix",
+        extra=[
+            "One contractor for both the garden and the repairs.",
+            "£5M public liability insurance, and we're a registered waste carrier, so garden waste is disposed of properly.",
+            "Monday to Saturday, with replies within 24 hours.",
+        ],
+        faqs=[
+            ("Do you cover Penwortham?",
+             "Yes. GreenFix Exterior Care is based in Penwortham and covers Penwortham, Preston, Fulwood and Leyland."),
+            ("Can you clear an overgrown garden in one visit?",
+             "Most gardens can be reset in a single tidy-up visit from £80; very large or heavily overgrown plots may need longer. We'll confirm after a free look."),
+            ("Do you take the garden waste away?",
+             "Yes. We're an Environment Agency registered waste carrier."),
+        ],
+        related=["garden-maintenance", "garden-tidy-ups", "hedge-trimming", "fence-repairs", "gate-repairs", "brick-repointing"],
+    ),
+    dict(
+        slug="fulwood", name="Fulwood",
+        card="Garden care, tidy-ups between tenancies and exterior repairs.",
+        meta_title="Garden Maintenance & Exterior Repairs Fulwood, Preston | GreenFix",
+        meta_description="Garden care, hedge trimming, window cleaning and fence, gate, brick and patio repairs for Fulwood homes, landlords and businesses. Free quotes.",
+        h1="Garden maintenance and exterior repairs in Fulwood",
+        intro="Fulwood has a lot of family homes and rented property, which means a lot of gardens, fences and drives that need regular attention. GreenFix Exterior Care looks after them: regular garden care, one-off tidy-ups, and exterior repairs from one contractor.",
+        services_heading="What we offer in Fulwood",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40, and hedge trimming from £40."),
+            ("Garden tidy-ups", "/garden-tidy-ups", "from £80, useful between tenancies."),
+            ("Window cleaning", "/window-cleaning", "free quote; external from £1.10 per pane."),
+            ("Fence, gate and garden wall repairs", "/fence-repairs", "from £50–£85."),
+            ("Patio and paving repairs", "/patio-repairs", "from £65, and pressure washing from £95."),
+        ],
+        price_note="Guide prices, confirmed after a free look.",
+        extra_heading="Landlords and letting agents",
+        extra=[
+            "Our residential property maintenance service covers grounds care and exterior repairs across a portfolio, with one point of contact.",
+        ],
+        faqs=[
+            ("Do you cover Fulwood?",
+             "Yes. GreenFix Exterior Care covers Fulwood, along with Preston, Penwortham and Leyland."),
+            ("Do you work for landlords and letting agents in Fulwood?",
+             "Yes. See residential property maintenance for portfolio work."),
+            ("Can you tidy a garden between tenancies?",
+             "Yes. One-off garden tidy-ups start from £80."),
+        ],
+        related=["garden-maintenance", "garden-tidy-ups", "window-cleaning", "fence-repairs", "patio-repairs", "residential-property-maintenance"],
+    ),
+    dict(
+        slug="leyland", name="Leyland",
+        card="Garden and grounds care plus fence, gate, paving and brick repairs.",
+        meta_title="Garden Maintenance & Property Repairs Leyland | GreenFix",
+        meta_description="Garden maintenance, hedge trimming, pressure washing and fence, gate, brick and patio repairs for homes and businesses in Leyland. Free quotes.",
+        h1="Garden maintenance and property repairs in Leyland",
+        intro="GreenFix Exterior Care covers Leyland from our base in Penwortham, a short drive away. We handle regular garden and grounds care for homes and businesses, and the exterior repairs that tend to pile up: fences, gates, patios, paving and brickwork.",
+        services_heading="Services in Leyland",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "(from £40) and lawn mowing (from £20) on a regular or one-off basis."),
+            ("Grounds maintenance for business premises", "/grounds-maintenance", "(from £40), including commercial and industrial units."),
+            ("Pressure washing", "/pressure-washing", "(from £95) for driveways, patios, paths and forecourts."),
+            ("Fence repairs and panel replacement", "/fence-repairs", "(from £85) and gate repairs (from £65)."),
+            ("Paving repairs", "/paving-repairs", "(from £65), slab relaying (from £95) and brick repointing (from £30/m²)."),
+        ],
+        price_note="Guide prices only, confirmed after a free assessment.",
+        extra_heading="For businesses and landlords",
+        extra=[
+            "If you manage several properties or a commercial site in Leyland, we can set up scheduled grounds care and planned preventative maintenance, so problems are caught early rather than when tenants or customers notice.",
+        ],
+        faqs=[
+            ("Do you cover Leyland?",
+             "Yes. GreenFix Exterior Care covers Leyland, along with Preston, Penwortham and Fulwood."),
+            ("Do you do commercial grounds maintenance in Leyland?",
+             "Yes. Grounds maintenance for business premises starts from £40 per visit, with scheduled contracts available."),
+            ("How quickly can you quote?",
+             "We reply within 24 hours and can usually arrange a free assessment soon after."),
+        ],
+        related=["garden-maintenance", "grounds-maintenance", "pressure-washing", "fence-repairs", "paving-repairs", "planned-preventative-maintenance"],
+    ),
+]
+
+
+def town_service_schema(town):
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": f"{DOMAIN}/{town['slug']}#service",
+        "name": f"Garden maintenance and exterior repairs in {town['name']}",
+        "serviceType": "Garden maintenance and exterior property repairs",
+        "description": town["meta_description"],
+        "provider": {"@id": BUSINESS_ID},
+        "areaServed": {"@type": "Place", "name": town["name"]},
+        "url": f"{DOMAIN}/{town['slug']}",
+    }, indent=2)
+
+
+def render_town_page(town):
+    canonical_path = f"/{town['slug']}"
+    crumbs = [("Home", "/"), ("Areas We Cover", None), (town["name"], None)]
+    schema = "\n".join([
+        f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
+        f'    <script type="application/ld+json">\n{breadcrumb_schema(crumbs)}\n    </script>',
+        f'    <script type="application/ld+json">\n{town_service_schema(town)}\n    </script>',
+        f'    <script type="application/ld+json">\n{faq_schema(town["faqs"])}\n    </script>',
+    ])
+    head = render_head(
+        title=town["meta_title"],
+        description=town["meta_description"],
+        canonical_path=canonical_path,
+        extra_schema=schema,
+    )
+    services_html = "\n                ".join(
+        f'<div class="card"><h3><a href="{href}" style="text-decoration:none;color:var(--dark-green);">{esc(name)}</a></h3><p>{esc(text[0].upper() + text[1:]) if text[0] != "(" else esc(text)}</p></div>'
+        for name, href, text in town["services"]
+    )
+    extra_html = "\n                    ".join(f"<li>{esc(x)}</li>" for x in town["extra"])
+    faqs_html = "\n                ".join(
+        f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in town["faqs"]
+    )
+    related_html = "\n                ".join(
+        f'<a href="/{slug}">{esc(SERVICE_BY_SLUG[slug]["h1"].split(" in ")[0])}</a>'
+        for slug in town["related"] if slug in SERVICE_BY_SLUG
+    )
+    other_towns = "\n                ".join(
+        f'<a href="/{t["slug"]}">{esc(t["name"])}</a>' for t in TOWN_PAGES if t["slug"] != town["slug"]
+    )
+    body = f"""{render_breadcrumb_html(crumbs)}
+    <section id="main-content" class="hero">
+        <div class="hero-content">
+            <h1>{esc(town["h1"])}</h1>
+            <p class="tagline">Grounds &amp; Garden Care and Exterior Repairs, for Homes and Businesses</p>
+            <div class="button-group">
+                <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
+                <a href="/#quote-form" class="btn btn-secondary">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <p class="lede">{esc(town["intro"])}</p>
+        </div>
+    </section>
+{render_trust_strip()}
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">{esc(town["services_heading"])}</h2>
+            <div class="grid grid-2">
+                {services_html}
+            </div>
+            <p class="lede center" style="margin-top:1.5rem;">{esc(town["price_note"])}</p>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container" style="max-width:760px;">
+            <h2 class="center">{esc(town["extra_heading"])}</h2>
+            <div class="card">
+                <ul>
+                    {extra_html}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-grey">
+        <div class="container">
+            <h2 class="center">Frequently Asked Questions</h2>
+            <div class="grid grid-2">
+                {faqs_html}
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="center">Related Services</h2>
+            <div class="related-links" style="justify-content:center;">
+                {related_html}
+            </div>
+            <h2 class="center" style="margin-top:2rem;">Other Areas We Cover</h2>
+            <div class="related-links" style="justify-content:center;">
+                <a href="/">Preston</a>
+                {other_towns}
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Get a Free Quote in {esc(town["name"])}</h2>
+            <p>Call or WhatsApp {PHONE_DISPLAY}, email <a href="mailto:{EMAIL}" style="color:inherit;">{EMAIL}</a>, or use our quote form &mdash; we respond within 24 hours.</p>
+            <div class="button-group">
+                <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
+                <a href="/#quote-form" class="btn btn-secondary">Request a Free Quote</a>
+            </div>
+        </div>
+    </section>
+"""
+    return render_page(head_html=head, body_html=body)
+
+
+def build_town_pages():
+    for town in TOWN_PAGES:
+        write_page(f"{town['slug']}.html", render_town_page(town))
 
 
 # ---------------------------------------------------------------------------
@@ -2718,17 +3037,17 @@ def build_blog():
 
 RETIRED_301_MAP = [
     # 12 town garden-maintenance pages -> /garden-maintenance
-    *[(f"/garden-maintenance-{t}", "/garden-maintenance") for t in [
+    *[(f"/garden-maintenance-{t}", f"/{t}" if t in ("fulwood", "leyland", "penwortham") else "/garden-maintenance") for t in [
         "bamber-bridge", "blackburn", "blackpool", "chorley", "freckleton",
         "fulwood", "kirkham", "leyland", "longton", "penwortham", "preston",
         "walton-le-dale",
     ]],
     ("/grass-cutting-preston", "/lawn-mowing"),
-    ("/grass-cutting-leyland", "/lawn-mowing"),
+    ("/grass-cutting-leyland", "/leyland"),
     ("/hedge-trimming-preston", "/hedge-trimming"),
     ("/garden-clearance-preston", "/garden-tidy-ups"),
-    ("/garden-clearance-penwortham", "/garden-tidy-ups"),
-    ("/garden-clearance-leyland", "/garden-tidy-ups"),
+    ("/garden-clearance-penwortham", "/penwortham"),
+    ("/garden-clearance-leyland", "/leyland"),
     ("/weed-control-preston", "/garden-maintenance"),
     ("/gutter-clearing-preston", "/repairs-and-maintenance"),
     ("/jet-washing-preston", "/pressure-washing"),
@@ -2765,6 +3084,8 @@ def build_redirects():
     for fname, _ in SECTORS:
         clean = "/" + fname[:-5]
         lines.append(f"{clean}  /{fname}  200")
+    for t in TOWN_PAGES:
+        lines.append(f"/{t['slug']}  /{t['slug']}.html  200")
     lines.append("/about-greenfix  /about-greenfix.html  200")
     lines.append("/before-after  /before-after.html  200")
     lines.append("/pricing-guide  /pricing-guide.html  200")
@@ -2808,6 +3129,13 @@ SITEMAP_REFRESHED_PATHS = {
     "/blog/why-does-my-door-stick-or-drag-on-the-floor",
 }
 
+# Pages added or changed after Andrew confirmed towns and services (2 Oct 2026).
+SITEMAP_LASTMOD_CONFIRMED = "2026-10-02"
+SITEMAP_CONFIRMED_PATHS = {
+    "/", "/knowledge-base", "/pricing-guide", "/brick-repointing", "/door-repairs",
+    "/porch-repairs", "/lime-repointing", "/penwortham", "/fulwood", "/leyland",
+}
+
 # Dead URLs Google still lists. GitHub Pages ignores _redirects and
 # .htaccess, so each old path is an HTML file. The Pages workflow copies
 # name.html to name/index.html, which is what answers /name.
@@ -2816,7 +3144,7 @@ GITHUB_PAGES_REDIRECTS = [
     ("driveway-cleaning-preston.html", "/pressure-washing", "Driveway Cleaning Preston"),
     ("window-cleaning-preston.html", "/window-cleaning", "Window Cleaning Preston"),
     ("estate-agent-services.html", "/residential-property-maintenance", "Estate Agent Services"),
-    ("garden-clearance-penwortham.html", "/garden-tidy-ups", "Garden Clearance Penwortham"),
+    ("garden-clearance-penwortham.html", "/penwortham", "Garden Maintenance & Exterior Repairs Penwortham"),
 ]
 
 
@@ -2845,6 +3173,8 @@ def build_sitemap():
         urls.append((f"/{service['slug']}", "0.8"))
     for fname, _ in SECTORS:
         urls.append(("/" + fname[:-5], "0.8"))
+    for t in TOWN_PAGES:
+        urls.append((f"/{t['slug']}", "0.8"))
     urls.append(("/about-greenfix", "0.6"))
     urls.append(("/before-after", "0.6"))
     urls.append(("/pricing-guide", "0.8"))
@@ -2855,7 +3185,9 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        lastmod = SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS else SITEMAP_LASTMOD
+        lastmod = (SITEMAP_LASTMOD_CONFIRMED if path in SITEMAP_CONFIRMED_PATHS
+                   else SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS
+                   else SITEMAP_LASTMOD)
         entries.append(f"""  <url>
     <loc>{DOMAIN}{path}</loc>
     <lastmod>{lastmod}</lastmod>
@@ -3261,6 +3593,7 @@ def main():
     build_pricing_guide()
     build_knowledge_base()
     build_sector_pages()
+    build_town_pages()
     build_blog()
     build_redirects()
     build_github_pages_redirects()

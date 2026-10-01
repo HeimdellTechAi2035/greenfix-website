@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://greenfixexterior-care.co.uk/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/brick-repointing</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -134,7 +134,19 @@
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/door-repairs</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/porch-repairs</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/lime-repointing</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -229,6 +241,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://greenfixexterior-care.co.uk/penwortham</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/fulwood</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenfixexterior-care.co.uk/leyland</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://greenfixexterior-care.co.uk/about-greenfix</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -242,13 +272,13 @@
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/pricing-guide</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://greenfixexterior-care.co.uk/knowledge-base</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
