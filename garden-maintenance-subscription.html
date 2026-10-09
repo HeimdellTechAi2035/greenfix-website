@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Maintenance Subscription Preston | From £29/month | GreenFix</title>
+    <meta name="description" content="Sign up for a monthly garden maintenance subscription with GreenFix Exterior Care. Lawn mowing from £29/month. Direct Debit, no contract lock-in. Preston and surrounding areas.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#1a5d3a">
+    <link rel="canonical" href="https://greenfixexterior-care.co.uk/garden-maintenance-subscription">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/assets/site.css">
+    <meta property="og:title" content="Garden Maintenance Subscription Preston | From £29/month | GreenFix">
+    <meta property="og:description" content="Monthly garden maintenance subscription — lawn, hedges and weeding. From £29/month. Direct Debit, no lock-in.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://greenfixexterior-care.co.uk/garden-maintenance-subscription">
+    <meta property="og:image" content="https://greenfixexterior-care.co.uk/hero-commercial-grounds-1200.jpg">
+    <meta property="og:site_name" content="GreenFix Exterior Care">
+    <meta property="og:locale" content="en_GB">
+    <style>
+      /* ---- Subscription page custom styles ---- */
+      .sub-hero {
+        background: linear-gradient(135deg, var(--dark-green) 0%, var(--light-green) 100%);
+        color: #fff;
+        padding: 3.5rem 1.25rem 2.5rem;
+        text-align: center;
+      }
+      .sub-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.6rem; }
+      .sub-hero p  { font-size: 1.05rem; opacity: 0.92; max-width: 560px; margin: 0 auto; }
+
+      .plans-section {
+        background: var(--light-grey);
+        padding: 2.5rem 1.25rem;
+      }
+      .plans-section h2 {
+        text-align: center;
+        color: var(--dark-green);
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+      .plans-section .plans-sub {
+        text-align: center;
+        color: var(--grey);
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+      }
+
+      .plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .plan-card {
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        border-radius: 1rem;
+        padding: 1.75rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        cursor: pointer;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .plan-card:hover, .plan-card.selected {
+        border-color: var(--dark-green);
+        box-shadow: 0 0 0 3px rgba(26,93,58,0.15);
+      }
+      .plan-card.featured {
+        border-color: var(--light-green);
+        position: relative;
+      }
+      .plan-badge {
+        position: absolute;
+        top: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--dark-green);
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.8rem;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .plan-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--dark-green);
+      }
+      .plan-price {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--charcoal);
+        line-height: 1;
+      }
+      .plan-price span { font-size: 0.95rem; font-weight: 400; color: var(--grey); }
+      .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        flex: 1;
+      }
+      .plan-features li {
+        font-size: 0.9rem;
+        color: var(--charcoal);
+        padding-left: 1.4rem;
+        position: relative;
+      }
+      .plan-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--dark-green);
+        font-weight: 700;
+      }
+      .plan-select-btn {
+        display: block;
+        width: 100%;
+        padding: 0.65rem 1rem;
+        border-radius: 0.55rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid var(--dark-green);
+        background: #fff;
+        color: var(--dark-green);
+        transition: background 0.15s, color 0.15s;
+      }
+      .plan-card.selected .plan-select-btn,
+      .plan-select-btn:hover {
+        background: var(--dark-green);
+        color: #fff;
+      }
+
+      /* ---- Signup form ---- */
+      #signup-form-section {
+        display: none;
+        padding: 2.5rem 1.25rem;
+        background: #fff;
+      }
+      #signup-form-section.visible { display: block; }
+
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .form-container h2 {
+        color: var(--dark-green);
+        font-size: 1.3rem;
+        margin-bottom: 0.25rem;
+      }
+      .form-container .selected-plan-badge {
+        display: inline-block;
+        background: var(--dark-green);
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.2rem 0.75rem;
+        border-radius: 999px;
+        margin-bottom: 1.25rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+      .form-group label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--charcoal);
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        border: 1.5px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.95rem;
+        font-family: inherit;
+        color: var(--charcoal);
+        background: #fff;
+        transition: border-color 0.15s;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--dark-green);
+        box-shadow: 0 0 0 2px rgba(26,93,58,0.12);
+      }
+      .form-group textarea { resize: vertical; min-height: 70px; }
+
+      .form-section-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--grey);
+        margin: 1.5rem 0 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .consent-box {
+        background: var(--light-grey);
+        border-radius: 0.65rem;
+        padding: 1rem 1.1rem;
+        margin: 1.25rem 0;
+        font-size: 0.85rem;
+        color: var(--grey);
+        line-height: 1.55;
+      }
+      .consent-box p { margin: 0.4rem 0; }
+      .consent-box strong { color: var(--charcoal); }
+
+      #submit-btn {
+        display: block;
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--dark-green);
+        color: #fff;
+        border: none;
+        border-radius: 0.65rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 1.25rem;
+        transition: background 0.15s;
+      }
+      #submit-btn:hover:not(:disabled) { background: var(--dark-green-hover); }
+      #submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+      #form-error {
+        display: none;
+        background: #fef0f0;
+        border: 1px solid #f5c0c0;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        color: #c0392b;
+      }
+      #form-error.visible { display: block; }
+
+      .how-it-works {
+        padding: 2.5rem 1.25rem;
+        background: var(--light-grey);
+      }
+      .how-it-works h2 {
+        text-align: center;
+        color: var(--dark-green);
+        font-size: 1.3rem;
+        margin-bottom: 1.75rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .step {
+        text-align: center;
+      }
+      .step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: var(--dark-green);
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+      }
+      .step h3 { font-size: 0.95rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.3rem; }
+      .step p  { font-size: 0.85rem; color: var(--grey); line-height: 1.5; }
+
+      .dd-guarantee {
+        background: #fff;
+        border: 1.5px solid #ddd;
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        max-width: 580px;
+        margin: 2rem auto 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        color: var(--grey);
+        line-height: 1.5;
+      }
+      .dd-guarantee-logo {
+        width: 48px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .dd-guarantee strong { color: var(--charcoal); display: block; margin-bottom: 0.15rem; }
+
+      /* Loading spinner overlay */
+      #loading-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(255,255,255,0.85);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      #loading-overlay.visible { display: flex; }
+      .spinner {
+        width: 40px; height: 40px;
+        border: 4px solid #e0e0e0;
+        border-top-color: var(--dark-green);
+        border-radius: 50%;
+        animation: spin 0.75s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      #loading-overlay p { font-weight: 600; color: var(--dark-green); }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="header-content">
+            <div class="header-row">
+                <a href="/" class="logo">
+                    <img src="/greenfix-exterior-care-logo.webp" alt="GreenFix Exterior Care logo" width="190" height="52" loading="eager">
+                </a>
+                <div class="header-actions">
+                    <a href="tel:+447447804597" class="phone-link">📞 <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+                </div>
+            </div>
+            <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+                <div class="nav-item">
+                <span class="nav-label" tabindex="0">Grounds &amp; Garden Care</span>
+                <div class="mega-panel">
+                <a href="/grounds-maintenance">Grounds Maintenance</a>
+                <a href="/garden-maintenance">Garden Maintenance</a>
+                <a href="/lawn-mowing">Lawn Mowing</a>
+                <a href="/hedge-trimming">Hedge Trimming</a>
+                <a href="/garden-tidy-ups">Garden Tidy-Ups</a>
+                <a href="/pressure-washing">Pressure Washing</a>
+                <a href="/window-cleaning">Window Cleaning</a>
+                <a href="/internal-window-cleaning">Internal Window Cleaning</a>
+                <a href="/external-window-cleaning">External Window Cleaning</a>
+                </div>
+            </div>
+                <div class="nav-item">
+                <span class="nav-label" tabindex="0">Repairs &amp; Maintenance</span>
+                <div class="mega-panel">
+                <a href="/exterior-structural-repairs">Exterior Structural Repairs</a>
+                <a href="/repairs-and-maintenance">Repairs and Maintenance</a>
+                </div>
+            </div>
+                <div class="nav-item">
+                    <span class="nav-label" tabindex="0">Sectors We Work With</span>
+                    <div class="mega-panel">
+                <a href="/commercial-maintenance">Commercial Maintenance</a>
+                <a href="/care-home-grounds-maintenance-preston">Care Homes</a>
+                <a href="/school-nursery-grounds-maintenance-preston">Schools &amp; Nurseries</a>
+                    </div>
+                </div>
+                <a href="/pricing-guide">Pricing</a>
+                <a href="/blog">Blog</a>
+                <a href="/about-greenfix">About</a>
+                <a href="/before-after">Gallery</a>
+                <a href="/garden-maintenance-subscription" style="color:var(--dark-green);font-weight:700;">Subscribe</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="loading-overlay" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <p>Setting up your subscription…</p>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="sub-hero">
+            <h1>Monthly Garden Maintenance — from £29/month</h1>
+            <p>Sign up today for a regular garden maintenance subscription. Set up your Direct Debit, choose your plan, and we&apos;ll take care of the rest. No lock-in contract — cancel anytime with 30 days notice.</p>
+        </section>
+
+        <!-- Plans -->
+        <section class="plans-section" id="plans">
+            <h2>Choose Your Package</h2>
+            <p class="plans-sub">All packages include a quick confirmation call to activate your subscription, as required under DMCC regulations.</p>
+
+            <div class="plans-grid" role="radiogroup" aria-label="Subscription packages">
+                <!-- Lawn -->
+                <div class="plan-card" id="card-LAWN" role="radio" aria-checked="false" tabindex="0" onclick="selectPlan('LAWN')" onkeydown="if(event.key==='Enter'||event.key===' '){selectPlan('LAWN')}">
+                    <p class="plan-name">🌿 Lawn Package</p>
+                    <p class="plan-price">£29 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li>Monthly lawn mowing &amp; edging</li>
+                        <li>Grass cuttings cleared and removed</li>
+                        <li>Lawn edges tidied</li>
+                        <li>Suitable for average-sized gardens</li>
+                    </ul>
+                    <button class="plan-select-btn" type="button">Select Lawn Package</button>
+                </div>
+
+                <!-- Silver -->
+                <div class="plan-card featured" id="card-SILVER" role="radio" aria-checked="false" tabindex="0" onclick="selectPlan('SILVER')" onkeydown="if(event.key==='Enter'||event.key===' '){selectPlan('SILVER')}">
+                    <span class="plan-badge">Most Popular</span>
+                    <p class="plan-name">🌳 Silver Package</p>
+                    <p class="plan-price">£49 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li>Everything in Lawn Package</li>
+                        <li>Hedge trimming (up to 3 hedges)</li>
+                        <li>All cuttings &amp; trimmings cleared</li>
+                        <li>Tidy garden borders</li>
+                    </ul>
+                    <button class="plan-select-btn" type="button">Select Silver Package</button>
+                </div>
+
+                <!-- Gold -->
+                <div class="plan-card" id="card-GOLD" role="radio" aria-checked="false" tabindex="0" onclick="selectPlan('GOLD')" onkeydown="if(event.key==='Enter'||event.key===' '){selectPlan('GOLD')}">
+                    <p class="plan-name">🏆 Gold Package</p>
+                    <p class="plan-price">£79 <span>/month</span></p>
+                    <ul class="plan-features">
+                        <li>Everything in Silver Package</li>
+                        <li>Weeding of beds &amp; borders</li>
+                        <li>Seasonal tidy-ups included</li>
+                        <li>Priority scheduling</li>
+                    </ul>
+                    <button class="plan-select-btn" type="button">Select Gold Package</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signup form (shown after plan selection) -->
+        <section id="signup-form-section" aria-labelledby="form-heading">
+            <div class="form-container">
+                <h2 id="form-heading">Your Details</h2>
+                <span class="selected-plan-badge" id="selected-plan-label">Lawn Package — £29/month</span>
+
+                <form id="signup-form" novalidate>
+                    <input type="hidden" id="plan-input" name="plan" value="">
+
+                    <p class="form-section-title">Your Information</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First name *</label>
+                            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name *</label>
+                            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile number *</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. 07700 900000" required>
+                        <small style="color:var(--grey);font-size:0.8rem;">We'll call this number to confirm your subscription.</small>
+                    </div>
+
+                    <p class="form-section-title">Garden / Service Address</p>
+
+                    <div class="form-group">
+                        <label for="addressLine1">Address line 1 *</label>
+                        <input type="text" id="addressLine1" name="addressLine1" autocomplete="address-line1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addressLine2">Address line 2</label>
+                        <input type="text" id="addressLine2" name="addressLine2" autocomplete="address-line2">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Town / City *</label>
+                            <input type="text" id="city" name="city" autocomplete="address-level2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Postcode *</label>
+                            <input type="text" id="postcode" name="postcode" autocomplete="postal-code" required style="text-transform:uppercase;">
+                        </div>
+                    </div>
+
+                    <p class="form-section-title">Preferences (optional)</p>
+
+                    <div class="form-group">
+                        <label for="preferredDay">Preferred visit day</label>
+                        <select id="preferredDay" name="preferredDay">
+                            <option value="">No preference</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accessNotes">Access notes</label>
+                        <textarea id="accessNotes" name="accessNotes" placeholder="Gate code, dog in garden, side gate location, etc."></textarea>
+                    </div>
+
+                    <div class="consent-box" role="note">
+                        <p><strong>What happens next:</strong></p>
+                        <p>1. You'll be taken to a secure <strong>GoCardless</strong> page to set up your Direct Debit mandate.</p>
+                        <p>2. Once complete, you'll be redirected to your customer portal.</p>
+                        <p>3. We'll call you on the mobile number above to confirm your subscription — this is a quick, legally required confirmation call (DMCC regulations).</p>
+                        <p style="margin-top:0.6rem;">By clicking <strong>Set Up Direct Debit</strong> you agree to Greenfix Exterior Care collecting your monthly subscription by Direct Debit, subject to our <a href="/terms" target="_blank">Terms &amp; Conditions</a>. You have a <strong>14-day cooling-off period</strong> and can cancel anytime with 30 days notice.</p>
+                    </div>
+
+                    <button type="submit" id="submit-btn">
+                        🔒 Set Up Direct Debit — Secure &amp; Protected
+                    </button>
+                    <div id="form-error" role="alert"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Choose Your Plan</h3>
+                    <p>Pick from Lawn, Silver or Gold depending on what your garden needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Set Up Direct Debit</h3>
+                    <p>Enter your details and set up your monthly Direct Debit on the secure GoCardless page. Protected by the Direct Debit Guarantee.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Confirm by Phone</h3>
+                    <p>We'll call you to confirm the subscription — a 2-minute call required under DMCC regulations for Direct Debit agreements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>We Visit Monthly</h3>
+                    <p>Your first visit is scheduled within 2 weeks. We'll text you the day before with an arrival window.</p>
+                </div>
+            </div>
+
+            <div class="dd-guarantee">
+                <!-- Simple DD logo text fallback — real DD logo can be added as an img later -->
+                <div class="dd-guarantee-logo" aria-hidden="true" style="font-size:1.5rem;line-height:1;text-align:center;">🏦</div>
+                <div>
+                    <strong>Protected by the Direct Debit Guarantee</strong>
+                    If an error is made in the payment of your Direct Debit, by Greenfix Exterior Care or your bank or building society, you are entitled to a full and immediate refund. Your bank or building society will accept instructions to cancel a Direct Debit at any time.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Grounds &amp; Garden Care</h4>
+                <ul>
+                    <li><a href="/grounds-maintenance">Grounds Maintenance</a></li>
+                    <li><a href="/garden-maintenance">Garden Maintenance</a></li>
+                    <li><a href="/garden-maintenance-subscription">Garden Subscription</a></li>
+                    <li><a href="/lawn-mowing">Lawn Mowing</a></li>
+                    <li><a href="/hedge-trimming">Hedge Trimming</a></li>
+                    <li><a href="/garden-tidy-ups">Garden Tidy-Ups</a></li>
+                    <li><a href="/pressure-washing">Pressure Washing</a></li>
+                    <li><a href="/window-cleaning">Window Cleaning</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Repairs &amp; Maintenance</h4>
+                <ul>
+                    <li><a href="/exterior-structural-repairs">Exterior Structural Repairs</a></li>
+                    <li><a href="/brick-repointing">Brick Repointing</a></li>
+                    <li><a href="/fence-repairs">Fence Repairs</a></li>
+                    <li><a href="/gate-repairs">Gate Repairs</a></li>
+                    <li><a href="/patio-repairs">Patio Repairs</a></li>
+                    <li><a href="/drain-repairs">Drain Repairs</a></li>
+                    <li><a href="/window-repairs">Window Repairs</a></li>
+                    <li><a href="/door-repairs">Door Repairs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sectors We Work With</h4>
+                <ul>
+                    <li><a href="/commercial-maintenance">Commercial Maintenance</a></li>
+                    <li><a href="/care-home-grounds-maintenance-preston">Care Homes</a></li>
+                    <li><a href="/church-grounds-maintenance-preston">Churches</a></li>
+                    <li><a href="/estate-grounds-maintenance-lancashire">Estates &amp; Heritage Grounds</a></li>
+                    <li><a href="/school-nursery-grounds-maintenance-preston">Schools &amp; Nurseries</a></li>
+                    <li><a href="/pub-restaurant-grounds-maintenance-preston">Pubs &amp; Restaurants</a></li>
+                </ul>
+                <h4 style="margin-top:1.25rem;">Areas We Cover</h4>
+                <ul>
+                    <li><a href="/penwortham">Penwortham</a></li>
+                    <li><a href="/fulwood">Fulwood</a></li>
+                    <li><a href="/leyland">Leyland</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about-greenfix">About GreenFix</a></li>
+                    <li><a href="/pricing-guide">Pricing Guide</a></li>
+                    <li><a href="/knowledge-base">Knowledge Base</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/before-after">Before &amp; After Gallery</a></li>
+                    <li><a href="tel:+447447804597">📞 07447804597</a></li>
+                    <li><a href="mailto:admin@greenfixexterior-care.co.uk">admin@greenfixexterior-care.co.uk</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61589641812157" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/company/greenfix-exterior-care/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><strong>GreenFix Exterior Care</strong> &mdash; Property maintenance and construction repairs across Preston.</p>
+            <p>£5M Public Liability Insurance &middot; Fully trained, experienced team &middot; Environment Agency registered Waste Carrier.</p>
+            <p>Greenfix Exterior Care Ltd &middot; 11 Lower Croft, Penwortham, Preston PR1 9DJ &middot; <a href="tel:+447447804597">07447 804597</a> &middot; <a href="mailto:admin@greenfixexterior-care.co.uk">admin@greenfixexterior-care.co.uk</a> &middot; Registered in England &amp; Wales, company no. 17241761</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var selectedPlan = null;
+      var ROUNDFLOW_API = 'https://roundflow.greenfixexterior-care.co.uk';
+
+      var PLAN_LABELS = {
+        LAWN:   'Lawn Package — £29/month',
+        SILVER: 'Silver Package — £49/month',
+        GOLD:   'Gold Package — £79/month',
+      };
+
+      window.selectPlan = function (plan) {
+        selectedPlan = plan;
+
+        // Update card UI
+        ['LAWN', 'SILVER', 'GOLD'].forEach(function (p) {
+          var card = document.getElementById('card-' + p);
+          if (card) {
+            card.classList.toggle('selected', p === plan);
+            card.setAttribute('aria-checked', p === plan ? 'true' : 'false');
+          }
+        });
+
+        // Show form
+        var section = document.getElementById('signup-form-section');
+        section.classList.add('visible');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Update form fields
+        document.getElementById('plan-input').value = plan;
+        document.getElementById('selected-plan-label').textContent = PLAN_LABELS[plan] || plan;
+      };
+
+      document.getElementById('signup-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var errorEl = document.getElementById('form-error');
+        errorEl.classList.remove('visible');
+
+        if (!selectedPlan) {
+          showError('Please select a package above.');
+          return;
+        }
+
+        var form = e.target;
+        var data = {
+          plan:         selectedPlan,
+          firstName:    form.firstName.value.trim(),
+          lastName:     form.lastName.value.trim(),
+          email:        form.email.value.trim(),
+          phone:        form.phone.value.trim(),
+          addressLine1: form.addressLine1.value.trim(),
+          addressLine2: form.addressLine2.value.trim() || undefined,
+          city:         form.city.value.trim(),
+          postcode:     form.postcode.value.trim().toUpperCase(),
+          preferredDay: form.preferredDay.value || undefined,
+          accessNotes:  form.accessNotes.value.trim() || undefined,
+        };
+
+        // Basic client-side validation
+        if (!data.firstName || !data.lastName) { showError('Please enter your full name.'); return; }
+        if (!data.email || !data.email.includes('@')) { showError('Please enter a valid email address.'); return; }
+        if (!data.phone || data.phone.length < 7) { showError('Please enter a valid phone number.'); return; }
+        if (!data.addressLine1) { showError('Please enter your address.'); return; }
+        if (!data.city) { showError('Please enter your town or city.'); return; }
+        if (!data.postcode || data.postcode.length < 5) { showError('Please enter a valid UK postcode.'); return; }
+
+        // Show loading
+        var loadingEl = document.getElementById('loading-overlay');
+        loadingEl.classList.add('visible');
+        document.getElementById('submit-btn').disabled = true;
+
+        fetch(ROUNDFLOW_API + '/api/greenfix/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (json) {
+            if (json.ok && json.redirectUrl) {
+              window.location.href = json.redirectUrl;
+            } else {
+              loadingEl.classList.remove('visible');
+              document.getElementById('submit-btn').disabled = false;
+              showError(json.error || 'Something went wrong. Please try again or call us on 07447 804597.');
+            }
+          })
+          .catch(function () {
+            loadingEl.classList.remove('visible');
+            document.getElementById('submit-btn').disabled = false;
+            showError('Could not connect to our signup system. Please call us on 07447 804597 to sign up over the phone.');
+          });
+      });
+
+      function showError(msg) {
+        var el = document.getElementById('form-error');
+        el.textContent = msg;
+        el.classList.add('visible');
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      // Uppercase postcode as you type
+      document.getElementById('postcode').addEventListener('input', function () {
+        this.value = this.value.toUpperCase();
+      });
+    })();
+    </script>
+
+    <script src="/assets/chatbot.js" defer></script>
+</body>
+</html>
