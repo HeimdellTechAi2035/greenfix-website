@@ -414,7 +414,7 @@
                 <!-- Lawn -->
                 <div class="plan-card" id="card-LAWN" role="radio" aria-checked="false" tabindex="0" onclick="selectPlan('LAWN')" onkeydown="if(event.key==='Enter'||event.key===' '){selectPlan('LAWN')}">
                     <p class="plan-name">🌿 Lawn Package</p>
-                    <p class="plan-price">£29 <span>/month</span></p>
+                    <p class="plan-price">£39 <span>/month</span></p>
                     <ul class="plan-features">
                         <li>Monthly lawn mowing &amp; edging</li>
                         <li>Grass cuttings cleared and removed</li>
@@ -428,7 +428,7 @@
                 <div class="plan-card featured" id="card-SILVER" role="radio" aria-checked="false" tabindex="0" onclick="selectPlan('SILVER')" onkeydown="if(event.key==='Enter'||event.key===' '){selectPlan('SILVER')}">
                     <span class="plan-badge">Most Popular</span>
                     <p class="plan-name">🌳 Silver Package</p>
-                    <p class="plan-price">£49 <span>/month</span></p>
+                    <p class="plan-price">£59 <span>/month</span></p>
                     <ul class="plan-features">
                         <li>Everything in Lawn Package</li>
                         <li>Hedge trimming (up to 3 hedges)</li>
@@ -693,7 +693,7 @@
 
         var form = e.target;
         var data = {
-          plan:         selectedPlan,
+          plan:         selectedPlan.toLowerCase(),
           firstName:    form.firstName.value.trim(),
           lastName:     form.lastName.value.trim(),
           email:        form.email.value.trim(),
@@ -719,7 +719,7 @@
         loadingEl.classList.add('visible');
         document.getElementById('submit-btn').disabled = true;
 
-        fetch(ROUNDFLOW_API + '/api/greenfix/subscribe', {
+        fetch(ROUNDFLOW_API + '/api/public/signup', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),

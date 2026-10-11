@@ -140,5 +140,10 @@
 /blog/why-wont-my-window-close-properly  /blog/why-wont-my-window-close-properly.html  200
 /blog/why-does-my-door-stick-or-drag-on-the-floor  /blog/why-does-my-door-stick-or-drag-on-the-floor.html  200
 
+# --- Subscription page aliases ---
+/garden-subscription  /garden-maintenance-subscription  301
+/garden-subscription.html  /garden-maintenance-subscription  301
+
 # --- Custom 404 ---
 /*  /404.html  404
+
