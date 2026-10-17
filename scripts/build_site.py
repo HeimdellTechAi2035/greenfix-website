@@ -160,9 +160,22 @@ SERVICES = [
         h1="Garden Maintenance in Preston",
         tagline="Regular, reliable garden care for your home",
         price="From £40", price_note="per visit, guide price only",
-        meta_title="Garden Maintenance Preston | Regular & One-Off from £40 | GreenFix",
-        meta_description="Garden maintenance in Preston: mowing, edging, weeding, hedges and seasonal upkeep, weekly, fortnightly or one-off. From £40 per visit.",
+        meta_title="Garden Maintenance Preston | Penwortham, Fulwood & Leyland from £40 | GreenFix",
+        meta_description="Local garden maintenance in Preston, Penwortham, Fulwood and Leyland. Mowing, edging, weeding, hedges and green waste removed. Regular or one-off visits from £40. Free quote.",
         intro="GreenFix keeps residential gardens tidy, healthy and under control across Preston. That covers the everyday jobs that keep a garden looking cared-for between the bigger seasonal work: mowing and edging, weeding beds and borders, light pruning, and general upkeep. Book a one-off visit or set up a regular round — whichever suits how you use your garden.",
+        local_section={
+            "heading": "Local garden maintenance across Preston",
+            "paragraphs": [
+                "We're based at Lower Croft in Penwortham (PR1), so most of our regular rounds are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "Typical jobs on a Preston round: lawn mowing and edging, weeding beds and borders, hedge and shrub trimming, leaf clearance in autumn, and taking every bag of green waste away with us.",
+            ],
+            "points": [
+                "Regular fortnightly or monthly rounds, or a single visit",
+                "Guide price from £40 per visit, fixed quote before we start",
+                "£5M public liability insurance",
+                "Environment Agency registered waste carrier",
+            ],
+        },
         cards=[
             ("Regular or One-Off", "Set up a fortnightly or monthly round, or book a single visit when your garden needs bringing back under control."),
             ("Lawns, Beds & Borders", "Mowing, edging, weeding and light pruning to keep the whole garden looking after itself between visits."),
@@ -178,6 +191,14 @@ SERVICES = [
              "Garden maintenance is ongoing upkeep — regular visits that keep an already-reasonable garden looking good. A garden tidy-up is a one-off reset for a garden that's become overgrown or neglected."),
             ("How often should I book a visit?",
              "Most gardens do well on a fortnightly or monthly round through spring and summer, less often over winter. We'll suggest a schedule based on your garden when we quote."),
+            ("Which areas of Preston do you cover for garden maintenance?",
+             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+            ("How much does garden maintenance cost in Preston?",
+             "Visits start from around £40 for a standard residential garden. The price depends on size, how much work is needed and how often we visit. We give a fixed quote first."),
+            ("Do you do one-off garden clearances as well as regular maintenance?",
+             "Yes. For an overgrown garden we do a one-off tidy-up first, then you can move onto a regular round if you want."),
+            ("Are you insured?",
+             "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier."),
         ],
         related=["lawn-mowing", "hedge-trimming", "garden-tidy-ups", "grounds-maintenance"],
         schema_desc="Regular and one-off garden maintenance for homeowners across Preston, including mowing, edging, weeding and seasonal upkeep.",
@@ -1323,6 +1344,27 @@ def write_page(filename, html):
 # Service page rendering
 # ---------------------------------------------------------------------------
 
+def render_local_section(section):
+    """Optional local-area block. Sits after the intro, before Why Choose."""
+    if not section:
+        return ""
+    paragraphs = "\n            ".join(
+        f'<p class="lede">{esc(p)}</p>' for p in section["paragraphs"]
+    )
+    items = "\n                ".join(f"<li>{esc(item)}</li>" for item in section["points"])
+    return f"""
+    <section class="section-white local-areas">
+        <div class="container">
+            <h2>{esc(section["heading"])}</h2>
+            {paragraphs}
+            <ul>
+                {items}
+            </ul>
+        </div>
+    </section>
+"""
+
+
 def render_service_page(service):
     cluster = cluster_label(service["slug"])
     canonical_path = f"/{service['slug']}"
@@ -1378,7 +1420,7 @@ def render_service_page(service):
             <p class="lede">{esc(service["intro"])}</p>
         </div>
     </section>
-{render_trust_strip()}
+{render_trust_strip()}{render_local_section(service.get("local_section"))}
     <section class="section-grey">
         <div class="container">
             <h2 class="center">Why Choose GreenFix</h2>
