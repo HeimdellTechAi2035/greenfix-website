@@ -274,6 +274,15 @@ p { color: var(--grey); }
 .section-grey { background: var(--light-grey); }
 .lede { max-width: 820px; color: var(--grey); line-height: 1.75; }
 .lede.center { margin: 0 auto; text-align: center; }
+.local-areas .lede + .lede { margin-top: 0.85rem; }
+.local-areas ul {
+  max-width: 820px;
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  color: var(--grey);
+  line-height: 1.75;
+}
+.local-areas li + li { margin-top: 0.35rem; }
 
 .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 @media (min-width: 700px) { .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); } }
