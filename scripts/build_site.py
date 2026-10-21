@@ -90,6 +90,8 @@ CLUSTERS = [
     {
         "key": "grounds",
         "label": "Grounds & Garden Care",
+        # Nav group, not its own page. Breadcrumb item points at the homepage section.
+        "path": "/#grounds-garden-care",
         "slugs": ["grounds-maintenance", "garden-maintenance", "lawn-mowing",
                   "hedge-trimming", "garden-tidy-ups", "pressure-washing",
                   "window-cleaning", "internal-window-cleaning", "external-window-cleaning"],
@@ -97,6 +99,7 @@ CLUSTERS = [
     {
         "key": "repairs",
         "label": "Repairs & Maintenance",
+        "path": "/#repairs-and-maintenance",
         "slugs": ["exterior-structural-repairs", "repairs-and-maintenance",
                   "brick-repointing", "lime-repointing", "brick-repairs", "garden-wall-repairs",
                   "fence-repairs", "fence-panel-replacement", "gate-repairs", "patio-repairs",
@@ -106,6 +109,10 @@ CLUSTERS = [
                   "planned-preventative-maintenance", "drone-property-inspections"],
     },
 ]
+
+# Same pattern: category labels that live as homepage sections, not standalone URLs.
+SECTORS_CRUMB_PATH = "/#sectors-we-work-with"
+AREAS_CRUMB_PATH = "/#areas-we-cover"
 
 SECTORS = [
     ("commercial-maintenance.html", "Commercial Maintenance"),
@@ -996,11 +1003,12 @@ def esc(text):
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def cluster_label(slug):
+def cluster_crumb(slug):
+    """(name, path) for the service's category breadcrumb."""
     for c in CLUSTERS:
         if slug in c["slugs"]:
-            return c["label"]
-    return None
+            return (c["label"], c["path"])
+    raise KeyError(slug)
 
 
 def sector_url(fname):
@@ -1122,12 +1130,21 @@ def service_schema(service):
 
 
 def breadcrumb_schema(items):
-    """items: list of (name, path_or_None) tuples, last item has path=None"""
+    """items: list of (name, path_or_None) tuples.
+
+    Google requires every ListItem to have position, name, and item as an
+    absolute URL. The last item may omit item; Google then uses the page URL.
+    """
     elements = []
+    last = len(items)
     for i, (name, path) in enumerate(items, 1):
         el = {"@type": "ListItem", "position": i, "name": name}
-        if path is not None:
-            el["item"] = f"{DOMAIN}{path}"
+        if path:
+            el["item"] = path if path.startswith(("http://", "https://")) else f"{DOMAIN}{path}"
+        elif i != last:
+            raise ValueError(
+                f"Breadcrumb ListItem {i} ({name!r}) needs an absolute item URL"
+            )
         elements.append(el)
     return json.dumps({
         "@context": "https://schema.org",
@@ -1387,11 +1404,15 @@ def render_local_section(section):
 
 
 def render_service_page(service):
-    cluster = cluster_label(service["slug"])
     canonical_path = f"/{service['slug']}"
+    crumbs = [
+        ("Home", "/"),
+        cluster_crumb(service["slug"]),
+        (service["h1"].split(" in ")[0], None),
+    ]
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
-        f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), (cluster, None), (service["h1"].split(" in ")[0], None)])}\n    </script>',
+        f'    <script type="application/ld+json">\n{breadcrumb_schema(crumbs)}\n    </script>',
         f'    <script type="application/ld+json">\n{service_schema(service)}\n    </script>',
         f'    <script type="application/ld+json">\n{faq_schema(service["faqs"])}\n    </script>',
     ])
@@ -1402,9 +1423,7 @@ def render_service_page(service):
         extra_schema=schema,
     )
 
-    breadcrumb = render_breadcrumb_html([
-        ("Home", "/"), (cluster, None), (service["h1"].split(" in ")[0], None)
-    ])
+    breadcrumb = render_breadcrumb_html(crumbs)
 
     cards_html = "\n                ".join(
         f'<div class="card"><h3>{esc(t)}</h3><p>{esc(txt)}</p></div>'
@@ -1636,7 +1655,7 @@ def render_homepage():
         </div>
     </section>
 
-    <section class="section-white">
+    <section class="section-white" id="grounds-garden-care">
         <div class="container">
             <h2 class="center">Grounds &amp; Garden Care</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">Regular garden care and ground maintenance for homes and larger sites.</p>
@@ -1646,7 +1665,7 @@ def render_homepage():
         </div>
     </section>
 
-    <section class="section-grey">
+    <section class="section-grey" id="repairs-and-maintenance">
         <div class="container">
             <h2 class="center">Repairs &amp; Maintenance</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">Structural, brick, roofing, drainage and general exterior repairs.</p>
@@ -1656,7 +1675,7 @@ def render_homepage():
         </div>
     </section>
 
-    <section class="section-white">
+    <section class="section-white" id="sectors-we-work-with">
         <div class="container">
             <h2 class="center">Sectors We Work With</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">Alongside homeowners, we support these sectors across Preston.</p>
@@ -1688,7 +1707,7 @@ def render_homepage():
         </div>
     </section>
 
-    <section class="section-white">
+    <section class="section-white" id="areas-we-cover">
         <div class="container">
             <h2 class="center">Areas We Cover</h2>
             <p class="lede center" style="margin-bottom:1.5rem;">We work across {AREA_SERVED_TEXT}.</p>
@@ -2358,7 +2377,7 @@ def render_sector_page(sector):
     canonical_path = "/" + sector["filename"][:-5]
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
-        f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("Sectors We Work With", None), (sector["h1"].split(" in ")[0], None)])}\n    </script>',
+        f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("Sectors We Work With", SECTORS_CRUMB_PATH), (sector["h1"].split(" in ")[0], None)])}\n    </script>',
         f'    <script type="application/ld+json">\n{faq_schema(sector["faqs"])}\n    </script>',
     ])
     head = render_head(
@@ -2368,7 +2387,7 @@ def render_sector_page(sector):
         extra_schema=schema,
     )
     breadcrumb = render_breadcrumb_html([
-        ("Home", "/"), ("Sectors We Work With", None), (sector["h1"].split(" in ")[0], None)
+        ("Home", "/"), ("Sectors We Work With", SECTORS_CRUMB_PATH), (sector["h1"].split(" in ")[0], None)
     ])
     cards_html = "\n                ".join(
         f'<div class="card"><h3>{esc(t)}</h3><p>{esc(txt)}</p></div>' for t, txt in sector["cards"]
@@ -2563,7 +2582,7 @@ def town_service_schema(town):
 
 def render_town_page(town):
     canonical_path = f"/{town['slug']}"
-    crumbs = [("Home", "/"), ("Areas We Cover", None), (town["name"], None)]
+    crumbs = [("Home", "/"), ("Areas We Cover", AREAS_CRUMB_PATH), (town["name"], None)]
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
         f'    <script type="application/ld+json">\n{breadcrumb_schema(crumbs)}\n    </script>',

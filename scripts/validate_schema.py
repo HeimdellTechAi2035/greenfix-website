@@ -23,6 +23,39 @@ SKIP = {
     "garden-clearance-penwortham.html",
 }
 
+def breadcrumb_issues(data):
+    """Google: every ListItem needs position, name, and an absolute item URL.
+    The last item may omit item."""
+    nodes = data if isinstance(data, list) else [data]
+    issues = []
+    for node in nodes:
+        if not isinstance(node, dict) or node.get("@type") != "BreadcrumbList":
+            continue
+        items = node.get("itemListElement")
+        if not isinstance(items, list) or not items:
+            issues.append("BreadcrumbList has no itemListElement")
+            continue
+        for idx, item in enumerate(items):
+            pos = idx + 1
+            if not isinstance(item, dict) or item.get("@type") != "ListItem":
+                issues.append(f"breadcrumb position {pos} is not a ListItem")
+                continue
+            if item.get("position") != pos:
+                issues.append(f"breadcrumb position {pos} has position={item.get('position')!r}")
+            name = item.get("name")
+            if not isinstance(name, str) or not name.strip():
+                issues.append(f"breadcrumb position {pos} is missing name")
+            url = item.get("item")
+            is_last = idx == len(items) - 1
+            if url is None:
+                if not is_last:
+                    issues.append(f"breadcrumb position {pos} ({name!r}) is missing item")
+                continue
+            if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+                issues.append(f"breadcrumb position {pos} item is not an absolute URL: {url!r}")
+    return issues
+
+
 REQUIRED_TAGS = [
     ('<title>', "title"),
     ('name="description"', "meta description"),
@@ -39,7 +72,13 @@ files = sorted(glob.glob("*.html")) + sorted(glob.glob("blog/*.html"))
 for f in files:
     if f in SKIP:
         continue
-    content = open(f, encoding="utf-8").read()
+    try:
+        content = open(f, encoding="utf-8").read()
+    except UnicodeDecodeError as e:
+        total_issues += 1
+        print(f"{f}:")
+        print(f"  - not valid UTF-8: {e}")
+        continue
     issues = []
 
     h1s = re.findall(r"<h1[\s>]", content)
@@ -55,9 +94,11 @@ for f in files:
         issues.append("no JSON-LD blocks found")
     for i, b in enumerate(blocks):
         try:
-            json.loads(b.strip())
+            data = json.loads(b.strip())
         except json.JSONDecodeError as e:
             issues.append(f"invalid JSON-LD block {i}: {e}")
+            continue
+        issues.extend(breadcrumb_issues(data))
 
     if issues:
         total_issues += len(issues)
