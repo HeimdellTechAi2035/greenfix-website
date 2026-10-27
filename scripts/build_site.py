@@ -348,12 +348,25 @@ SERVICES = [
     # ---------------- Repairs & Maintenance ----------------
     dict(
         slug="exterior-structural-repairs", cluster="repairs",
-        h1="Exterior Structural Repairs in Preston",
+        h1="Exterior Structural Repairs in Preston, Penwortham, Fulwood and Leyland",
         tagline="Masonry, walls and structural brickwork put right",
         price="Quotation Required", price_note="every structural job is assessed individually",
-        meta_title="Exterior House Repairs Preston | Brickwork, Walls & Masonry | GreenFix",
-        meta_description="Exterior house repairs in Preston: brickwork, garden walls, masonry and structural fixes for homes and businesses. Every job surveyed and quoted.",
-        intro="Exterior structural repairs cover the bigger masonry and brickwork jobs — cracked or failing brickwork, leaning or unstable garden walls, and other structural issues on the outside of a property. Because the scope of a structural repair varies so much from one property to the next, we assess every job individually before quoting rather than working to a fixed guide price. If you know exactly what needs doing, our brick repointing, brick repairs and garden wall repairs pages cover the more specific, defined jobs.",
+        meta_title="Exterior Structural Repairs Preston | Penwortham, Fulwood & Leyland | GreenFix",
+        meta_description="Exterior structural repairs in Preston, Penwortham, Fulwood and Leyland. Cracked brickwork, masonry and garden walls surveyed and quoted. Free quote.",
+        intro="Exterior structural repairs cover cracked or failing brickwork, leaning or unstable garden walls, and other masonry problems on the outside of a property, for homes and businesses in Preston, Penwortham, Fulwood and Leyland. Every job is assessed on site and quoted individually — there is no fixed guide price. Call 07447804597 or request a free quote and we respond within 24 hours.",
+        local_section={
+            "heading": "Local exterior structural repairs across Preston",
+            "paragraphs": [
+                "We're based at Lower Croft in Penwortham (PR1), so most structural repairs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "Typical jobs: cracked, spalled or unstable brickwork assessed and repaired, and leaning, cracked or partially collapsed garden and boundary walls looked at before any work starts. If you already know the job is repointing, a few damaged bricks, or a defined garden wall repair, those pages have guide prices.",
+            ],
+            "points": [
+                "Free site assessment and a written quote before work starts",
+                "Brickwork, masonry and garden wall repairs, quoted individually",
+                "£5M public liability insurance",
+                "Environment Agency registered waste carrier",
+            ],
+        },
         cards=[
             ("Free Site Assessment", "We visit, assess the extent of the issue, and explain what's actually needed before any work starts."),
             ("Brickwork & Masonry", "Cracked, spalled or unstable brickwork assessed and repaired to restore both appearance and structural integrity."),
@@ -369,9 +382,17 @@ SERVICES = [
              "This page is for bigger or less clear-cut structural issues that need assessing first. If you already know it's specifically a repointing job, a few damaged bricks, or a garden wall repair, those pages have guide prices to start from."),
             ("Is this covered by insurance?",
              f"We hold {INSURANCE} for all work we carry out. Whether a specific repair is covered by your own buildings insurance depends on your policy and the cause of the damage."),
+            ("Which areas of Preston do you cover for exterior structural repairs?",
+             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+            ("How do I get a quote for exterior structural repairs?",
+             "Call 07447804597 or use the quote form. We'll visit, assess the issue, and provide a written quote before any work starts. We respond within 24 hours."),
+            ("Do you offer lime repointing for older brickwork?",
+             "Yes. Lime repointing is a separate service for older, softer brickwork, quoted after a free assessment. Standard brick repointing has a guide price from £30 per m². See our lime repointing and brick repointing pages."),
+            ("Do you repair porches as well?",
+             "Yes. Porch repairs are a separate service for homes and businesses across Preston, quoted after a free assessment. See our porch repairs page."),
         ],
-        related=["brick-repairs", "brick-repointing", "garden-wall-repairs", "repairs-and-maintenance"],
-        schema_desc="Structural brickwork, masonry and garden wall repair assessment and quotation across Preston.",
+        related=["brick-repairs", "brick-repointing", "lime-repointing", "garden-wall-repairs", "porch-repairs", "repairs-and-maintenance"],
+        schema_desc="Structural brickwork, masonry and garden wall repair assessment and quotation across Preston, Penwortham, Fulwood and Leyland.",
     ),
     dict(
         slug="repairs-and-maintenance", cluster="repairs",
@@ -402,12 +423,25 @@ SERVICES = [
     ),
     dict(
         slug="brick-repointing", cluster="repairs",
-        h1="Brick Repointing in Preston",
+        h1="Brick Repointing in Preston, Penwortham, Fulwood and Leyland",
         tagline="Restoring worn or crumbling mortar joints",
         price="From £30 per m²", price_note="guide price only, confirmed after assessment",
-        meta_title="Brick Repointing Preston | Crumbling Mortar Fixed from £30/m²",
-        meta_description="Mortar between your bricks crumbling? GreenFix repoints eroded joints in Preston to restore weatherproofing, including lime mortar on request. From £30 per m².",
-        intro="Repointing repairs the mortar joints between bricks, not the bricks themselves. Over time, mortar erodes, crumbles or falls out, letting water into the wall and weakening it. We rake out the damaged mortar and repoint with a matching mix, restoring both the weatherproofing and the appearance of the brickwork. If the bricks themselves are cracked or damaged rather than the mortar, see our brick repairs page instead.",
+        meta_title="Brick Repointing Preston | Penwortham, Fulwood & Leyland from £30/m² | GreenFix",
+        meta_description="Local brick repointing in Preston, Penwortham, Fulwood and Leyland. Crumbling mortar joints repaired, including lime mortar on request. From £30 per m². Free quote.",
+        intro="Brick repointing repairs crumbling, cracked or missing mortar between bricks — not the bricks themselves — for homes and businesses in Preston, Penwortham, Fulwood and Leyland. We rake out the failed mortar and repoint with a matching mix, including lime mortar on request for older, softer brickwork. From £30 per m² as a guide price, confirmed after assessment: call 07447804597 or request a free quote and we respond within 24 hours.",
+        local_section={
+            "heading": "Local brick repointing across Preston",
+            "paragraphs": [
+                "We're based at Lower Croft in Penwortham (PR1), so most repointing jobs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "Typical jobs: eroded, crumbling or missing mortar raked out and repointed with a mix matched to the existing brickwork, including lime mortar on request where older, softer brick needs it.",
+            ],
+            "points": [
+                "Mortar joints repaired to restore weatherproofing",
+                "Guide price from £30 per m², confirmed after assessment",
+                "£5M public liability insurance",
+                "Environment Agency registered waste carrier",
+            ],
+        },
         cards=[
             ("Mortar Joint Repair", "Eroded, crumbling or missing mortar raked out and repointed to stop water getting into the wall."),
             ("Matched Mortar Mix", "Mortar colour and mix matched to the existing brickwork wherever possible, for a consistent finish."),
@@ -424,10 +458,16 @@ SERVICES = [
             ("How is repointing priced?",
              "From £30 per m² as a guide price, confirmed once we've assessed the area and extent of the work needed."),
             ("Do you offer lime mortar repointing?",
-             "Yes. We repoint in lime mortar on request, which is often the right choice for older, softer brickwork. See our lime repointing page for details."),
+             "Yes. We repoint in lime mortar on request, which is often the right choice for older, softer brickwork. Lime repointing is quoted after a free assessment. See our lime repointing page for details."),
+            ("Which areas of Preston do you cover for brick repointing?",
+             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+            ("How much does brick repointing cost in Preston?",
+             "From £30 per m² as a guide price, confirmed after assessment. The final figure depends on the area of wall and how accessible it is."),
+            ("Are you insured?",
+             "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier."),
         ],
         related=["lime-repointing", "brick-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
-        schema_desc="Brick repointing to repair eroded or crumbling mortar joints, priced per square metre, across Preston.",
+        schema_desc="Brick repointing to repair eroded or crumbling mortar joints, priced per square metre, across Preston, Penwortham, Fulwood and Leyland.",
     ),
     dict(
         slug="brick-repairs", cluster="repairs",
@@ -2561,7 +2601,7 @@ TOWN_PAGES = [
             ("How quickly can you quote?",
              "We reply within 24 hours and can usually arrange a free assessment soon after."),
         ],
-        related=["garden-maintenance", "grounds-maintenance", "pressure-washing", "fence-repairs", "paving-repairs", "planned-preventative-maintenance"],
+        related=["garden-maintenance", "grounds-maintenance", "pressure-washing", "fence-repairs", "paving-repairs", "brick-repointing", "planned-preventative-maintenance"],
     ),
 ]
 
@@ -3190,12 +3230,16 @@ def build_redirects():
 # not listed: they are noindex aliases, not pages to crawl.
 SITEMAP_LASTMOD = "2026-08-30"
 SITEMAP_LASTMOD_REFRESHED = "2026-10-01"
+# Preston local copy added to brick repointing and exterior structural repairs.
+SITEMAP_LASTMOD_LOCAL = "2026-10-27"
+SITEMAP_LOCAL_PATHS = {
+    "/brick-repointing",
+    "/exterior-structural-repairs",
+}
 SITEMAP_REFRESHED_PATHS = {
     "/",
     "/about-greenfix",
     "/gate-repairs",
-    "/exterior-structural-repairs",
-    "/brick-repointing",
     "/slab-relaying",
     "/church-grounds-maintenance-preston",
     "/commercial-maintenance",
@@ -3214,7 +3258,7 @@ SITEMAP_REFRESHED_PATHS = {
 # Pages added or changed after Andrew confirmed towns and services (2 Oct 2026).
 SITEMAP_LASTMOD_CONFIRMED = "2026-10-02"
 SITEMAP_CONFIRMED_PATHS = {
-    "/", "/knowledge-base", "/pricing-guide", "/brick-repointing", "/door-repairs",
+    "/", "/knowledge-base", "/pricing-guide", "/door-repairs",
     "/porch-repairs", "/lime-repointing", "/penwortham", "/fulwood", "/leyland",
 }
 
@@ -3267,7 +3311,8 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        lastmod = (SITEMAP_LASTMOD_CONFIRMED if path in SITEMAP_CONFIRMED_PATHS
+        lastmod = (SITEMAP_LASTMOD_LOCAL if path in SITEMAP_LOCAL_PATHS
+                   else SITEMAP_LASTMOD_CONFIRMED if path in SITEMAP_CONFIRMED_PATHS
                    else SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS
                    else SITEMAP_LASTMOD)
         entries.append(f"""  <url>
