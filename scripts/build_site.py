@@ -1330,6 +1330,8 @@ def render_footer():
                 <ul>
                     <li><a href="/about-greenfix">About GreenFix</a></li>
                     <li><a href="/about-greenfix#complaints">Complaints Procedure</a></li>
+                    <li><a href="/terms">Terms &amp; Conditions</a></li>
+                    <li><a href="/privacy">Privacy Notice</a></li>
                     <li><a href="/pricing-guide">Pricing Guide</a></li>
                     <li><a href="/knowledge-base">Knowledge Base</a></li>
                     <li><a href="/blog">Blog</a></li>
@@ -3209,6 +3211,8 @@ def build_redirects():
     for t in TOWN_PAGES:
         lines.append(f"/{t['slug']}  /{t['slug']}.html  200")
     lines.append("/about-greenfix  /about-greenfix.html  200")
+    lines.append("/terms  /terms.html  200")
+    lines.append("/privacy  /privacy.html  200")
     lines.append("/before-after  /before-after.html  200")
     lines.append("/pricing-guide  /pricing-guide.html  200")
     lines.append("/knowledge-base  /knowledge-base.html  200")
@@ -3235,6 +3239,12 @@ SITEMAP_LASTMOD_LOCAL = "2026-10-27"
 SITEMAP_LOCAL_PATHS = {
     "/brick-repointing",
     "/exterior-structural-repairs",
+}
+SITEMAP_LASTMOD_OCT30 = "2026-10-30"
+SITEMAP_OCT30_PATHS = {
+    "/terms",
+    "/privacy",
+    "/garden-maintenance-subscription",
 }
 SITEMAP_REFRESHED_PATHS = {
     "/",
@@ -3297,11 +3307,14 @@ def build_sitemap():
     urls = [("/", "1.0")]
     for service in SERVICES:
         urls.append((f"/{service['slug']}", "0.8"))
+    urls.append(("/garden-maintenance-subscription", "0.8"))
     for fname, _ in SECTORS:
         urls.append(("/" + fname[:-5], "0.8"))
     for t in TOWN_PAGES:
         urls.append((f"/{t['slug']}", "0.8"))
     urls.append(("/about-greenfix", "0.6"))
+    urls.append(("/terms", "0.4"))
+    urls.append(("/privacy", "0.4"))
     urls.append(("/before-after", "0.6"))
     urls.append(("/pricing-guide", "0.8"))
     urls.append(("/knowledge-base", "0.7"))
@@ -3311,7 +3324,8 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        lastmod = (SITEMAP_LASTMOD_LOCAL if path in SITEMAP_LOCAL_PATHS
+        lastmod = (SITEMAP_LASTMOD_OCT30 if path in SITEMAP_OCT30_PATHS
+                   else SITEMAP_LASTMOD_LOCAL if path in SITEMAP_LOCAL_PATHS
                    else SITEMAP_LASTMOD_CONFIRMED if path in SITEMAP_CONFIRMED_PATHS
                    else SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS
                    else SITEMAP_LASTMOD)
