@@ -55,7 +55,7 @@
     toggle.type = "button";
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-controls", "gf-chat-panel");
-    toggle.setAttribute("aria-label", "Chat with " + BOT_NAME + ", the GreenFix garden assistant");
+    toggle.setAttribute("aria-label", "Chat with " + BOT_NAME + ", the GreenFix property care assistant");
     var toggleIcon = el("span", "gf-pot-icon", POT_SVG);
     toggle.appendChild(toggleIcon);
     toggle.appendChild(el("span", "gf-chat-toggle-label", "Chat"));
@@ -72,7 +72,7 @@
     var panel = el("div", "gf-chat-panel");
     panel.id = "gf-chat-panel";
     panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", BOT_NAME + ", the GreenFix garden assistant");
+    panel.setAttribute("aria-label", BOT_NAME + ", the GreenFix property care assistant");
     panel.hidden = true;
 
     var header = el("div", "gf-chat-header");

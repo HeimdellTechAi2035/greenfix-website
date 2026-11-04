@@ -52,8 +52,8 @@ STREET_ADDRESS = "11 Lower Croft"
 DISPLAY_ADDRESS = "11 Lower Croft, Penwortham, Preston PR1 9DJ"
 POSTAL_LOCALITY = "Preston"
 POSTAL_CODE = "PR1 9DJ"
-HOURS_DISPLAY = "Monday - Saturday, 9:00am - 5:00pm (12:00-1:00pm lunch)"
-OPENING_HOURS_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+HOURS_DISPLAY = "Monday - Friday, 9:00am - 5:00pm; Saturday, 9:00am - 3:30pm (12:00-1:00pm lunch); Sunday closed"
+OPENING_HOURS_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 OPENING_HOURS_SPEC = [
     {"@type": "OpeningHoursSpecification",
      "dayOfWeek": OPENING_HOURS_DAYS,
@@ -62,6 +62,10 @@ OPENING_HOURS_SPEC = [
      "dayOfWeek": OPENING_HOURS_DAYS,
      "opens": "13:00", "closes": "17:00"},
 ]
+OPENING_HOURS_SPEC.extend([
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "12:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "13:00", "closes": "15:30"},
+])
 GEO_LATITUDE = "53.77025605"
 GEO_LONGITUDE = "-2.69715175"
 GOOGLE_MAPS_CID = "7185723301089874500"
@@ -1397,18 +1401,15 @@ def render_footer():
             </div>
         </div>
         <div class="footer-map">
-            <h4>Find Us</h4>
-            <p>{DISPLAY_ADDRESS}</p>
+            <h4>Service Area</h4>
+            <p>{AREA_SERVED_TEXT}.</p>
+            <p>We visit your property. There is no customer reception at our registered office.</p>
             <p>Open: {HOURS_DISPLAY}</p>
-            <div class="map-embed map-embed--compact">
-                <iframe src="{GOOGLE_MAPS_EMBED_SRC}" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="{esc(BUSINESS_NAME)} on Google Maps"></iframe>
-            </div>
-            <p><a href="{GOOGLE_MAPS_SHARE_URL}" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
         </div>
         <div class="footer-bottom">
             <p><strong>{BUSINESS_NAME}</strong> &mdash; Property Maintenance &amp; Exterior Care across Preston.</p>
             <p>{INSURANCE} &middot; {TRAINED} &middot; {WASTE_CARRIER} &middot; Prices shown are guide prices only.</p>
-            <p>{LEGAL_NAME} &middot; {DISPLAY_ADDRESS} &middot; <a href="tel:{PHONE_TEL}">07447 804597</a> &middot; <a href="mailto:{EMAIL}">{EMAIL}</a> &middot; Registered in England &amp; Wales, company no. {COMPANY_NUMBER}</p>
+            <p>{LEGAL_NAME} &middot; Registered office: {DISPLAY_ADDRESS} &middot; <a href="tel:{PHONE_TEL}">07447 804597</a> &middot; <a href="mailto:{EMAIL}">{EMAIL}</a> &middot; Registered in England &amp; Wales, company no. {COMPANY_NUMBER}</p>
         </div>
     </footer>
 """
@@ -1877,7 +1878,7 @@ def render_about():
         f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("About GreenFix", None)])}\n    </script>',
     ])
     head = render_head(
-        title="About GreenFix | Property Maintenance & Construction Preston",
+        title="About GREENFIX | Property Maintenance & Exterior Care Preston",
         description=f"About {BUSINESS_NAME} — property maintenance, painting, decorating and exterior care across Preston, new for {FOUNDED}.",
         canonical_path="/about-greenfix",
         extra_schema=schema,
@@ -1895,7 +1896,7 @@ def render_about():
         <div class="container">
             <h2>Who We Are</h2>
             <p class="lede">{BUSINESS_NAME} launched in {FOUNDED}, providing property maintenance and exterior care for homeowners, landlords, letting agents and businesses. Our work includes painting and decorating, rental refreshes, regular grounds and garden care and agreed exterior repairs. We're built on turning up when we say we will and doing the job properly, every time.</p>
-            <p class="lede" style="margin-top:1rem;"><strong>Address:</strong> {DISPLAY_ADDRESS}</p>
+            <p class="lede" style="margin-top:1rem;"><strong>Registered office (no customer visits):</strong> {DISPLAY_ADDRESS}</p>
             <p class="lede" style="margin-top:0.35rem;"><strong>Hours:</strong> {HOURS_DISPLAY}</p>
         </div>
     </section>
@@ -3642,7 +3643,7 @@ CHATBOT_JS_TEMPLATE = """// GreenFix FAQ chatbot — rule-based keyword matching
     toggle.type = "button";
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-controls", "gf-chat-panel");
-    toggle.setAttribute("aria-label", "Chat with " + BOT_NAME + ", the GreenFix garden assistant");
+    toggle.setAttribute("aria-label", "Chat with " + BOT_NAME + ", the GreenFix property care assistant");
     var toggleIcon = el("span", "gf-pot-icon", POT_SVG);
     toggle.appendChild(toggleIcon);
     toggle.appendChild(el("span", "gf-chat-toggle-label", "Chat"));
@@ -3659,7 +3660,7 @@ CHATBOT_JS_TEMPLATE = """// GreenFix FAQ chatbot — rule-based keyword matching
     var panel = el("div", "gf-chat-panel");
     panel.id = "gf-chat-panel";
     panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", BOT_NAME + ", the GreenFix garden assistant");
+    panel.setAttribute("aria-label", BOT_NAME + ", the GreenFix property care assistant");
     panel.hidden = true;
 
     var header = el("div", "gf-chat-header");
