@@ -101,6 +101,9 @@
 /residential-property-maintenance  /residential-property-maintenance.html  200
 /planned-preventative-maintenance  /planned-preventative-maintenance.html  200
 /drone-property-inspections  /drone-property-inspections.html  200
+/services/painting-decorating  /services/painting-decorating.html  200
+/services/landlord-property-maintenance  /services/landlord-property-maintenance.html  200
+/services/pat-testing  /services/pat-testing.html  200
 /commercial-maintenance  /commercial-maintenance.html  200
 /factory-warehouse-grounds-maintenance  /factory-warehouse-grounds-maintenance.html  200
 /care-home-grounds-maintenance-preston  /care-home-grounds-maintenance-preston.html  200
@@ -142,10 +145,5 @@
 /blog/why-wont-my-window-close-properly  /blog/why-wont-my-window-close-properly.html  200
 /blog/why-does-my-door-stick-or-drag-on-the-floor  /blog/why-does-my-door-stick-or-drag-on-the-floor.html  200
 
-# --- Subscription page aliases ---
-/garden-subscription  /garden-maintenance-subscription  301
-/garden-subscription.html  /garden-maintenance-subscription  301
-
 # --- Custom 404 ---
 /*  /404.html  404
-

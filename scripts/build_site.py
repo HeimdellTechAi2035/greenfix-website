@@ -18,7 +18,7 @@ import re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DOMAIN = "https://greenfixexterior-care.co.uk"
-BUSINESS_NAME = "GreenFix Exterior Care"
+BUSINESS_NAME = "GREENFIX"
 PHONE_DISPLAY = "07447804597"
 PHONE_TEL = "+447447804597"
 EMAIL = "admin@greenfixexterior-care.co.uk"
@@ -34,7 +34,7 @@ TRAINED = "Fully trained, experienced team"
 FACEBOOK = "https://www.facebook.com/profile.php?id=61589641812157"
 LINKEDIN = "https://www.linkedin.com/company/greenfix-exterior-care/"
 TIKTOK = "https://www.tiktok.com/@greenfixpreston"
-LOGO_IMG = "greenfix-exterior-care-logo.webp"
+LOGO_IMG = "assets/greenfix-property-care.svg"
 OG_IMAGE = "hero-commercial-grounds-1200.jpg"
 LEGAL_NAME = "Greenfix Exterior Care Ltd"
 COMPANY_NUMBER = "17241761"
@@ -1030,6 +1030,60 @@ SERVICES = [
     ),
 ]
 
+
+# Expanded maintenance services. PAT remains information-only until launch readiness is confirmed.
+SERVICES.extend([
+    dict(slug="services/painting-decorating", cluster="repairs",
+         h1="Painting & Decorating in Preston", tagline="Interior and exterior decorating for homes, rentals and businesses",
+         price="Free Quote", price_note="Scope, preparation and materials agreed before work starts",
+         meta_title="Painting & Decorating Preston | GREENFIX",
+         meta_description="Interior and exterior painting, decorating and rental property refreshes in Preston, Penwortham, Fulwood and Leyland. Request a Greenfix quote.",
+         intro="Freshen up a home, prepare a rental between tenancies or improve a business premises. Greenfix provides painting and decorating across Preston, Penwortham, Fulwood and Leyland, with the preparation, finish, access arrangements and materials agreed in your written quote.",
+         cards=[("Interior Decorating", "Walls, ceilings and woodwork, from a single room to a wider property refresh. Tell us about the condition of the surfaces and the finish you want."),
+                ("Exterior Painting", "Suitable exterior walls, doors, gates and timberwork. We assess surface condition, weather and access before agreeing the work."),
+                ("Rental Property Refreshes", "Decorating between tenancies for landlords, HMOs and letting agents. Agree the rooms, access and target handover date with us."),
+                ("Preparation & Clear Pricing", "Your quote sets out preparation, coatings, materials and clean-up. Damp, significant damage or specialist work is assessed before decorating starts.")],
+         faqs=[("Do you work for landlords and letting agents?", "Yes. We can quote for one property or discuss a planned programme across several properties. Each job needs an agreed scope and access arrangements."),
+               ("Do you paint inside and outside?", "Yes. Interior and suitable exterior work can be quoted. Exterior work depends on surface condition, safe access and weather."),
+               ("How do I get an accurate quote?", "Tell us the property area, rooms or surfaces, approximate sizes, condition, desired finish and deadline. Photos help; we may need a site visit."),
+               ("Are materials included?", "We confirm materials, preparation and labour in the quote, so you know what is included before accepting.")],
+         related=["services/landlord-property-maintenance", "residential-property-maintenance", "commercial-maintenance"],
+         schema_desc="Interior and exterior painting and decorating, including rental property refreshes across Preston."),
+    dict(slug="services/landlord-property-maintenance", cluster="repairs",
+         h1="Landlord & Letting Agent Property Maintenance in Preston", tagline="One point of contact for rental refreshes, decorating and exterior care",
+         price="Quotation Required", price_note="One-off jobs or planned maintenance by agreement",
+         meta_title="Landlord Property Maintenance Preston | GREENFIX",
+         meta_description="Property refreshes, painting, garden clearances, exterior repairs and planned maintenance for Preston landlords and letting agents. Request a quote.",
+         intro="Keep rental properties presentable and organise work between tenancies with one point of contact. Greenfix supports landlords, letting agents and property managers across Preston, Penwortham, Fulwood and Leyland with decorating, minor repairs and exterior care. Send a single job or a list of properties and we will agree priorities, access and quotes with you.",
+         cards=[("Between-Tenancy Refreshes", "Combine decorating, garden tidy-ups and agreed minor repairs into a practical schedule before the next tenancy."),
+                ("Ongoing Exterior Care", "Regular gardens and communal grounds, pressure washing, gutters and agreed fencing or gate repairs."),
+                ("Several Properties, One Contact", "Send the address and work required for each property. We coordinate the agreed jobs and keep you informed of progress."),
+                ("Clear Approval Before Work", "We agree scope, price and access before starting. Additional work needs approval. Specialist or regulated work is assessed separately.")],
+         faqs=[("Can you look after more than one property?", "Yes. Contact us with the locations and maintenance needs to discuss a planned schedule. Each property's work and cost are agreed before starting."),
+               ("Can you work between tenancies?", "Yes. Share the checkout and proposed handover dates. We confirm availability and a realistic schedule after assessing the work."),
+               ("Does this include gas or fixed electrical certification?", "No. Gas safety certificates and fixed electrical installation inspections are separate specialist services and are not included in this maintenance offer."),
+               ("Can I book PAT testing?", "PAT testing is planned but is not yet available to book. We will confirm its launch once training, equipment and insurance arrangements are complete.")],
+         related=["services/painting-decorating", "garden-tidy-ups", "planned-preventative-maintenance"],
+         schema_desc="Property maintenance for landlords and letting agents, including decorating, rental refreshes and exterior care in Preston."),
+    dict(slug="services/pat-testing", cluster="repairs", coming_soon=True,
+         h1="PAT Testing in Preston — Coming Soon", tagline="Planned portable appliance inspection and testing service — bookings are not open",
+         price="Coming soon", price_note="Launch date and pricing to be confirmed",
+         meta_title="PAT Testing Preston — Coming Soon | GREENFIX",
+         meta_description="Greenfix is preparing a PAT testing service for Preston landlords and businesses. Not yet available to book. Learn about the planned service and reporting.",
+         intro="We are preparing a portable appliance inspection and testing service for landlords and businesses around Preston. This service is not yet available to book. Launch depends on confirmed competence and training, suitable equipment and insurance cover. No launch date has been set.",
+         cards=[("Planned Inspection Process", "The intended service combines visual inspection with appropriate electrical tests, based on the equipment type and its use."),
+                ("Equipment & Access", "At launch we will confirm which appliances we can inspect, safe access requirements and any exclusions before quoting."),
+                ("Planned Customer Records", "The intended report will identify inspected appliances, locations, results and items requiring action. Report format will be confirmed before bookings open."),
+                ("Risk-Based Intervals", "Inspection and testing frequency depends on equipment, environment and risk. Annual PAT testing is not a universal legal requirement.")],
+         faqs=[("Can I book a PAT testing visit now?", "No. Bookings are not open. This page describes a planned service; availability and prices will be published after launch readiness is confirmed."),
+               ("Does every appliance need an annual PAT test?", "No. HSE guidance explains that there is no universal annual PAT testing requirement. The maintenance approach and intervals should reflect equipment, its use and the environment."),
+               ("Is PAT testing the same as an EICR?", "No. PAT relates to electrical appliances; an EICR assesses the fixed electrical installation. This planned service does not include EICRs, electrical installation work or gas safety certification."),
+               ("Will reports be available through the portal?", "Downloadable reports and an appliance register are planned future improvements. They are not currently available.")],
+         related=["services/landlord-property-maintenance", "commercial-maintenance"],
+         schema_desc="Information about Greenfix's planned PAT testing service. Coming soon; bookings are not open.")
+])
+CLUSTERS[1]["slugs"] = ["services/painting-decorating", "services/landlord-property-maintenance", "services/pat-testing"] + CLUSTERS[1]["slugs"]
+
 SERVICE_BY_SLUG = {s["slug"]: s for s in SERVICES}
 
 
@@ -1097,11 +1151,9 @@ def local_business_schema():
         "@id": BUSINESS_ID,
         "name": BUSINESS_NAME,
         "legalName": LEGAL_NAME,
-        "alternateName": ["GreenFix", "GreenFix Property Care"],
+        "alternateName": ["GreenFix", "GreenFix Exterior Care"],
         "description": (
-            "Property maintenance and exterior repair contractor in Preston, "
-            "Lancashire: grounds and garden care plus brick, fence, gate, patio, "
-            "paving, roof tile, drain, window and door repairs for homes and businesses."
+            "Property maintenance, painting and decorating, rental refreshes and exterior care for landlords, letting agents, businesses and homeowners across Preston, Lancashire."
         ),
         "url": DOMAIN + "/",
         "telephone": PHONE_TEL,
@@ -1251,7 +1303,7 @@ def render_header():
         <div class="header-content">
             <div class="header-row">
                 <a href="/" class="logo">
-                    <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="190" height="52" loading="eager">
+                    <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="300" height="72" loading="eager">
                 </a>
                 <div class="header-actions">
                     <a href="tel:{PHONE_TEL}" class="phone-link">\U0001F4DE <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
@@ -1354,7 +1406,7 @@ def render_footer():
             <p><a href="{GOOGLE_MAPS_SHARE_URL}" target="_blank" rel="noopener">Get Directions on Google Maps &rarr;</a></p>
         </div>
         <div class="footer-bottom">
-            <p><strong>{BUSINESS_NAME}</strong> &mdash; Property maintenance and construction repairs across Preston.</p>
+            <p><strong>{BUSINESS_NAME}</strong> &mdash; Property Maintenance &amp; Exterior Care across Preston.</p>
             <p>{INSURANCE} &middot; {TRAINED} &middot; {WASTE_CARRIER} &middot; Prices shown are guide prices only.</p>
             <p>{LEGAL_NAME} &middot; {DISPLAY_ADDRESS} &middot; <a href="tel:{PHONE_TEL}">07447 804597</a> &middot; <a href="mailto:{EMAIL}">{EMAIL}</a> &middot; Registered in England &amp; Wales, company no. {COMPANY_NUMBER}</p>
         </div>
@@ -1407,7 +1459,8 @@ def render_page(*, head_html, body_html, extra_script=""):
 {render_header()}
 {body_html}
 {render_footer()}
-{extra_script}    <script src="/assets/chatbot.js" defer></script>
+{extra_script}    <script src="/assets/quote-service.js" defer></script>
+    <script src="/assets/chatbot.js" defer></script>
 </body>
 </html>
 """
@@ -1415,6 +1468,7 @@ def render_page(*, head_html, body_html, extra_script=""):
 
 def write_page(filename, html):
     path = os.path.join(ROOT, filename)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(html)
     print(f"wrote {filename} ({len(html)} bytes)")
@@ -1542,6 +1596,14 @@ def render_service_page(service):
     </section>
 """
 
+    if service.get("coming_soon"):
+        body = body.replace(render_trust_strip(), "")
+        body = body.replace('href="/#quote-form" class="btn btn-secondary">Request a Free Quote', 'href="#service-status" class="btn btn-secondary">Service status')
+        start = body.index('    <section class="final-cta">')
+        body = body[:start] + '\n<section class="section-white" id="service-status"><div class="container"><h2>PAT testing is not yet available</h2><p>Bookings will open only once training, suitable equipment and insurance are confirmed.</p><p>Read <a href="https://www.hse.gov.uk/electricity/faq-portable-appliance-testing.htm" target="_blank" rel="noopener">HSE guidance on portable appliance testing</a>.</p></div></section>\n'
+    else:
+        from urllib.parse import quote
+        body = body.replace('href="/#quote-form"', 'href="/?service=' + quote(service["h1"].split(" in ")[0]) + '#quote-form"')
     return render_page(head_html=head, body_html=body)
 
 
@@ -1557,10 +1619,10 @@ TODAY_ISO = _datetime.date.today().isoformat()
 QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
         <div class="form-container">
             <h2 class="center">Request a Free Quote or Book a Site Visit</h2>
-            <p class="lede center" style="margin-bottom:1.5rem;">Grounds and garden care, or a structural repair? Tell us what needs doing, and a preferred date if you'd like us to come and see you — we'll confirm by phone within 24 hours.</p>
+            <p class="lede center" style="margin-bottom:1.5rem;">Decorating, a rental refresh or exterior care? Tell us the work, property and target date. We will confirm the scope and availability by phone. PAT testing bookings are not open.</p>
             <form class="quote-form" name="quote-request" method="POST" action="https://forms.heimdell-tech-ai.co.uk/greenfix/quote-request" id="quoteForm">
                 <input type="hidden" name="form-name" value="quote-request" />
-                <input type="text" name="bot-field" class="bot-field" />
+                <input type="text" name="bot-field" class="bot-field" tabindex="-1" aria-hidden="true" />
                 <div class="form-group">
                     <label for="fullname">Full Name <span class="required">*</span></label>
                     <input type="text" id="fullname" name="full_name" required>
@@ -1574,8 +1636,21 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
                     <input type="text" id="address" name="property_address" required placeholder="E.g., Preston / 123 High Street">
                 </div>
                 <div class="form-group">
+                    <label for="service">Which service do you need?</label>
+                    <select id="service" name="service_type">
+                        <option value="">Please select</option>
+                        <option>Painting &amp; decorating</option>
+                        <option>Landlord &amp; letting agent maintenance</option>
+                        <option>Garden &amp; grounds maintenance</option>
+                        <option>Exterior care &amp; repairs</option>
+                        <option>Planned property maintenance</option>
+                        <option>Other / several services</option>
+                    </select>
+                    <small>PAT testing is coming soon and cannot currently be booked.</small>
+                </div>
+                <div class="form-group">
                     <label for="message">What work needs doing? <span class="required">*</span></label>
-                    <textarea id="message" name="message" required placeholder="E.g., lawn mowing round, hedge trimming, brick repointing, fence repair, blocked drain, roof tile repair..."></textarea>
+                    <textarea id="message" name="message" required placeholder="Tell us the service, rooms or exterior areas, condition, approximate sizes and target date. For several properties, include each location."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="visit-date">Preferred Visit Date <span style="font-weight:400;color:var(--grey);">(optional)</span></label>
@@ -1624,8 +1699,8 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
 
 
 HOMEPAGE_FAQS = [
-    ("Do you only do garden work, or repairs as well?",
-     "Both. GreenFix covers grounds and garden care (mowing, hedges, tidy-ups, pressure washing) and exterior property repairs (brickwork, fencing, gates, paving, roofing, drainage, windows and doors) for homes and businesses."),
+    ("What property maintenance services do you offer?",
+     "Greenfix offers painting and decorating, rental property refreshes, minor repairs, grounds and garden maintenance and exterior care. We support homeowners, landlords, letting agents and businesses. PAT testing is coming soon and is not yet available to book."),
     ("What areas do you cover?",
      f"{AREA_SERVED_TEXT}."),
     ("Are you insured?",
@@ -1638,6 +1713,8 @@ HOMEPAGE_FAQS = [
      f"Call or WhatsApp {PHONE_DISPLAY}, or use the quote form on this site. We respond within 24 hours."),
 ]
 
+
+GARDEN_SUBSCRIPTION_HTML = '    <section class="services-section" style="background:#f0f7f3;padding:3rem 1.25rem;" aria-labelledby="subscription-heading">\n      <div class="container" style="max-width:960px;margin:0 auto;text-align:center;">\n        <h2 id="subscription-heading" style="color:var(--dark-green);font-size:1.6rem;margin-bottom:0.5rem;">Monthly Garden Maintenance Plans</h2>\n        <p style="color:#555;margin-bottom:2rem;font-size:1rem;">Set up once by Direct Debit - no contract lock-in, cancel any time.</p>\n        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-bottom:2rem;">\n          <div style="background:#fff;border:2px solid #d4e8d8;border-radius:1rem;padding:1.75rem 1.25rem;">\n            <p style="font-size:1.1rem;font-weight:700;color:var(--dark-green);margin-bottom:0.5rem;">Lawn Package</p>\n            <p style="font-size:2rem;font-weight:800;color:#1a1a1a;margin:0;">£39<span style="font-size:0.95rem;font-weight:400;color:#777;">/mo</span></p>\n            <p style="font-size:0.85rem;color:#555;margin:0.75rem 0;">Fortnightly visits: lawn mowing and edge tidy</p>\n          </div>\n          <div style="background:#fff;border:2px solid var(--dark-green);border-radius:1rem;padding:1.75rem 1.25rem;position:relative;">\n            <span style="position:absolute;top:-0.75rem;left:50%;transform:translateX(-50%);background:var(--dark-green);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.8rem;border-radius:999px;">MOST POPULAR</span>\n            <p style="font-size:1.1rem;font-weight:700;color:var(--dark-green);margin-bottom:0.5rem;">Silver Package</p>\n            <p style="font-size:2rem;font-weight:800;color:#1a1a1a;margin:0;">£59<span style="font-size:0.95rem;font-weight:400;color:#777;">/mo</span></p>\n            <p style="font-size:0.85rem;color:#555;margin:0.75rem 0;">Fortnightly visits. Lawns + hedge trimming included</p>\n          </div>\n          <div style="background:#fff;border:2px solid #d4e8d8;border-radius:1rem;padding:1.75rem 1.25rem;">\n            <p style="font-size:1.1rem;font-weight:700;color:var(--dark-green);margin-bottom:0.5rem;">Gold Package</p>\n            <p style="font-size:2rem;font-weight:800;color:#1a1a1a;margin:0;">£79<span style="font-size:0.95rem;font-weight:400;color:#777;">/mo</span></p>\n            <p style="font-size:0.85rem;color:#555;margin:0.75rem 0;">Fortnightly visits. Lawns + hedges + weeding</p>\n          </div>\n        </div>\n        <a href="/garden-maintenance-subscription" style="display:inline-block;padding:0.9rem 2.5rem;font-size:1rem;font-weight:700;background:var(--dark-green);color:#fff;border-radius:0.5rem;text-decoration:none;">Sign Up and Set Up Direct Debit</a>\n        <p style="font-size:0.8rem;color:#888;margin-top:0.75rem;">Powered by GoCardless - Cancel any time</p>\n      </div>\n    </section>'
 
 def render_homepage():
     grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
@@ -1674,8 +1751,8 @@ def render_homepage():
     ])
 
     head = render_head(
-        title="Garden Maintenance & Exterior Repairs in Preston | GreenFix",
-        description="Grounds and garden care plus fence, gate, brick, patio and drain repairs for Preston homes and businesses. £5M insured. Free quotes: 07447 804597.",
+        title="Property Maintenance & Painting Preston | GREENFIX",
+        description="Painting, decorating, landlord property maintenance and exterior care across Preston, Penwortham, Fulwood and Leyland. Request a free Greenfix quote.",
         canonical_path="/",
         extra_schema=schema,
         preload_image="/hero-commercial-1200w.webp",
@@ -1687,15 +1764,29 @@ def render_homepage():
                 <source type="image/webp" srcset="/hero-commercial-480w.webp 480w, /hero-commercial-800w.webp 800w, /hero-commercial-1200w.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 800px) 80vw, 1200px">
                 <img class="hero-image" src="/hero-commercial-1200w.webp" alt="GreenFix Exterior Care team carrying out grounds maintenance in Preston" width="1200" height="630" loading="eager" fetchpriority="high">
             </picture>
-            <h1>Property Maintenance &amp; Construction Repairs Across Preston</h1>
-            <p class="tagline">Grounds &amp; Garden Care and Exterior Repairs, for Homes and Businesses</p>
-            <p class="hero-desc">GreenFix Exterior Care keeps properties looking after themselves and in good repair &mdash; from lawn mowing and hedge trimming to brickwork, fencing, roofing, drainage and general exterior repairs. One reliable contractor for the outside of your property.</p>
+            <h1>Property Maintenance &amp; Exterior Care</h1>
+            <p class="tagline">Painting, decorating and exterior care across Preston and Lancashire</p>
+            <p class="hero-desc">GREENFIX supports landlords, letting agents, businesses and homeowners with painting and decorating, rental property refreshes, minor repairs and dependable garden and exterior care. PAT testing is coming soon; bookings are not yet open.</p>
             <div class="button-group">
                 <a href="#quote-form" class="btn btn-primary">Request a Free Quote</a>
                 <a href="tel:{PHONE_TEL}" class="btn btn-secondary">\U0001F4DE Call {PHONE_DISPLAY}</a>
             </div>
         </div>
     </section>
+
+    <section class="section-white" aria-labelledby="service-groups">
+        <div class="container">
+            <h2 class="center" id="service-groups">One contact for your property</h2>
+            <p class="lede center">From a single decorating job to regular care across several properties.</p>
+            <div class="grid grid-3">
+                <div class="card"><h3>Exterior Care</h3><p>Gardens, communal grounds, pressure washing, gutters, fencing and gates.</p><a href="/#grounds-garden-care">Explore exterior services</a></div>
+                <div class="card"><h3>Property Maintenance</h3><p>Interior and exterior painting, decorating, rental refreshes and agreed minor repairs.</p><p><a href="/services/painting-decorating">Painting &amp; decorating</a></p><p><a href="/services/landlord-property-maintenance">Landlords &amp; letting agents</a></p></div>
+                <div class="card"><h3>PAT Testing <span class="launch-label">Coming soon</span></h3><p>Planned appliance inspections and testing for landlords and businesses. Bookings are not open.</p><a href="/services/pat-testing">Read about the planned service</a></div>
+            </div>
+        </div>
+    </section>
+
+{GARDEN_SUBSCRIPTION_HTML}
 
     <section class="section-white" id="grounds-garden-care">
         <div class="container">
@@ -1710,7 +1801,7 @@ def render_homepage():
     <section class="section-grey" id="repairs-and-maintenance">
         <div class="container">
             <h2 class="center">Repairs &amp; Maintenance</h2>
-            <p class="lede center" style="margin-bottom:1.5rem;">Structural, brick, roofing, drainage and general exterior repairs.</p>
+            <p class="lede center" style="margin-bottom:1.5rem;">Painting, decorating, rental refreshes, planned upkeep and exterior repairs.</p>
             <div class="grid grid-3">
                 {repairs_cards}
             </div>
@@ -1762,7 +1853,7 @@ def render_homepage():
     <section class="final-cta">
         <div class="container">
             <h2>Get a Free Quote Today</h2>
-            <p>Grounds work or a repair job &mdash; call {PHONE_DISPLAY} or WhatsApp photos for a fast estimate.</p>
+            <p>Decorating, rental refresh or exterior care &mdash; call {PHONE_DISPLAY} or WhatsApp photos for a fast estimate.</p>
             <div class="button-group">
                 <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
             </div>
@@ -1787,7 +1878,7 @@ def render_about():
     ])
     head = render_head(
         title="About GreenFix | Property Maintenance & Construction Preston",
-        description=f"About {BUSINESS_NAME} — property maintenance and construction repairs for homes and businesses across Preston, new for {FOUNDED}.",
+        description=f"About {BUSINESS_NAME} — property maintenance, painting, decorating and exterior care across Preston, new for {FOUNDED}.",
         canonical_path="/about-greenfix",
         extra_schema=schema,
     )
@@ -1795,15 +1886,15 @@ def render_about():
     body = f"""{breadcrumb}
     <section id="main-content" class="hero">
         <div class="hero-content">
-            <h1>About GreenFix Exterior Care</h1>
-            <p class="tagline">Property Maintenance &amp; Construction Repairs, New for {FOUNDED}</p>
+            <h1>About GREENFIX</h1>
+            <p class="tagline">Property Maintenance &amp; Exterior Care, New for {FOUNDED}</p>
         </div>
     </section>
 
     <section class="section-white">
         <div class="container">
             <h2>Who We Are</h2>
-            <p class="lede">{BUSINESS_NAME} launched in {FOUNDED}, covering two sides of keeping a property looking good and working properly: regular grounds and garden care, and exterior construction repairs &mdash; brickwork, fencing, gates, paving, roofing, drainage, windows and doors. We're built on turning up when we say we will and doing the job properly, every time.</p>
+            <p class="lede">{BUSINESS_NAME} launched in {FOUNDED}, providing property maintenance and exterior care for homeowners, landlords, letting agents and businesses. Our work includes painting and decorating, rental refreshes, regular grounds and garden care and agreed exterior repairs. We're built on turning up when we say we will and doing the job properly, every time.</p>
             <p class="lede" style="margin-top:1rem;"><strong>Address:</strong> {DISPLAY_ADDRESS}</p>
             <p class="lede" style="margin-top:0.35rem;"><strong>Hours:</strong> {HOURS_DISPLAY}</p>
         </div>
@@ -1943,6 +2034,8 @@ def build_gallery():
 def offer_catalog_schema():
     items = []
     for s in SERVICES:
+        if s.get("coming_soon"):
+            continue
         item = {
             "@type": "Offer",
             "name": s["h1"].split(" in ")[0],
@@ -2656,7 +2749,7 @@ def render_town_page(town):
     <section id="main-content" class="hero">
         <div class="hero-content">
             <h1>{esc(town["h1"])}</h1>
-            <p class="tagline">Grounds &amp; Garden Care and Exterior Repairs, for Homes and Businesses</p>
+            <p class="tagline">Painting, decorating and exterior care across Preston and Lancashire</p>
             <div class="button-group">
                 <a href="tel:{PHONE_TEL}" class="btn btn-primary">\U0001F4DE Call {PHONE_DISPLAY}</a>
                 <a href="/#quote-form" class="btn btn-secondary">Request a Free Quote</a>
@@ -3232,7 +3325,7 @@ def build_redirects():
 # Pages whose <title> or meta description changed on 2026-10-01.
 # Everything else keeps the previous sitemap lastmod. Redirect stubs are
 # not listed: they are noindex aliases, not pages to crawl.
-SITEMAP_LASTMOD = "2026-08-30"
+SITEMAP_LASTMOD = "2026-11-04"
 SITEMAP_LASTMOD_REFRESHED = "2026-10-01"
 # Preston local copy added to brick repointing and exterior structural repairs.
 SITEMAP_LASTMOD_LOCAL = "2026-10-27"
@@ -3324,11 +3417,7 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        lastmod = (SITEMAP_LASTMOD_OCT30 if path in SITEMAP_OCT30_PATHS
-                   else SITEMAP_LASTMOD_LOCAL if path in SITEMAP_LOCAL_PATHS
-                   else SITEMAP_LASTMOD_CONFIRMED if path in SITEMAP_CONFIRMED_PATHS
-                   else SITEMAP_LASTMOD_REFRESHED if path in SITEMAP_REFRESHED_PATHS
-                   else SITEMAP_LASTMOD)
+        lastmod = SITEMAP_LASTMOD
         entries.append(f"""  <url>
     <loc>{DOMAIN}{path}</loc>
     <lastmod>{lastmod}</lastmod>
@@ -3379,7 +3468,7 @@ def build_chatbot_kb():
         entries.append({
             "k": sorted(set(name_tokens + ["price", "cost", "much", "charge"])),
             "a": (f"{name}: {service['price']} ({service['price_note']}). "
-                  f"{service['tagline']}. See /{service['slug']} or call {PHONE_DISPLAY} for an exact quote."),
+                  f"{service['tagline']}. See /{service['slug']} or contact {PHONE_DISPLAY} for details."),
         })
         for q, a in service["faqs"]:
             entries.append({

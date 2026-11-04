@@ -591,3 +591,15 @@ textarea { resize: vertical; min-height: 100px; }
 @media print {
   header, .breadcrumb, .button-group, form, .final-cta, .gf-chat-toggle, .gf-chat-panel, .gf-chat-teaser { display: none; }
 }
+
+/* Expanded property-care branding fits narrow phone headers. */
+.logo img { width: 260px; max-width: 100%; height: auto; max-height: 62px; }
+.logo { height: 62px; flex: 0 1 260px; }
+.launch-label { display: inline-block; border-radius: 1rem; padding: .15rem .55rem; font-size: .72rem; background: #edf4df; color: #34551d; vertical-align: middle; }
+@media (max-width: 480px) {
+  .logo { height: 48px; flex-basis: 210px; }
+  .logo img { min-width: 0; }
+  .header-row { gap: .4rem; }
+  .header-actions { flex-shrink: 0; }
+  .phone-link, .nav-toggle { padding: .4rem .45rem; font-size: .8rem; }
+}

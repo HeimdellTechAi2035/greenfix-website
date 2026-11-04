@@ -17,6 +17,7 @@ SKIP = {
     "googlec72ca5999f108be1.html",
     # noindex HTML redirect stubs, not content pages
     "garden-maintenance-preston.html",
+    "garden-subscription.html",
     "driveway-cleaning-preston.html",
     "window-cleaning-preston.html",
     "estate-agent-services.html",
