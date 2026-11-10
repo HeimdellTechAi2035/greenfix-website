@@ -11,6 +11,11 @@
   else if (/landlord|letting/i.test(requested)) service.selectedIndex = 2;
   else if (/garden|grounds|lawn|hedge/i.test(requested)) service.selectedIndex = 3;
   else if (requested) service.selectedIndex = 4;
+  Array.prototype.some.call(service.options, function (option, index) {
+    if (option.value.toLowerCase() !== requested.toLowerCase()) return false;
+    service.selectedIndex = index;
+    return true;
+  });
   form.addEventListener('submit', function () {
     if (!service.value) return;
     var prefix = 'Service: ' + service.value + '\n';

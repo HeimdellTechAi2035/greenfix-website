@@ -1088,6 +1088,76 @@ SERVICES.extend([
 ])
 CLUSTERS[1]["slugs"] = ["services/painting-decorating", "services/landlord-property-maintenance", "services/pat-testing"] + CLUSTERS[1]["slugs"]
 
+SERVICES.extend([
+    dict(
+        slug="salt-spreading", cluster="grounds",
+        h1="Salt Spreading & Gritting in Preston",
+        tagline="Winter treatment for private paths, car parks and shared access areas",
+        price="Quotation Required", price_note="based on site size, access and visit frequency",
+        meta_title="Salt Spreading & Gritting Preston | GreenFix",
+        meta_description="Salt spreading and winter gritting for private paths, car parks and communal areas in Preston, Penwortham, Fulwood and Leyland. Request a site quote.",
+        intro="Keep winter access on your maintenance plan. GreenFix provides salt spreading and gritting for private properties, communal grounds and business premises across Preston, Penwortham, Fulwood and Leyland. We work with homeowners, landlords, letting agents and property managers to agree which areas need treatment, how we can access them and when visits are needed. Contact us for a one-off visit or to discuss a planned winter schedule.",
+        local_section={
+            "heading": "Winter gritting for your property",
+            "paragraphs": [
+                "From a shared entrance at a rental property to a business car park, we quote for the areas you need treated. Tell us about pedestrian routes, steps, slopes, vehicle access and any opening times that affect the visit.",
+                "Send the address, approximate area and photos where possible. We confirm the treatment areas, materials, visit arrangements and price before work starts. Timing and repeat visits are agreed with you; contact us to check availability.",
+            ],
+            "points": ["Private paths and pedestrian routes", "Car parks and business entrances", "Communal access for rental and managed properties", "One-off visits or planned winter arrangements by agreement"],
+        },
+        cards=[
+            ("Paths & Entrances", "Salt spreading for agreed private walkways, entrances and shared access routes, with attention to the areas used by residents, staff and visitors."),
+            ("Car Parks & Communal Areas", "Winter gritting for suitable private car parks, forecourts and communal hard surfaces, with the treatment area agreed before the visit."),
+            ("Planned Winter Visits", "Discuss a winter maintenance schedule for one property or several sites. Visit timing, access and any repeat treatment are agreed individually."),
+            ("Clear Scope & Pricing", "A site-specific quote based on the area, surface, access, materials and frequency required, so you know what the agreed visit includes."),
+        ],
+        faqs=[
+            ("Do you offer salt spreading and gritting in Preston?", "Yes. We cover Preston, Penwortham, Fulwood and Leyland for agreed private paths, car parks, entrances and communal access areas. Contact us with your address and treatment needs."),
+            ("Can I book a one-off visit or regular winter gritting?", "You can request a one-off treatment or discuss planned winter visits. We confirm availability, access, timing and the areas to be treated before accepting the work."),
+            ("How much does salt spreading cost?", "We quote individually. The price depends on the size and layout of the site, access, materials and the number of visits. Send photos and approximate dimensions to help us assess the job."),
+            ("Does gritting guarantee an ice-free surface?", "No. Conditions can change after treatment, and rain, traffic or further freezing can mean another visit is needed. Keep monitoring the site and take care on treated surfaces. Repeat treatments need to be agreed."),
+            ("Do you grit public roads or offer a 24-hour response?", "This service is for agreed private property areas. Public road treatment is outside this service. Call to check appointment availability; a 24-hour or automatic weather-triggered response is not included."),
+        ],
+        related=["grounds-maintenance", "planned-preventative-maintenance", "storm-damage-repairs"],
+        schema_desc="Salt spreading and winter gritting for private paths, car parks, entrances and communal property areas in Preston, Penwortham, Fulwood and Leyland. Site-specific quotations and visits by agreement.",
+    ),
+    dict(
+        slug="storm-damage-repairs", cluster="repairs",
+        h1="Storm Damage Repairs in Preston",
+        tagline="Help with damaged fences, gates, roof tiles and exterior property repairs",
+        price="Quotation Required", price_note="following assessment of damage and safe access",
+        meta_title="Storm Damage Repairs Preston | GreenFix",
+        meta_description="Storm damage repairs in Preston, Penwortham, Fulwood and Leyland. Damaged fences, gates, roof tiles and exterior repairs assessed and quoted. Contact GreenFix.",
+        intro="A damaged fence, broken gate or slipped roof tile can leave your property exposed after bad weather. GreenFix assesses storm damage and quotes for suitable exterior repairs across Preston, Penwortham, Fulwood and Leyland. We help homeowners, landlords, letting agents and businesses organise the next steps, with the repair scope, safe access and price agreed before work starts. Send photos taken from a safe position and your property address, or call to discuss the damage and our availability.",
+        local_section={
+            "heading": "From storm damage assessment to agreed repairs",
+            "paragraphs": [
+                "Tell us what has been damaged, when you noticed it and whether access is affected. Photos help us understand the job, but a site visit may be needed before we can confirm the work and cost. We can discuss fencing, gates, roof tiles and suitable exterior masonry repairs together where several areas are affected.",
+                "Repairs are scheduled around the condition of the property, safe access and weather. Where scaffolding, specialist assessment or additional work is needed, we explain this before you commit. Keep clear of unstable walls, loose roof materials and damaged structures while arrangements are made.",
+            ],
+            "points": ["Fence repairs and replacement panels", "Damaged gates and boundary repairs", "Slipped, cracked or missing roof tiles", "Agreed exterior repairs for homes and managed properties"],
+        },
+        cards=[
+            ("Fences & Gates", "Assess wind-damaged fence panels, posts and gates, then agree which parts can be repaired and which need replacing."),
+            ("Roof Tile Repairs", "Slipped, cracked or missing tiles assessed for repair or replacement. Work depends on weather, the condition of the roof and suitable access."),
+            ("Walls & Exterior Repairs", "Discuss damaged garden walls, pointing and other exterior areas. Unstable structures may need specialist assessment before repair work can be agreed."),
+            ("Landlords & Property Managers", "Send the property address, damage details and access contact. We agree priorities and a quote with you before starting approved repairs."),
+        ],
+        faqs=[
+            ("What storm damage can GreenFix repair?", "We assess damaged fencing, gates, roof tiles and suitable exterior masonry or property repairs. The work we can accept depends on the damage, safe access and whether specialist assessment is needed."),
+            ("Can you repair a fence that has blown down?", "Yes. We can assess panels, posts and fixings and quote for repair or replacement. Photos taken from a safe location help us understand how much of the fence is affected."),
+            ("Can you attend immediately after a storm?", "Call to check current availability. We confirm a realistic appointment once we understand the damage, access and weather conditions. Same-day attendance and 24-hour emergency cover are not guaranteed."),
+            ("How much do storm damage repairs cost?", "We provide a quote for the specific damage. Materials, labour, access equipment and waste removal depend on the job. Any scaffolding or specialist requirements are discussed before you approve the work."),
+            ("What should I send when requesting a quote?", "Send your name, phone number, property address, a description of the damage and photos taken without approaching unsafe areas. For a rental property, include the person who can arrange access and who will approve the work."),
+            ("Can I use your quote for an insurance enquiry?", "You can share our repair quote with your insurer. Check their approval requirements before authorising work; cover and claim decisions are made by your insurer."),
+        ],
+        related=["fence-repairs", "fence-panel-replacement", "gate-repairs", "roof-tile-repairs", "garden-wall-repairs"],
+        schema_desc="Storm damage assessment and agreed repairs to fences, gates, roof tiles and suitable property exteriors in Preston, Penwortham, Fulwood and Leyland. Quoted following assessment and safe access checks.",
+    ),
+])
+CLUSTERS[0]["slugs"].append("salt-spreading")
+CLUSTERS[1]["slugs"].append("storm-damage-repairs")
+
 SERVICE_BY_SLUG = {s["slug"]: s for s in SERVICES}
 
 
@@ -1645,6 +1715,8 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
                         <option>Garden &amp; grounds maintenance</option>
                         <option>Exterior care &amp; repairs</option>
                         <option>Planned property maintenance</option>
+                        <option>Salt Spreading &amp; Gritting</option>
+                        <option>Storm Damage Repairs</option>
                         <option>Other / several services</option>
                     </select>
                     <small>PAT testing is coming soon and cannot currently be booked.</small>
@@ -3418,7 +3490,7 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        lastmod = SITEMAP_LASTMOD
+        lastmod = "2026-11-10" if path in {"/salt-spreading", "/storm-damage-repairs"} else SITEMAP_LASTMOD
         entries.append(f"""  <url>
     <loc>{DOMAIN}{path}</loc>
     <lastmod>{lastmod}</lastmod>
