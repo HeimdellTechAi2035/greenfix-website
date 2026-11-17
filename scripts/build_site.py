@@ -1391,30 +1391,33 @@ def render_breadcrumb_html(items):
 """
 
 
-def render_nav_item(label, slugs, current_slug=None):
-    links = []
-    for slug in slugs:
-        svc = SERVICE_BY_SLUG.get(slug)
-        if svc:
-            links.append(f'<a href="/{slug}">{esc(svc["h1"].split(" in ")[0])}</a>')
-    panel = "\n                ".join(links)
+def render_nav_item(label, panel_id, links):
+    panel = "\n                        ".join(
+        f'<a href="{url}">{esc(text)}</a>' for url, text in links
+    )
     return f"""<div class="nav-item">
-                <span class="nav-label" tabindex="0">{esc(label)}</span>
-                <div class="mega-panel">
-                {panel}
-                </div>
-            </div>"""
+                    <button type="button" class="nav-label" aria-expanded="false" aria-controls="{panel_id}">{esc(label)}</button>
+                    <div class="mega-panel" id="{panel_id}" hidden>
+                        {panel}
+                    </div>
+                </div>"""
 
 
 def render_header():
-    grounds = next(c for c in CLUSTERS if c["key"] == "grounds")
-    repairs = next(c for c in CLUSTERS if c["key"] == "repairs")
-    sector_links = "\n                ".join(
-        f'<a href="{sector_url(fname)}">{esc(label)}</a>' for fname, label in SECTORS
-    )
-    town_links = "\n                ".join(
-        f'<a href="/{t["slug"]}">{esc(t["name"])}</a>' for t in TOWN_PAGES
-    )
+    service_groups = []
+    for cluster in CLUSTERS:
+        links = [
+            (f"/{slug}", SERVICE_BY_SLUG[slug]["h1"].split(" in ")[0])
+            for slug in cluster["slugs"]
+        ]
+        service_groups.append(render_nav_item(cluster["label"], f"nav-{cluster['key']}", links))
+    sector_links = [(sector_url(fname), label) for fname, label in SECTORS]
+    town_links = [(f"/{town['slug']}", town["name"]) for town in TOWN_PAGES]
+    navigation_groups = "\n                ".join([
+        *service_groups,
+        render_nav_item("Sectors We Work With", "nav-sectors", sector_links),
+        render_nav_item("Areas", "nav-areas", town_links),
+    ])
     return f"""    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <div class="header-content">
@@ -1423,25 +1426,12 @@ def render_header():
                     <img src="/{LOGO_IMG}" alt="{BUSINESS_NAME} logo" width="300" height="72" loading="eager">
                 </a>
                 <div class="header-actions">
-                    <a href="tel:{PHONE_TEL}" class="phone-link">\U0001F4DE <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
-                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+                    <a href="tel:{PHONE_TEL}" class="phone-link">📞 <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
                 </div>
             </div>
             <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-                {render_nav_item(grounds["label"], grounds["slugs"])}
-                {render_nav_item(repairs["label"], repairs["slugs"])}
-                <div class="nav-item">
-                    <span class="nav-label" tabindex="0">Sectors We Work With</span>
-                    <div class="mega-panel">
-                {sector_links}
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <span class="nav-label" tabindex="0">Areas</span>
-                    <div class="mega-panel">
-                {town_links}
-                    </div>
-                </div>
+                {navigation_groups}
                 <a href="/pricing-guide">Pricing</a>
                 <a href="/blog">Blog</a>
                 <a href="/about-greenfix">About</a>
@@ -1573,7 +1563,8 @@ def render_page(*, head_html, body_html, extra_script=""):
 {render_header()}
 {body_html}
 {render_footer()}
-{extra_script}    <script src="/assets/quote-service.js" defer></script>
+{extra_script}    <script src="/assets/site-nav.js" defer></script>
+    <script src="/assets/quote-service.js" defer></script>
     <script src="/assets/chatbot.js" defer></script>
 </body>
 </html>
@@ -1896,12 +1887,19 @@ def render_homepage():
         title="Commercial & Domestic Gritting Preston | Greenfix",
         description="Commercial and domestic gritting in Preston for car parks, business parks, care homes and driveways. Blocked drain repairs, resealing and winter maintenance.",
         canonical_path="/",
+        og_image=f"{DOMAIN}/assets/gritting-quad-car-park-1280.webp",
         extra_schema=schema,
     )
 
     body = f"""    <main id="main-content">
     <section class="hero winter-hero">
         <div class="hero-content">
+            <img class="hero-image winter-hero-image"
+                 src="/assets/gritting-quad-car-park-1280.webp"
+                 srcset="/assets/gritting-quad-car-park-480.webp 480w, /assets/gritting-quad-car-park-800.webp 800w, /assets/gritting-quad-car-park-1280.webp 1280w"
+                 sizes="(max-width: 880px) calc(100vw - 2.5rem), 820px"
+                 alt="A quad bike spreading rock salt across a car park"
+                 width="1280" height="640" fetchpriority="high">
             <h1>Commercial &amp; Domestic Gritting and Salt Spreading in Preston</h1>
             <h2>Winter Property Maintenance for Homes, Car Parks &amp; Business Premises</h2>
             <p class="hero-desc">Request winter gritting for home driveways and private paths, supermarket car parks, business parks, nursing homes and council premises. Greenfix also clears blocked outdoor drains, fixes waterlogged gardens and reseals exterior windows and doors.</p>

@@ -208,13 +208,13 @@
                 </a>
                 <div class="header-actions">
                     <a href="tel:+447447804597" class="phone-link">📞 <span class="phone-link-full">Call GreenFix</span><span class="phone-link-short">Call</span></a>
-                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');var open=n.classList.toggle('is-open');this.setAttribute('aria-expanded',open);">Menu ▾</button>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
                 </div>
             </div>
             <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
                 <div class="nav-item">
-                <span class="nav-label" tabindex="0">Grounds &amp; Garden Care</span>
-                <div class="mega-panel">
+                <button type="button" class="nav-label" aria-expanded="false" aria-controls="nav-grounds">Grounds &amp; Garden Care</button>
+                <div class="mega-panel" id="nav-grounds" hidden>
                 <a href="/grounds-maintenance">Grounds Maintenance</a>
                 <a href="/garden-maintenance">Garden Maintenance</a>
                 <a href="/lawn-mowing">Lawn Mowing</a>
@@ -228,8 +228,8 @@
                 </div>
             </div>
                 <div class="nav-item">
-                <span class="nav-label" tabindex="0">Repairs &amp; Maintenance</span>
-                <div class="mega-panel">
+                <button type="button" class="nav-label" aria-expanded="false" aria-controls="nav-repairs">Repairs &amp; Maintenance</button>
+                <div class="mega-panel" id="nav-repairs" hidden>
                 <a href="/services/painting-decorating">Painting &amp; Decorating</a>
                 <a href="/services/landlord-property-maintenance">Landlord &amp; Letting Agent Property Maintenance</a>
                 <a href="/services/pat-testing">PAT Testing</a>
@@ -258,8 +258,8 @@
                 </div>
             </div>
                 <div class="nav-item">
-                    <span class="nav-label" tabindex="0">Sectors We Work With</span>
-                    <div class="mega-panel">
+                    <button type="button" class="nav-label" aria-expanded="false" aria-controls="nav-sectors">Sectors We Work With</button>
+                    <div class="mega-panel" id="nav-sectors" hidden>
                 <a href="/commercial-maintenance">Commercial Maintenance</a>
                 <a href="/factory-warehouse-grounds-maintenance">Factories &amp; Warehouses</a>
                 <a href="/care-home-grounds-maintenance-preston">Care Homes</a>
@@ -272,8 +272,8 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <span class="nav-label" tabindex="0">Areas</span>
-                    <div class="mega-panel">
+                    <button type="button" class="nav-label" aria-expanded="false" aria-controls="nav-areas">Areas</button>
+                    <div class="mega-panel" id="nav-areas" hidden>
                 <a href="/penwortham">Penwortham</a>
                 <a href="/fulwood">Fulwood</a>
                 <a href="/leyland">Leyland</a>
@@ -478,5 +478,6 @@
 
     <script src="/assets/quote-service.js" defer></script>
     <script src="/assets/chatbot.js" defer></script>
+    <script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

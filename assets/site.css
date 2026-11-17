@@ -80,6 +80,30 @@ header {
 
 /* Mega-menu nav */
 .primary-nav { display: none; }
+.nav-label {
+  font: inherit;
+  background: transparent;
+  border: 0;
+  text-align: left;
+}
+.nav-toggle::after, .nav-label::after {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0 0.15rem 0.18rem 0.45rem;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"]::after, .nav-label[aria-expanded="true"]::after {
+  transform: rotate(225deg);
+  margin-bottom: -0.2rem;
+}
+.nav-label:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--dark-green);
+  outline-offset: 2px;
+}
 .nav-toggle {
   display: inline-flex;
   align-items: center;
@@ -116,12 +140,11 @@ header {
     cursor: pointer;
   }
   .nav-item > a:hover, .nav-item > .nav-label:hover,
-  .nav-item:hover > .nav-label, .nav-item:focus-within > .nav-label {
+  .nav-label[aria-expanded="true"] {
     background: var(--light-grey);
     color: var(--dark-green);
   }
   .mega-panel {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -131,12 +154,13 @@ header {
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     padding: 1rem;
     min-width: 260px;
-    max-width: 560px;
-    display: none;
+    max-width: min(560px, 85vw);
+    max-height: calc(100dvh - 9.5rem);
+    overflow: auto;
     grid-template-columns: repeat(2, minmax(0,1fr));
     gap: 0.25rem 1.5rem;
   }
-  .nav-item:hover .mega-panel, .nav-item:focus-within .mega-panel { display: grid; }
+  .mega-panel:not([hidden]) { display: grid; }
   .mega-panel a {
     display: block;
     padding: 0.4rem 0.5rem;
@@ -155,6 +179,9 @@ header {
     border-top: 1px solid var(--border-grey);
     margin-top: 0.5rem;
     padding-top: 0.5rem;
+    max-height: calc(100dvh - 5.25rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .nav-item > a, .nav-item > .nav-label {
     display: flex;
@@ -167,8 +194,8 @@ header {
     border-bottom: 1px solid var(--border-grey);
     cursor: pointer;
   }
-  .mega-panel { display: none; padding-left: 0.75rem; }
-  .nav-item.is-open .mega-panel { display: block; }
+  .nav-item > .nav-label { width: 100%; }
+  .mega-panel { padding-left: 0.75rem; }
   .mega-panel a {
     display: block;
     padding: 0.6rem 0.25rem;
@@ -265,6 +292,7 @@ header {
 
 /* ---------- Winter services ---------- */
 .winter-hero { padding-block: clamp(2.5rem, 6vw, 5rem); }
+.winter-hero .winter-hero-image { margin-bottom: clamp(1.25rem, 3vw, 2rem); }
 .winter-hero h1 { font-size: clamp(2rem, 5.75vw, 3.65rem); line-height: 1.13; }
 .winter-hero h2, .hero .winter-hero-subtitle {
   color: var(--white);
