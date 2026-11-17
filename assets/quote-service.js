@@ -18,8 +18,8 @@
   });
   var hint = document.getElementById('winter-quote-hint');
   var winterHints = {
-    'Salt Spreading & Gritting': 'Include the site postcode, areas to grit, opening or shift times, and whether you need one visit or planned cover.',
-    'Winter Property Maintenance': 'Include each site postcode, the winter jobs needed and any access requirements.',
+    'Salt Spreading & Gritting': 'Include your postcode, the driveway, paths or steps you need gritted, and whether you need one visit or planned cover.',
+    'Winter Property Maintenance': 'Include your postcode, the winter jobs you need at home and any access details.',
     'Blocked Drains & Drainage': 'Tell us where water is pooling, where the suspected blockage is and whether the problem keeps returning.',
     'Window & Door Resealing': 'Tell us how many windows or doors are affected and where you notice draughts or rain getting in.'
   };

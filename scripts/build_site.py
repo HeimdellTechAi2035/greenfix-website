@@ -25,6 +25,7 @@ PHONE_TEL = "+447447804597"
 EMAIL = "admin@greenfixexterior-care.co.uk"
 WINTER_PATH = "/winter-property-maintenance-preston"
 GRITTING_SERVICE = "Salt Spreading & Gritting"
+GRITTING_HERO = "/assets/gritting-push-spreader-driveway"
 RESEALING_PATH = "/window-door-resealing-preston"
 WINTER_SERVICE = "Winter Property Maintenance"
 DRAINAGE_SERVICE = "Blocked Drains & Drainage"
@@ -33,7 +34,7 @@ WINTER_QUOTE = f"/?service={quote(WINTER_SERVICE)}#quote-form"
 GRITTING_QUOTE = f"/?service={quote(GRITTING_SERVICE)}#quote-form"
 GRITTING_WHATSAPP = (
     f"https://wa.me/{PHONE_TEL.lstrip('+')}?text="
-    + quote("Hi Greenfix, please can I get a gritting quote? Site postcode: ")
+    + quote("Hi Greenfix, please can I get a domestic gritting quote? Home postcode: ")
 )
 ADDRESS_LOCALITY = "Preston"
 ADDRESS_REGION = "Lancashire"
@@ -1105,41 +1106,36 @@ SERVICES.extend([
     dict(
         slug="salt-spreading", cluster="grounds",
         h1=f"{GRITTING_SERVICE} in Preston",
-        tagline="Winter gritting for car parks, entrances, footpaths and private premises",
-        price="Free Site Quote", price_note="one-off treatments or planned visits by agreement",
-        meta_title="Car Park Gritting & Salt Spreading Preston | Greenfix",
-        meta_description="Commercial and private winter gritting in Preston for car parks, supermarkets, care homes, business parks and entrances. Get a free site quote.",
-        intro="Greenfix Exterior Care provides winter gritting and salt spreading across Preston. Tell us which routes have to stay usable, from a care home entrance or supermarket walkway to a private car park or a shared path. We agree the areas, access, visit timing and price with you. Request one treatment or ask about planned winter visits for one site or several.",
+        tagline="Domestic gritting for driveways, garden paths, steps and entrances",
+        price="Free Quote", price_note="one-off treatments or planned visits by agreement",
+        meta_title="Driveway & Path Gritting in Preston | Greenfix",
+        meta_description="Domestic driveway salting and path gritting in Preston. Get a free quote for one-off treatment or planned visits for paths, steps and entrances.",
+        intro="Greenfix Exterior Care provides domestic gritting and salt spreading across Preston. Tell us which areas at your home need treating, such as the driveway, the path to your front door or outdoor steps. We agree what to treat, how to get access, when to visit and the price before you book.",
         local_section={
-            "heading": "Gritting across Preston",
+            "heading": "Home gritting across Preston",
             "paragraphs": [
-                "Request a quote for sites in Preston city centre, Fulwood, Deepdale, Ribbleton, Ashton-on-Ribble, Riversway, Ingol, Lea, Cottam, Grimsargh or Broughton. We also take enquiries for Penwortham and Leyland. Share each site postcode so we can confirm coverage and availability.",
+                "Request a quote for homes in Preston city centre, Fulwood, Deepdale, Ribbleton, Ashton-on-Ribble, Riversway, Ingol, Lea, Cottam, Grimsargh or Broughton. We also take enquiries for Penwortham and Leyland. Share your postcode so we can confirm coverage and availability.",
             ],
             "points": [
-                "Private paths, steps, ramps and entrances",
-                "Customer and staff car parks, drop-off zones and pedestrian routes",
-                "Communal access to managed blocks, private drives and agreed on-site access roads",
-                "Loading bays, delivery approaches and service yards where suitable",
+                "Private residential driveways",
+                "Front paths and side access paths",
+                "External steps, ramps and entrances",
             ],
         },
         cards=[
-            ("Supermarkets & Retail Parks", "Quote for customer entrances, trolley routes, car parks and delivery approaches on the premises."),
-            ("Care Homes & Nursing Homes", "Agree the resident and visitor entrances, accessible routes, drop-off points and staff paths to prioritise."),
-            ("Business Parks & Warehouses", "Identify shared routes, staff car parks, office entrances and loading areas with the person managing the site."),
-            ("Council Offices & Public Buildings", "Request a quote for managed on-site entrances, paths, visitor car parks and staff access."),
-            ("Landlords & Private Premises", "Quote for driveways, steps and shared entrances at homes, managed blocks, rental sites and private estates."),
-            ("Schools, Clinics & Hospitality", "Point out the key entrances, drop-off points, pedestrian routes and staff access alongside opening times."),
+            ("Driveways", "Tell us the size and surface of your drive, and flag any steep or shaded sections."),
+            ("Paths & Side Access", "Tell us which walkways you use to reach your front door, side entrance or detached garage."),
+            ("Steps, Ramps & Entrances", "Point out outdoor steps, ramps or thresholds where frost and ice are a concern."),
+            ("One-Off or Planned Visits", "Ask about a single treatment or planned visits. We confirm availability and timings before you book."),
         ],
         faqs=[
             ("Can I book a one-off visit or planned winter gritting?", "Yes. We confirm availability, access, timings and areas to treat before you book a single visit or an agreed series of visits."),
-            ("How much does winter gritting in Preston cost?", "We quote each site based on its size, surfaces, access, materials and frequency. Send the postcode, areas that need treating, and approximate sizes or photos if you have them."),
-            ("Can you grit around our opening hours?", "Share your staff arrival, opening and delivery times. We will confirm an available treatment window with you before booking."),
-            ("Can you quote for several properties?", "Yes. Send each postcode and the areas to cover at each site so we can discuss routing, visit windows and pricing."),
-            ("Which roads and access routes can you grit?", "We quote for agreed areas within properties, including private site roads where suitable. Lancashire County Council manages its own public highway gritting routes."),
-            ("How long does a treatment last?", "Rain, traffic and further freezing can change conditions. Keep monitoring the site and agree any repeat treatments with Greenfix."),
+            ("How much does winter gritting in Preston cost?", "For domestic gritting, we quote based on the size and surface of the area, access and how often you need a visit. Send your postcode and approximate sizes or photos if you have them."),
+            ("Which areas at my home can you grit?", "We quote for private residential driveways, paths, steps, ramps and entrances. Tell us which areas you want covered and where ice tends to form."),
+            ("How long does a treatment last?", "Rain, foot traffic and further freezing can change conditions. Keep an eye on the treated areas and contact Greenfix to agree any repeat visits."),
         ],
         related=["drain-repairs", "drainage-repairs", "storm-damage-repairs"],
-        schema_desc="Site-specific winter gritting and salt spreading for supermarkets, care homes, council premises, business parks, private properties and car parks in Preston, Penwortham, Fulwood and Leyland.",
+        schema_desc="Domestic winter gritting and salt spreading for private driveways, paths, steps, ramps and entrances in Preston, Penwortham, Fulwood and Leyland.",
     ),
     dict(
         slug=RESEALING_PATH.lstrip("/"), cluster="repairs",
@@ -1323,7 +1319,7 @@ def service_schema(service):
     }
     if service["slug"] == "salt-spreading":
         data["@id"] = f"{data['url']}#service"
-        data["serviceType"] = "Commercial and domestic gritting and salt spreading"
+        data["serviceType"] = "Domestic gritting and salt spreading"
     if not service["price"].lower().startswith(("quotation", "free quote")):
         # Extract a leading numeric guide price for structured data.
         import re as _re
@@ -1617,10 +1613,12 @@ def render_service_page(service):
         f'    <script type="application/ld+json">\n{service_schema(service)}\n    </script>',
         f'    <script type="application/ld+json">\n{faq_schema(service["faqs"])}\n    </script>',
     ])
+    gritting = service["slug"] == "salt-spreading"
     head = render_head(
         title=service["meta_title"],
         description=service["meta_description"],
         canonical_path=canonical_path,
+        og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp" if gritting else None,
         extra_schema=schema,
     )
 
@@ -1642,14 +1640,13 @@ def render_service_page(service):
     )
 
     price_note_html = f'<span class="price-note">{esc(service["price_note"])}</span>' if service.get("price_note") else ""
-    gritting = service["slug"] == "salt-spreading"
     service_name = service["h1"].split(" in ")[0]
     if service["slug"] in {"drain-repairs", "drainage-repairs"}:
         service_name = DRAINAGE_SERVICE
     quote_label = "Get a Gritting Quote" if gritting else "Request a Free Quote"
     quote_path = GRITTING_QUOTE if gritting else f'/?service={quote(service_name)}#quote-form'
     gritting_contact = (
-        f'\n                <a href="{GRITTING_WHATSAPP}" class="btn btn-secondary">WhatsApp Site Details</a>'
+        f'\n                <a href="{GRITTING_WHATSAPP}" class="btn btn-secondary">WhatsApp Your Details</a>'
         if gritting else ""
     )
     extra_services = (
@@ -1657,7 +1654,7 @@ def render_service_page(service):
         if gritting else ""
     )
     quote_message = (
-        "Send your site postcode, the areas to grit, opening times and whether you need one visit or planned cover."
+        "Send your postcode, the areas you need gritted and whether you want one visit or planned cover."
         if gritting else f"Call {PHONE_DISPLAY} or fill in our quote form &mdash; we respond within 24 hours."
     )
 
@@ -1682,7 +1679,7 @@ def render_service_page(service):
 {render_trust_strip()}{render_local_section(service.get("local_section"))}
     <section class="section-grey">
         <div class="container">
-            <h2 class="center">{"Sites We Grit" if gritting else "Why Choose GreenFix"}</h2>
+            <h2 class="center">{"Areas We Grit Around Your Home" if gritting else "Why Choose GreenFix"}</h2>
             <div class="grid grid-2">
                 {cards_html}
             </div>
@@ -1835,10 +1832,10 @@ HOMEPAGE_FAQS = [
      "Most services have a guide 'from' price shown on their page. The final price depends on the size and specifics of the job, confirmed after a free assessment or quote."),
     ("Do you work with businesses as well as homeowners?",
      "Yes, alongside residential work we support care homes, churches, schools, pubs, restaurants, shops, factories, warehouses, estates and event venues."),
-    ("Who can book winter gritting in Preston?",
-     "Greenfix quotes for supermarkets, care and nursing homes, business parks, warehouses, council premises and private properties. Tell us the site postcode and which areas need treating so we can check availability."),
+    ("Can I book gritting for my driveway in Preston?",
+     "Yes. Greenfix offers domestic gritting for private driveways, paths, steps, ramps and entrances. Send your postcode and which areas need treating so we can check availability."),
     ("Can I book winter gritting for a single visit?",
-     "Yes. Ask for one visit or discuss planned winter cover. We confirm the areas, access, visit times and site-specific quote before booking."),
+     "Yes. Ask for one visit or discuss planned winter cover. We confirm the areas, access, visit times and price before booking."),
     ("How do I get a quote?",
      f"Call or WhatsApp {PHONE_DISPLAY}, or use the quote form on this site. We respond within 24 hours."),
 ]
@@ -1880,14 +1877,14 @@ def render_homepage():
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
         f'    <script type="application/ld+json">\n{faq_schema(HOMEPAGE_FAQS)}\n    </script>',
-        f'    <script type="application/ld+json">\n{winter_webpage_schema("/", "Commercial & Domestic Gritting Preston")}\n    </script>',
+        f'    <script type="application/ld+json">\n{winter_webpage_schema("/", "Domestic Gritting & Salt Spreading in Preston")}\n    </script>',
     ])
 
     head = render_head(
-        title="Commercial & Domestic Gritting Preston | Greenfix",
-        description="Commercial and domestic gritting in Preston for car parks, business parks, care homes and driveways. Blocked drain repairs, resealing and winter maintenance.",
+        title="Domestic Gritting & Salt Spreading in Preston | Greenfix",
+        description="Domestic gritting and salt spreading in Preston for driveways, paths and steps. Greenfix also offers winter home repairs, drainage and window and door resealing.",
         canonical_path="/",
-        og_image=f"{DOMAIN}/assets/gritting-quad-car-park-1280.webp",
+        og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp",
         extra_schema=schema,
     )
 
@@ -1895,19 +1892,19 @@ def render_homepage():
     <section class="hero winter-hero">
         <div class="hero-content">
             <img class="hero-image winter-hero-image"
-                 src="/assets/gritting-quad-car-park-1280.webp"
-                 srcset="/assets/gritting-quad-car-park-480.webp 480w, /assets/gritting-quad-car-park-800.webp 800w, /assets/gritting-quad-car-park-1280.webp 1280w"
+                 src="{GRITTING_HERO}-1280.webp"
+                 srcset="{GRITTING_HERO}-480.webp 480w, {GRITTING_HERO}-800.webp 800w, {GRITTING_HERO}-1280.webp 1280w"
                  sizes="(max-width: 880px) calc(100vw - 2.5rem), 820px"
-                 alt="A quad bike spreading rock salt across a car park"
+                 alt="A worker pushing a wheeled salt spreader across a residential driveway"
                  width="1280" height="640" fetchpriority="high">
-            <h1>Commercial &amp; Domestic Gritting and Salt Spreading in Preston</h1>
-            <h2>Winter Property Maintenance for Homes, Car Parks &amp; Business Premises</h2>
-            <p class="hero-desc">Request winter gritting for home driveways and private paths, supermarket car parks, business parks, nursing homes and council premises. Greenfix also clears blocked outdoor drains, fixes waterlogged gardens and reseals exterior windows and doors.</p>
+            <h1>Domestic Gritting and Salt Spreading in Preston</h1>
+            <h2>Driveways, Paths, Steps and Front Entrances</h2>
+            <p class="hero-desc">Get a free quote for one-off gritting or planned winter visits for your home. Greenfix also clears blocked outdoor drains, fixes waterlogged gardens and reseals exterior windows and doors.</p>
             <div class="button-group">
                 <a href="{GRITTING_QUOTE}" class="btn btn-primary">Get a Gritting Quote</a>
                 <a href="{WINTER_PATH}" class="btn btn-secondary">See All Winter Services</a>
             </div>
-            <p class="winter-hero-contact"><a href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a> · <a href="{GRITTING_WHATSAPP}">WhatsApp Site Details</a></p>
+            <p class="winter-hero-contact"><a href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a> · <a href="{GRITTING_WHATSAPP}">WhatsApp Your Details</a></p>
         </div>
     </section>
 
@@ -1915,7 +1912,7 @@ def render_homepage():
         <div class="container">
             <h2 id="preston-winter-services">Preston Winter Services</h2>
             <div class="grid grid-3">
-                <div class="card"><h3><a href="/salt-spreading">Car Park Gritting &amp; Private Site Salting</a></h3><p>Enquire about one-off treatments or planned winter visits for car parks, paths and site entrances.</p></div>
+                <div class="card"><h3><a href="/salt-spreading">Driveway &amp; Path Gritting</a></h3><p>Ask about one-off salting or planned winter visits for your driveway, paths and front steps.</p></div>
                 <div class="card"><h3><a href="/drain-repairs">Blocked Drains</a> &amp; <a href="/drainage-repairs">Garden Drainage</a></h3><p>Outdoor gullies, downpipes, channel drains and pooling on gardens, yards and driveways.</p></div>
                 <div class="card"><h3><a href="{RESEALING_PATH}">Window &amp; Door Resealing</a></h3><p>Assessment of failed sealant, worn draught seals and rain getting in around exterior frames.</p></div>
             </div>
@@ -2023,11 +2020,11 @@ def build_homepage():
 
 WINTER_CARDS = [
     ("/salt-spreading", "Salt Spreading & Gritting",
-     "Preston winter gritting for private car parks, entrances, walkways, steps, ramps and agreed access routes. Ask about a one-off visit or planned cover."),
+     "Domestic winter gritting for private driveways, front paths, steps, ramps and entrances. Ask about a one-off visit or planned cover."),
     ("/drain-repairs", "Blocked Drains & Drain Repairs",
      "Clearing blocked outdoor drains, gullies and downpipes, and repairing suitable cracked or collapsed drain sections."),
     ("/drainage-repairs", "Waterlogged Gardens & Surface Drainage",
-     "Investigate pooling on gardens, drives, patios and car parks. Quote for channel drains, land drainage and soakaway work where suitable."),
+     "Investigate pooling in gardens and on driveways and patios. Quote for channel drains, land drainage and soakaway work where suitable."),
     ("/repairs-and-maintenance", "Gutter & Rainwater Clearance",
      "Clear leaves and debris from suitable gutters and check where overflowing rainwater is landing around entrances and paths."),
     (RESEALING_PATH, "Window, Door & Porch Resealing",
@@ -2037,24 +2034,24 @@ WINTER_CARDS = [
     ("/paving-repairs", "Loose, Sunken & Damaged Paving",
      "Repair damaged paths, patios and access paving or relay loose and uneven slabs after assessment."),
     ("/garden-tidy-ups", "Winter Garden & Grounds Clearance",
-     "Clear leaves and suitable garden debris from paths, entrances and managed grounds."),
+     "Clear leaves and suitable garden debris from home paths, entrances and gardens."),
     ("/brick-repointing", "Frost-Damaged Brickwork & Pointing",
      "Assess loose mortar joints, damaged bricks and garden walls and quote for suitable repairs."),
     ("/planned-preventative-maintenance", "Planned Winter Property Checks",
-     "Agree checks on drainage, paving, entrances, fencing, roof tiles and other exposed areas across one site or a portfolio."),
+     "Agree checks on drainage, paths, fencing, roof tiles and other exposed areas around your home."),
 ]
 
 WINTER_FAQS = [
-    ("Can Greenfix quote for several winter jobs at the same site?",
-     "Yes. Send a short list of the issues and the site postcode. We can quote for the gritting areas or agree a wider scope that includes drains, guttering, resealing or repairs."),
+    ("Can Greenfix quote for several winter jobs at my home?",
+     "Yes. Send your postcode and a short list of the jobs. We can quote for gritting, drainage, gutter clearing, resealing or exterior repairs."),
     ("Is a blocked drain the same as a waterlogged garden?",
      "A blocked drain is an issue with a specific pipe, gully or channel. A garden, driveway or yard that repeatedly holds water may need its wider surface drainage assessed."),
     ("Can you reseal a draughty window or external door?",
      "Yes, where a failed frame seal or worn weatherstrip is the cause. We check the frame, opening seals and route the water is taking before recommending work. Misting between panes usually indicates a problem with the glazing unit."),
-    ("Can you grit a supermarket car park, nursing home or business park in Preston?",
-     "Yes. We quote for agreed on-site areas such as car parks, entrances, paths, ramps and service yards. Send the site postcode and opening or shift times so we can confirm availability and treatment windows."),
+    ("Can you grit my driveway, front steps and garden path in Preston?",
+     "Yes. We quote for private driveways, paths, external steps and entrances at homes across Preston. Send your postcode and the areas you need treated."),
     ("What information do you need for a winter quote?",
-     "Send the site postcode, affected areas and any access restrictions. For gritting, add opening or shift times and whether you need one-off treatment or planned visits. For drainage or resealing, photos and a short description help."),
+     "Send your postcode, the areas that need attention and any access restrictions. For gritting, tell us whether you need one visit or planned cover. Photos help us assess drainage or resealing work."),
 ]
 
 
@@ -2104,10 +2101,10 @@ def winter_webpage_schema(path, title, description=None):
 
 
 def render_winter_page():
-    title = "Winter Property Maintenance in Preston"
+    title = "Winter Home Maintenance in Preston"
     description = (
-        "Preston winter gritting, blocked drain repairs, waterlogged garden drainage, gutter clearing, "
-        "window and door resealing, and storm repairs. Free site quotes."
+        "Preston winter home maintenance including domestic gritting, blocked drains, garden drainage, gutter clearing, "
+        "window and door resealing, and storm repairs. Free quotes."
     )
     crumbs = [("Home", "/"), (title, None)]
     schema = "\n".join([
@@ -2125,8 +2122,8 @@ def render_winter_page():
         for question, answer in WINTER_FAQS
     )
     head = render_head(
-        title="Winter Property Maintenance Preston | Gritting & Drainage", description=description,
-        canonical_path=WINTER_PATH, extra_schema=schema,
+        title="Winter Home Maintenance in Preston | Greenfix", description=description,
+        canonical_path=WINTER_PATH, og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp", extra_schema=schema,
     )
     body = f"""{render_breadcrumb_html(crumbs)}
     <main id="main-content">
@@ -2135,15 +2132,15 @@ def render_winter_page():
             <h1>{title}</h1>
             <h2 class="winter-hero-subtitle">Gritting, Blocked Drains, Resealing &amp; Storm Repairs</h2>
             <div class="button-group">
-                <a href="{WINTER_QUOTE}" class="btn btn-primary">Request a Winter Site Quote</a>
+                <a href="{WINTER_QUOTE}" class="btn btn-primary">Request a Winter Home Quote</a>
                 <a href="/salt-spreading" class="btn btn-secondary">Explore Gritting</a>
             </div>
         </div>
     </section>
     <section class="section-white" aria-labelledby="winter-services">
         <div class="container">
-            <h2 id="winter-services">Winter Services for Your Site</h2>
-            <p class="lede winter-intro">Greenfix Exterior Care helps with winter access and wet-weather repairs across Preston. We take enquiries from supermarkets, nursing homes, council offices, business parks, landlords and homeowners.</p>
+            <h2 id="winter-services">Winter Services for Your Home</h2>
+            <p class="lede winter-intro">Greenfix Exterior Care helps householders across Preston with icy driveways and paths, blocked drains, overflowing gutters and other winter property repairs.</p>
             <div class="grid grid-2">
                 {cards}
             </div>
@@ -2168,10 +2165,10 @@ def render_winter_page():
     </section>
     <section class="final-cta">
         <div class="container">
-            <h2>Get a Quote for One Site or Several</h2>
-            <p>Send your site postcodes, the work needed and any access times. Photos help us see what needs attention.</p>
+            <h2>Get a Winter Quote for Your Home</h2>
+            <p>Send your postcode, the work you need and any access details. Photos help us see what needs attention.</p>
             <div class="button-group">
-                <a href="{WINTER_QUOTE}" class="btn btn-primary">Request a Winter Site Quote</a>
+                <a href="{WINTER_QUOTE}" class="btn btn-primary">Request a Winter Home Quote</a>
                 <a href="tel:{PHONE_TEL}" class="btn btn-secondary">Call {PHONE_DISPLAY}</a>
             </div>
         </div>
@@ -2547,7 +2544,7 @@ def render_knowledge_base():
     <section class="section-white" id="winter-services">
         <div class="container">
             <h2>Preston Winter Service Catalogue</h2>
-            <p class="lede winter-intro"><a href="{WINTER_PATH}">Winter property maintenance in Preston</a> covers agreed winter access, drainage and exterior repairs for commercial and private sites.</p>
+            <p class="lede winter-intro"><a href="{WINTER_PATH}">Winter property maintenance in Preston</a> covers domestic gritting, drainage and exterior repairs for homes across Preston.</p>
             <div class="grid grid-2">
                 {winter_links}
             </div>
@@ -2628,7 +2625,6 @@ def build_knowledge_base():
 SECTOR_PAGES = [
     dict(
         filename="commercial-maintenance.html",
-        winter_copy="For office entrances, business park walkways and private car parks, ask about planned winter gritting.",
         h1="Commercial Property Maintenance in Preston",
         tagline="Grounds care and exterior repairs for commercial premises",
         meta_title="Commercial Property Maintenance & Repairs Preston | GreenFix",
@@ -2652,7 +2648,6 @@ SECTOR_PAGES = [
     ),
     dict(
         filename="factory-warehouse-grounds-maintenance.html",
-        winter_copy="Get a gritting quote for agreed loading areas, staff routes, site entrances and car parks.",
         h1="Factory & Warehouse Grounds Maintenance in Preston",
         tagline="Yards, car parks and boundary repairs for industrial sites",
         meta_title="Factory & Warehouse Grounds Maintenance Preston | GreenFix",
@@ -2676,7 +2671,6 @@ SECTOR_PAGES = [
     ),
     dict(
         filename="care-home-grounds-maintenance-preston.html",
-        winter_copy="Ask about gritting for resident and visitor entrances, wheelchair routes, staff paths and drop-off areas.",
         h1="Care Home Grounds Maintenance in Preston",
         tagline="Safe, well-kept outdoor spaces for residents, staff and visitors",
         meta_title="Care Home Grounds Maintenance Preston | GreenFix",
@@ -2815,7 +2809,6 @@ SECTOR_PAGES = [
     ),
     dict(
         filename="shop-retail-exterior-maintenance-preston.html",
-        winter_copy="Ask about gritting for supermarket entrances, retail park paths, delivery approaches and private car parks.",
         h1="Shop & Retail Unit Exterior Maintenance in Preston",
         tagline="Presentable shopfronts, car parks and service areas",
         meta_title="Shop & Retail Exterior Maintenance Preston | GreenFix",
@@ -2866,21 +2859,6 @@ def render_sector_page(sector):
         f'<a href="/{slug}">{esc(SERVICE_BY_SLUG[slug]["h1"].split(" in ")[0])}</a>'
         for slug in sector["related"] if slug in SERVICE_BY_SLUG
     )
-    winter_copy = sector.get("winter_copy")
-    winter_promo = f"""
-    <aside class="winter-promo" aria-label="Preston winter gritting">
-        <div class="container winter-promo-inner">
-            <div>
-                <p class="winter-promo-title">Winter Gritting in Preston</p>
-                <p>{esc(winter_copy)}</p>
-            </div>
-            <div class="winter-promo-actions">
-                <a href="/salt-spreading" class="btn btn-dark">View Gritting Services</a>
-                <a href="{WINTER_PATH}">Winter Property Maintenance</a>
-            </div>
-        </div>
-    </aside>
-""" if winter_copy else ""
     body = f"""{breadcrumb}
     <section id="main-content" class="hero">
         <div class="hero-content">
@@ -2898,7 +2876,7 @@ def render_sector_page(sector):
             <p class="lede">{esc(sector["intro"])}</p>
         </div>
     </section>
-{winter_promo}{render_trust_strip()}
+{render_trust_strip()}
     <section class="section-grey">
         <div class="container">
             <h2 class="center">How We Help</h2>
@@ -3766,10 +3744,9 @@ def build_sitemap():
     entries = []
     for path, priority in urls:
         if path in {"/", WINTER_PATH, RESEALING_PATH, "/salt-spreading", "/window-repairs",
-                    "/door-repairs", "/drain-repairs", "/drainage-repairs", "/knowledge-base", "/pricing-guide"} or any(
-            sector.get("winter_copy") and path == "/" + sector["filename"][:-5]
-            for sector in SECTOR_PAGES
-        ):
+                    "/door-repairs", "/drain-repairs", "/drainage-repairs", "/knowledge-base", "/pricing-guide",
+                    "/commercial-maintenance", "/factory-warehouse-grounds-maintenance",
+                    "/care-home-grounds-maintenance-preston", "/shop-retail-exterior-maintenance-preston"}:
             lastmod = "2026-11-17"
         elif path == "/storm-damage-repairs":
             lastmod = "2026-11-10"
@@ -3822,16 +3799,16 @@ def winter_chat_topics():
     return [
         (
             ("grit", "gritting", "salting", "salt spreading", "deicing", "de icing",
-             "icy path", "icy paths", "icy car park", "ice on", "black ice"),
-            gritting_faqs["Can I book a one-off visit or planned winter gritting?"]
-            + " We quote for private car parks, entrances, ramps, paths and agreed access routes across Preston.",
+             "icy path", "icy paths", "icy driveway", "icy steps", "ice on", "black ice"),
+            "Our gritting service is for private residential driveways, paths, steps, ramps and entrances across Preston. "
+            "Ask about a one-off treatment or planned visits.",
             GRITTING_QUOTE, "Get a gritting quote",
         ),
         (
             ("gritting cost", "gritting price", "gritting prices", "price for gritting", "cost of gritting",
-             "gritting cost per visit", "car park gritting costs", "cost to grit", "price to grit"),
+             "gritting cost per visit", "driveway gritting costs", "cost to grit", "price to grit"),
             gritting_faqs["How much does winter gritting in Preston cost?"],
-            GRITTING_QUOTE, "Get a site quote",
+            GRITTING_QUOTE, "Get a home gritting quote",
         ),
         (
             ("blocked drain", "blocked drains", "outdoor drain", "outside drain", "external drain", "gully", "gullies", "downpipe",
@@ -3872,7 +3849,7 @@ def winter_chat_topics():
         (
             ("winter property", "winter maintenance", "winter services", "winter check", "winter checks",
              "winter proof", "winterproof"),
-            answers["Can Greenfix quote for several winter jobs at the same site?"],
+            answers["Can Greenfix quote for several winter jobs at my home?"],
             WINTER_PATH, "See all winter services",
         ),
     ]
