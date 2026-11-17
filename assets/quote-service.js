@@ -16,6 +16,24 @@
     service.selectedIndex = index;
     return true;
   });
+  var hint = document.getElementById('winter-quote-hint');
+  var winterHints = {
+    'Salt Spreading & Gritting': 'Include the site postcode, areas to grit, opening or shift times, and whether you need one visit or planned cover.',
+    'Winter Property Maintenance': 'Include each site postcode, the winter jobs needed and any access requirements.',
+    'Blocked Drains & Drainage': 'Tell us where water is pooling, where the suspected blockage is and whether the problem keeps returning.',
+    'Window & Door Resealing': 'Tell us how many windows or doors are affected and where you notice draughts or rain getting in.'
+  };
+  if (hint) {
+    var updateHint = function () {
+      var instructions = winterHints[service.value] || '';
+      hint.textContent = instructions;
+      hint.hidden = !instructions;
+      if (instructions) message.setAttribute('aria-describedby', hint.id);
+      else message.removeAttribute('aria-describedby');
+    };
+    service.addEventListener('change', updateHint);
+    updateHint();
+  }
   form.addEventListener('submit', function () {
     if (!service.value) return;
     var prefix = 'Service: ' + service.value + '\n';

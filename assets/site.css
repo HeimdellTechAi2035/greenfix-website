@@ -263,6 +263,48 @@ header {
 .btn-dark:hover { background: var(--dark-green-hover); transform: translateY(-2px); }
 .btn:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
 
+/* ---------- Winter services ---------- */
+.winter-hero { padding-block: clamp(2.5rem, 6vw, 5rem); }
+.winter-hero h1 { font-size: clamp(2rem, 5.75vw, 3.65rem); line-height: 1.13; }
+.winter-hero h2, .hero .winter-hero-subtitle {
+  color: var(--white);
+  font-size: clamp(1.1rem, 2.65vw, 1.5rem);
+  line-height: 1.35;
+  margin: 0.85rem 0 1rem;
+}
+.winter-hero .hero-desc { max-width: 680px; margin-inline: auto; }
+.winter-hero-contact { margin-top: 1.15rem; }
+.winter-hero-contact a { font-weight: 700; }
+.winter-promo {
+  background: #eaf3ee;
+  border-bottom: 1px solid #d3e5da;
+  padding: 1rem 0;
+}
+.winter-promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+.winter-promo-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 800;
+  color: var(--dark-green);
+}
+.winter-promo p { color: var(--charcoal); }
+.winter-promo-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+}
+.winter-promo-actions > a:not(.btn) { font-weight: 700; color: var(--dark-green); }
+.winter-promo-actions .btn { padding: 0.65rem 1rem; }
+.winter-promo-actions .btn:focus-visible { outline-color: var(--dark-green); }
+.winter-intro { margin-bottom: 1.25rem; }
+.winter-links { margin-top: 1.5rem; }
+
 /* ---------- Generic sections ---------- */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
 section { padding: 2.75rem 1.25rem; }
