@@ -1487,6 +1487,7 @@ def render_footer():
                     <li><a href="/about-greenfix#complaints">Complaints Procedure</a></li>
                     <li><a href="/terms">Terms &amp; Conditions</a></li>
                     <li><a href="/privacy">Privacy Notice</a></li>
+                    <li><a href="/health-and-safety-policy">Health and Safety Policy</a></li>
                     <li><a href="/pricing-guide">Pricing Guide</a></li>
                     <li><a href="/knowledge-base">Knowledge Base</a></li>
                     <li><a href="/blog">Blog</a></li>
@@ -3734,6 +3735,7 @@ def build_sitemap():
     urls.append(("/about-greenfix", "0.6"))
     urls.append(("/terms", "0.4"))
     urls.append(("/privacy", "0.4"))
+    urls.append(("/health-and-safety-policy", "0.4"))
     urls.append(("/before-after", "0.6"))
     urls.append(("/pricing-guide", "0.8"))
     urls.append(("/knowledge-base", "0.7"))
@@ -3748,6 +3750,8 @@ def build_sitemap():
                     "/commercial-maintenance", "/factory-warehouse-grounds-maintenance",
                     "/care-home-grounds-maintenance-preston", "/shop-retail-exterior-maintenance-preston"}:
             lastmod = "2026-11-17"
+        elif path == "/health-and-safety-policy":
+            lastmod = "2026-11-18"
         elif path == "/storm-damage-repairs":
             lastmod = "2026-11-10"
         else:

@@ -317,6 +317,8 @@ p { color: var(--grey); }
 .section-grey { background: var(--light-grey); }
 .lede { max-width: 820px; color: var(--grey); line-height: 1.75; }
 .lede.center { margin: 0 auto; text-align: center; }
+.health-and-safety-policy .lede + .lede,
+.health-and-safety-policy .lede + h3 { margin-top: 1rem; }
 .local-areas .lede + .lede { margin-top: 0.85rem; }
 .local-areas ul {
   max-width: 820px;
