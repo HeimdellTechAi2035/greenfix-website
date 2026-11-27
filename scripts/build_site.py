@@ -38,9 +38,18 @@ GRITTING_WHATSAPP = (
 )
 ADDRESS_LOCALITY = "Preston"
 ADDRESS_REGION = "Lancashire"
-# Penwortham, Fulwood and Leyland confirmed by the owner on 2 Oct 2026.
-AREA_SERVED = ["Preston", "Penwortham", "Fulwood", "Leyland"]
-AREA_SERVED_TEXT = "Preston, Lancashire, including Penwortham, Fulwood and Leyland"
+# Towns confirmed by the owner: Penwortham, Fulwood and Leyland on 2 Oct 2026;
+# Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale
+# on 27 Nov 2026. Do not add towns that are not in this list.
+AREA_SERVED = [
+    "Preston", "Penwortham", "Fulwood", "Leyland",
+    "Cottam", "Ingol", "Lea", "Ashton-on-Ribble",
+    "Hutton", "Longton", "Walton-le-Dale",
+]
+AREA_SERVED_TEXT = (
+    "Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, "
+    "Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale"
+)
 FOUNDED = "2026"
 INSURANCE = "£5M Public Liability Insurance"
 WASTE_CARRIER = "Environment Agency registered Waste Carrier"
@@ -111,7 +120,7 @@ CLUSTERS = [
         # Nav group, not its own page. Breadcrumb item points at the homepage section.
         "path": "/#grounds-garden-care",
         "slugs": ["grounds-maintenance", "garden-maintenance", "lawn-mowing",
-                  "hedge-trimming", "garden-tidy-ups",
+                  "hedge-trimming", "weed-control", "garden-tidy-ups",
                   "window-cleaning", "internal-window-cleaning", "external-window-cleaning"],
     },
     {
@@ -119,11 +128,14 @@ CLUSTERS = [
         "label": "Repairs & Maintenance",
         "path": "/#repairs-and-maintenance",
         "slugs": ["exterior-structural-repairs", "repairs-and-maintenance",
-                  "brick-repointing", "lime-repointing", "brick-repairs", "garden-wall-repairs",
+                  "brick-repointing", "lime-repointing", "brick-repairs", "stone-repairs",
+                  "garden-wall-repairs",
                   "fence-repairs", "fence-panel-replacement", "gate-repairs", "patio-repairs",
-                  "paving-repairs", "slab-relaying", "roof-tile-repairs",
+                  "paving-repairs", "slab-relaying", "roof-tile-repairs", "chimney-repairs",
+                  "lintel-replacement",
                   "drain-repairs", "drainage-repairs", "window-repairs",
-                  "door-repairs", "porch-repairs", "residential-property-maintenance",
+                  "door-repairs", "porch-repairs", "porch-roof-repairs",
+                  "residential-property-maintenance",
                   "planned-preventative-maintenance", "drone-property-inspections"],
     },
 ]
@@ -191,7 +203,7 @@ SERVICES = [
         local_section={
             "heading": "Local garden maintenance across Preston",
             "paragraphs": [
-                "We're based at Lower Croft in Penwortham (PR1), so most of our regular rounds are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "We're based at Lower Croft in Penwortham (PR1), so most of our regular rounds are a short drive away: Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton, Walton-le-Dale and Ribbleton, across the wider Preston area (PR1–PR5, PR25, PR26).",
                 "Typical jobs on a Preston round: lawn mowing and edging, weeding beds and borders, hedge and shrub trimming, leaf clearance in autumn, and taking every bag of green waste away with us.",
             ],
             "points": [
@@ -217,7 +229,7 @@ SERVICES = [
             ("How often should I book a visit?",
              "Most gardens do well on a fortnightly or monthly round through spring and summer, less often over winter. We'll suggest a schedule based on your garden when we quote."),
             ("Which areas of Preston do you cover for garden maintenance?",
-             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+             "Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. Ribbleton is covered as well. If you're nearby and not listed, call and ask."),
             ("How much does garden maintenance cost in Preston?",
              "Visits start from around £40 for a standard residential garden. The price depends on size, how much work is needed and how often we visit. We give a fixed quote first."),
             ("Do you do one-off garden clearances as well as regular maintenance?",
@@ -225,19 +237,19 @@ SERVICES = [
             ("Are you insured?",
              "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier."),
         ],
-        related=["lawn-mowing", "hedge-trimming", "garden-tidy-ups", "grounds-maintenance"],
+        related=["lawn-mowing", "hedge-trimming", "weed-control", "garden-tidy-ups", "grounds-maintenance"],
         schema_desc="Regular and one-off garden maintenance for homeowners across Preston, including mowing, edging, weeding and seasonal upkeep.",
     ),
     dict(
         slug="lawn-mowing", cluster="grounds",
-        h1="Lawn Mowing in Preston",
-        tagline="A neatly cut lawn, every time",
+        h1="Lawn Mowing and Grass Cutting in Preston",
+        tagline="Grass cutting and lawn mowing, with edging included",
         price="From £20", price_note="per cut, guide price only",
-        meta_title="Lawn Mowing Preston | From £20 | GreenFix",
-        meta_description="Professional lawn mowing in Preston. Regular cuts or a one-off, with edging included. From £20 per cut.",
-        intro="GreenFix cuts lawns across Preston, from a single overdue mow to a regular weekly or fortnightly round through the growing season. Every cut includes edging so borders and paths stay crisp, and we adjust blade height and frequency as the season changes — shorter, more frequent cuts in peak growth, longer intervals when growth slows.",
+        meta_title="Lawn Mowing & Grass Cutting Preston | From £20 | GreenFix",
+        meta_description="Lawn mowing and grass cutting in Preston. Regular cuts or a one-off, with edging included. From £20 per cut.",
+        intro="Grass cutting and lawn mowing are the same GreenFix service across Preston: from a single overdue cut to a regular weekly or fortnightly round through the growing season. Every cut includes edging so borders and paths stay crisp, and we adjust blade height and frequency as the season changes — shorter, more frequent cuts in peak growth, longer intervals when growth slows.",
         cards=[
-            ("Regular Rounds", "Weekly or fortnightly cuts booked in through spring and summer, so you're never chasing an overgrown lawn."),
+            ("Regular Grass Cutting", "Weekly or fortnightly grass cutting booked in through spring and summer, so you're never chasing an overgrown lawn."),
             ("Edging Included", "Every mow includes edging along borders, paths and driveways for a genuinely finished look."),
             ("One-Off Cuts", "Lawn got away from you? We can bring an overgrown lawn back under control with a first cut, then set up a regular round from there."),
             ("Clippings Handled", "Grass clippings collected and removed as standard, so you're not left to rake and bag them up yourself."),
@@ -251,9 +263,11 @@ SERVICES = [
              "Yes, clippings are collected and removed as part of the service."),
             ("Is edging included in the price?",
              "Yes, every cut includes edging along borders, paths and driveway edges."),
+            ("Is grass cutting the same as lawn mowing?",
+             "Yes. Grass cutting and lawn mowing are the same service. We cut the lawn, edge it and take the clippings away, as a regular round or a one-off, from £20 per cut as a guide price."),
         ],
-        related=["garden-maintenance", "hedge-trimming", "garden-tidy-ups"],
-        schema_desc="Regular and one-off lawn mowing with edging included, for homes across Preston.",
+        related=["garden-maintenance", "hedge-trimming", "garden-tidy-ups", "weed-control"],
+        schema_desc="Regular and one-off lawn mowing and grass cutting, with edging included, for homes across Preston. From £20 per cut.",
     ),
     dict(
         slug="hedge-trimming", cluster="grounds",
@@ -262,45 +276,78 @@ SERVICES = [
         price="From £40", price_note="per visit, guide price only",
         meta_title="Hedge Trimming Preston | From £40 | GreenFix",
         meta_description="Professional hedge trimming in Preston. Shaping, height reduction and waste removal, one-off or seasonal. From £40.",
-        intro="GreenFix trims and shapes hedges across Preston, from a routine seasonal cut to bringing an overgrown or misshapen hedge back under control. We cut to a clean, even line, reduce height where needed, and clear all the cuttings away — you're left with a tidy hedge and a tidy garden, not a pile of green waste to deal with yourself.",
+        intro="Hedge trimming in Preston is a cut to a clean line, with the cuttings taken away. GreenFix trims and shapes hedges from a routine seasonal cut to bringing an overgrown or misshapen hedge back under control. We reduce height and width where you want that. A straightforward trim starts from £40 as a guide price. The final figure depends on the length, the height and access, and is confirmed after a free look.",
         cards=[
             ("Shaping & Height Reduction", "Hedges cut to a clean, level line, with height and width brought back under control where they've grown out."),
             ("Right Time of Year", "We time cuts sensibly through the growing season and take care around nesting birds in spring, in line with standard good practice."),
             ("All Hedge Types", "Conifer, privet, beech, laurel and mixed boundary hedges — different growth habits, same tidy finish."),
             ("Waste Cleared Away", f"All cuttings removed and disposed of properly — we're a {WASTE_CARRIER}."),
         ],
+        sections=[
+            {
+                "heading": "What a hedge trim includes",
+                "paragraphs": [
+                    "A hedge trim is the cut itself, not a redesign of the garden. We cut the face and top to an even line, take the sides back where the hedge has spread, and reduce the height where you have asked for that. Cuttings are cleared and taken away. GreenFix is an Environment Agency registered waste carrier, so the waste is not left in bags for you to sort out.",
+                    "The guide price is from £40 per visit. That is the starting point for a straightforward hedge, not a fixed quote for every boundary. A short front hedge is a smaller job than a tall run along the back of a garden, or a hedge that has not been cut for years. We confirm the price after a free look.",
+                ],
+            },
+            {
+                "heading": "When to trim, and nesting birds",
+                "paragraphs": [
+                    "Most hedges are best cut in late spring or early summer, and again in early autumn. Fast-growing hedges such as privet or leylandii may need two or three trims a year to stay tidy. Slower hedges such as beech or yew often need one good cut a year. We advise on timing for your hedge when we quote.",
+                    "Many hedges are used by nesting birds. It is an offence under UK law to damage or destroy an active nest, so we check before cutting and we leave an active nest alone. Through the main nesting season, roughly March to August, anything more than a careful light trim waits until the nest is clear. That is the same advice as on our hedge timing article.",
+                ],
+                "html": '<p>Read <a href="/blog/best-time-of-year-to-trim-hedges">when to trim hedges</a>.</p>',
+            },
+            {
+                "heading": "Overgrown hedges and tall hedges",
+                "paragraphs": [
+                    "An overgrown hedge is usually brought back in stages. Cutting a neglected hedge hard in one go can leave bare wood that is slow to green up. We reduce height and width gradually where a single hard cut would damage the plant.",
+                    "Tell us how tall the hedge is and how we get to it, including whether there is room to work from your side. We do not give a fixed time until we have seen the hedge. The visit length depends on the size of the hedge and the access.",
+                ],
+            },
+        ],
         faqs=[
             ("What time of year should hedges be trimmed?",
-             "Most hedges benefit from a cut in late spring/early summer and again in early autumn. We'll advise on timing for your specific hedge type when we quote."),
+             "Most hedges benefit from a cut in late spring or early summer and again in early autumn. We'll advise on timing for your specific hedge type when we quote."),
+            ("How much does hedge trimming cost?",
+             "From £40 per visit as a guide price. The final price depends on the length and height of the hedge, how overgrown it is, and access, and is confirmed after a free look."),
+            ("How long does hedge trimming take?",
+             "It depends on the size of the hedge and how easy it is to reach. We tell you what to expect when we quote. We do not give a fixed time until the hedge has been seen."),
             ("Can you reduce the height of an overgrown hedge?",
-             "Yes. Height reduction is a common job — we bring overgrown hedges back down gradually where a hard cut all at once could damage the hedge."),
+             "Yes. Height reduction is a common job. We bring overgrown hedges back down gradually where a hard cut all at once could damage the hedge."),
+            ("Do you check for nesting birds?",
+             "Yes. We check before cutting and leave an active nest alone. Through the main nesting season, roughly March to August, we keep work to a careful light trim until the nest is clear."),
             ("Do you remove the cuttings?",
              "Yes, all hedge cuttings and waste are cleared away and disposed of after every visit."),
             ("Can you set up a regular hedge trimming schedule?",
-             "Yes, we can add hedge trimming to a regular garden maintenance round, or book it as a stand-alone seasonal visit."),
+             "Yes. Hedge trimming can be booked on its own from £40, added to a garden maintenance round, or included in the monthly plans. Silver is £59 a month and Gold is £79 a month. Silver and Gold are fortnightly visits. Silver adds hedge trimming for up to 3 hedges."),
+            ("Which hedges can you trim?",
+             "Conifer, privet, beech, laurel, leylandii and mixed boundary hedges. The finish is a clean line; the timing depends on how fast that hedge grows."),
         ],
-        related=["garden-maintenance", "lawn-mowing", "garden-tidy-ups"],
-        schema_desc="Hedge trimming, shaping and height reduction with waste removal, for homes across Preston.",
+        related=["garden-maintenance", "lawn-mowing", "garden-tidy-ups", "weed-control"],
+        extra_related=[("/garden-maintenance-subscription", "Monthly Garden Maintenance Plans")],
+        schema_desc="Hedge trimming, shaping and height reduction with waste removal, for homes across Preston. From £40 per visit.",
     ),
     dict(
         slug="garden-tidy-ups", cluster="grounds",
-        h1="Garden Tidy-Ups in Preston",
+        h1="Garden Tidy-Ups and Garden Clearance in Preston",
         tagline="A full reset for an overgrown or neglected garden",
         price="From £80", price_note="per visit, guide price only",
-        meta_title="Garden Tidy Up & Clearance Preston | From £80 | GreenFix",
-        meta_description="Overgrown garden? One-off garden tidy-ups and clearances in Preston: cutting back, weeding, mowing and waste taken away. From £80.",
-        intro="A garden tidy-up is a one-off reset from £80 per visit (guide price only), not a routine visit. It is for gardens that have been left, overgrown, or that need bringing back under control before regular maintenance can take over. We clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything we clear, leaving a garden that is manageable again. The final price depends on the size of the garden and how much work is needed, and is confirmed after a free assessment.",
-        sections=[{'heading': 'What a garden tidy-up includes', 'paragraphs': ['The guide price is from £80 per visit. That is the starting point for a straightforward tidy-up, not a fixed quote. Garden size, access and how much work is actually needed all change the price. Nothing on this site is a fixed quote until the job has been seen, and the figure is confirmed after a free assessment.', 'On the visit we clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything that is cleared. Beds, borders and lawns are cut back as a full reset rather than a partial tidy. The growth this service already covers is brambles, self-seeded growth, dead plants and overgrown shrubs, plus weeds in beds and borders.', 'An overgrown garden usually has several of those problems at once. Grass may be too long for a normal mow. Beds can be lost under weeds and self-seeded growth. Shrubs may have spread well beyond their space, and debris can have built up. A standard fortnightly maintenance visit is not the right first step when there is that much to do. The tidy-up is the reset for that situation.', 'Most gardens can be reset in a single visit. A very large or badly overgrown garden may need a second visit, including where the lawn has to be brought back to a manageable length over more than one cut. We confirm that after a free look, once you have told us the current state of the garden.', 'Green waste, cuttings and cleared material are removed and disposed of properly. GreenFix is an Environment Agency registered waste carrier, so what we clear is not left in bags for you to sort out.']}, {'heading': 'Typical tidy-up jobs', 'paragraphs': ['People ask for a tidy-up when a garden has been neglected, after a house move, or when it has been left unattended for a long time. In Fulwood the same one-off visit is used between tenancies. The work is available across Preston, Penwortham, Fulwood and Leyland.', 'Depending on the garden, a tidy-up can include cutting back brambles and overgrown shrubs, clearing weeds from beds and borders, cutting back self-seeded growth and dead plants, and bringing an overgrown lawn back to a length that can be mowed. If the grass is too long for a single pass, that can take more than one cut. What is cut is taken away rather than left in piles.', 'Once the garden is manageable, regular garden maintenance is the ongoing upkeep: mowing, edging, weeding beds and borders, light pruning and seasonal work, from £40 a visit as a guide. Lawn mowing on its own starts from £20 a cut, with edging included. Hedge trimming starts from £40. Those are separate jobs with their own guide prices, quoted before work starts.'], 'html': '<p>See <a href="/garden-maintenance">garden maintenance</a>, <a href="/lawn-mowing">lawn mowing</a> and <a href="/hedge-trimming">hedge trimming</a>.</p>'}, {'heading': 'How quoting works', 'paragraphs': ['Call or WhatsApp 07447804597, or use the quote form. Tell us the current state of the garden: which of the beds, the lawn and the shrubs need work, and how we get into the garden. We respond within 24 hours.', 'If you have photos, WhatsApp them to 07447804597 for a faster quote. We respond the same day when photos are sent that way. The from £80 price is the starting point for a straightforward tidy-up. Most jobs are quoted individually, because the size of the garden and the amount of clearing change the time on site.', 'A preferred date on the form is not a guaranteed slot. We call or text to confirm a visit before it is booked. Prices shown are guide prices only.']}, {'heading': 'Areas we cover', 'paragraphs': ['GreenFix visits the property. Garden tidy-ups are carried out in Preston, Penwortham, Fulwood and Leyland. The registered office is 11 Lower Croft, Penwortham, Preston PR1 9DJ. There is no customer reception at that address.'], 'local': True, 'html': '<p>Local pages: <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a>.</p>'}, {'heading': 'After the tidy-up', 'paragraphs': ['Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control. The initial reset is the heavy work. The regular visit is what keeps the garden that way afterwards.', 'Monthly garden maintenance plans are paid monthly. They are set up by Direct Debit, with no contract lock-in, and you can cancel any time. The Lawn package is £39 a month for an average-sized garden: fortnightly lawn mowing and edging, with cuttings cleared. Silver is £59 a month and Gold is £79 a month. Silver and Gold are fortnightly visits. Silver adds hedge trimming (up to 3 hedges). Gold adds weeding of beds and borders, and seasonal tidy-ups are included in Gold.', 'A garden that has been left still starts with the one-off tidy-up from £80. The monthly plans are for keeping a garden that is already in reasonable shape.'], 'html': '<p><a href="/garden-maintenance-subscription">See monthly garden maintenance plans</a>.</p>'}],
+        meta_title="Garden Clearance & Tidy-Ups Preston | From £80 | GreenFix",
+        meta_description="Garden clearance and tidy-ups in Preston for overgrown gardens. Cutting back, weeding, mowing and waste taken away. From £80.",
+        intro="Garden clearance and a garden tidy-up are the same one-off reset, from £80 per visit (guide price only), not a routine visit. It is for gardens that have been left, overgrown, or that need bringing back under control before regular maintenance can take over. We clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything we clear, leaving a garden that is manageable again. The final price depends on the size of the garden and how much work is needed, and is confirmed after a free assessment.",
+        sections=[{'heading': 'What a garden tidy-up includes', 'paragraphs': ['The guide price is from £80 per visit. That is the starting point for a straightforward tidy-up, not a fixed quote. Garden size, access and how much work is actually needed all change the price. Nothing on this site is a fixed quote until the job has been seen, and the figure is confirmed after a free assessment.', 'On the visit we clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything that is cleared. Beds, borders and lawns are cut back as a full reset rather than a partial tidy. The growth this service already covers is brambles, self-seeded growth, dead plants and overgrown shrubs, plus weeds in beds and borders.', 'An overgrown garden usually has several of those problems at once. Grass may be too long for a normal mow. Beds can be lost under weeds and self-seeded growth. Shrubs may have spread well beyond their space, and debris can have built up. A standard fortnightly maintenance visit is not the right first step when there is that much to do. The tidy-up is the reset for that situation.', 'Most gardens can be reset in a single visit. A very large or badly overgrown garden may need a second visit, including where the lawn has to be brought back to a manageable length over more than one cut. We confirm that after a free look, once you have told us the current state of the garden.', 'Green waste, cuttings and cleared material are removed and disposed of properly. GreenFix is an Environment Agency registered waste carrier, so what we clear is not left in bags for you to sort out.']}, {'heading': 'Typical tidy-up jobs', 'paragraphs': ['People ask for a tidy-up when a garden has been neglected, after a house move, or when it has been left unattended for a long time. In Fulwood the same one-off visit is used between tenancies. The work is available across Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale.', 'Depending on the garden, a tidy-up can include cutting back brambles and overgrown shrubs, clearing weeds from beds and borders, cutting back self-seeded growth and dead plants, and bringing an overgrown lawn back to a length that can be mowed. If the grass is too long for a single pass, that can take more than one cut. What is cut is taken away rather than left in piles.', 'Once the garden is manageable, regular garden maintenance is the ongoing upkeep: mowing, edging, weeding beds and borders, light pruning and seasonal work, from £40 a visit as a guide. Lawn mowing on its own starts from £20 a cut, with edging included. Hedge trimming starts from £40. Those are separate jobs with their own guide prices, quoted before work starts.'], 'html': '<p>See <a href="/garden-maintenance">garden maintenance</a>, <a href="/lawn-mowing">lawn mowing</a> and <a href="/hedge-trimming">hedge trimming</a>.</p>'}, {'heading': 'How quoting works', 'paragraphs': ['Call or WhatsApp 07447804597, or use the quote form. Tell us the current state of the garden: which of the beds, the lawn and the shrubs need work, and how we get into the garden. We respond within 24 hours.', 'If you have photos, WhatsApp them to 07447804597 for a faster quote. We respond the same day when photos are sent that way. The from £80 price is the starting point for a straightforward tidy-up. Most jobs are quoted individually, because the size of the garden and the amount of clearing change the time on site.', 'A preferred date on the form is not a guaranteed slot. We call or text to confirm a visit before it is booked. Prices shown are guide prices only.']}, {'heading': 'Areas we cover', 'paragraphs': ['GreenFix visits the property. Garden tidy-ups and garden clearance are carried out in Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. The registered office is 11 Lower Croft, Penwortham, Preston PR1 9DJ. There is no customer reception at that address.'], 'local': True, 'html': '<p>Local pages: <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a>, <a href="/leyland">Leyland</a>, <a href="/cottam">Cottam</a>, <a href="/ingol">Ingol</a>, <a href="/lea">Lea</a>, <a href="/ashton-on-ribble">Ashton-on-Ribble</a>, <a href="/hutton">Hutton</a>, <a href="/longton">Longton</a> and <a href="/walton-le-dale">Walton-le-Dale</a>.</p>'}, {'heading': 'After the tidy-up', 'paragraphs': ['Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control. The initial reset is the heavy work. The regular visit is what keeps the garden that way afterwards.', 'Monthly garden maintenance plans are paid monthly. They are set up by Direct Debit, with no contract lock-in, and you can cancel any time. The Lawn package is £39 a month for an average-sized garden: fortnightly lawn mowing and edging, with cuttings cleared. Silver is £59 a month and Gold is £79 a month. Silver and Gold are fortnightly visits. Silver adds hedge trimming (up to 3 hedges). Gold adds weeding of beds and borders, and seasonal tidy-ups are included in Gold.', 'A garden that has been left still starts with the one-off tidy-up from £80. The monthly plans are for keeping a garden that is already in reasonable shape.'], 'html': '<p><a href="/garden-maintenance-subscription">See monthly garden maintenance plans</a>.</p>'}],
         cards=[
             ("Full Garden Reset", "Overgrown beds, borders and lawns cleared and cut back in a single visit, not a partial tidy."),
             ("Cutting Back & Clearing", "Brambles, self-seeded growth, dead plants and overgrown shrubs cut back and cleared."),
             ("All Waste Removed", f"Everything we clear is taken away and disposed of responsibly — we're a {WASTE_CARRIER}, so nothing is left in bags for you to sort out."),
             ("A Fresh Starting Point", "Once a garden's been reset, we can set up a regular garden maintenance round to keep it that way."),
         ],
-        faqs=[('How is this different from garden maintenance?', "A garden tidy-up is a one-off deep clear for a garden that's become overgrown or neglected. Garden maintenance is the regular, ongoing upkeep that keeps a garden looking good once it's already in reasonable shape."), ('Do you take away everything you clear?', "Yes. All green waste, cuttings and cleared material is removed and disposed of properly — we're a Environment Agency registered Waste Carrier."), ('Can you deal with a very overgrown or neglected garden?', "Yes, this is exactly the job a garden tidy-up is for. Tell us the current state of the garden when you call and we'll quote accordingly."), ('Can I set up regular maintenance after the tidy-up?', 'Yes, many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control.'), ('How much does a garden tidy-up cost?', 'From £80 per visit as a guide price. The final price depends on the size of the garden and how much needs clearing, and is confirmed after a free assessment. Most jobs are quoted individually.'), ('Which areas do you cover for garden tidy-ups?', 'Preston, Penwortham, Fulwood and Leyland.'), ('How do I get a quote?', 'Call or WhatsApp 07447804597, or use the quote form on this site. We respond within 24 hours. WhatsApp photos of the garden to 07447804597 if you have them, for a faster quote. We respond the same day when photos are sent that way.'), ('Can you tidy a garden between tenancies?', 'Yes. One-off garden tidy-ups start from £80, including between tenancies.'), ('Will a tidy-up take more than one visit?', 'Most gardens are reset in a single visit. A very large or badly overgrown garden may need a second visit. We confirm that after a free look.'), ('Can I move onto a monthly plan afterwards?', 'Yes. Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round. Monthly plans are paid monthly and you can cancel any time. Lawn is £39 a month for fortnightly visits. Silver is £59 a month and Gold is £79 a month, and Silver and Gold are fortnightly visits.')],
+        faqs=[('How is this different from garden maintenance?', "A garden tidy-up is a one-off deep clear for a garden that's become overgrown or neglected. Garden maintenance is the regular, ongoing upkeep that keeps a garden looking good once it's already in reasonable shape."), ('Do you take away everything you clear?', "Yes. All green waste, cuttings and cleared material is removed and disposed of properly — we're a Environment Agency registered Waste Carrier."), ('Can you deal with a very overgrown or neglected garden?', "Yes, this is exactly the job a garden tidy-up is for. Tell us the current state of the garden when you call and we'll quote accordingly."), ('Can I set up regular maintenance after the tidy-up?', 'Yes, many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control.'), ('How much does a garden tidy-up cost?', 'From £80 per visit as a guide price. The final price depends on the size of the garden and how much needs clearing, and is confirmed after a free assessment. Most jobs are quoted individually.'), ('Which areas do you cover for garden tidy-ups and garden clearance?', 'Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale.'), ('Is garden clearance the same as a garden tidy-up?', 'Yes. Garden clearance is the same one-off service as a garden tidy-up, from £80 per visit as a guide price. The final price depends on the size of the garden and how much needs clearing, and is confirmed after a free assessment.'), ('How do I get a quote?', 'Call or WhatsApp 07447804597, or use the quote form on this site. We respond within 24 hours. WhatsApp photos of the garden to 07447804597 if you have them, for a faster quote. We respond the same day when photos are sent that way.'), ('Can you tidy a garden between tenancies?', 'Yes. One-off garden tidy-ups start from £80, including between tenancies.'), ('Will a tidy-up take more than one visit?', 'Most gardens are reset in a single visit. A very large or badly overgrown garden may need a second visit. We confirm that after a free look.'), ('Can I move onto a monthly plan afterwards?', 'Yes. Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round. Monthly plans are paid monthly and you can cancel any time. Lawn is £39 a month for fortnightly visits. Silver is £59 a month and Gold is £79 a month, and Silver and Gold are fortnightly visits.')],
         related=["garden-maintenance", "lawn-mowing", "hedge-trimming"],
         extra_related=[("/garden-maintenance-subscription", "Monthly Garden Maintenance Plans")],
-        schema_desc="One-off garden tidy-ups from £80 per visit for overgrown or neglected gardens across Preston, Penwortham, Fulwood and Leyland. Guide price only.",
+        schema_desc="One-off garden tidy-ups and garden clearance from £80 per visit for overgrown or neglected gardens across Preston and the surrounding towns we cover. Guide price only.",
     ),
     dict(
         slug="window-cleaning", cluster="grounds",
@@ -341,7 +388,7 @@ SERVICES = [
         local_section={
             "heading": "Local exterior structural repairs across Preston",
             "paragraphs": [
-                "We're based at Lower Croft in Penwortham (PR1), so most structural repairs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "We're based at Lower Croft in Penwortham (PR1), so most structural repairs are a short drive away: Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton, Walton-le-Dale and Ribbleton, across the wider Preston area (PR1–PR5, PR25, PR26).",
                 "Typical jobs: cracked, spalled or unstable brickwork assessed and repaired, and leaning, cracked or partially collapsed garden and boundary walls looked at before any work starts. If you already know the job is repointing, a few damaged bricks, or a defined garden wall repair, those pages have guide prices.",
             ],
             "points": [
@@ -367,7 +414,7 @@ SERVICES = [
             ("Is this covered by insurance?",
              f"We hold {INSURANCE} for all work we carry out. Whether a specific repair is covered by your own buildings insurance depends on your policy and the cause of the damage."),
             ("Which areas of Preston do you cover for exterior structural repairs?",
-             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+             "Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. Ribbleton is covered as well. If you're nearby and not listed, call and ask."),
             ("How do I get a quote for exterior structural repairs?",
              "Call 07447804597 or use the quote form. We'll visit, assess the issue, and provide a written quote before any work starts. We respond within 24 hours."),
             ("Do you offer lime repointing for older brickwork?",
@@ -375,7 +422,7 @@ SERVICES = [
             ("Do you repair porches as well?",
              "Yes. Porch repairs are a separate service for homes and businesses across Preston, quoted after a free assessment. See our porch repairs page."),
         ],
-        related=["brick-repairs", "brick-repointing", "lime-repointing", "garden-wall-repairs", "porch-repairs", "repairs-and-maintenance"],
+        related=["brick-repairs", "stone-repairs", "brick-repointing", "lime-repointing", "chimney-repairs", "lintel-replacement", "garden-wall-repairs", "porch-repairs", "repairs-and-maintenance"],
         schema_desc="Structural brickwork, masonry and garden wall repair assessment and quotation across Preston, Penwortham, Fulwood and Leyland.",
     ),
     dict(
@@ -416,7 +463,7 @@ SERVICES = [
         local_section={
             "heading": "Local brick repointing across Preston",
             "paragraphs": [
-                "We're based at Lower Croft in Penwortham (PR1), so most repointing jobs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "We're based at Lower Croft in Penwortham (PR1), so most repointing jobs are a short drive away: Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton, Walton-le-Dale and Ribbleton, across the wider Preston area (PR1–PR5, PR25, PR26).",
                 "Typical jobs: eroded, crumbling or missing mortar raked out and repointed with a mix matched to the existing brickwork, including lime mortar on request where older, softer brick needs it.",
             ],
             "points": [
@@ -444,7 +491,7 @@ SERVICES = [
             ("Do you offer lime mortar repointing?",
              "Yes. We repoint in lime mortar on request, which is often the right choice for older, softer brickwork. Lime repointing is quoted after a free assessment. See our lime repointing page for details."),
             ("Which areas of Preston do you cover for brick repointing?",
-             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
+             "Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. Ribbleton is covered as well. If you're nearby and not listed, call and ask."),
             ("How much does brick repointing cost in Preston?",
              "From £30 per m² as a guide price, confirmed after assessment. The final figure depends on the area of wall and how accessible it is."),
             ("Are you insured?",
@@ -477,7 +524,7 @@ SERVICES = [
             ("Do I need repointing as well as brick repairs?",
              "Sometimes — if the mortar around the damaged bricks has also failed, we'll point this out and quote for both."),
         ],
-        related=["brick-repointing", "garden-wall-repairs", "exterior-structural-repairs"],
+        related=["brick-repointing", "stone-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
         schema_desc="Repair and replacement of damaged, cracked or spalled bricks, matched to existing brickwork, across Preston.",
     ),
     dict(
@@ -549,7 +596,7 @@ SERVICES = [
         local_section={
             "heading": "Sagging Gate Repair in Preston",
             "paragraphs": [
-                "We're based at Lower Croft in Penwortham (PR1), so most gate repairs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
+                "We're based at Lower Croft in Penwortham (PR1), so most gate repairs are a short drive away: Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton, Walton-le-Dale and Ribbleton, across the wider Preston area (PR1–PR5, PR25, PR26).",
                 "Typical jobs are manual garden and driveway gates: worn, rusted or broken hinges and latches replaced, and sagging, sticking or dropped gates adjusted and re-hung so they open, close and latch. Timber and metal gates are both repaired. This does not cover automatic or electric gate motors.",
             ],
             "points": [
@@ -561,7 +608,7 @@ SERVICES = [
             ],
         },
         cards=[('Hinges and Latches', 'Worn, rusted or broken hinges and latches replaced. Hinges and latches from £65, confirmed after assessment. The quote is free.'), ('Sagging Gate Repair', 'Sagging, sticking or dropped gates adjusted and re-hung so they swing freely and close properly.'), ('Timber and Metal Gates', 'Manual garden and driveway gates in timber and metal, repaired to suit the material.'), ('No Electric Gate Motors', 'Automatic and electric gate motors are not covered. The work is the gate, the hinges and the latches.')],
-        faqs=[('Why is my gate sagging or dragging on the ground?', 'This is usually a hinge or post problem rather than the gate itself — worn hinges or a settling post let the gate drop out of alignment over time.'), ('Can you repair the gate instead of replacing it?', 'In most cases, yes — hinge, latch and alignment problems can usually be fixed without replacing the whole gate.'), ('Do you repair metal gates as well as timber?', 'Yes. We repair timber and metal manual garden and driveway gates. We do not repair automatic or electric gate motors.'), ('Do you repair automatic or electric gate motors?', 'No. This service is for manual garden and driveway gates: sagging, sticking and dropped gates, and broken hinges and latches on timber and metal. We do not repair automatic or electric gate motors.'), ('How much does a gate repair cost?', 'From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ('Which areas of Preston do you cover for gate repairs?', "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."), ('How much does a gate repair cost in Preston?', 'From £65 as a guide price, confirmed after assessment. The price depends on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ("Can you fix a gate that won't close or latch?", "Yes. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem. In most cases that can be fixed without replacing the whole gate."), ('Are you insured?', "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier.")],
+        faqs=[('Why is my gate sagging or dragging on the ground?', 'This is usually a hinge or post problem rather than the gate itself — worn hinges or a settling post let the gate drop out of alignment over time.'), ('Can you repair the gate instead of replacing it?', 'In most cases, yes — hinge, latch and alignment problems can usually be fixed without replacing the whole gate.'), ('Do you repair metal gates as well as timber?', 'Yes. We repair timber and metal manual garden and driveway gates. We do not repair automatic or electric gate motors.'), ('Do you repair automatic or electric gate motors?', 'No. This service is for manual garden and driveway gates: sagging, sticking and dropped gates, and broken hinges and latches on timber and metal. We do not repair automatic or electric gate motors.'), ('How much does a gate repair cost?', 'From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ('Which areas of Preston do you cover for gate repairs?', "Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. Ribbleton is covered as well. If you're nearby and not listed, call and ask."), ('How much does a gate repair cost in Preston?', 'From £65 as a guide price, confirmed after assessment. The price depends on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ("Can you fix a gate that won't close or latch?", "Yes. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem. In most cases that can be fixed without replacing the whole gate."), ('Are you insured?', "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier.")],
         related=["fence-repairs", "door-repairs", "repairs-and-maintenance"],
         schema_desc="Manual garden and driveway gate repairs in Preston for sagging, sticking and dropped timber and metal gates, hinges and latches. Does not cover automatic or electric gate motors.",
     ),
@@ -670,7 +717,7 @@ SERVICES = [
             ("Do you repair ridge tiles as well as the main roof?",
              "Yes, ridge tile repointing and re-bedding is a common part of roof tile repair work."),
         ],
-        related=["drainage-repairs", "drain-repairs", "exterior-structural-repairs"],
+        related=["chimney-repairs", "drainage-repairs", "drain-repairs", "exterior-structural-repairs"],
         schema_desc="Repair and replacement of slipped, cracked or missing roof and ridge tiles across Preston.",
     ),
     dict(
@@ -780,7 +827,7 @@ SERVICES = [
             ("Do you repair porches as well?",
              "Yes. We carry out porch repairs too. See our porch repairs page; porch work is quoted after a free assessment."),
         ],
-        related=[RESEALING_PATH.lstrip("/"), "porch-repairs", "window-repairs", "gate-repairs", "repairs-and-maintenance"],
+        related=[RESEALING_PATH.lstrip("/"), "porch-repairs", "lintel-replacement", "window-repairs", "gate-repairs", "repairs-and-maintenance"],
         schema_desc="Repair of sticking, damaged or draughty exterior doors for homes and businesses across Preston.",
     ),
     dict(
@@ -805,33 +852,50 @@ SERVICES = [
             ("Can you repair the porch door at the same time?",
              "Yes. Porch doors are repaired the same way as other exterior doors: hinges, locks, frames and seals."),
         ],
-        related=["door-repairs", "window-repairs", "roof-tile-repairs", "repairs-and-maintenance"],
+        related=["porch-roof-repairs", "door-repairs", "window-repairs", "roof-tile-repairs", "repairs-and-maintenance"],
         schema_desc="Porch repairs for homes and businesses in Preston, including porch doors, frames, seals and weatherproofing.",
     ),
     dict(
         slug="lime-repointing", cluster="repairs",
-        h1="Lime Repointing in Preston",
-        tagline="Lime mortar repointing for older brickwork",
+        h1="Lime Repointing in Lancashire",
+        tagline="Lime mortar repointing for older brickwork across Lancashire",
         price="Free Quote", price_note="quoted after a free assessment",
-        meta_title="Lime Repointing Preston | Lime Mortar Pointing | GreenFix",
-        meta_description="Lime mortar repointing in Preston for older and softer brickwork. Eroded joints raked out and repointed in lime. Free assessment and quote.",
-        intro="Lime repointing replaces worn mortar joints with a lime-based mortar instead of a modern cement mix. Lime is softer and more breathable than cement, which is why it's generally used on older, softer brickwork: it lets moisture escape through the joints rather than through the bricks. GreenFix repoints in lime mortar on request across Preston. We assess the wall first, rake out the failed mortar and repoint in lime, and give you a clear quote before work starts.",
+        meta_title="Lime Repointing Lancashire | Lime Mortar Pointing | GreenFix",
+        meta_description="Lime mortar repointing across Lancashire for older and softer brickwork. Eroded joints raked out and repointed in lime. Free assessment and quote.",
+        intro="Lime repointing uses a lime mortar in place of a hard cement mix, which is the usual choice for older, softer brickwork. GreenFix carries out lime repointing across Lancashire from our base in Penwortham. We look at the wall first, rake out the failed mortar, repoint in lime, and quote before any work starts. There is no fixed lime price on this page.",
+        local_section={
+            "heading": "Lime repointing across Lancashire",
+            "paragraphs": [
+                "We are based at Lower Croft in Penwortham and regularly repoint in lime across Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. If the property is elsewhere in Lancashire, send the postcode and we will say whether we can take the job.",
+                "Lime repointing is for the mortar joints. If the bricks or stone themselves are damaged, that is a separate repair. Standard cement-mix brick repointing, where lime is not what the wall needs, is priced from £30 per m² as a guide.",
+            ],
+            "points": [
+                "Lime mortar for older and softer brickwork",
+                "Free assessment, then a written quote",
+                "No fixed lime price until the wall has been seen",
+                "£5M public liability insurance",
+            ],
+        },
         cards=[
             ("Lime Mortar on Request", "Joints repointed in lime mortar rather than a cement mix, where that's what the brickwork needs."),
             ("Raked Out Properly", "Failed and crumbling mortar raked out to a sound depth before repointing."),
             ("Breathable Joints", "Lime lets moisture escape through the joints, helping protect softer bricks from damp and frost damage."),
-            ("Free Assessment", "We look at the wall first and quote before starting, so you know the cost up front."),
+            ("Across Lancashire", "Regular work across Preston and the towns we cover, and enquiries from elsewhere in Lancashire by postcode."),
         ],
         faqs=[
-            ("Do you offer lime repointing?",
-             "Yes. GreenFix repoints in lime mortar on request across Preston."),
             ("Why use lime mortar instead of cement?",
-             "Lime mortar is softer and more breathable than cement, so it's generally used on older, softer brickwork. A hard cement mortar can trap moisture and cause the bricks around it to crack or spall."),
+             "Lime mortar is softer and more breathable than cement, so it is generally used on older, softer brickwork. It lets moisture leave through the joints. A hard cement mortar can trap that moisture and push it through the bricks, which is a common reason bricks crack or spall."),
             ("How much does lime repointing cost?",
-             "Lime repointing is quoted after a free assessment of the wall. Standard brick repointing has a guide price from £30 per m²; see our brick repointing page."),
+             "Lime repointing is a free quote after we have seen the wall. We do not publish a separate lime rate. Standard brick repointing, where a cement mix is suitable, has a guide price from £30 per m². The lime price depends on the area of wall, the condition of the joints and access."),
+            ("How long does lime repointing take?",
+             "The time on site depends on how much wall needs doing and how easy it is to reach. We confirm that after a free look, before the work is booked. We do not give a fixed number of days until the wall has been seen."),
+            ("Do you offer lime repointing across Lancashire?",
+             "Yes. GreenFix repoints in lime mortar across Lancashire. We regularly cover Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. Send the postcode if the property is elsewhere in the county."),
+            ("Is lime repointing the same as brick repointing?",
+             "Both repair the mortar joints rather than the bricks. Lime repointing uses a lime mortar and is quoted after a look. Brick repointing is the cement-mix service, from £30 per m² as a guide. We say which one the wall needs after we have seen it."),
         ],
-        related=["brick-repointing", "brick-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
-        schema_desc="Lime mortar repointing for older and softer brickwork in Preston.",
+        related=["brick-repointing", "brick-repairs", "stone-repairs", "garden-wall-repairs", "exterior-structural-repairs"],
+        schema_desc="Lime mortar repointing for older and softer brickwork across Lancashire. Quoted after a free assessment.",
     ),
     dict(
         slug="internal-window-cleaning", cluster="grounds",
@@ -1063,7 +1127,7 @@ SERVICES.extend([
         local_section={
             "heading": "Home gritting across Preston",
             "paragraphs": [
-                "Request a quote for homes in Preston city centre, Fulwood, Deepdale, Ribbleton, Ashton-on-Ribble, Riversway, Ingol, Lea, Cottam, Grimsargh or Broughton. We also take enquiries for Penwortham and Leyland. Share your postcode so we can confirm coverage and availability.",
+                "Request a quote for homes in Preston, Penwortham, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale. We also take enquiries from Deepdale, Ribbleton, Riversway, Grimsargh and Broughton. Share your postcode so we can confirm coverage and availability.",
             ],
             "points": [
                 "Private residential driveways",
@@ -1145,6 +1209,155 @@ SERVICES.extend([
 CLUSTERS[0]["slugs"].append("salt-spreading")
 CLUSTERS[1]["slugs"].append("storm-damage-repairs")
 
+# Services confirmed by the owner on 27 Nov 2026. No published price:
+# every one of these is a free quote after the job has been seen.
+SERVICES.extend([
+    dict(
+        slug="weed-control", cluster="grounds",
+        h1="Weed Control in Preston",
+        tagline="Weeds removed from beds, borders, paths and gravel",
+        price="Free Quote", price_note="quoted after a free look",
+        meta_title="Weed Control Preston | Beds, Borders & Paths | GreenFix",
+        meta_description="Weed control in Preston. Weeds removed from beds, borders, paths and gravel, and taken away. One-off or part of regular garden care. Free quote.",
+        intro="Weed control in Preston means the weeds are taken out and taken away. GreenFix clears weeds from beds, borders, paths and gravel, by hand and with tools. There is no separate published price for weeding on its own: the visit is a free quote after we have seen the garden. Weeding is also part of regular garden maintenance, which starts from £40 a visit, and of the Gold monthly plan at £79 a month.",
+        cards=[
+            ("Beds and Borders", "Weeds pulled and cut out of planted beds and borders, including growth that has filled the gaps between plants."),
+            ("Paths and Gravel", "Weeds removed from paths, gravel and the edges where they meet the lawn."),
+            ("Waste Taken Away", f"What we pull out is taken away. We are a {WASTE_CARRIER}."),
+            ("One-Off or Regular", "Book a single weed clear, or keep on top of it with garden maintenance or the Gold monthly plan."),
+        ],
+        faqs=[
+            ("What does weed control include?",
+             "We remove weeds from beds, borders, paths and gravel and take them away. It is a free quote after we have seen the garden. We do not publish a separate price for weeding on its own."),
+            ("Is this the same as a garden tidy-up?",
+             "No. Weed control is the weeding. A garden tidy-up, also called a garden clearance, is the full reset of an overgrown garden and starts from £80. If the garden needs more than weeding, we will say so and quote the tidy-up instead."),
+            ("Can weeding be part of a regular visit?",
+             "Yes. Garden maintenance starts from £40 a visit and includes weeding beds and borders along with mowing and edging. The Gold plan is £79 a month and includes weeding of beds and borders on fortnightly visits."),
+            ("Do you cover the towns around Preston?",
+             f"Yes. Weed control is available across {AREA_SERVED_TEXT}."),
+        ],
+        related=["garden-maintenance", "garden-tidy-ups", "lawn-mowing", "hedge-trimming"],
+        extra_related=[("/garden-maintenance-subscription", "Monthly Garden Maintenance Plans")],
+        schema_desc="Weed control for beds, borders, paths and gravel across Preston. Quoted after a free look. Weeding is also included in garden maintenance from £40 and the Gold plan at £79 a month.",
+    ),
+    dict(
+        slug="chimney-repairs", cluster="repairs",
+        h1="Chimney Repairs in Preston",
+        tagline="Cracked stacks, failed mortar and loose pots",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Chimney Repairs Preston | Free Quote | GreenFix",
+        meta_description="Chimney repairs in Preston for cracked stacks, failed mortar and loose or damaged pots. Assessed first. Free quote. No published price.",
+        intro="Chimney repairs in Preston put a damaged stack back into sound condition: cracked brickwork, mortar that has failed, and pots that are loose or damaged. GreenFix looks at the chimney first and quotes before any work starts. There is no published price, because the cost depends on the damage and how we reach the stack.",
+        cards=[
+            ("Cracked Stacks", "Cracked or loose brickwork on the chimney stack repaired after we have seen how far the damage goes."),
+            ("Failed Mortar", "Joints that have crumbled are raked out and repointed. Lime mortar is used where the brickwork needs it."),
+            ("Pots", "Loose or damaged chimney pots refitted or replaced where that is what the stack needs."),
+            ("Quoted After a Look", "Every chimney is a free quote. We tell you the work and the cost before we start."),
+        ],
+        faqs=[
+            ("What chimney repairs do you carry out?",
+             "We repair cracked or loose brickwork on the stack, failed mortar, and loose or damaged pots. The job is a free quote after we have seen the chimney. We do not publish a price for it."),
+            ("How much does a chimney repair cost in Preston?",
+             "It is a free quote. The cost depends on the damage and the access. Call or send photos taken from a safe position and we will tell you whether we need to visit before quoting."),
+            ("Do you sweep chimneys or line flues?",
+             "No. This service is the repair of the stack itself. Sweeping and flue lining are not part of it."),
+            ("Can you repair the roof tiles around the chimney at the same time?",
+             "Where the tiles around the stack also need work, that is quoted as a roof tile repair. Roof tile repairs start from £250 as a guide price, confirmed after assessment."),
+            ("Which areas do you cover?",
+             f"Chimney repairs are available across {AREA_SERVED_TEXT}."),
+        ],
+        related=["roof-tile-repairs", "brick-repairs", "brick-repointing", "lime-repointing", "exterior-structural-repairs"],
+        schema_desc="Chimney stack repairs in Preston, including cracked brickwork, failed mortar and loose or damaged pots. Free quote after assessment.",
+    ),
+    dict(
+        slug="stone-repairs", cluster="repairs",
+        h1="Stone Repairs in Preston",
+        tagline="Damaged stone on walls, sills and steps",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Stone Repairs Preston | Walls, Sills & Steps | GreenFix",
+        meta_description="Stone repairs in Preston for cracked, loose or weathered stone on walls, sills and steps. Matched as closely as we can. Free quote.",
+        intro="Stone repairs in Preston are for stone that has cracked, come loose or weathered on walls, sills and steps. GreenFix repairs the damaged stone and, where the joints have failed, repoints them. Older stone often needs lime mortar, which we quote separately after a look. There is no published price for stone repairs: every job is a free quote.",
+        cards=[
+            ("Walls and Boundary Stone", "Cracked, loose or weathered stone on garden and boundary walls repaired after we have seen the wall."),
+            ("Sills and Steps", "Damaged stone sills and steps repaired or the failed section made sound."),
+            ("Joints", "Failed joints repointed. Lime repointing is used where the wall needs a breathable mortar."),
+            ("Matched to the Wall", "The repair is matched to the existing stone as closely as we can. An exact match is not always possible on older stone."),
+        ],
+        faqs=[
+            ("What stone repairs do you do?",
+             "We repair cracked, loose or weathered stone on walls, sills and steps, and we repoint failed joints. The work is a free quote after a look. We do not publish a stone repair price."),
+            ("How much do stone repairs cost?",
+             "Stone repairs are a free quote. The cost depends on how much stone is damaged and how we reach it. Lime repointing, if the joints need lime, is also quoted after a look. Cement-mix brick repointing, where that is the right job, starts from £30 per m²."),
+            ("Can you match the existing stone?",
+             "We match the repair to the stone that is already there as closely as we can. On older walls an exact match is not always available, and we will say so before you agree the work."),
+            ("What if the property is listed?",
+             "We can quote the repair. If the building is listed or in a conservation area, you may need consent before work starts. That consent is for you to confirm."),
+            ("Which areas do you cover?",
+             f"Stone repairs are available across {AREA_SERVED_TEXT}."),
+        ],
+        related=["lime-repointing", "brick-repairs", "garden-wall-repairs", "brick-repointing", "exterior-structural-repairs"],
+        schema_desc="Stone repairs for walls, sills and steps in Preston, including failed joints. Free quote after assessment.",
+    ),
+    dict(
+        slug="lintel-replacement", cluster="repairs",
+        h1="Lintel Replacement in Preston",
+        tagline="Failed lintels over windows and doors",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Lintel Replacement Preston | Windows & Doors | GreenFix",
+        meta_description="Lintel replacement in Preston where a lintel over a window or door has failed and the brickwork above is cracking or dropping. Free quote.",
+        intro="Lintel replacement in Preston is for a lintel over a window or door that has failed, where the brickwork above the opening is cracking or starting to drop. GreenFix assesses the opening and quotes the replacement before any work starts. There is no published price. If the opening needs a structural design before it can be repaired, we tell you that before anything is booked.",
+        cards=[
+            ("Windows and Doors", "Failed lintels over window and door openings, assessed from the cracking or movement above them."),
+            ("Brickwork Above the Opening", "The courses above the lintel made good once the lintel itself has been dealt with."),
+            ("Told Before We Start", "You get the scope and the quote in writing. Extra work is not added without you agreeing it."),
+            ("Structural Design Called Out", "If the job needs a structural calculation, we say so before the work is booked. We do not start on a guess."),
+        ],
+        faqs=[
+            ("How do I know a lintel needs replacing?",
+             "The usual signs are cracks in the brickwork above a window or door, or a course of bricks that has started to drop. We look at the opening before saying whether the lintel needs replacing."),
+            ("How much does lintel replacement cost?",
+             "It is a free quote after we have seen the opening. We do not publish a price. The cost depends on the opening, the lintel and the access."),
+            ("Do you replace lintels over both windows and doors?",
+             "Yes. Window openings and door openings are both covered. Window repairs and door repairs are separate services where the frame, hinges or seals are the problem rather than the lintel."),
+            ("Will you need a structural engineer?",
+             "Some openings do. If a structural design is needed, we tell you before the work is booked. We do not include that design in a guess at the price."),
+            ("Which areas do you cover?",
+             f"Lintel replacement is available across {AREA_SERVED_TEXT}."),
+        ],
+        related=["window-repairs", "door-repairs", "brick-repairs", "exterior-structural-repairs", "porch-repairs"],
+        schema_desc="Lintel replacement over windows and doors in Preston, where the lintel has failed and the brickwork above is cracking or dropping. Free quote.",
+    ),
+    dict(
+        slug="porch-roof-repairs", cluster="repairs",
+        h1="Porch Roof Repairs in Preston",
+        tagline="Leaking or damaged porch roofs",
+        price="Free Quote", price_note="quoted after a free assessment",
+        meta_title="Porch Roof Repairs Preston | Free Quote | GreenFix",
+        meta_description="Porch roof repairs in Preston for a leaking or damaged porch roof. Separate from porch door and frame repairs. Assessed first. Free quote.",
+        intro="Porch roof repairs in Preston fix a porch roof that is leaking or damaged. This is the roof itself, not the porch door, frame or seals, which are on our porch repairs page. GreenFix looks at the roof and quotes the repair before starting. Porch roofs are not all built the same way, so there is no published price.",
+        cards=[
+            ("Leaking Roofs", "We find where the porch roof is letting water in and quote the repair that stops it."),
+            ("Damaged Covering", "The roof covering repaired or the failed part replaced, once we have seen how the porch is built."),
+            ("Separate from the Door", "Porch doors, frames and seals are porch repairs. This page is the roof."),
+            ("Free Assessment", "Photos help. The quote follows a look when we need one, and you agree the cost before work starts."),
+        ],
+        faqs=[
+            ("Do you repair porch roofs?",
+             "Yes. We repair leaking or damaged porch roofs across Preston. The job is a free quote after we have seen the roof. We do not publish a porch roof price."),
+            ("Is this the same as porch repairs?",
+             "No. Porch repairs cover the porch door, the frame and the seals. Porch roof repairs are the roof. Both can be quoted together if the porch needs both."),
+            ("How much does a porch roof repair cost?",
+             "It is a free quote. The cost depends on the covering, the damage and the access. Send photos taken from a safe position if you have them."),
+            ("Can you repair the house roof at the same time?",
+             "Slipped, cracked or missing tiles on the main roof are a roof tile repair, from £250 as a guide price. We will say if that is a separate job from the porch roof."),
+            ("Which areas do you cover?",
+             f"Porch roof repairs are available across {AREA_SERVED_TEXT}."),
+        ],
+        related=["porch-repairs", "roof-tile-repairs", "door-repairs", "repairs-and-maintenance"],
+        schema_desc="Porch roof repairs in Preston for leaking or damaged porch roofs. Free quote after assessment. Separate from porch door, frame and seal repairs.",
+    ),
+])
+
 SERVICE_BY_SLUG = {s["slug"]: s for s in SERVICES}
 
 
@@ -1202,8 +1415,8 @@ def render_head(*, title, description, canonical_path, og_image=None, extra_sche
 
 
 def local_business_schema():
-    """Sitewide LocalBusiness block. areaServed lists Preston plus the towns
-    the owner confirmed on 2 Oct 2026 (Penwortham, Fulwood, Leyland)."""
+    """Sitewide LocalBusiness block. areaServed is the owner-confirmed list
+    in AREA_SERVED (27 Nov 2026)."""
     data = {
         "@context": "https://schema.org",
         "@type": ["HomeAndConstructionBusiness", "GeneralContractor", "LandscapingBusiness"],
@@ -1212,7 +1425,11 @@ def local_business_schema():
         "legalName": LEGAL_NAME,
         "alternateName": ["GreenFix", "GreenFix Exterior Care"],
         "description": (
-            "Property maintenance, painting and decorating, rental refreshes and exterior care for landlords, letting agents, businesses and homeowners across Preston, Lancashire."
+            "Property maintenance, painting and decorating, garden care and exterior repairs "
+            "for homeowners, landlords, letting agents and businesses across "
+            f"{AREA_SERVED_TEXT}. "
+            "Garden care includes maintenance, grass cutting, hedge trimming, weed control and garden clearance. "
+            "Repairs include chimney repairs, stone repairs, lintel replacement, porch roof repairs and lime repointing."
         ),
         "url": DOMAIN + "/",
         "telephone": PHONE_TEL,
@@ -1852,6 +2069,9 @@ def render_homepage():
         f'<h3>{esc(t["name"])}</h3><p>{esc(t["card"])}</p></a>'
         for t in TOWN_PAGES
     )
+    town_area_links = ", ".join(
+        f'<a href="/{t["slug"]}">{esc(t["name"])}</a>' for t in TOWN_PAGES[:-1]
+    ) + f' and <a href="/{TOWN_PAGES[-1]["slug"]}">{esc(TOWN_PAGES[-1]["name"])}</a>'
 
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
@@ -1861,7 +2081,7 @@ def render_homepage():
 
     head = render_head(
         title="Garden Maintenance, Repairs & Gritting Preston | GreenFix",
-        description="Garden maintenance, exterior repairs and winter gritting in Preston, Penwortham, Fulwood and Leyland. Tidy-ups from £80. Free quotes.",
+        description="Garden maintenance, exterior repairs and winter gritting across Preston and nearby towns. Tidy-ups from £80. Free quotes.",
         canonical_path="/",
         og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp",
         extra_schema=schema,
@@ -1878,8 +2098,8 @@ def render_homepage():
                  width="1280" height="640" fetchpriority="high">
             <h1>Garden Maintenance, Repairs and Gritting in Preston</h1>
             <h2>Winter Gritting for Driveways, Paths, Steps and Entrances</h2>
-            <p class="hero-desc">GreenFix provides garden maintenance, exterior repairs and domestic gritting across Preston, Penwortham, Fulwood and Leyland. Get a free quote for one-off gritting or planned winter visits for driveways, paths, steps and front entrances.</p>
-            <p class="hero-desc"><a href="/garden-maintenance">Garden maintenance</a>, <a href="/garden-tidy-ups">garden tidy-ups</a>, <a href="/gate-repairs">garden gate repairs</a>, <a href="/brick-repointing">brick repointing</a> and <a href="/exterior-structural-repairs">exterior structural repairs</a>. Areas we cover: <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a>.</p>
+            <p class="hero-desc">GreenFix provides garden maintenance, exterior repairs and domestic gritting across Preston and the nearby towns listed below. Get a free quote for one-off gritting or planned winter visits for driveways, paths, steps and front entrances.</p>
+            <p class="hero-desc"><a href="/garden-maintenance">Garden maintenance</a>, <a href="/garden-tidy-ups">garden tidy-ups</a>, <a href="/gate-repairs">garden gate repairs</a>, <a href="/brick-repointing">brick repointing</a> and <a href="/exterior-structural-repairs">exterior structural repairs</a>. Areas we cover: {town_area_links}.</p>
             <div class="button-group">
                 <a href="{GRITTING_QUOTE}" class="btn btn-primary">Get a Gritting Quote</a>
                 <a href="{WINTER_PATH}" class="btn btn-secondary">See All Winter Services</a>
@@ -2499,6 +2719,9 @@ def render_knowledge_base():
     faqs_html = "\n                ".join(
         f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in KNOWLEDGE_BASE_FAQS
     )
+    town_page_links = ", ".join(
+        f'<a href="/{t["slug"]}">{esc(t["name"])}</a>' for t in TOWN_PAGES
+    )
 
     body = f"""{breadcrumb}
     <section id="main-content" class="hero">
@@ -2536,7 +2759,7 @@ def render_knowledge_base():
     <section class="section-white">
         <div class="container">
             <h2>Service Area</h2>
-            <p class="lede">{AREA_SERVED_TEXT}. See our <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a> pages.</p>
+            <p class="lede">{AREA_SERVED_TEXT}. See our town pages: {town_page_links}.</p>
         </div>
     </section>
 
@@ -2906,19 +3129,20 @@ def build_sector_pages():
 
 
 # ---------------------------------------------------------------------------
-# Town pages — Penwortham, Fulwood and Leyland, confirmed by the owner on
-# 2 Oct 2026. No local jobs, reviews or street lists are claimed: add real
-# examples only once they exist and the customer has agreed.
+# Town pages. Penwortham, Fulwood and Leyland confirmed 2 Oct 2026.
+# Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale
+# confirmed 27 Nov 2026. No local jobs, reviews or street lists are claimed.
+# Landmarks are only named where the place relationship is certain.
 # ---------------------------------------------------------------------------
 
 TOWN_PAGES = [
     dict(
         slug="penwortham", name="Penwortham",
-        card="Our home base: garden care and exterior repairs minutes away.",
-        meta_title="Garden Maintenance & Exterior Repairs Penwortham | GreenFix",
-        meta_description="GreenFix is based in Penwortham. Garden maintenance, tidy-ups, hedge trimming, fence, gate, patio and brick repairs for local homes. Free quotes.",
-        h1="Garden maintenance and exterior repairs in Penwortham",
-        intro="GreenFix Exterior Care is based in Penwortham, so local homes and businesses get a contractor who's minutes away, not across the county. We look after gardens and grounds and carry out exterior repairs, from a one-off tidy-up of an overgrown garden to fixing a gate that won't latch.",
+        card="Our home base: gardener and exterior repairs minutes away.",
+        meta_title="Gardener in Penwortham | Garden Care & Repairs | GreenFix",
+        meta_description="Gardener in Penwortham for lawns, hedges and tidy-ups, plus fence, gate, patio and brick repairs. GreenFix is based here. Free quotes.",
+        h1="Gardener in Penwortham",
+        intro="Looking for a gardener in Penwortham? GreenFix Exterior Care is based in Penwortham, so local homes and businesses get a contractor who's minutes away, not across the county. We look after gardens and grounds and carry out exterior repairs, from a one-off tidy-up of an overgrown garden to fixing a gate that won't latch.",
         services_heading="What we do in Penwortham",
         services=[
             ("Garden maintenance", "/garden-maintenance", "from £40 a visit: mowing, edging, weeding and seasonal upkeep, weekly, fortnightly or one-off."),
@@ -2936,7 +3160,7 @@ TOWN_PAGES = [
         ],
         faqs=[
             ("Do you cover Penwortham?",
-             "Yes. GreenFix Exterior Care is based in Penwortham and covers Penwortham, Preston, Fulwood and Leyland."),
+             "Yes. GreenFix Exterior Care is based in Penwortham. We also cover Preston, Fulwood, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale."),
             ("Can you clear an overgrown garden in one visit?",
              "Most gardens can be reset in a single tidy-up visit from £80; very large or heavily overgrown plots may need longer. We'll confirm after a free look."),
             ("Do you take the garden waste away?",
@@ -2946,11 +3170,11 @@ TOWN_PAGES = [
     ),
     dict(
         slug="fulwood", name="Fulwood",
-        card="Garden care, tidy-ups between tenancies and exterior repairs.",
-        meta_title="Garden Maintenance & Repairs Fulwood | GreenFix",
-        meta_description="Garden care, hedge trimming, window cleaning and fence, gate, brick and patio repairs for Fulwood homes, landlords and businesses. Free quotes.",
-        h1="Garden maintenance and exterior repairs in Fulwood",
-        intro="Fulwood has a lot of family homes and rented property, which means a lot of gardens, fences and drives that need regular attention. GreenFix Exterior Care looks after them: regular garden care, one-off tidy-ups, and exterior repairs from one contractor.",
+        card="Gardener for family homes, tidy-ups between tenancies and exterior repairs.",
+        meta_title="Gardener in Fulwood | Garden Care & Repairs | GreenFix",
+        meta_description="Gardener in Fulwood for regular garden care, tidy-ups between tenancies, hedges and exterior repairs. Free quotes from GreenFix.",
+        h1="Gardener in Fulwood",
+        intro="Need a gardener in Fulwood? Fulwood has a lot of family homes and rented property, which means a lot of gardens, fences and drives that need regular attention. GreenFix Exterior Care looks after them: regular garden care, one-off tidy-ups, and exterior repairs from one contractor.",
         services_heading="What we offer in Fulwood",
         services=[
             ("Garden maintenance", "/garden-maintenance", "from £40, and hedge trimming from £40."),
@@ -2966,7 +3190,7 @@ TOWN_PAGES = [
         ],
         faqs=[
             ("Do you cover Fulwood?",
-             "Yes. GreenFix Exterior Care covers Fulwood, along with Preston, Penwortham and Leyland."),
+             "Yes. GreenFix is a gardener in Fulwood, and also covers Preston, Penwortham, Leyland, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale."),
             ("Do you work for landlords and letting agents in Fulwood?",
              "Yes. See residential property maintenance for portfolio work."),
             ("Can you tidy a garden between tenancies?",
@@ -2976,11 +3200,11 @@ TOWN_PAGES = [
     ),
     dict(
         slug="leyland", name="Leyland",
-        card="Garden and grounds care plus fence, gate, paving and brick repairs.",
-        meta_title="Garden Maintenance & Property Repairs Leyland | GreenFix",
-        meta_description="Garden maintenance, hedge trimming and fence, gate, brick and patio repairs for homes and businesses in Leyland. Free quotes.",
-        h1="Garden maintenance and property repairs in Leyland",
-        intro="GreenFix Exterior Care covers Leyland from our base in Penwortham, a short drive away. We handle regular garden and grounds care for homes and businesses, and the exterior repairs that tend to pile up: fences, gates, patios, paving and brickwork.",
+        card="Gardener for homes and businesses, plus fence, gate, paving and brick repairs.",
+        meta_title="Gardener in Leyland | Garden Care & Repairs | GreenFix",
+        meta_description="Gardener in Leyland for lawns, hedges and grounds care, plus fence, gate, patio and brick repairs. Free quotes from GreenFix.",
+        h1="Gardener in Leyland",
+        intro="GreenFix is a gardener in Leyland, covering the town from our base in Penwortham, a short drive away. We handle regular garden and grounds care for homes and businesses, and the exterior repairs that tend to pile up: fences, gates, patios, paving and brickwork.",
         services_heading="Services in Leyland",
         services=[
             ("Garden maintenance", "/garden-maintenance", "(from £40) and lawn mowing (from £20) on a regular or one-off basis."),
@@ -2995,13 +3219,238 @@ TOWN_PAGES = [
         ],
         faqs=[
             ("Do you cover Leyland?",
-             "Yes. GreenFix Exterior Care covers Leyland, along with Preston, Penwortham and Fulwood."),
+             "Yes. GreenFix is a gardener in Leyland, and also covers Preston, Penwortham, Fulwood, Cottam, Ingol, Lea, Ashton-on-Ribble, Hutton, Longton and Walton-le-Dale."),
             ("Do you do commercial grounds maintenance in Leyland?",
              "Yes. Grounds maintenance for business premises starts from £40 per visit, with scheduled contracts available."),
             ("How quickly can you quote?",
              "We reply within 24 hours and can usually arrange a free assessment soon after."),
         ],
         related=["garden-maintenance", "grounds-maintenance", "hedge-trimming", "fence-repairs", "paving-repairs", "brick-repointing", "planned-preventative-maintenance"],
+    ),
+    dict(
+        slug="cottam", name="Cottam",
+        card="Gardener for west Preston homes, plus fence, patio and brick repairs.",
+        meta_title="Gardener in Cottam | Garden Care & Repairs | GreenFix",
+        meta_description="Gardener in Cottam for lawns, hedges and garden tidy-ups, plus fence, patio and brick repairs. GreenFix covers this side of Preston. Free quotes.",
+        h1="Gardener in Cottam",
+        intro="Cottam is on the west side of Preston, between Ingol and Lea. A lot of the homes are houses with a lawn, a hedge and borders that need a regular cut. GreenFix is a gardener in Cottam for mowing, hedge trimming and tidy-ups, and we also repair fences, gates, patios and brickwork, so the outside of the house is one contractor.",
+        services_heading="What we do in Cottam",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40 a visit: mowing, edging, weeding and seasonal upkeep."),
+            ("Lawn mowing and grass cutting", "/lawn-mowing", "from £20 a cut, with edging included."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, with the cuttings taken away."),
+            ("Garden tidy-ups and clearance", "/garden-tidy-ups", "from £80 when a garden needs a full reset."),
+            ("Fence and patio repairs", "/fence-repairs", "fence repairs from £85, and patio repairs from £95."),
+        ],
+        price_note="All prices are guide prices, confirmed after a free look at the job.",
+        extra_heading="One contractor for the garden and the repairs",
+        extra=[
+            "Regular grass cutting through the growing season, or a one-off visit.",
+            "Hedges, weeding and a full clearance when the garden has got away.",
+            "Fence, gate, patio and brick repairs quoted from the same team.",
+        ],
+        faqs=[
+            ("Do you garden in Cottam?",
+             "Yes. Cottam is on the west side of Preston, between Ingol and Lea. We mow, trim hedges and clear overgrown gardens, and we carry out exterior repairs."),
+            ("Do you take the garden waste away?",
+             "Yes. We are an Environment Agency registered waste carrier."),
+            ("Do you repair fences and patios in Cottam as well?",
+             "Yes. Fence repairs start from £85 and patio repairs from £95. Both are guide prices, confirmed after a free look."),
+        ],
+        related=["garden-maintenance", "lawn-mowing", "hedge-trimming", "garden-tidy-ups", "fence-repairs", "patio-repairs"],
+    ),
+    dict(
+        slug="ingol", name="Ingol",
+        card="Gardener for north-west Preston gardens, hedges and tidy-ups.",
+        meta_title="Gardener in Ingol | Grass Cutting & Repairs | GreenFix",
+        meta_description="Gardener in Ingol for regular grass cutting, hedge trimming and garden clearance, with exterior repairs when you need them. Free quotes.",
+        h1="Gardener in Ingol",
+        intro="Ingol sits in north-west Preston, beside Cottam. The gardens we see here are mostly family plots: a lawn, a boundary hedge, and beds that fill in through the summer. GreenFix is a gardener in Ingol for regular grass cutting and seasonal hedge work, and for a clearance when a garden has got away. Fence, gate and patio repairs can be done by the same team.",
+        services_heading="Garden and repair work in Ingol",
+        services=[
+            ("Grass cutting", "/lawn-mowing", "from £20 a cut. This is the same service as lawn mowing, with edging included."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, timed around the growing season and nesting birds."),
+            ("Weed control", "/weed-control", "a free quote, or included in garden maintenance from £40 a visit."),
+            ("Garden clearance", "/garden-tidy-ups", "from £80 for a one-off reset of an overgrown garden."),
+            ("Gate repairs", "/gate-repairs", "from £65 for hinges, latches and sagging manual gates."),
+        ],
+        price_note="Guide prices, confirmed after a free look. Weed control is quoted rather than priced from a guide.",
+        extra_heading="Keeping a family garden in hand",
+        extra=[
+            "A regular cut is usually enough once the garden is under control.",
+            "If it has been left, the first visit is a tidy-up from £80, then a round if you want one.",
+            "We reply within 24 hours.",
+        ],
+        faqs=[
+            ("Do you cover Ingol?",
+             "Yes. Ingol is in north-west Preston, next to Cottam, and it is within the area we cover from Penwortham."),
+            ("Can you cut the grass and trim the hedge on the same visit?",
+             "Yes. Lawn mowing starts from £20 and hedge trimming from £40, or both can be part of garden maintenance from £40. We confirm the price after a look."),
+            ("What if the garden is overgrown?",
+             "A one-off garden clearance starts from £80. That is the same service as a garden tidy-up."),
+        ],
+        related=["lawn-mowing", "hedge-trimming", "weed-control", "garden-tidy-ups", "gate-repairs", "garden-maintenance"],
+    ),
+    dict(
+        slug="lea", name="Lea",
+        card="Gardener for Lea homes: lawns, hedges, weeding and repairs.",
+        meta_title="Gardener in Lea | Lawns, Hedges & Repairs | GreenFix",
+        meta_description="Gardener in Lea for home gardens: mowing, weeding, hedges and one-off tidy-ups, plus gate, fence and patio repairs. Free quotes.",
+        h1="Gardener in Lea",
+        intro="Lea is on the west side of Preston, next to Cottam and Ashton-on-Ribble. Plots range from compact newer gardens to older houses with established hedges. GreenFix is a gardener in Lea for regular mowing and weeding, or a one-off tidy-up, and we repair gates, fences and paving from the same team.",
+        services_heading="What we offer in Lea",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40: mowing, edging, weeding and light pruning."),
+            ("Weed control", "/weed-control", "beds, borders, paths and gravel. Free quote, or part of a maintenance visit."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, cuttings taken away."),
+            ("Garden tidy-ups", "/garden-tidy-ups", "from £80, including a full garden clearance."),
+            ("Fence and gate repairs", "/fence-repairs", "fences from £85 and gates from £65."),
+        ],
+        price_note="The figures above are guide prices. Weed control is quoted after a look.",
+        extra_heading="Older hedges and newer lawns",
+        extra=[
+            "A newer lawn is usually a regular cut. An established hedge may only need a seasonal trim.",
+            "Weeding is booked on its own or added to the garden visit.",
+            "Green waste is taken away. We are a registered waste carrier.",
+        ],
+        faqs=[
+            ("Do you cover Lea?",
+             "Yes. Lea is west of Preston, next to Cottam and Ashton-on-Ribble."),
+            ("Do you weed beds as well as mow?",
+             "Yes. Weeding can be booked as weed control, which is a free quote, or included in regular garden maintenance from £40 a visit."),
+            ("Are the prices on this page fixed?",
+             "No. They are guide prices, confirmed after a free look at the garden or the repair."),
+        ],
+        related=["garden-maintenance", "weed-control", "hedge-trimming", "garden-tidy-ups", "fence-repairs", "gate-repairs"],
+    ),
+    dict(
+        slug="ashton-on-ribble", name="Ashton-on-Ribble",
+        card="Gardener for lawns and hedges, plus porch, brick and paving repairs.",
+        meta_title="Gardener in Ashton-on-Ribble | GreenFix",
+        meta_description="Gardener in Ashton-on-Ribble for lawns, borders and hedges, and for porch, brick and paving repairs. Free quotes from GreenFix.",
+        h1="Gardener in Ashton-on-Ribble",
+        intro="Ashton-on-Ribble is west of Preston city centre, towards Lea and the River Ribble. The usual work is a front garden, a back lawn and a boundary hedge, with older brickwork and porches on some streets. GreenFix is a gardener in Ashton-on-Ribble and also repairs porches, brick joints, patios and fences.",
+        services_heading="Services in Ashton-on-Ribble",
+        services=[
+            ("Lawn mowing and grass cutting", "/lawn-mowing", "from £20 a cut, edging included."),
+            ("Hedge trimming", "/hedge-trimming", "from £40."),
+            ("Garden maintenance", "/garden-maintenance", "from £40 a visit when the beds need weeding as well as the lawn."),
+            ("Porch repairs", "/porch-repairs", "doors, frames and seals. Free quote after a look."),
+            ("Porch roof repairs", "/porch-roof-repairs", "a leaking or damaged porch roof, quoted separately from the door."),
+            ("Brick repointing", "/brick-repointing", "from £30 per m². Lime repointing is quoted after a look."),
+        ],
+        price_note="Guide prices where a figure is shown. Porch repairs, porch roofs and lime repointing are free quotes.",
+        extra_heading="Gardens and the front of the house",
+        extra=[
+            "Small front gardens are fine. Tell us the size when you ask for a quote.",
+            "A porch door and a porch roof are quoted as the jobs they actually are.",
+            "We are based in Penwortham, a short drive away.",
+        ],
+        faqs=[
+            ("Do you cover Ashton-on-Ribble?",
+             "Yes. Ashton-on-Ribble is west of the city centre, towards Lea and the River Ribble."),
+            ("Do you repair porches in Ashton-on-Ribble?",
+             "Yes. Porch repairs cover the door, frame and seals. Porch roof repairs are the roof. Both are a free quote. There is no fixed porch price."),
+            ("Can you look after a small front garden?",
+             "Yes. Mowing, hedges and weeding, on a regular round or as a one-off visit."),
+        ],
+        related=["lawn-mowing", "hedge-trimming", "porch-repairs", "porch-roof-repairs", "brick-repointing", "lime-repointing"],
+    ),
+    dict(
+        slug="hutton", name="Hutton",
+        card="Gardener for village gardens south of Penwortham, plus wall and fence repairs.",
+        meta_title="Gardener in Hutton | Village Gardens & Repairs | GreenFix",
+        meta_description="Gardener in Hutton for village gardens, hedges and tidy-ups, plus fence, gate and wall repairs. A short drive from our Penwortham base. Free quotes.",
+        h1="Gardener in Hutton",
+        intro="Hutton is a village south of Penwortham, on the way to Longton. Gardens here are often a bit larger than a town terrace, with hedges, lawns and boundaries that take a full visit. GreenFix is a gardener in Hutton. We are based in Penwortham, so the drive is short. We also repair fences, gates and garden walls.",
+        services_heading="What we do in Hutton",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40 a visit for mowing, edging, weeding and hedges on a round."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, including height reduction where a hedge has grown out."),
+            ("Garden clearance", "/garden-tidy-ups", "from £80 for an overgrown plot."),
+            ("Garden wall repairs", "/garden-wall-repairs", "from £50 for leaning, cracked or damaged boundary walls."),
+            ("Fence and gate repairs", "/fence-repairs", "fences from £85 and gates from £65."),
+        ],
+        price_note="Guide prices, confirmed after a free look.",
+        extra_heading="Village plots, not just small lawns",
+        extra=[
+            "A larger garden is quoted from the work, not from a one-size price.",
+            "Hedges on a boundary are a common job on their own.",
+            "Wall, fence and gate repairs are available on the same visit when that helps.",
+        ],
+        faqs=[
+            ("Do you cover Hutton?",
+             "Yes. Hutton is south of Penwortham, between our base and Longton."),
+            ("Do you take on larger village gardens?",
+             "Yes. We quote from the size and the work. Garden maintenance starts from £40 a visit and a tidy-up or garden clearance from £80."),
+            ("Do you repair garden walls in Hutton?",
+             "Yes. Garden wall repairs start from £50, and brick repointing from £30 per square metre. Both are guide prices. Lime repointing is a free quote."),
+        ],
+        related=["garden-maintenance", "hedge-trimming", "garden-tidy-ups", "garden-wall-repairs", "fence-repairs", "gate-repairs"],
+    ),
+    dict(
+        slug="longton", name="Longton",
+        card="Gardener for lawns, hedges and overgrown gardens, plus fence and brick repairs.",
+        meta_title="Gardener in Longton | Lawns, Hedges & Repairs | GreenFix",
+        meta_description="Gardener in Longton for lawns, hedges and overgrown gardens, with fence, gate and brick repairs as well. Free quotes.",
+        h1="Gardener in Longton",
+        intro="Longton is the next village south of Hutton. It is still a straightforward trip from our base in Penwortham. GreenFix is a gardener in Longton for mowing, hedges and the occasional overgrown plot, and for the repairs that come with a house: fencing, gates and brickwork.",
+        services_heading="Services in Longton",
+        services=[
+            ("Lawn mowing and grass cutting", "/lawn-mowing", "from £20 a cut, on a round or as a one-off."),
+            ("Hedge trimming", "/hedge-trimming", "from £40, cuttings removed."),
+            ("Garden tidy-ups and clearance", "/garden-tidy-ups", "from £80 when the garden needs resetting before a regular visit will cope."),
+            ("Fence repairs", "/fence-repairs", "from £85, including blown panels and rotten posts."),
+            ("Brick repointing", "/brick-repointing", "from £30 per m². Lime mortar is available and is quoted after a look."),
+        ],
+        price_note="Guide prices only, confirmed after a free assessment.",
+        extra_heading="From the Penwortham base",
+        extra=[
+            "Longton is south of Hutton, which is south of our registered office in Penwortham.",
+            "We reply within 24 hours and arrange a free look before confirming a price.",
+            "Garden waste is taken away and disposed of properly.",
+        ],
+        faqs=[
+            ("Do you cover Longton?",
+             "Yes. Longton is south of Hutton, within reach of our Penwortham base."),
+            ("How quickly can you quote?",
+             "We reply within 24 hours. A preferred date on the form is not a booked slot until we confirm it."),
+            ("Do you only do gardens in Longton?",
+             "No. We also repair fences, from £85, gates, from £65, and brickwork. Brick repointing starts from £30 per square metre."),
+        ],
+        related=["lawn-mowing", "hedge-trimming", "garden-tidy-ups", "fence-repairs", "gate-repairs", "brick-repointing"],
+    ),
+    dict(
+        slug="walton-le-dale", name="Walton-le-Dale",
+        card="Gardener south of the Ribble, plus fences, patios and brick repairs.",
+        meta_title="Gardener in Walton-le-Dale | Garden Care & Repairs | GreenFix",
+        meta_description="Gardener in Walton-le-Dale for garden care and exterior repairs south of the Ribble, including tidy-ups, hedges, fences and brickwork. Free quotes.",
+        h1="Gardener in Walton-le-Dale",
+        intro="Walton-le-Dale sits south of Preston, across the River Ribble. Homes range from older streets to later housing, with lawns, hedges and brick boundary walls. GreenFix is a gardener in Walton-le-Dale for regular garden care and for a clearance when a plot has been left. We also repair fences, gates, patios and pointing.",
+        services_heading="What we do in Walton-le-Dale",
+        services=[
+            ("Garden maintenance", "/garden-maintenance", "from £40 a visit."),
+            ("Garden clearance", "/garden-tidy-ups", "from £80, the same service as a garden tidy-up."),
+            ("Hedge trimming", "/hedge-trimming", "from £40."),
+            ("Patio repairs", "/patio-repairs", "from £95 for cracked, sunken or loose slabs."),
+            ("Brick repointing", "/brick-repointing", "from £30 per m². Lime repointing across Lancashire is a free quote."),
+        ],
+        price_note="Guide prices, confirmed after a free look. Lime repointing has no published rate.",
+        extra_heading="South of the river",
+        extra=[
+            "We visit the property. There is no customer reception at the Penwortham office.",
+            "Clearance and tidy-ups are for gardens that are past a normal maintenance visit.",
+            "Pointing, patios, fences and gates are quoted as repairs, not as part of the garden price.",
+        ],
+        faqs=[
+            ("Do you cover Walton-le-Dale?",
+             "Yes. Walton-le-Dale is south of Preston, across the River Ribble."),
+            ("Do you do garden clearance in Walton-le-Dale?",
+             "Yes. Garden clearance starts from £80. It is the same one-off service as a garden tidy-up."),
+            ("Can you repoint brickwork in Walton-le-Dale?",
+             "Yes. Brick repointing starts from £30 per square metre as a guide price. Lime repointing, for older softer brickwork, is quoted after a free look."),
+        ],
+        related=["garden-maintenance", "garden-tidy-ups", "hedge-trimming", "patio-repairs", "brick-repointing", "lime-repointing"],
     ),
 ]
 
@@ -3011,7 +3460,7 @@ def town_service_schema(town):
         "@context": "https://schema.org",
         "@type": "Service",
         "@id": f"{DOMAIN}/{town['slug']}#service",
-        "name": f"Garden maintenance and exterior repairs in {town['name']}",
+        "name": town["h1"],
         "serviceType": "Garden maintenance and exterior property repairs",
         "description": town["meta_description"],
         "provider": {"@id": BUSINESS_ID},
@@ -3548,7 +3997,7 @@ def build_blog():
 
 RETIRED_301_MAP = [
     # 12 town garden-maintenance pages -> /garden-maintenance
-    *[(f"/garden-maintenance-{t}", f"/{t}" if t in ("fulwood", "leyland", "penwortham") else "/garden-maintenance") for t in [
+    *[(f"/garden-maintenance-{t}", f"/{t}" if t in ("fulwood", "leyland", "penwortham", "longton", "walton-le-dale") else "/garden-maintenance") for t in [
         "bamber-bridge", "blackburn", "blackpool", "chorley", "freckleton",
         "fulwood", "kirkham", "leyland", "longton", "penwortham", "preston",
         "walton-le-dale",
@@ -3559,7 +4008,7 @@ RETIRED_301_MAP = [
     ("/garden-clearance-preston", "/garden-tidy-ups"),
     ("/garden-clearance-penwortham", "/penwortham"),
     ("/garden-clearance-leyland", "/leyland"),
-    ("/weed-control-preston", "/garden-maintenance"),
+    ("/weed-control-preston", "/weed-control"),
     ("/gutter-clearing-preston", "/repairs-and-maintenance"),
     ("/jet-washing-preston", "/patio-repairs"),
     ("/driveway-cleaning-preston", "/patio-repairs"),
@@ -3674,6 +4123,7 @@ GITHUB_PAGES_REDIRECTS = [
     ("window-cleaning-preston.html", "/window-cleaning", "Window Cleaning Preston"),
     ("estate-agent-services.html", "/residential-property-maintenance", "Estate Agent Services"),
     ("garden-clearance-penwortham.html", "/penwortham", "Garden Maintenance & Exterior Repairs Penwortham"),
+    ("weed-control-preston.html", "/weed-control", "Weed Control in Preston"),
 ]
 
 
@@ -3720,19 +4170,9 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        if path in SITEMAP_SEO_PATHS:
-            lastmod = "2026-11-27"
-        elif path in {"/", WINTER_PATH, RESEALING_PATH, "/salt-spreading", "/window-repairs",
-                    "/door-repairs", "/drain-repairs", "/drainage-repairs", "/knowledge-base", "/pricing-guide",
-                    "/commercial-maintenance", "/factory-warehouse-grounds-maintenance",
-                    "/care-home-grounds-maintenance-preston", "/shop-retail-exterior-maintenance-preston"}:
-            lastmod = "2026-11-17"
-        elif path == "/health-and-safety-policy":
-            lastmod = "2026-11-18"
-        elif path == "/storm-damage-repairs":
-            lastmod = "2026-11-10"
-        else:
-            lastmod = SITEMAP_LASTMOD
+        # 27 Nov 2026: areaServed and the new town and service pages changed
+        # the generated HTML, including the shared LocalBusiness block.
+        lastmod = "2026-11-27"
         entries.append(f"""  <url>
     <loc>{DOMAIN}{path}</loc>
     <lastmod>{lastmod}</lastmod>
@@ -3812,7 +4252,7 @@ def winter_chat_topics():
             f"/?service={quote(RESEALING_SERVICE)}#quote-form", "Get a resealing quote",
         ),
         (
-            ("gutter", "gutters", "guttering", "gutter cleaning", "gutter clearing", "overflowing gutter"),
+            ("gutter", "gutters", "guttering", "gutter clearing", "overflowing gutter"),
             "GreenFix does not offer gutter cleaning or gutter clearing. If you need an exterior repair we do carry out, send the job and your postcode.",
             "/#quote-form", "Request a quote",
         ),
@@ -3878,8 +4318,10 @@ def build_chatbot_kb():
     # Areas covered
     entries.append({
         "k": ["area", "areas", "cover", "coverage", "location", "locations", "where",
-              "preston", "lancashire", "wigan", "manchester", "greater"],
-        "a": f"We cover {AREA_SERVED_TEXT}. Share your site postcode to confirm availability.",
+              "preston", "lancashire", "wigan", "manchester", "greater",
+              "penwortham", "fulwood", "leyland", "cottam", "ingol", "lea",
+              "ashton", "hutton", "longton", "walton", "ribble"],
+        "a": f"We cover {AREA_SERVED_TEXT}. Share your postcode to confirm availability.",
     })
 
     # Insurance / credentials
@@ -4215,6 +4657,111 @@ def build_chatbot_assets():
     print(f"wrote assets/chatbot.js ({len(kb)} knowledge-base entries, {len(js)} bytes)")
 
 
+def build_llms_txt():
+    """Plaintext fact sheet. Prices here are the same guide prices as the pages."""
+    town_lines = "\n".join(
+        f"- {t['name']}: {DOMAIN}/{t['slug']}" for t in TOWN_PAGES
+    )
+    text = f"""# GreenFix — Property Maintenance & Exterior Care
+
+> GreenFix Exterior Care (Greenfix Exterior Care Ltd, Companies House {COMPANY_NUMBER}) is a property maintenance and exterior repair contractor based in Preston, Lancashire. It provides painting and decorating, landlord property refreshes, grounds and garden care and exterior repairs for homeowners, landlords and businesses. New for {FOUNDED}. {INSURANCE}; Environment Agency registered waste carrier.
+
+## Services and guide prices
+- Domestic salt spreading and winter gritting: private residential driveways, paths, steps, ramps and entrances. One-off or planned visits by agreement. {DOMAIN}/salt-spreading
+- Winter home maintenance in Preston: gritting, blocked drains, waterlogged garden and surface drainage, exterior window and door resealing, paving and storm repairs. {DOMAIN}{WINTER_PATH}
+- Storm damage repairs: fencing, gates, roof tiles and suitable exterior repairs, subject to assessment, safe access and weather. Quotation required; contact us for availability. {DOMAIN}/storm-damage-repairs
+- Painting and decorating: interior and exterior work, quotation required. {DOMAIN}/services/painting-decorating
+- Landlord and letting agent property maintenance: rental refreshes and planned maintenance, quotation required. {DOMAIN}/services/landlord-property-maintenance
+- PAT testing: planned service, coming soon. Bookings are not open; launch requires confirmed training, equipment and insurance. Portal reports and appliance registers are future work, not currently available. {DOMAIN}/services/pat-testing
+Guide "from" prices, confirmed after a free assessment.
+- Grounds & garden care: grounds maintenance (from £40), garden maintenance (from £40), lawn mowing and grass cutting (from £20 per cut; grass cutting is the same service), hedge trimming (from £40), garden tidy-ups and garden clearance (from £80; clearance is the same service as a tidy-up), window cleaning (free quote; external from £1.10 per pane).
+- Weed control: weeds removed from beds, borders, paths and gravel. Free quote. Weeding is also part of garden maintenance (from £40 a visit) and the Gold monthly plan (£79 a month). {DOMAIN}/weed-control
+- Exterior repairs: brick repointing (from £30/m²), brick repairs (from £50), garden wall repairs (from £50), fence repairs (from £85), fence panel replacement (from £85), gate repairs (from £65), patio repairs (from £95), paving repairs (from £65), slab relaying (from £95), roof tile repairs (from £250), drain and drainage repairs (from £95), window repairs (from £65), door repairs (from £65).
+- Monthly garden maintenance plans, fortnightly visits, paid monthly by Direct Debit via GoCardless: Lawn Package £39/month, Silver Package £59/month (adds hedge trimming, up to 3 hedges), Gold Package £79/month (adds weeding of beds and borders). Details and sign-up: {DOMAIN}/garden-maintenance-subscription
+- Free quote after a look, no published price: porch repairs, porch roof repairs, chimney repairs, stone repairs, lintel replacement, weed control, and lime mortar repointing (Lancashire).
+- Lime repointing is offered across Lancashire and is quoted after a free assessment. It does not use the £30/m² brick repointing guide price. {DOMAIN}/lime-repointing
+- Quotation only: exterior structural repairs, general repairs and maintenance, residential property maintenance, planned preventative maintenance, drone property inspections.
+
+## Winter service catalogue
+- Domestic gritting and salt spreading: {DOMAIN}/salt-spreading
+- Blocked outside drains, gullies and downpipes: {DOMAIN}/drain-repairs
+- Garden drainage, pooling and waterlogged lawns, channel drains, French drains and soakaways: {DOMAIN}/drainage-repairs
+- General exterior repairs and maintenance: {DOMAIN}/repairs-and-maintenance
+- Exterior window, door and porch resealing: {DOMAIN}/window-door-resealing-preston
+- Storm damage to fencing, gates and roof tiles: {DOMAIN}/storm-damage-repairs
+- Loose or sunken paths and paving: {DOMAIN}/paving-repairs
+- Leaf and garden debris clearance: {DOMAIN}/garden-tidy-ups
+- Frost-damaged brickwork and pointing: {DOMAIN}/brick-repointing
+- Planned winter home checks: {DOMAIN}/planned-preventative-maintenance
+- For a quote, share your home postcode, the areas to treat or repair and how to access them. For gritting, include whether it is one visit or planned cover.
+
+## Who we work with
+Homeowners, landlords, property managers, supermarkets, retail parks, business parks, nursing homes, council premises, warehouses, factories, schools, clinics, hospitality, churches and other privately managed premises.
+
+## Service area
+{AREA_SERVED_TEXT}.
+
+## Contact
+- Registered office (no customer visits): {DISPLAY_ADDRESS}
+- Phone / WhatsApp: 07447 804597
+- Email: {EMAIL}
+- Hours: Monday–Friday 9:00–17:00; Saturday 9:00–15:30 (closed 12:00–13:00); Sunday closed
+- Google Maps: {GOOGLE_MAPS_SHARE_URL}
+
+## Key pages
+- Home: {DOMAIN}/
+- Pricing guide: {DOMAIN}/pricing-guide
+- Knowledge base (all facts in one place): {DOMAIN}/knowledge-base
+- Garden maintenance: {DOMAIN}/garden-maintenance
+- Lawn mowing and grass cutting: {DOMAIN}/lawn-mowing
+- Hedge trimming: {DOMAIN}/hedge-trimming
+- Weed control: {DOMAIN}/weed-control
+- Garden tidy-ups and garden clearance: {DOMAIN}/garden-tidy-ups
+- Monthly garden maintenance plans (Lawn £39, Silver £59, Gold £79 per month, fortnightly visits): {DOMAIN}/garden-maintenance-subscription
+- Grounds maintenance: {DOMAIN}/grounds-maintenance
+- Gate repairs: {DOMAIN}/gate-repairs
+- Fence repairs: {DOMAIN}/fence-repairs
+- Brick repointing: {DOMAIN}/brick-repointing
+- Lime repointing (Lancashire): {DOMAIN}/lime-repointing
+- Chimney repairs: {DOMAIN}/chimney-repairs
+- Stone repairs: {DOMAIN}/stone-repairs
+- Lintel replacement: {DOMAIN}/lintel-replacement
+- Door repairs: {DOMAIN}/door-repairs
+- Porch repairs: {DOMAIN}/porch-repairs
+- Porch roof repairs: {DOMAIN}/porch-roof-repairs
+{town_lines}
+- Commercial property maintenance: {DOMAIN}/commercial-maintenance
+- About & complaints procedure: {DOMAIN}/about-greenfix
+- Blog (question-led advice): {DOMAIN}/blog
+
+## Naming
+Preferred name: "GreenFix Exterior Care". Previously referred to as "GreenFix Property Care". Not affiliated with other businesses called Greenfix.
+
+## FAQ
+Q: Is GreenFix a gardening company or a builder?
+A: Both: regular grounds and garden care, plus one-off exterior repairs.
+
+Q: Is GreenFix insured?
+A: Yes: £5M public liability insurance, and it is an Environment Agency registered waste carrier.
+
+Q: How do I get a quote?
+A: Call or WhatsApp 07447 804597 or email {EMAIL}. Replies within 24 hours.
+
+Q: Where does GreenFix work?
+A: {AREA_SERVED_TEXT}.
+
+Q: How much does garden clearance cost?
+A: Garden clearance is the same service as a garden tidy-up, from £80 per visit as a guide price, confirmed after a free assessment.
+
+Q: How much does lime repointing cost?
+A: Lime repointing is a free quote after the wall has been seen. Standard brick repointing, where a cement mix is suitable, is from £30 per m² as a guide price.
+"""
+    path = os.path.join(ROOT, "llms.txt")
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
+    print(f"wrote llms.txt ({len(text)} bytes)")
+
+
 def main():
     print(f"Loaded {len(SERVICES)} services across {len(CLUSTERS)} clusters.")
     for c in CLUSTERS:
@@ -4236,6 +4783,7 @@ def main():
     build_redirects()
     build_github_pages_redirects()
     build_sitemap()
+    build_llms_txt()
     print("Done.")
 
 
