@@ -19,7 +19,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DOMAIN = "https://greenfixexterior-care.co.uk"
-BUSINESS_NAME = "GREENFIX"
+BUSINESS_NAME = "GreenFix"
 PHONE_DISPLAY = "07447804597"
 PHONE_TEL = "+447447804597"
 EMAIL = "admin@greenfixexterior-care.co.uk"
@@ -185,7 +185,7 @@ SERVICES = [
         h1="Garden Maintenance in Preston",
         tagline="Regular, reliable garden care for your home",
         price="From £40", price_note="per visit, guide price only",
-        meta_title="Garden Maintenance Preston | Penwortham, Fulwood & Leyland from £40 | GreenFix",
+        meta_title="Garden Maintenance Preston | From £40 | GreenFix",
         meta_description="Local garden maintenance in Preston, Penwortham, Fulwood and Leyland. Mowing, edging, weeding, hedges and green waste removed. Regular or one-off visits from £40. Free quote.",
         intro="GreenFix keeps residential gardens tidy, healthy and under control across Preston. That covers the everyday jobs that keep a garden looking cared-for between the bigger seasonal work: mowing and edging, weeding beds and borders, light pruning, and general upkeep. Book a one-off visit or set up a regular round — whichever suits how you use your garden.",
         local_section={
@@ -289,25 +289,18 @@ SERVICES = [
         price="From £80", price_note="per visit, guide price only",
         meta_title="Garden Tidy Up & Clearance Preston | From £80 | GreenFix",
         meta_description="Overgrown garden? One-off garden tidy-ups and clearances in Preston: cutting back, weeding, mowing and waste taken away. From £80.",
-        intro="A garden tidy-up is a one-off reset, not a routine visit: for gardens that have been left, overgrown, or need bringing back under control before regular maintenance can take over. We clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything we clear — leaving a garden that's actually manageable again.",
+        intro="A garden tidy-up is a one-off reset from £80 per visit (guide price only), not a routine visit. It is for gardens that have been left, overgrown, or that need bringing back under control before regular maintenance can take over. We clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything we clear, leaving a garden that is manageable again. The final price depends on the size of the garden and how much work is needed, and is confirmed after a free assessment.",
+        sections=[{'heading': 'What a garden tidy-up includes', 'paragraphs': ['The guide price is from £80 per visit. That is the starting point for a straightforward tidy-up, not a fixed quote. Garden size, access and how much work is actually needed all change the price. Nothing on this site is a fixed quote until the job has been seen, and the figure is confirmed after a free assessment.', 'On the visit we clear overgrown beds, cut back shrubs and brambles, remove weeds, and take away everything that is cleared. Beds, borders and lawns are cut back as a full reset rather than a partial tidy. The growth this service already covers is brambles, self-seeded growth, dead plants and overgrown shrubs, plus weeds in beds and borders.', 'An overgrown garden usually has several of those problems at once. Grass may be too long for a normal mow. Beds can be lost under weeds and self-seeded growth. Shrubs may have spread well beyond their space, and debris can have built up. A standard fortnightly maintenance visit is not the right first step when there is that much to do. The tidy-up is the reset for that situation.', 'Most gardens can be reset in a single visit. A very large or badly overgrown garden may need a second visit, including where the lawn has to be brought back to a manageable length over more than one cut. We confirm that after a free look, once you have told us the current state of the garden.', 'Green waste, cuttings and cleared material are removed and disposed of properly. GreenFix is an Environment Agency registered waste carrier, so what we clear is not left in bags for you to sort out.']}, {'heading': 'Typical tidy-up jobs', 'paragraphs': ['People ask for a tidy-up when a garden has been neglected, after a house move, or when it has been left unattended for a long time. In Fulwood the same one-off visit is used between tenancies. The work is available across Preston, Penwortham, Fulwood and Leyland.', 'Depending on the garden, a tidy-up can include cutting back brambles and overgrown shrubs, clearing weeds from beds and borders, cutting back self-seeded growth and dead plants, and bringing an overgrown lawn back to a length that can be mowed. If the grass is too long for a single pass, that can take more than one cut. What is cut is taken away rather than left in piles.', 'Once the garden is manageable, regular garden maintenance is the ongoing upkeep: mowing, edging, weeding beds and borders, light pruning and seasonal work, from £40 a visit as a guide. Lawn mowing on its own starts from £20 a cut, with edging included. Hedge trimming starts from £40. Those are separate jobs with their own guide prices, quoted before work starts.'], 'html': '<p>See <a href="/garden-maintenance">garden maintenance</a>, <a href="/lawn-mowing">lawn mowing</a> and <a href="/hedge-trimming">hedge trimming</a>.</p>'}, {'heading': 'How quoting works', 'paragraphs': ['Call or WhatsApp 07447804597, or use the quote form. Tell us the current state of the garden: which of the beds, the lawn and the shrubs need work, and how we get into the garden. We respond within 24 hours.', 'If you have photos, WhatsApp them to 07447804597 for a faster quote. We respond the same day when photos are sent that way. The from £80 price is the starting point for a straightforward tidy-up. Most jobs are quoted individually, because the size of the garden and the amount of clearing change the time on site.', 'A preferred date on the form is not a guaranteed slot. We call or text to confirm a visit before it is booked. Prices shown are guide prices only.']}, {'heading': 'Areas we cover', 'paragraphs': ['GreenFix visits the property. Garden tidy-ups are carried out in Preston, Penwortham, Fulwood and Leyland. The registered office is 11 Lower Croft, Penwortham, Preston PR1 9DJ. There is no customer reception at that address.'], 'local': True, 'html': '<p>Local pages: <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a>.</p>'}, {'heading': 'After the tidy-up', 'paragraphs': ['Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control. The initial reset is the heavy work. The regular visit is what keeps the garden that way afterwards.', 'Monthly garden maintenance plans are paid monthly. They are set up by Direct Debit, with no contract lock-in, and you can cancel any time. The Lawn package is £39 a month for an average-sized garden: fortnightly lawn mowing and edging, with cuttings cleared. Silver is £59 a month and Gold is £79 a month. Silver and Gold are fortnightly visits. Silver adds hedge trimming (up to 3 hedges). Gold adds weeding of beds and borders, and seasonal tidy-ups are included in Gold.', 'A garden that has been left still starts with the one-off tidy-up from £80. The monthly plans are for keeping a garden that is already in reasonable shape.'], 'html': '<p><a href="/garden-maintenance-subscription">See monthly garden maintenance plans</a>.</p>'}],
         cards=[
             ("Full Garden Reset", "Overgrown beds, borders and lawns cleared and cut back in a single visit, not a partial tidy."),
             ("Cutting Back & Clearing", "Brambles, self-seeded growth, dead plants and overgrown shrubs cut back and cleared."),
             ("All Waste Removed", f"Everything we clear is taken away and disposed of responsibly — we're a {WASTE_CARRIER}, so nothing is left in bags for you to sort out."),
             ("A Fresh Starting Point", "Once a garden's been reset, we can set up a regular garden maintenance round to keep it that way."),
         ],
-        faqs=[
-            ("How is this different from garden maintenance?",
-             "A garden tidy-up is a one-off deep clear for a garden that's become overgrown or neglected. Garden maintenance is the regular, ongoing upkeep that keeps a garden looking good once it's already in reasonable shape."),
-            ("Do you take away everything you clear?",
-             f"Yes. All green waste, cuttings and cleared material is removed and disposed of properly — we're a {WASTE_CARRIER}."),
-            ("Can you deal with a very overgrown or neglected garden?",
-             "Yes, this is exactly the job a garden tidy-up is for. Tell us the current state of the garden when you call and we'll quote accordingly."),
-            ("Can I set up regular maintenance after the tidy-up?",
-             "Yes, many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control."),
-        ],
+        faqs=[('How is this different from garden maintenance?', "A garden tidy-up is a one-off deep clear for a garden that's become overgrown or neglected. Garden maintenance is the regular, ongoing upkeep that keeps a garden looking good once it's already in reasonable shape."), ('Do you take away everything you clear?', "Yes. All green waste, cuttings and cleared material is removed and disposed of properly — we're a Environment Agency registered Waste Carrier."), ('Can you deal with a very overgrown or neglected garden?', "Yes, this is exactly the job a garden tidy-up is for. Tell us the current state of the garden when you call and we'll quote accordingly."), ('Can I set up regular maintenance after the tidy-up?', 'Yes, many clients book a one-off tidy-up first and then move onto a regular garden maintenance round once the garden is back under control.'), ('How much does a garden tidy-up cost?', 'From £80 per visit as a guide price. The final price depends on the size of the garden and how much needs clearing, and is confirmed after a free assessment. Most jobs are quoted individually.'), ('Which areas do you cover for garden tidy-ups?', 'Preston, Penwortham, Fulwood and Leyland.'), ('How do I get a quote?', 'Call or WhatsApp 07447804597, or use the quote form on this site. We respond within 24 hours. WhatsApp photos of the garden to 07447804597 if you have them, for a faster quote. We respond the same day when photos are sent that way.'), ('Can you tidy a garden between tenancies?', 'Yes. One-off garden tidy-ups start from £80, including between tenancies.'), ('Will a tidy-up take more than one visit?', 'Most gardens are reset in a single visit. A very large or badly overgrown garden may need a second visit. We confirm that after a free look.'), ('Can I move onto a monthly plan afterwards?', 'Yes. Many clients book a one-off tidy-up first and then move onto a regular garden maintenance round. Monthly plans are paid monthly and you can cancel any time. Lawn is £39 a month for fortnightly visits. Silver is £59 a month and Gold is £79 a month, and Silver and Gold are fortnightly visits.')],
         related=["garden-maintenance", "lawn-mowing", "hedge-trimming"],
-        schema_desc="One-off garden tidy-ups and overgrown garden clearance for homes across Preston.",
+        extra_related=[("/garden-maintenance-subscription", "Monthly Garden Maintenance Plans")],
+        schema_desc="One-off garden tidy-ups from £80 per visit for overgrown or neglected gardens across Preston, Penwortham, Fulwood and Leyland. Guide price only.",
     ),
     dict(
         slug="pressure-washing", cluster="grounds",
@@ -369,7 +362,7 @@ SERVICES = [
         h1="Exterior Structural Repairs in Preston, Penwortham, Fulwood and Leyland",
         tagline="Masonry, walls and structural brickwork put right",
         price="Quotation Required", price_note="every structural job is assessed individually",
-        meta_title="Exterior Structural Repairs Preston | Penwortham, Fulwood & Leyland | GreenFix",
+        meta_title="Exterior Structural Repairs Preston | GreenFix",
         meta_description="Exterior structural repairs in Preston, Penwortham, Fulwood and Leyland. Cracked brickwork, masonry and garden walls surveyed and quoted. Free quote.",
         intro="Exterior structural repairs cover cracked or failing brickwork, leaning or unstable garden walls, and other masonry problems on the outside of a property, for homes and businesses in Preston, Penwortham, Fulwood and Leyland. Every job is assessed on site and quoted individually — there is no fixed guide price. Call 07447804597 or request a free quote and we respond within 24 hours.",
         local_section={
@@ -444,7 +437,7 @@ SERVICES = [
         h1="Brick Repointing in Preston, Penwortham, Fulwood and Leyland",
         tagline="Restoring worn or crumbling mortar joints",
         price="From £30 per m²", price_note="guide price only, confirmed after assessment",
-        meta_title="Brick Repointing Preston | Penwortham, Fulwood & Leyland from £30/m² | GreenFix",
+        meta_title="Brick Repointing Preston | From £30/m² | GreenFix",
         meta_description="Local brick repointing in Preston, Penwortham, Fulwood and Leyland. Crumbling mortar joints repaired, including lime mortar on request. From £30 per m². Free quote.",
         intro="Brick repointing repairs crumbling, cracked or missing mortar between bricks — not the bricks themselves — for homes and businesses in Preston, Penwortham, Fulwood and Leyland. We rake out the failed mortar and repoint with a matching mix, including lime mortar on request for older, softer brickwork. From £30 per m² as a guide price, confirmed after assessment: call 07447804597 or request a free quote and we respond within 24 hours.",
         local_section={
@@ -570,51 +563,31 @@ SERVICES = [
     ),
     dict(
         slug="gate-repairs", cluster="repairs",
-        h1="Gate Repairs in Preston",
-        tagline="Hinges, latches and gate alignment fixed",
+        quote_name="Gate Repairs",
+        h1="Garden Gate Repair in Preston",
+        tagline="Hinges and latches from £65. Free quote.",
         price="From £65", price_note="guide price only, confirmed after assessment",
-        meta_title="Gate Repairs Preston | Penwortham, Fulwood & Leyland from £65 | GreenFix",
-        meta_description="Local gate repairs in Preston, Penwortham, Fulwood and Leyland. Sagging, sticking and damaged garden and driveway gates, hinges and latches. From £65. Free quote.",
-        intro="A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem rather than something that needs a full replacement. We repair and adjust garden and boundary gates, timber and metal, for homes and businesses across Preston — fixing hinges, latches, and alignment so the gate opens, closes and locks the way it should.",
+        meta_title="Garden Gate Repairs Preston | From £65 | GreenFix",
+        meta_description="Garden gate repair in Preston for sagging, sticking and dropped gates. Timber and metal. Hinges and latches from £65. No electric gate motors. Free quote.",
+        intro="Garden gate repair in Preston is for manual garden and driveway gates that sag, stick or drop, or that have broken hinges or latches. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem rather than something that needs a full replacement. We repair and adjust timber and metal gates so they open, close and latch. Hinges and latches from £65. The quote is free. We do not repair automatic or electric gate motors.",
         local_section={
             "heading": "Local gate repairs across Preston",
             "paragraphs": [
                 "We're based at Lower Croft in Penwortham (PR1), so most gate repairs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
-                "Typical jobs: worn, rusted or broken hinges and latches replaced, sagging or sticking gates adjusted and re-hung, and timber or metal garden, driveway and site access gates repaired so they open, close and latch properly.",
+                "Typical jobs are manual garden and driveway gates: worn, rusted or broken hinges and latches replaced, and sagging, sticking or dropped gates adjusted and re-hung so they open, close and latch. Timber and metal gates are both repaired. This does not cover automatic or electric gate motors.",
             ],
             "points": [
                 "Hinge, latch and alignment repairs, usually without replacing the whole gate",
+                "Manual garden and driveway gates only: automatic and electric gate motors are not covered",
                 "Guide price from £65, confirmed after assessment",
                 "£5M public liability insurance",
                 "Environment Agency registered waste carrier",
             ],
         },
-        cards=[
-            ("Hinges & Latches", "Worn, rusted or broken hinges and latches replaced so the gate operates smoothly again."),
-            ("Sagging & Sticking Gates", "Misaligned gates adjusted and re-hung so they swing freely and close properly."),
-            ("Timber & Metal Gates", "Garden gates, driveway gates and metal security gates repaired to suit the material and use."),
-            ("Domestic & Commercial", "Residential garden gates and commercial site access gates, repaired to the same standard."),
-        ],
-        faqs=[
-            ("Why is my gate sagging or dragging on the ground?",
-             "This is usually a hinge or post problem rather than the gate itself — worn hinges or a settling post let the gate drop out of alignment over time."),
-            ("Can you repair the gate instead of replacing it?",
-             "In most cases, yes — hinge, latch and alignment problems can usually be fixed without replacing the whole gate."),
-            ("Do you repair metal gates as well as timber?",
-             "Yes, we repair both timber and metal garden, driveway and site access gates."),
-            ("How much does a gate repair cost?",
-             "From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame."),
-            ("Which areas of Preston do you cover for gate repairs?",
-             "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."),
-            ("How much does a gate repair cost in Preston?",
-             "From £65 as a guide price, confirmed after assessment. The price depends on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame."),
-            ("Can you fix a gate that won't close or latch?",
-             "Yes. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem. In most cases that can be fixed without replacing the whole gate."),
-            ("Are you insured?",
-             "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier."),
-        ],
+        cards=[('Hinges & Latches', 'Worn, rusted or broken hinges and latches replaced. Hinges and latches from £65, confirmed after assessment. The quote is free.'), ('Sagging Gate Repair', 'Sagging, sticking or dropped gates adjusted and re-hung so they swing freely and close properly.'), ('Timber & Metal Gates', 'Manual garden and driveway gates in timber and metal, repaired to suit the material.'), ('No Electric Gate Motors', 'Automatic and electric gate motors are not covered. The work is the gate, the hinges and the latches.')],
+        faqs=[('Why is my gate sagging or dragging on the ground?', 'This is usually a hinge or post problem rather than the gate itself — worn hinges or a settling post let the gate drop out of alignment over time.'), ('Can you repair the gate instead of replacing it?', 'In most cases, yes — hinge, latch and alignment problems can usually be fixed without replacing the whole gate.'), ('Do you repair metal gates as well as timber?', 'Yes. We repair timber and metal manual garden and driveway gates. We do not repair automatic or electric gate motors.'), ('Do you repair automatic or electric gate motors?', 'No. This service is for manual garden and driveway gates: sagging, sticking and dropped gates, and broken hinges and latches on timber and metal. We do not repair automatic or electric gate motors.'), ('How much does a gate repair cost?', 'From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ('Which areas of Preston do you cover for gate repairs?', "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."), ('How much does a gate repair cost in Preston?', 'From £65 as a guide price, confirmed after assessment. The price depends on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ("Can you fix a gate that won't close or latch?", "Yes. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem. In most cases that can be fixed without replacing the whole gate."), ('Are you insured?', "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier.")],
         related=["fence-repairs", "door-repairs", "repairs-and-maintenance"],
-        schema_desc="Gate hinge, latch and alignment repairs for homes and businesses across Preston.",
+        schema_desc="Manual garden and driveway gate repairs in Preston for sagging, sticking and dropped timber and metal gates, hinges and latches. Does not cover automatic or electric gate motors.",
     ),
     dict(
         slug="patio-repairs", cluster="repairs",
@@ -729,7 +702,7 @@ SERVICES = [
         h1="Drain Repairs in Preston",
         tagline="Outdoor drain, gully and downpipe clearance and repairs",
         price="From £95", price_note="guide price only, confirmed after assessment",
-        meta_title="Blocked Drains & Drain Repairs Preston | Greenfix",
+        meta_title="Blocked Drains & Drain Repairs Preston | GreenFix",
         meta_description="Drain repairs in Preston — blocked, cracked or collapsed drain runs, downpipes and gullies fixed. From £95.",
         intro="Drain repairs cover an individual drain, downpipe or gulley that's blocked, cracked, or has collapsed — the kind of problem that shows up as slow-draining water, a bad smell, or water surfacing where it shouldn't. We diagnose the specific cause, clear blockages, and repair or reseal damaged pipework and joints. For broader surface-water or land drainage issues, see our drainage repairs page instead.",
         cards=[
@@ -756,7 +729,7 @@ SERVICES = [
         h1="Drainage Repairs in Preston",
         tagline="Waterlogged gardens and surface water put right",
         price="From £95", price_note="guide price only, confirmed after assessment",
-        meta_title="Garden Drainage & Waterlogged Gardens Preston | Greenfix",
+        meta_title="Garden Drainage & Waterlogged Gardens Preston | GreenFix",
         meta_description="Garden drainage in Preston for waterlogged lawns, pooling driveways and yards. Channel drain, French drain and soakaway assessment and repairs.",
         intro="Drainage repairs deal with broader surface-water problems — waterlogged lawns, patios or driveways that hold water long after rain has stopped, and land or garden drainage that isn't working properly. Rather than a single blocked pipe (see drain repairs), this is about how water moves, or fails to move, across a whole area: soakaways, French drains, and channel drains that need repairing, clearing, or installing to solve the problem properly.",
         cards=[
@@ -1054,9 +1027,9 @@ SERVICES.extend([
     dict(slug="services/painting-decorating", cluster="repairs",
          h1="Painting & Decorating in Preston", tagline="Interior and exterior decorating for homes, rentals and businesses",
          price="Free Quote", price_note="Scope, preparation and materials agreed before work starts",
-         meta_title="Painting & Decorating Preston | GREENFIX",
-         meta_description="Interior and exterior painting, decorating and rental property refreshes in Preston, Penwortham, Fulwood and Leyland. Request a Greenfix quote.",
-         intro="Freshen up a home, prepare a rental between tenancies or improve a business premises. Greenfix provides painting and decorating across Preston, Penwortham, Fulwood and Leyland, with the preparation, finish, access arrangements and materials agreed in your written quote.",
+         meta_title="Painting & Decorating Preston | GreenFix",
+         meta_description="Interior and exterior painting, decorating and rental property refreshes in Preston, Penwortham, Fulwood and Leyland. Request a GreenFix quote.",
+         intro="Freshen up a home, prepare a rental between tenancies or improve a business premises. GreenFix provides painting and decorating across Preston, Penwortham, Fulwood and Leyland, with the preparation, finish, access arrangements and materials agreed in your written quote.",
          cards=[("Interior Decorating", "Walls, ceilings and woodwork, from a single room to a wider property refresh. Tell us about the condition of the surfaces and the finish you want."),
                 ("Exterior Painting", "Suitable exterior walls, doors, gates and timberwork. We assess surface condition, weather and access before agreeing the work."),
                 ("Rental Property Refreshes", "Decorating between tenancies for landlords, HMOs and letting agents. Agree the rooms, access and target handover date with us."),
@@ -1070,9 +1043,9 @@ SERVICES.extend([
     dict(slug="services/landlord-property-maintenance", cluster="repairs",
          h1="Landlord & Letting Agent Property Maintenance in Preston", tagline="One point of contact for rental refreshes, decorating and exterior care",
          price="Quotation Required", price_note="One-off jobs or planned maintenance by agreement",
-         meta_title="Landlord Property Maintenance Preston | GREENFIX",
+         meta_title="Landlord Property Maintenance Preston | GreenFix",
          meta_description="Property refreshes, painting, garden clearances, exterior repairs and planned maintenance for Preston landlords and letting agents. Request a quote.",
-         intro="Keep rental properties presentable and organise work between tenancies with one point of contact. Greenfix supports landlords, letting agents and property managers across Preston, Penwortham, Fulwood and Leyland with decorating, minor repairs and exterior care. Send a single job or a list of properties and we will agree priorities, access and quotes with you.",
+         intro="Keep rental properties presentable and organise work between tenancies with one point of contact. GreenFix supports landlords, letting agents and property managers across Preston, Penwortham, Fulwood and Leyland with decorating, minor repairs and exterior care. Send a single job or a list of properties and we will agree priorities, access and quotes with you.",
          cards=[("Between-Tenancy Refreshes", "Combine decorating, garden tidy-ups and agreed minor repairs into a practical schedule before the next tenancy."),
                 ("Ongoing Exterior Care", "Regular gardens and communal grounds, pressure washing, gutters and agreed fencing or gate repairs."),
                 ("Several Properties, One Contact", "Send the address and work required for each property. We coordinate the agreed jobs and keep you informed of progress."),
@@ -1086,8 +1059,8 @@ SERVICES.extend([
     dict(slug="services/pat-testing", cluster="repairs", coming_soon=True,
          h1="PAT Testing in Preston — Coming Soon", tagline="Planned portable appliance inspection and testing service — bookings are not open",
          price="Coming soon", price_note="Launch date and pricing to be confirmed",
-         meta_title="PAT Testing Preston — Coming Soon | GREENFIX",
-         meta_description="Greenfix is preparing a PAT testing service for Preston landlords and businesses. Not yet available to book. Learn about the planned service and reporting.",
+         meta_title="PAT Testing Preston — Coming Soon | GreenFix",
+         meta_description="GreenFix is preparing a PAT testing service for Preston landlords and businesses. Not yet available to book. Learn about the planned service and reporting.",
          intro="We are preparing a portable appliance inspection and testing service for landlords and businesses around Preston. This service is not yet available to book. Launch depends on confirmed competence and training, suitable equipment and insurance cover. No launch date has been set.",
          cards=[("Planned Inspection Process", "The intended service combines visual inspection with appropriate electrical tests, based on the equipment type and its use."),
                 ("Equipment & Access", "At launch we will confirm which appliances we can inspect, safe access requirements and any exclusions before quoting."),
@@ -1098,7 +1071,7 @@ SERVICES.extend([
                ("Is PAT testing the same as an EICR?", "No. PAT relates to electrical appliances; an EICR assesses the fixed electrical installation. This planned service does not include EICRs, electrical installation work or gas safety certification."),
                ("Will reports be available through the portal?", "Downloadable reports and an appliance register are planned future improvements. They are not currently available.")],
          related=["services/landlord-property-maintenance", "commercial-maintenance"],
-         schema_desc="Information about Greenfix's planned PAT testing service. Coming soon; bookings are not open.")
+         schema_desc="Information about GreenFix's planned PAT testing service. Coming soon; bookings are not open.")
 ])
 CLUSTERS[1]["slugs"] = ["services/painting-decorating", "services/landlord-property-maintenance", "services/pat-testing"] + CLUSTERS[1]["slugs"]
 
@@ -1108,9 +1081,9 @@ SERVICES.extend([
         h1=f"{GRITTING_SERVICE} in Preston",
         tagline="Domestic gritting for driveways, garden paths, steps and entrances",
         price="Free Quote", price_note="one-off treatments or planned visits by agreement",
-        meta_title="Driveway & Path Gritting in Preston | Greenfix",
+        meta_title="Driveway & Path Gritting in Preston | GreenFix",
         meta_description="Domestic driveway salting and path gritting in Preston. Get a free quote for one-off treatment or planned visits for paths, steps and entrances.",
-        intro="Greenfix Exterior Care provides domestic gritting and salt spreading across Preston. Tell us which areas at your home need treating, such as the driveway, the path to your front door or outdoor steps. We agree what to treat, how to get access, when to visit and the price before you book.",
+        intro="GreenFix Exterior Care provides domestic gritting and salt spreading across Preston. Tell us which areas at your home need treating, such as the driveway, the path to your front door or outdoor steps. We agree what to treat, how to get access, when to visit and the price before you book.",
         local_section={
             "heading": "Home gritting across Preston",
             "paragraphs": [
@@ -1132,7 +1105,7 @@ SERVICES.extend([
             ("Can I book a one-off visit or planned winter gritting?", "Yes. We confirm availability, access, timings and areas to treat before you book a single visit or an agreed series of visits."),
             ("How much does winter gritting in Preston cost?", "For domestic gritting, we quote based on the size and surface of the area, access and how often you need a visit. Send your postcode and approximate sizes or photos if you have them."),
             ("Which areas at my home can you grit?", "We quote for private residential driveways, paths, steps, ramps and entrances. Tell us which areas you want covered and where ice tends to form."),
-            ("How long does a treatment last?", "Rain, foot traffic and further freezing can change conditions. Keep an eye on the treated areas and contact Greenfix to agree any repeat visits."),
+            ("How long does a treatment last?", "Rain, foot traffic and further freezing can change conditions. Keep an eye on the treated areas and contact GreenFix to agree any repeat visits."),
         ],
         related=["drain-repairs", "drainage-repairs", "storm-damage-repairs"],
         schema_desc="Domestic winter gritting and salt spreading for private driveways, paths, steps, ramps and entrances in Preston, Penwortham, Fulwood and Leyland.",
@@ -1142,9 +1115,9 @@ SERVICES.extend([
         h1=f"{RESEALING_SERVICE} in Preston",
         tagline="Exterior frame sealant, worn weatherstrips and draughty porch doors",
         price="Free Quote", price_note="following assessment of frames, seals and access",
-        meta_title="Window & Door Resealing Preston | Draughts & Leaks | Greenfix",
-        meta_description="Preston exterior window and door resealing. Greenfix assesses draughts, failed frame sealant and rain ingress at windows, doors and porches. Free quote.",
-        intro="Greenfix assesses draughts and rain getting in around exterior windows, doors and porches across Preston. We check where air or water is entering before quoting to renew suitable perimeter sealant or replace worn weatherstrips.",
+        meta_title="Window & Door Resealing Preston | Draughts & Leaks | GreenFix",
+        meta_description="Preston exterior window and door resealing. GreenFix assesses draughts, failed frame sealant and rain ingress at windows, doors and porches. Free quote.",
+        intro="GreenFix assesses draughts and rain getting in around exterior windows, doors and porches across Preston. We check where air or water is entering before quoting to renew suitable perimeter sealant or replace worn weatherstrips.",
         cards=[
             ("Window Frame Resealing", "Inspect gaps and deteriorated sealant around exterior frames and quote to renew failed sections where suitable."),
             ("Door Seals & Thresholds", "Check worn weatherstrips, threshold gaps and how the door closes before recommending resealing or adjustment."),
@@ -1601,6 +1574,30 @@ def render_local_section(section):
 """
 
 
+def render_extra_sections(sections):
+    """Optional long-form sections for a service page. Inserted before the cards."""
+    if not sections:
+        return ""
+    blocks = []
+    for i, section in enumerate(sections):
+        klass = "section-grey" if i % 2 == 0 else "section-white"
+        if section.get("local"):
+            klass += " local-areas"
+        parts = ["<p>%s</p>" % esc(p) for p in section.get("paragraphs", [])]
+        if section.get("html"):
+            parts.append(section["html"])
+        inner = "\n            ".join(parts)
+        blocks.append(
+            '    <section class="%s">\n'
+            '        <div class="container" style="max-width:760px;">\n'
+            '            <h2 class="center">%s</h2>\n'
+            '            %s\n'
+            '        </div>\n'
+            '    </section>' % (klass, esc(section["heading"]), inner)
+        )
+    return "\n" + "\n".join(blocks) + "\n"
+
+
 def render_service_page(service):
     canonical_path = f"/{service['slug']}"
     crumbs = [
@@ -1639,9 +1636,13 @@ def render_service_page(service):
         f'<a href="/{slug}">{esc(SERVICE_BY_SLUG[slug]["h1"].split(" in ")[0])}</a>'
         for slug in service["related"] if slug in SERVICE_BY_SLUG
     )
+    extra_related = "".join(
+        f'\n                <a href="{href}">{esc(label)}</a>'
+        for href, label in service.get("extra_related", [])
+    )
 
     price_note_html = f'<span class="price-note">{esc(service["price_note"])}</span>' if service.get("price_note") else ""
-    service_name = service["h1"].split(" in ")[0]
+    service_name = service.get("quote_name") or service["h1"].split(" in ")[0]
     if service["slug"] in {"drain-repairs", "drainage-repairs"}:
         service_name = DRAINAGE_SERVICE
     quote_label = "Get a Gritting Quote" if gritting else "Request a Free Quote"
@@ -1677,7 +1678,7 @@ def render_service_page(service):
             <p class="lede">{esc(service["intro"])}</p>
         </div>
     </section>
-{render_trust_strip()}{render_local_section(service.get("local_section"))}
+{render_trust_strip()}{render_local_section(service.get("local_section"))}{render_extra_sections(service.get("sections"))}
     <section class="section-grey">
         <div class="container">
             <h2 class="center">{"Areas We Grit Around Your Home" if gritting else "Why Choose GreenFix"}</h2>
@@ -1700,7 +1701,7 @@ def render_service_page(service):
         <div class="container">
             <h2 class="center">Related Services</h2>
             <div class="related-links" style="justify-content:center;">
-                {related_html}{extra_services}
+                {related_html}{extra_related}{extra_services}
             </div>
         </div>
     </section>
@@ -1824,7 +1825,7 @@ QUOTE_FORM_HTML = f"""    <section class="section-white" id="quote-form">
 
 HOMEPAGE_FAQS = [
     ("What property maintenance services do you offer?",
-     "Greenfix offers painting and decorating, rental property refreshes, minor repairs, grounds and garden maintenance and exterior care. We support homeowners, landlords, letting agents and businesses. PAT testing is coming soon and is not yet available to book."),
+     "GreenFix offers painting and decorating, rental property refreshes, minor repairs, grounds and garden maintenance and exterior care. We support homeowners, landlords, letting agents and businesses. PAT testing is coming soon and is not yet available to book."),
     ("What areas do you cover?",
      f"{AREA_SERVED_TEXT}."),
     ("Are you insured?",
@@ -1834,7 +1835,7 @@ HOMEPAGE_FAQS = [
     ("Do you work with businesses as well as homeowners?",
      "Yes, alongside residential work we support care homes, churches, schools, pubs, restaurants, shops, factories, warehouses, estates and event venues."),
     ("Can I book gritting for my driveway in Preston?",
-     "Yes. Greenfix offers domestic gritting for private driveways, paths, steps, ramps and entrances. Send your postcode and which areas need treating so we can check availability."),
+     "Yes. GreenFix offers domestic gritting for private driveways, paths, steps, ramps and entrances. Send your postcode and which areas need treating so we can check availability."),
     ("Can I book winter gritting for a single visit?",
      "Yes. Ask for one visit or discuss planned winter cover. We confirm the areas, access, visit times and price before booking."),
     ("How do I get a quote?",
@@ -1878,12 +1879,12 @@ def render_homepage():
     schema = "\n".join([
         f'    <script type="application/ld+json">\n{local_business_schema()}\n    </script>',
         f'    <script type="application/ld+json">\n{faq_schema(HOMEPAGE_FAQS)}\n    </script>',
-        f'    <script type="application/ld+json">\n{winter_webpage_schema("/", "Domestic Gritting & Salt Spreading in Preston")}\n    </script>',
+        f'    <script type="application/ld+json">\n{winter_webpage_schema("/", "Garden Maintenance, Repairs and Gritting in Preston")}\n    </script>',
     ])
 
     head = render_head(
-        title="Domestic Gritting & Salt Spreading in Preston | Greenfix",
-        description="Domestic gritting and salt spreading in Preston for driveways, paths and steps. Greenfix also offers winter home repairs, drainage and window and door resealing.",
+        title="Garden Maintenance, Repairs & Gritting Preston | GreenFix",
+        description="Garden maintenance, exterior repairs and winter gritting in Preston, Penwortham, Fulwood and Leyland. Tidy-ups from £80. Free quotes.",
         canonical_path="/",
         og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp",
         extra_schema=schema,
@@ -1898,9 +1899,10 @@ def render_homepage():
                  sizes="(max-width: 880px) calc(100vw - 2.5rem), 820px"
                  alt="A worker pushing a wheeled salt spreader across a residential driveway"
                  width="1280" height="640" fetchpriority="high">
-            <h1>Domestic Gritting and Salt Spreading in Preston</h1>
-            <h2>Driveways, Paths, Steps and Front Entrances</h2>
-            <p class="hero-desc">Get a free quote for one-off gritting or planned winter visits for your home. Greenfix also clears blocked outdoor drains, fixes waterlogged gardens and reseals exterior windows and doors.</p>
+            <h1>Garden Maintenance, Repairs and Gritting in Preston</h1>
+            <h2>Winter Gritting for Driveways, Paths, Steps and Entrances</h2>
+            <p class="hero-desc">GreenFix provides garden maintenance, exterior repairs and domestic gritting across Preston, Penwortham, Fulwood and Leyland. Get a free quote for one-off gritting or planned winter visits for driveways, paths, steps and front entrances.</p>
+            <p class="hero-desc"><a href="/garden-maintenance">Garden maintenance</a>, <a href="/garden-tidy-ups">garden tidy-ups</a>, <a href="/gate-repairs">garden gate repairs</a>, <a href="/brick-repointing">brick repointing</a> and <a href="/exterior-structural-repairs">exterior structural repairs</a>. Areas we cover: <a href="/penwortham">Penwortham</a>, <a href="/fulwood">Fulwood</a> and <a href="/leyland">Leyland</a>.</p>
             <div class="button-group">
                 <a href="{GRITTING_QUOTE}" class="btn btn-primary">Get a Gritting Quote</a>
                 <a href="{WINTER_PATH}" class="btn btn-secondary">See All Winter Services</a>
@@ -2043,7 +2045,7 @@ WINTER_CARDS = [
 ]
 
 WINTER_FAQS = [
-    ("Can Greenfix quote for several winter jobs at my home?",
+    ("Can GreenFix quote for several winter jobs at my home?",
      "Yes. Send your postcode and a short list of the jobs. We can quote for gritting, drainage, gutter clearing, resealing or exterior repairs."),
     ("Is a blocked drain the same as a waterlogged garden?",
      "A blocked drain is an issue with a specific pipe, gully or channel. A garden, driveway or yard that repeatedly holds water may need its wider surface drainage assessed."),
@@ -2078,7 +2080,7 @@ def winter_webpage_schema(path, title, description=None):
             "areaServed": AREA_SERVED,
             "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Greenfix Winter Property Services",
+                "name": "GreenFix Winter Property Services",
                 "itemListElement": [
                     {
                         "@type": "Offer",
@@ -2097,6 +2099,11 @@ def winter_webpage_schema(path, title, description=None):
         data["about"] = [
             {"@id": f"{DOMAIN}/salt-spreading#service"},
             {"@id": f"{DOMAIN}{WINTER_PATH}#service"},
+            {"@type": "Service", "name": "Garden Maintenance", "url": f"{DOMAIN}/garden-maintenance"},
+            {"@type": "Service", "name": "Garden Tidy-Ups", "url": f"{DOMAIN}/garden-tidy-ups"},
+            {"@type": "Service", "name": "Garden Gate Repairs", "url": f"{DOMAIN}/gate-repairs"},
+            {"@type": "Service", "name": "Brick Repointing", "url": f"{DOMAIN}/brick-repointing"},
+            {"@type": "Service", "name": "Exterior Structural Repairs", "url": f"{DOMAIN}/exterior-structural-repairs"},
         ]
     return json.dumps(data, indent=2)
 
@@ -2123,7 +2130,7 @@ def render_winter_page():
         for question, answer in WINTER_FAQS
     )
     head = render_head(
-        title="Winter Home Maintenance in Preston | Greenfix", description=description,
+        title="Winter Home Maintenance in Preston | GreenFix", description=description,
         canonical_path=WINTER_PATH, og_image=f"{DOMAIN}{GRITTING_HERO}-1280.webp", extra_schema=schema,
     )
     body = f"""{render_breadcrumb_html(crumbs)}
@@ -2141,7 +2148,7 @@ def render_winter_page():
     <section class="section-white" aria-labelledby="winter-services">
         <div class="container">
             <h2 id="winter-services">Winter Services for Your Home</h2>
-            <p class="lede winter-intro">Greenfix Exterior Care helps householders across Preston with icy driveways and paths, blocked drains, overflowing gutters and other winter property repairs.</p>
+            <p class="lede winter-intro">GreenFix Exterior Care helps householders across Preston with icy driveways and paths, blocked drains, overflowing gutters and other winter property repairs.</p>
             <div class="grid grid-2">
                 {cards}
             </div>
@@ -2189,7 +2196,7 @@ def render_about():
         f'    <script type="application/ld+json">\n{breadcrumb_schema([("Home", "/"), ("About GreenFix", None)])}\n    </script>',
     ])
     head = render_head(
-        title="About GREENFIX | Property Maintenance & Exterior Care Preston",
+        title="About GreenFix | Property Maintenance & Exterior Care Preston",
         description=f"About {BUSINESS_NAME} — property maintenance, painting, decorating and exterior care across Preston, new for {FOUNDED}.",
         canonical_path="/about-greenfix",
         extra_schema=schema,
@@ -2198,7 +2205,7 @@ def render_about():
     body = f"""{breadcrumb}
     <section id="main-content" class="hero">
         <div class="hero-content">
-            <h1>About GREENFIX</h1>
+            <h1>About GreenFix</h1>
             <p class="tagline">Property Maintenance &amp; Exterior Care, New for {FOUNDED}</p>
         </div>
     </section>
@@ -2500,7 +2507,7 @@ def render_knowledge_base():
     ])
     head = render_head(
         title="Knowledge Base | GreenFix Exterior Care",
-        description="Greenfix Exterior Care service catalogue for Preston. Winter gritting, blocked drains, gutter clearing, window and door resealing, and property repairs.",
+        description="GreenFix Exterior Care service catalogue for Preston. Winter gritting, blocked drains, gutter clearing, window and door resealing, and property repairs.",
         canonical_path="/knowledge-base",
         extra_schema=schema,
     )
@@ -2967,7 +2974,7 @@ TOWN_PAGES = [
     dict(
         slug="fulwood", name="Fulwood",
         card="Garden care, tidy-ups between tenancies and exterior repairs.",
-        meta_title="Garden Maintenance & Exterior Repairs Fulwood, Preston | GreenFix",
+        meta_title="Garden Maintenance & Repairs Fulwood | GreenFix",
         meta_description="Garden care, hedge trimming, window cleaning and fence, gate, brick and patio repairs for Fulwood homes, landlords and businesses. Free quotes.",
         h1="Garden maintenance and exterior repairs in Fulwood",
         intro="Fulwood has a lot of family homes and rented property, which means a lot of gardens, fences and drives that need regular attention. GreenFix Exterior Care looks after them: regular garden care, one-off tidy-ups, and exterior repairs from one contractor.",
@@ -3723,6 +3730,8 @@ def build_github_pages_redirects():
         write_page(filename, html)
 
 
+SITEMAP_SEO_PATHS = ['/', '/about-greenfix', '/before-after', '/blog', '/blog/best-time-of-year-to-trim-hedges', '/blog/can-pressure-washing-damage-patio-or-driveway', '/blog/fence-needs-repairing-or-replacing', '/blog/garden-completely-overgrown-where-to-start', '/blog/garden-wall-leaning-is-it-dangerous', '/blog/how-do-i-know-if-i-have-a-slipped-roof-tile', '/blog/how-much-does-brick-repointing-cost', '/blog/how-much-does-garden-maintenance-cost', '/blog/how-often-should-windows-be-cleaned', '/blog/how-often-should-you-cut-your-lawn', '/blog/how-to-fix-a-pothole-or-sunken-driveway', '/blog/what-causes-bricks-to-crack-or-spall', '/blog/whats-included-in-a-grounds-maintenance-contract', '/blog/why-do-patio-slabs-become-uneven-over-time', '/blog/why-does-my-door-stick-or-drag-on-the-floor', '/blog/why-does-my-garden-stay-waterlogged-after-rain', '/blog/why-is-my-drain-blocked-again-after-clearing-it', '/blog/why-is-my-patio-sinking-or-cracking', '/blog/why-wont-my-gate-close-properly', '/blog/why-wont-my-window-close-properly', '/brick-repairs', '/brick-repointing', '/care-home-grounds-maintenance-preston', '/church-grounds-maintenance-preston', '/commercial-maintenance', '/door-repairs', '/drain-repairs', '/drainage-repairs', '/drone-property-inspections', '/estate-grounds-maintenance-lancashire', '/event-venue-grounds-maintenance-preston', '/exterior-structural-repairs', '/external-window-cleaning', '/factory-warehouse-grounds-maintenance', '/fence-panel-replacement', '/fence-repairs', '/fulwood', '/garden-maintenance', '/garden-maintenance-subscription', '/garden-tidy-ups', '/garden-wall-repairs', '/gate-repairs', '/grounds-maintenance', '/health-and-safety-policy', '/hedge-trimming', '/internal-window-cleaning', '/knowledge-base', '/lawn-mowing', '/leyland', '/lime-repointing', '/patio-repairs', '/paving-repairs', '/penwortham', '/planned-preventative-maintenance', '/porch-repairs', '/pressure-washing', '/pricing-guide', '/privacy', '/pub-restaurant-grounds-maintenance-preston', '/repairs-and-maintenance', '/residential-property-maintenance', '/roof-tile-repairs', '/salt-spreading', '/school-nursery-grounds-maintenance-preston', '/services/landlord-property-maintenance', '/services/painting-decorating', '/services/pat-testing', '/shop-retail-exterior-maintenance-preston', '/slab-relaying', '/storm-damage-repairs', '/terms', '/window-cleaning', '/window-door-resealing-preston', '/window-repairs', '/winter-property-maintenance-preston']
+
 def build_sitemap():
     urls = [("/", "1.0"), (WINTER_PATH, "0.8")]
     for service in SERVICES:
@@ -3745,7 +3754,9 @@ def build_sitemap():
 
     entries = []
     for path, priority in urls:
-        if path in {"/", WINTER_PATH, RESEALING_PATH, "/salt-spreading", "/window-repairs",
+        if path in SITEMAP_SEO_PATHS:
+            lastmod = "2026-11-27"
+        elif path in {"/", WINTER_PATH, RESEALING_PATH, "/salt-spreading", "/window-repairs",
                     "/door-repairs", "/drain-repairs", "/drainage-repairs", "/knowledge-base", "/pricing-guide",
                     "/commercial-maintenance", "/factory-warehouse-grounds-maintenance",
                     "/care-home-grounds-maintenance-preston", "/shop-retail-exterior-maintenance-preston"}:
@@ -3853,7 +3864,7 @@ def winter_chat_topics():
         (
             ("winter property", "winter maintenance", "winter services", "winter check", "winter checks",
              "winter proof", "winterproof"),
-            answers["Can Greenfix quote for several winter jobs at my home?"],
+            answers["Can GreenFix quote for several winter jobs at my home?"],
             WINTER_PATH, "See all winter services",
         ),
     ]
@@ -4088,7 +4099,7 @@ CHATBOT_JS_TEMPLATE = """// GreenFix FAQ chatbot — rule-based keyword matching
     var headerIcon = el("span", "gf-pot-icon gf-pot-icon-sm", POT_SVG);
     var headerTitle = el("div", "gf-chat-header-title");
     headerTitle.appendChild(el("strong", null, BOT_NAME));
-    headerTitle.appendChild(el("span", "gf-chat-header-sub", "Greenfix Property Care Assistant"));
+    headerTitle.appendChild(el("span", "gf-chat-header-sub", "GreenFix Property Care Assistant"));
     header.appendChild(headerIcon);
     header.appendChild(headerTitle);
     var closeBtn = el("button", "gf-chat-close", "\\u00D7");

@@ -301,6 +301,7 @@ header {
   margin: 0.85rem 0 1rem;
 }
 .winter-hero .hero-desc { max-width: 680px; margin-inline: auto; }
+.winter-hero .hero-desc a { text-decoration: underline; }
 .winter-hero-contact { margin-top: 1.15rem; }
 .winter-hero-contact a { font-weight: 700; }
 .winter-intro { margin-bottom: 1.25rem; }
