@@ -26,6 +26,7 @@ SKIP = {
     "window-cleaning-preston.html",
     "estate-agent-services.html",
     "garden-clearance-penwortham.html",
+    "weed-control-preston.html",
 }
 
 def breadcrumb_issues(data):
