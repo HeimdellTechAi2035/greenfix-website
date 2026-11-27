@@ -111,7 +111,7 @@ CLUSTERS = [
         # Nav group, not its own page. Breadcrumb item points at the homepage section.
         "path": "/#grounds-garden-care",
         "slugs": ["grounds-maintenance", "garden-maintenance", "lawn-mowing",
-                  "hedge-trimming", "garden-tidy-ups", "pressure-washing",
+                  "hedge-trimming", "garden-tidy-ups",
                   "window-cleaning", "internal-window-cleaning", "external-window-cleaning"],
     },
     {
@@ -303,33 +303,6 @@ SERVICES = [
         schema_desc="One-off garden tidy-ups from £80 per visit for overgrown or neglected gardens across Preston, Penwortham, Fulwood and Leyland. Guide price only.",
     ),
     dict(
-        slug="pressure-washing", cluster="grounds",
-        h1="Pressure Washing in Preston",
-        tagline="Restore patios, driveways and paths",
-        price="From £95", price_note="per visit, guide price only",
-        meta_title="Driveway & Patio Pressure Washing Preston | From £95 | GreenFix",
-        meta_description="Driveway, patio and path pressure washing in Preston. Moss, algae and grime removed from block paving, flags and concrete. From £95.",
-        intro="GreenFix pressure washes patios, driveways, paths and exterior walls across Preston, removing built-up moss, algae, grime and staining. This is a cleaning service — restoring the surface you already have to look its best — not a structural repair. If a surface is actually cracked, sunken or damaged rather than just dirty, see our patio repairs, paving repairs or slab relaying pages instead.",
-        cards=[
-            ("Patios & Driveways", "Block paving, slabs, concrete and tarmac cleaned of moss, algae, oil marks and general grime."),
-            ("Paths & Walkways", "Slippery, moss-covered paths cleaned back to a safe, presentable surface."),
-            ("Walls & Boundaries", "Garden walls and exterior surfaces cleaned as part of a full property tidy-up."),
-            ("Correct Pressure for the Surface", "The right pressure and technique for each surface type, so cleaning doesn't damage joints, pointing or block paving sand."),
-        ],
-        faqs=[
-            ("Will pressure washing damage my patio or driveway?",
-             "No, when done correctly. We match pressure and technique to the surface — block paving, natural stone and concrete all need slightly different handling."),
-            ("Can you remove green algae and moss?",
-             "Yes, this is one of the most common reasons people book pressure washing, and it's straightforward to remove and makes surfaces safer underfoot."),
-            ("What if my patio is actually cracked or sunken, not just dirty?",
-             "That's a repair job rather than a cleaning job — see our patio repairs, paving repairs or slab relaying pages, or call us and we'll point you the right way."),
-            ("Do you clean driveways as well as patios?",
-             "Yes, we clean driveways, patios, paths and garden walls."),
-        ],
-        related=["patio-repairs", "paving-repairs", "slab-relaying", "garden-maintenance"],
-        schema_desc="Pressure washing for patios, driveways, paths and walls across Preston, removing moss, algae and grime.",
-    ),
-    dict(
         slug="window-cleaning", cluster="grounds",
         h1="Window Cleaning in Preston",
         tagline="Domestic and commercial window cleaning",
@@ -411,17 +384,17 @@ SERVICES = [
         tagline="General exterior upkeep, from small fixes to ongoing contracts",
         price="Quotation Required", price_note="scope varies job to job",
         meta_title="Repairs and Maintenance Preston | GreenFix",
-        meta_description="General exterior repairs and maintenance in Preston — gutter clearing, bin store upkeep and general property fixes. Call for a quote.",
-        intro="Repairs and Maintenance is our general property upkeep service — for the smaller, ongoing exterior jobs that don't need a dedicated specialist page of their own, and for clients who'd rather have one contractor handle a list of odd jobs than book several separate trades. That includes tasks like gutter clearing and bin store area upkeep, general exterior tidying, and small fixes around a property, either as a one-off visit or an ongoing maintenance arrangement.",
+        meta_description="General exterior repairs and maintenance in Preston — bin store upkeep, exterior tidying and small property fixes. Call for a quote.",
+        intro="Repairs and Maintenance is our general property upkeep service — for the smaller, ongoing exterior jobs that don't need a dedicated specialist page of their own, and for clients who'd rather have one contractor handle a list of odd jobs than book several separate trades. That includes bin store area upkeep, general exterior tidying, and small fixes around a property, either as a one-off visit or an ongoing maintenance arrangement.",
         cards=[
-            ("Gutter Clearing", "Blocked gutters cleared of leaves and debris so rainwater drains away properly instead of overflowing."),
+            ("Exterior Tidying", "General exterior tidying around a property, on its own or alongside other small fixes."),
             ("Bin Store & Communal Areas", "Bin storage areas and shared exterior spaces kept clean and presentable for managed or commercial sites."),
             ("General Property Fixes", "Smaller exterior maintenance jobs that don't fit neatly into a single trade, handled as part of a wider visit."),
             ("One-Off or Ongoing", "Book a single visit to work through a list of jobs, or set up a regular maintenance arrangement."),
         ],
         faqs=[
-            ("Do you clear gutters as part of this service?",
-             "Yes, gutter clearing is one of the most common jobs we handle under general repairs and maintenance."),
+            ("What does a general repairs and maintenance visit cover?",
+             "Smaller exterior jobs that don't fit a single trade, including bin store upkeep and general exterior tidying, quoted together as one visit."),
             ("Can you look after bin store or communal areas for a managed site?",
              "Yes, we work with managed and commercial sites to keep bin storage and shared exterior areas clean and presentable."),
             ("What if I have several small jobs that don't fit one category?",
@@ -430,7 +403,7 @@ SERVICES = [
              "Yes, many clients start with a one-off visit and move onto a regular maintenance schedule once we know their site."),
         ],
         related=["exterior-structural-repairs", "grounds-maintenance", "gate-repairs"],
-        schema_desc="General exterior repairs and maintenance including gutter clearing and bin store upkeep, across Preston.",
+        schema_desc="General exterior repairs and maintenance, including bin store upkeep and small exterior fixes, across Preston.",
     ),
     dict(
         slug="brick-repointing", cluster="repairs",
@@ -595,17 +568,17 @@ SERVICES = [
         tagline="Cracked, sunken or loose patio slabs repaired",
         price="From £95", price_note="guide price only, confirmed after assessment",
         meta_title="Patio Repairs Preston | From £95 | GreenFix",
-        meta_description="Patio repairs in Preston — cracked, sunken or loose slabs fixed. From £95. This is a structural repair, not patio cleaning.",
-        intro="Patio repairs deal with a patio that's actually damaged — cracked, sunken, loose or unstable slabs — rather than one that just needs cleaning. We re-bed loose slabs, replace cracked ones, and correct sunken areas so the surface is safe and level again. If your patio just looks dirty or mossy rather than damaged, our pressure washing service is the quicker, cheaper fix.",
+        meta_description="Patio repairs in Preston — cracked, sunken or loose slabs fixed. From £95.",
+        intro="Patio repairs deal with a patio that's actually damaged — cracked, sunken, loose or unstable slabs. We re-bed loose slabs, replace cracked ones, and correct sunken areas so the surface is safe and level again.",
         cards=[
             ("Cracked & Damaged Slabs", "Individual cracked or damaged slabs lifted and replaced to match the surrounding patio."),
             ("Sunken & Uneven Areas", "Sunken sections re-bedded and levelled, removing trip hazards and standing water."),
             ("Loose & Rocking Slabs", "Loose slabs re-bedded on a proper base so they no longer rock or shift underfoot."),
-            ("Repair, Not Cleaning", "If your patio is dirty rather than damaged, see our pressure washing page — a much quicker and cheaper fix."),
+            ("Safe, Level Surface", "Re-bedded and replaced slabs leave the patio safe to walk on and level again."),
         ],
         faqs=[
-            ("How do I know if I need a repair or just a clean?",
-             "If slabs are cracked, sunken, loose or rocking, that's a repair job. If the patio is just discoloured, mossy or slippery but structurally sound, pressure washing will sort it."),
+            ("When does a patio need a repair?",
+             "If slabs are cracked, sunken, loose or rocking, the patio needs a repair. We re-bed loose slabs, replace cracked ones and correct sunken areas."),
             ("Can you fix just the damaged slabs, not the whole patio?",
              "Yes, in most cases we can lift and replace or re-bed specific damaged or sunken slabs without redoing the whole patio."),
             ("What causes a patio to sink or slabs to come loose?",
@@ -613,8 +586,8 @@ SERVICES = [
             ("Do you match the replacement slabs to my existing patio?",
              "We match slab type and size wherever possible; exact colour matching depends on whether your original slabs are still available."),
         ],
-        related=["paving-repairs", "slab-relaying", "pressure-washing"],
-        schema_desc="Repair of cracked, sunken or loose patio slabs across Preston, distinct from patio cleaning.",
+        related=["paving-repairs", "slab-relaying", "drainage-repairs"],
+        schema_desc="Repair of cracked, sunken or loose patio slabs across Preston.",
     ),
     dict(
         slug="paving-repairs", cluster="repairs",
@@ -640,7 +613,7 @@ SERVICES = [
             ("Do you repair tarmac driveways too?",
              "Yes, we can patch-repair cracked or sunken tarmac areas as well as block paving and slabbed surfaces."),
         ],
-        related=["patio-repairs", "slab-relaying", "pressure-washing"],
+        related=["patio-repairs", "slab-relaying", "drainage-repairs"],
         schema_desc="Repair of cracked, sunken or poorly edged driveway and path paving across Preston.",
     ),
     dict(
@@ -908,7 +881,7 @@ SERVICES = [
             ("Is this the same as internal window cleaning?",
              "No — this covers the outside of the glass, frames and sills. For cleaning from indoors, see our internal window cleaning page."),
         ],
-        related=["internal-window-cleaning", "window-cleaning", "pressure-washing"],
+        related=["internal-window-cleaning", "window-cleaning", "window-repairs"],
         schema_desc="External window cleaning using purified water systems for homes and businesses across Preston, from £1.10 per pane.",
     ),
     dict(
@@ -945,11 +918,11 @@ SERVICES = [
         price="Quotation Required", price_note="tailored to your property and needs",
         meta_title="Residential Property Maintenance Preston | GreenFix",
         meta_description="Residential property maintenance in Preston for homeowners and landlords — grounds care and exterior repairs from one reliable contractor.",
-        intro="Keeping a home looking good and working properly usually means juggling several different trades — a gardener for the grounds, someone else for fencing, another for guttering or brickwork. We provide residential property maintenance as a single point of contact for homeowners and landlords across Preston, covering both regular grounds and garden care and one-off exterior repairs, so you're not managing multiple contractors for the outside of your property.",
+        intro="Keeping a home looking good and working properly usually means juggling several different trades — a gardener for the grounds, someone else for fencing, another for brickwork. We provide residential property maintenance as a single point of contact for homeowners and landlords across Preston, covering both regular grounds and garden care and one-off exterior repairs, so you're not managing multiple contractors for the outside of your property.",
         cards=[
             ("One Point of Contact", "A single contractor for grounds care and exterior repairs, rather than coordinating several different trades yourself."),
             ("Homeowners & Landlords", "Suited to owner-occupied homes and rental properties, including routine upkeep between tenancies."),
-            ("Grounds & Garden Care", "Lawn mowing, hedge trimming, garden tidy-ups and pressure washing, on a one-off or regular basis."),
+            ("Grounds & Garden Care", "Lawn mowing, hedge trimming and garden tidy-ups, on a one-off or regular basis."),
             ("Exterior Repairs", "Brickwork, fencing, gates, paving, roofing, drainage, windows and doors repaired as and when needed."),
         ],
         faqs=[
@@ -1008,7 +981,7 @@ SERVICES = [
         ],
         faqs=[
             ("What can a drone inspection actually show me?",
-             "High-resolution photos and video of roofs, chimneys, gutters and other high or hard-to-reach areas, clear enough to spot slipped tiles, damaged pointing or blocked gutters."),
+             "High-resolution photos and video of roofs, chimneys, gutters and other high or hard-to-reach areas, clear enough to spot slipped tiles or damaged pointing."),
             ("Is this useful if I just want to check before getting a full quote?",
              "Yes — a drone inspection is a good way to see the actual condition of a roof or high area before deciding what work, if any, is needed."),
             ("Do you need special access or permission to fly a drone at my property?",
@@ -1047,7 +1020,7 @@ SERVICES.extend([
          meta_description="Property refreshes, painting, garden clearances, exterior repairs and planned maintenance for Preston landlords and letting agents. Request a quote.",
          intro="Keep rental properties presentable and organise work between tenancies with one point of contact. GreenFix supports landlords, letting agents and property managers across Preston, Penwortham, Fulwood and Leyland with decorating, minor repairs and exterior care. Send a single job or a list of properties and we will agree priorities, access and quotes with you.",
          cards=[("Between-Tenancy Refreshes", "Combine decorating, garden tidy-ups and agreed minor repairs into a practical schedule before the next tenancy."),
-                ("Ongoing Exterior Care", "Regular gardens and communal grounds, pressure washing, gutters and agreed fencing or gate repairs."),
+                ("Ongoing Exterior Care", "Regular gardens and communal grounds, plus agreed fencing or gate repairs."),
                 ("Several Properties, One Contact", "Send the address and work required for each property. We coordinate the agreed jobs and keep you informed of progress."),
                 ("Clear Approval Before Work", "We agree scope, price and access before starting. Additional work needs approval. Specialist or regulated work is assessed separately.")],
          faqs=[("Can you look after more than one property?", "Yes. Contact us with the locations and maintenance needs to discuss a planned schedule. Each property's work and cost are agreed before starting."),
@@ -1920,7 +1893,7 @@ def render_homepage():
                 <div class="card"><h3><a href="{RESEALING_PATH}">Window &amp; Door Resealing</a></h3><p>Assessment of failed sealant, worn draught seals and rain getting in around exterior frames.</p></div>
             </div>
             <div class="related-links winter-links">
-                <a href="/repairs-and-maintenance">Gutter Clearing</a>
+                <a href="/repairs-and-maintenance">Repairs and Maintenance</a>
                 <a href="/storm-damage-repairs">Storm Damage Repairs</a>
                 <a href="/paving-repairs">Paving Repairs</a>
             </div>
@@ -1932,7 +1905,7 @@ def render_homepage():
             <h2 class="center" id="service-groups">One contact for your property</h2>
             <p class="lede center">From a single decorating job to regular care across several properties.</p>
             <div class="grid grid-3">
-                <div class="card"><h3>Exterior Care</h3><p>Gardens, communal grounds, pressure washing, gutters, fencing and gates.</p><a href="/#grounds-garden-care">Explore exterior services</a></div>
+                <div class="card"><h3>Exterior Care</h3><p>Gardens, communal grounds, fencing and gates.</p><a href="/#grounds-garden-care">Explore exterior services</a></div>
                 <div class="card"><h3>Property Maintenance</h3><p>Interior and exterior painting, decorating, rental refreshes and agreed minor repairs.</p><p><a href="/services/painting-decorating">Painting &amp; decorating</a></p><p><a href="/services/landlord-property-maintenance">Landlords &amp; letting agents</a></p></div>
                 <div class="card"><h3>PAT Testing <span class="launch-label">Coming soon</span></h3><p>Planned appliance inspections and testing for landlords and businesses. Bookings are not open.</p><a href="/services/pat-testing">Read about the planned service</a></div>
             </div>
@@ -2028,8 +2001,6 @@ WINTER_CARDS = [
      "Clearing blocked outdoor drains, gullies and downpipes, and repairing suitable cracked or collapsed drain sections."),
     ("/drainage-repairs", "Waterlogged Gardens & Surface Drainage",
      "Investigate pooling in gardens and on driveways and patios. Quote for channel drains, land drainage and soakaway work where suitable."),
-    ("/repairs-and-maintenance", "Gutter & Rainwater Clearance",
-     "Clear leaves and debris from suitable gutters and check where overflowing rainwater is landing around entrances and paths."),
     (RESEALING_PATH, "Window, Door & Porch Resealing",
      "Assess draughts and rain getting in around exterior frames. Quote for failed perimeter sealant or worn weather seals where suitable."),
     ("/storm-damage-repairs", "Storm, Fence, Gate & Roof Tile Repairs",
@@ -2046,7 +2017,7 @@ WINTER_CARDS = [
 
 WINTER_FAQS = [
     ("Can GreenFix quote for several winter jobs at my home?",
-     "Yes. Send your postcode and a short list of the jobs. We can quote for gritting, drainage, gutter clearing, resealing or exterior repairs."),
+     "Yes. Send your postcode and a short list of the jobs. We can quote for gritting, drainage, resealing or exterior repairs."),
     ("Is a blocked drain the same as a waterlogged garden?",
      "A blocked drain is an issue with a specific pipe, gully or channel. A garden, driveway or yard that repeatedly holds water may need its wider surface drainage assessed."),
     ("Can you reseal a draughty window or external door?",
@@ -2111,7 +2082,7 @@ def winter_webpage_schema(path, title, description=None):
 def render_winter_page():
     title = "Winter Home Maintenance in Preston"
     description = (
-        "Preston winter home maintenance including domestic gritting, blocked drains, garden drainage, gutter clearing, "
+        "Preston winter home maintenance including domestic gritting, blocked drains, garden drainage, "
         "window and door resealing, and storm repairs. Free quotes."
     )
     crumbs = [("Home", "/"), (title, None)]
@@ -2148,7 +2119,7 @@ def render_winter_page():
     <section class="section-white" aria-labelledby="winter-services">
         <div class="container">
             <h2 id="winter-services">Winter Services for Your Home</h2>
-            <p class="lede winter-intro">GreenFix Exterior Care helps householders across Preston with icy driveways and paths, blocked drains, overflowing gutters and other winter property repairs.</p>
+            <p class="lede winter-intro">GreenFix Exterior Care helps householders across Preston with icy driveways and paths, blocked drains and other winter property repairs.</p>
             <div class="grid grid-2">
                 {cards}
             </div>
@@ -2225,7 +2196,7 @@ def render_about():
             <div class="grid grid-2">
                 <div class="card">
                     <h3>Grounds &amp; Garden Care</h3>
-                    <p>Lawn mowing, hedge trimming, garden tidy-ups, grounds maintenance for larger sites, pressure washing and window cleaning.</p>
+                    <p>Lawn mowing, hedge trimming, garden tidy-ups, grounds maintenance for larger sites and window cleaning.</p>
                 </div>
                 <div class="card">
                     <h3>Repairs &amp; Maintenance</h3>
@@ -2283,7 +2254,6 @@ GALLERY_CATEGORIES = [
     ("Garden Clearance & Tidy-Ups", "Overgrown gardens cleared and reset, ready for regular maintenance."),
     ("Lawn Mowing & Restoration", "Neglected lawns brought back to a healthy, well-kept finish."),
     ("Hedge & Shrub Trimming", "Overgrown hedges shaped and height-reduced."),
-    ("Patio & Driveway Pressure Washing", "Moss, algae and grime removed from patios and driveways."),
     ("Fence & Gate Repairs", "Damaged panels, posts, hinges and latches repaired."),
     ("Brick & Wall Repairs", "Repointing, brick repairs and garden wall rebuilding."),
 ]
@@ -2507,7 +2477,7 @@ def render_knowledge_base():
     ])
     head = render_head(
         title="Knowledge Base | GreenFix Exterior Care",
-        description="GreenFix Exterior Care service catalogue for Preston. Winter gritting, blocked drains, gutter clearing, window and door resealing, and property repairs.",
+        description="GreenFix Exterior Care service catalogue for Preston. Winter gritting, blocked drains, window and door resealing, and property repairs.",
         canonical_path="/knowledge-base",
         extra_schema=schema,
     )
@@ -2751,23 +2721,23 @@ SECTOR_PAGES = [
         h1="Event & Venue Grounds Maintenance in Preston",
         tagline="Visitor-ready grounds before events, tidied after",
         meta_title="Event & Venue Grounds Maintenance Preston | GreenFix",
-        meta_description="Event and venue grounds maintenance in Preston — grounds prepared before events, patios and paths pressure washed and repaired.",
-        intro="Venues and event sites need grounds that look their best before guests arrive, and a quick turnaround to tidy up afterwards. GreenFix prepares grounds, patios and access routes before events, and can also handle the pressure washing and paving repairs that keep outdoor spaces customer-ready between events.",
+        meta_description="Event and venue grounds maintenance in Preston — grounds prepared before events, and patio and path repairs.",
+        intro="Venues and event sites need grounds that look their best before guests arrive, and a quick turnaround to tidy up afterwards. GreenFix prepares grounds, patios and access routes before events, and can also handle the paving repairs that keep outdoor spaces customer-ready between events.",
         cards=[
             ("Pre-Event Preparation", "Grounds, paths and outdoor areas tidied and prepared before weddings, functions and events."),
-            ("Patios & Outdoor Seating", "Pressure washing to keep patios and outdoor seating areas clean and welcoming."),
+            ("Patios & Outdoor Seating", "Patio and paving repairs so outdoor seating areas stay safe and level."),
             ("Paths & Car Parks", "Paving repairs and grounds maintenance for visitor-facing paths and car parks."),
             ("Fast Turnaround", "Quick post-event tidy-ups so the venue is ready for the next booking."),
         ],
         faqs=[
             ("Can you prepare grounds before a specific event date?",
              "Yes, we can schedule a grounds and exterior tidy-up ahead of a confirmed event date."),
-            ("Do you pressure wash patios and outdoor seating areas?",
-             "Yes, pressure washing is a common job for venues to keep outdoor seating and patio areas presentable."),
+            ("Do you repair patios and paths at venues?",
+             "Yes. Patio and paving repairs are available for outdoor seating areas and access routes."),
             ("Can you turn a site around quickly after an event?",
              "Yes, we can schedule a fast post-event tidy-up where turnaround time matters."),
         ],
-        related=["pressure-washing", "grounds-maintenance", "paving-repairs"],
+        related=["grounds-maintenance", "paving-repairs", "patio-repairs"],
     ),
     dict(
         filename="school-nursery-grounds-maintenance-preston.html",
@@ -2797,10 +2767,10 @@ SECTOR_PAGES = [
         h1="Pub & Restaurant Grounds Maintenance in Preston",
         tagline="Beer gardens, patios and car parks kept customer-ready",
         meta_title="Pub & Restaurant Grounds Maintenance Preston | GreenFix",
-        meta_description="Grounds maintenance and pressure washing for pubs and restaurants in Preston — beer gardens, patios and car parks kept customer-ready.",
-        intro="Pubs and restaurants need outdoor areas that stay customer-ready, worked around opening hours. GreenFix maintains beer gardens, patios and car parks, and pressure washes outdoor seating areas to keep them clean and welcoming for customers.",
+        meta_description="Grounds maintenance for pubs and restaurants in Preston — beer gardens, patios and car parks kept customer-ready.",
+        intro="Pubs and restaurants need outdoor areas that stay customer-ready, worked around opening hours. GreenFix maintains beer gardens, patios and car parks, and carries out paving repairs so outdoor areas stay safe for customers.",
         cards=[
-            ("Beer Gardens & Outdoor Seating", "Grounds maintenance and pressure washing to keep outdoor seating areas customer-ready."),
+            ("Beer Gardens & Outdoor Seating", "Grounds maintenance and paving repairs to keep outdoor seating areas customer-ready."),
             ("Car Parks & Entrances", "Weed control, paving repairs and grounds tidiness for car parks and entrances."),
             ("Fence & Boundary Repairs", "Boundary fencing and gates repaired as needed."),
             ("Around Opening Hours", "Work scheduled early morning or on quieter days to avoid disrupting trade."),
@@ -2808,35 +2778,35 @@ SECTOR_PAGES = [
         faqs=[
             ("Can you work around our opening hours?",
              "Yes, we can schedule visits early morning or on quieter trading days to avoid disrupting service."),
-            ("Do you pressure wash beer gardens and patios?",
-             "Yes, pressure washing is one of the most common jobs we do for pubs and restaurants."),
+            ("Do you look after beer gardens and patios?",
+             "Yes. Grounds maintenance and paving repairs are common jobs for pubs and restaurants."),
             ("Can you prepare the venue before a busy season or event?",
              "Yes, we can tidy and prepare grounds and outdoor areas ahead of busy seasonal trading or events."),
         ],
-        related=["pressure-washing", "grounds-maintenance", "paving-repairs"],
+        related=["grounds-maintenance", "paving-repairs", "patio-repairs"],
     ),
     dict(
         filename="shop-retail-exterior-maintenance-preston.html",
         h1="Shop & Retail Unit Exterior Maintenance in Preston",
         tagline="Presentable shopfronts, car parks and service areas",
         meta_title="Shop & Retail Exterior Maintenance Preston | GreenFix",
-        meta_description="Exterior maintenance for shops and retail units in Preston — pressure washing, grounds care and repairs for business parks.",
-        intro="Shops, retail units and business parks need exterior areas that stay presentable for customers, with work scheduled to avoid disrupting trade. GreenFix pressure washes shopfronts and entrances, maintains grounds and car parks, and carries out paving and fencing repairs as needed.",
+        meta_description="Exterior maintenance for shops and retail units in Preston — grounds care and paving and fencing repairs for business parks.",
+        intro="Shops, retail units and business parks need exterior areas that stay presentable for customers, with work scheduled to avoid disrupting trade. GreenFix maintains grounds and car parks, and carries out paving and fencing repairs as needed.",
         cards=[
-            ("Shopfront & Entrance Presentation", "Pressure washing to keep shopfronts and entrances clean and welcoming."),
+            ("Entrances", "Grounds upkeep and paving repairs around shop entrances."),
             ("Car Parks & Customer Areas", "Grounds maintenance and paving repairs for car parks and customer-facing areas."),
             ("Business Parks", "Scheduled maintenance across business parks with multiple retail units."),
             ("Before or After Trading Hours", "Work scheduled before opening or out of hours to avoid disrupting customers."),
         ],
         faqs=[
-            ("Can you clean shopfronts and entrances?",
-             "Yes, pressure washing shopfronts and entrances is a common job for retail units."),
+            ("Do you maintain entrances and customer areas?",
+             "Yes. We maintain grounds and carry out paving repairs for entrances, car parks and customer-facing areas."),
             ("Do you work with business parks with multiple units?",
              "Yes, we work with individual shops as well as business parks and managed retail sites with multiple units."),
             ("Can you work before opening hours?",
              "Yes, we can schedule visits early morning or out of hours to avoid disrupting trading."),
         ],
-        related=["pressure-washing", "grounds-maintenance", "paving-repairs"],
+        related=["grounds-maintenance", "paving-repairs", "fence-repairs"],
     ),
 ]
 
@@ -2950,7 +2920,6 @@ TOWN_PAGES = [
             ("Garden maintenance", "/garden-maintenance", "from £40 a visit: mowing, edging, weeding and seasonal upkeep, weekly, fortnightly or one-off."),
             ("Garden tidy-ups and clearance", "/garden-tidy-ups", "from £80: overgrown gardens cut back, cleared and the waste taken away."),
             ("Hedge trimming", "/hedge-trimming", "from £40, and lawn mowing from £20."),
-            ("Pressure washing", "/pressure-washing", "from £95: driveways, patios and paths cleared of moss and algae."),
             ("Fence and gate repairs", "/fence-repairs", "from £85 and £65: broken panels, rotten posts, sagging or sticking gates."),
             ("Brick repointing", "/brick-repointing", "from £30/m², and patio repairs and slab relaying from £95."),
         ],
@@ -2984,7 +2953,7 @@ TOWN_PAGES = [
             ("Garden tidy-ups", "/garden-tidy-ups", "from £80, useful between tenancies."),
             ("Window cleaning", "/window-cleaning", "free quote; external from £1.10 per pane."),
             ("Fence, gate and garden wall repairs", "/fence-repairs", "from £50–£85."),
-            ("Patio and paving repairs", "/patio-repairs", "from £65, and pressure washing from £95."),
+            ("Patio and paving repairs", "/patio-repairs", "patio repairs from £95, and paving repairs from £65."),
         ],
         price_note="Guide prices, confirmed after a free look.",
         extra_heading="Landlords and letting agents",
@@ -3005,14 +2974,13 @@ TOWN_PAGES = [
         slug="leyland", name="Leyland",
         card="Garden and grounds care plus fence, gate, paving and brick repairs.",
         meta_title="Garden Maintenance & Property Repairs Leyland | GreenFix",
-        meta_description="Garden maintenance, hedge trimming, pressure washing and fence, gate, brick and patio repairs for homes and businesses in Leyland. Free quotes.",
+        meta_description="Garden maintenance, hedge trimming and fence, gate, brick and patio repairs for homes and businesses in Leyland. Free quotes.",
         h1="Garden maintenance and property repairs in Leyland",
         intro="GreenFix Exterior Care covers Leyland from our base in Penwortham, a short drive away. We handle regular garden and grounds care for homes and businesses, and the exterior repairs that tend to pile up: fences, gates, patios, paving and brickwork.",
         services_heading="Services in Leyland",
         services=[
             ("Garden maintenance", "/garden-maintenance", "(from £40) and lawn mowing (from £20) on a regular or one-off basis."),
             ("Grounds maintenance for business premises", "/grounds-maintenance", "(from £40), including commercial and industrial units."),
-            ("Pressure washing", "/pressure-washing", "(from £95) for driveways, patios, paths and forecourts."),
             ("Fence repairs and panel replacement", "/fence-repairs", "(from £85) and gate repairs (from £65)."),
             ("Paving repairs", "/paving-repairs", "(from £65), slab relaying (from £95) and brick repointing (from £30/m²)."),
         ],
@@ -3029,7 +2997,7 @@ TOWN_PAGES = [
             ("How quickly can you quote?",
              "We reply within 24 hours and can usually arrange a free assessment soon after."),
         ],
-        related=["garden-maintenance", "grounds-maintenance", "pressure-washing", "fence-repairs", "paving-repairs", "brick-repointing", "planned-preventative-maintenance"],
+        related=["garden-maintenance", "grounds-maintenance", "hedge-trimming", "fence-repairs", "paving-repairs", "brick-repointing", "planned-preventative-maintenance"],
     ),
 ]
 
@@ -3232,18 +3200,6 @@ BLOG_POSTS = [
         ],
     ),
     dict(
-        slug="can-pressure-washing-damage-patio-or-driveway",
-        title="Can Pressure Washing Damage a Patio or Driveway?",
-        service="pressure-washing",
-        meta_description="Whether pressure washing can damage patios, driveways or block paving, and how the right technique avoids it.",
-        answer="Pressure washing shouldn't damage a patio or driveway if the pressure and technique are matched to the surface — but using too high a pressure, the wrong nozzle, or holding the jet too close can damage joints, pointing and softer materials.",
-        body=[
-            "The main risk isn't the water pressure itself but how it's applied. Block paving has sand-filled joints between the blocks that can be blasted out by an aggressive, close-up jet, leaving the paving looser and more prone to shifting. Natural stone and older or softer paving can be etched or have its surface damaged by excessive pressure. Mortar joints in an older patio can also be eroded by a jet held too close for too long.",
-            "Used correctly — the right pressure, the right nozzle, kept moving rather than held in one spot, and with joint sand re-applied afterwards where needed — pressure washing is a safe and effective way to remove moss, algae, grime and staining without damaging the surface underneath.",
-            "If a patio or driveway is already cracked, sunken, or has loose slabs rather than just being dirty, pressure washing won't fix that — that's a repair job, not a cleaning one, and pushing a jet washer over damaged paving can make loose sections worse rather than better. Preston's damp climate means algae and moss build up on patios and driveways faster here than in drier parts of the country, which is why pressure washing is such a regularly requested job across the area.",
-        ],
-    ),
-    dict(
         slug="how-often-should-windows-be-cleaned",
         title="How Often Should Windows Be Cleaned?",
         service="window-cleaning",
@@ -3325,7 +3281,7 @@ BLOG_POSTS = [
         answer="Patios sink or crack when the base underneath fails — through poor original installation, ground movement, or water washing out the material the slabs are bedded on — rather than through a problem with the slabs themselves.",
         body=[
             "A patio is only as stable as what's underneath it. If the sub-base wasn't properly compacted when the patio was laid, or if water has found a way to erode the bedding material over the years, individual slabs lose their support and start to rock, sink, or crack under normal weight. Tree roots growing underneath a patio can cause similar movement, lifting some slabs while others stay in place.",
-            "It's worth being clear on the difference between a patio that's damaged and one that's just dirty. Green algae, moss and general grime don't affect the structure of a patio at all — that's a cleaning job, and pressure washing sorts it. Cracked, sunken, loose or rocking slabs are a different problem entirely, caused by what's happening beneath the surface, and cleaning won't fix any of it.",
+            "Cracked, sunken, loose or rocking slabs are caused by what's happening beneath the surface. Dirt or algae on top of the slabs does not explain that movement, and it does not put them back level.",
             "Repairing a patio properly means addressing the base, not just replacing the visible slab — otherwise the same section is likely to sink again within a season or two. This is one of the most common repair enquiries we get from homeowners across Preston, especially on patios more than a few years old.",
         ],
     ),
@@ -3600,9 +3556,11 @@ RETIRED_301_MAP = [
     ("/garden-clearance-leyland", "/leyland"),
     ("/weed-control-preston", "/garden-maintenance"),
     ("/gutter-clearing-preston", "/repairs-and-maintenance"),
-    ("/jet-washing-preston", "/pressure-washing"),
-    ("/driveway-cleaning-preston", "/pressure-washing"),
-    ("/patio-cleaning-preston", "/pressure-washing"),
+    ("/jet-washing-preston", "/patio-repairs"),
+    ("/driveway-cleaning-preston", "/patio-repairs"),
+    ("/patio-cleaning-preston", "/patio-repairs"),
+    ("/pressure-washing", "/patio-repairs"),
+    ("/blog/can-pressure-washing-damage-patio-or-driveway", "/blog"),
     ("/bin-store-cleaning-preston", "/repairs-and-maintenance"),
     ("/fence-repairs-preston", "/fence-repairs"),
     ("/gate-repairs-preston", "/gate-repairs"),
@@ -3680,7 +3638,6 @@ SITEMAP_REFRESHED_PATHS = {
     "/slab-relaying",
     "/church-grounds-maintenance-preston",
     "/commercial-maintenance",
-    "/pressure-washing",
     "/garden-maintenance",
     "/window-cleaning",
     "/window-repairs",
@@ -3704,7 +3661,11 @@ SITEMAP_CONFIRMED_PATHS = {
 # name.html to name/index.html, which is what answers /name.
 GITHUB_PAGES_REDIRECTS = [
     ("garden-maintenance-preston.html", "/garden-maintenance", "Garden Maintenance Preston"),
-    ("driveway-cleaning-preston.html", "/pressure-washing", "Driveway Cleaning Preston"),
+    ("driveway-cleaning-preston.html", "/patio-repairs", "Patio Repairs"),
+    ("jet-washing-preston.html", "/patio-repairs", "Patio Repairs"),
+    ("patio-cleaning-preston.html", "/patio-repairs", "Patio Repairs"),
+    ("pressure-washing.html", "/patio-repairs", "Patio Repairs"),
+    ("blog/can-pressure-washing-damage-patio-or-driveway.html", "/blog", "the GreenFix blog"),
     ("window-cleaning-preston.html", "/window-cleaning", "Window Cleaning Preston"),
     ("estate-agent-services.html", "/residential-property-maintenance", "Estate Agent Services"),
     ("garden-clearance-penwortham.html", "/penwortham", "Garden Maintenance & Exterior Repairs Penwortham"),
@@ -3730,7 +3691,7 @@ def build_github_pages_redirects():
         write_page(filename, html)
 
 
-SITEMAP_SEO_PATHS = ['/', '/about-greenfix', '/before-after', '/blog', '/blog/best-time-of-year-to-trim-hedges', '/blog/can-pressure-washing-damage-patio-or-driveway', '/blog/fence-needs-repairing-or-replacing', '/blog/garden-completely-overgrown-where-to-start', '/blog/garden-wall-leaning-is-it-dangerous', '/blog/how-do-i-know-if-i-have-a-slipped-roof-tile', '/blog/how-much-does-brick-repointing-cost', '/blog/how-much-does-garden-maintenance-cost', '/blog/how-often-should-windows-be-cleaned', '/blog/how-often-should-you-cut-your-lawn', '/blog/how-to-fix-a-pothole-or-sunken-driveway', '/blog/what-causes-bricks-to-crack-or-spall', '/blog/whats-included-in-a-grounds-maintenance-contract', '/blog/why-do-patio-slabs-become-uneven-over-time', '/blog/why-does-my-door-stick-or-drag-on-the-floor', '/blog/why-does-my-garden-stay-waterlogged-after-rain', '/blog/why-is-my-drain-blocked-again-after-clearing-it', '/blog/why-is-my-patio-sinking-or-cracking', '/blog/why-wont-my-gate-close-properly', '/blog/why-wont-my-window-close-properly', '/brick-repairs', '/brick-repointing', '/care-home-grounds-maintenance-preston', '/church-grounds-maintenance-preston', '/commercial-maintenance', '/door-repairs', '/drain-repairs', '/drainage-repairs', '/drone-property-inspections', '/estate-grounds-maintenance-lancashire', '/event-venue-grounds-maintenance-preston', '/exterior-structural-repairs', '/external-window-cleaning', '/factory-warehouse-grounds-maintenance', '/fence-panel-replacement', '/fence-repairs', '/fulwood', '/garden-maintenance', '/garden-maintenance-subscription', '/garden-tidy-ups', '/garden-wall-repairs', '/gate-repairs', '/grounds-maintenance', '/health-and-safety-policy', '/hedge-trimming', '/internal-window-cleaning', '/knowledge-base', '/lawn-mowing', '/leyland', '/lime-repointing', '/patio-repairs', '/paving-repairs', '/penwortham', '/planned-preventative-maintenance', '/porch-repairs', '/pressure-washing', '/pricing-guide', '/privacy', '/pub-restaurant-grounds-maintenance-preston', '/repairs-and-maintenance', '/residential-property-maintenance', '/roof-tile-repairs', '/salt-spreading', '/school-nursery-grounds-maintenance-preston', '/services/landlord-property-maintenance', '/services/painting-decorating', '/services/pat-testing', '/shop-retail-exterior-maintenance-preston', '/slab-relaying', '/storm-damage-repairs', '/terms', '/window-cleaning', '/window-door-resealing-preston', '/window-repairs', '/winter-property-maintenance-preston']
+SITEMAP_SEO_PATHS = ['/', '/about-greenfix', '/before-after', '/blog', '/blog/best-time-of-year-to-trim-hedges', '/blog/fence-needs-repairing-or-replacing', '/blog/garden-completely-overgrown-where-to-start', '/blog/garden-wall-leaning-is-it-dangerous', '/blog/how-do-i-know-if-i-have-a-slipped-roof-tile', '/blog/how-much-does-brick-repointing-cost', '/blog/how-much-does-garden-maintenance-cost', '/blog/how-often-should-windows-be-cleaned', '/blog/how-often-should-you-cut-your-lawn', '/blog/how-to-fix-a-pothole-or-sunken-driveway', '/blog/what-causes-bricks-to-crack-or-spall', '/blog/whats-included-in-a-grounds-maintenance-contract', '/blog/why-do-patio-slabs-become-uneven-over-time', '/blog/why-does-my-door-stick-or-drag-on-the-floor', '/blog/why-does-my-garden-stay-waterlogged-after-rain', '/blog/why-is-my-drain-blocked-again-after-clearing-it', '/blog/why-is-my-patio-sinking-or-cracking', '/blog/why-wont-my-gate-close-properly', '/blog/why-wont-my-window-close-properly', '/brick-repairs', '/brick-repointing', '/care-home-grounds-maintenance-preston', '/church-grounds-maintenance-preston', '/commercial-maintenance', '/door-repairs', '/drain-repairs', '/drainage-repairs', '/drone-property-inspections', '/estate-grounds-maintenance-lancashire', '/event-venue-grounds-maintenance-preston', '/exterior-structural-repairs', '/external-window-cleaning', '/factory-warehouse-grounds-maintenance', '/fence-panel-replacement', '/fence-repairs', '/fulwood', '/garden-maintenance', '/garden-maintenance-subscription', '/garden-tidy-ups', '/garden-wall-repairs', '/gate-repairs', '/grounds-maintenance', '/health-and-safety-policy', '/hedge-trimming', '/internal-window-cleaning', '/knowledge-base', '/lawn-mowing', '/leyland', '/lime-repointing', '/patio-repairs', '/paving-repairs', '/penwortham', '/planned-preventative-maintenance', '/porch-repairs', '/pricing-guide', '/privacy', '/pub-restaurant-grounds-maintenance-preston', '/repairs-and-maintenance', '/residential-property-maintenance', '/roof-tile-repairs', '/salt-spreading', '/school-nursery-grounds-maintenance-preston', '/services/landlord-property-maintenance', '/services/painting-decorating', '/services/pat-testing', '/shop-retail-exterior-maintenance-preston', '/slab-relaying', '/storm-damage-repairs', '/terms', '/window-cleaning', '/window-door-resealing-preston', '/window-repairs', '/winter-property-maintenance-preston']
 
 def build_sitemap():
     urls = [("/", "1.0"), (WINTER_PATH, "0.8")]
@@ -3846,9 +3807,9 @@ def winter_chat_topics():
             f"/?service={quote(RESEALING_SERVICE)}#quote-form", "Get a resealing quote",
         ),
         (
-            ("gutter", "gutters", "guttering", "overflowing gutter"),
-            "We clear leaves and debris from suitable gutters. Tell us where water is overflowing and send photos of the affected area if you have them.",
-            "/repairs-and-maintenance", "See gutter clearing",
+            ("gutter", "gutters", "guttering", "gutter cleaning", "gutter clearing", "overflowing gutter"),
+            "GreenFix does not offer gutter cleaning or gutter clearing. If you need an exterior repair we do carry out, send the job and your postcode.",
+            "/#quote-form", "Request a quote",
         ),
         (
             ("storm damage", "blown down", "fence blew", "damaged gate", "slipped tile",
