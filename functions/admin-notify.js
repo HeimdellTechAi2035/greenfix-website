@@ -78,7 +78,7 @@ exports.handler = async function (event, context) {
 function buildSubject(eventType, data) {
   switch (eventType) {
     case 'job_request':
-      return 'New Greenfix job request submitted';
+      return 'New GreenFix job request submitted';
     case 'client_message':
       return 'New client message received';
     case 'date_accepted':
