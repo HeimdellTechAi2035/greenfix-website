@@ -537,6 +537,9 @@ SERVICES = [
     dict(
         slug="gate-repairs", cluster="repairs",
         quote_name="Gate Repairs",
+        # Homepage card keeps the wording published before this rebuild.
+        card_name="Gate Repairs",
+        card_tagline="Hinges, latches and gate alignment fixed",
         h1="Garden Gate Repair in Preston",
         tagline="Hinges and latches from £65. Free quote.",
         price="From £65", price_note="guide price only, confirmed after assessment",
@@ -544,7 +547,7 @@ SERVICES = [
         meta_description="Garden gate repair in Preston for sagging, sticking and dropped gates. Timber and metal. Hinges and latches from £65. No electric gate motors. Free quote.",
         intro="Garden gate repair in Preston is for manual garden and driveway gates that sag, stick or drop, or that have broken hinges or latches. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem rather than something that needs a full replacement. We repair and adjust timber and metal gates so they open, close and latch. Hinges and latches from £65. The quote is free. We do not repair automatic or electric gate motors.",
         local_section={
-            "heading": "Local gate repairs across Preston",
+            "heading": "Sagging Gate Repair in Preston",
             "paragraphs": [
                 "We're based at Lower Croft in Penwortham (PR1), so most gate repairs are a short drive away: Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol, Lea, Leyland and the wider Preston area (PR1–PR5, PR25, PR26).",
                 "Typical jobs are manual garden and driveway gates: worn, rusted or broken hinges and latches replaced, and sagging, sticking or dropped gates adjusted and re-hung so they open, close and latch. Timber and metal gates are both repaired. This does not cover automatic or electric gate motors.",
@@ -557,7 +560,7 @@ SERVICES = [
                 "Environment Agency registered waste carrier",
             ],
         },
-        cards=[('Hinges & Latches', 'Worn, rusted or broken hinges and latches replaced. Hinges and latches from £65, confirmed after assessment. The quote is free.'), ('Sagging Gate Repair', 'Sagging, sticking or dropped gates adjusted and re-hung so they swing freely and close properly.'), ('Timber & Metal Gates', 'Manual garden and driveway gates in timber and metal, repaired to suit the material.'), ('No Electric Gate Motors', 'Automatic and electric gate motors are not covered. The work is the gate, the hinges and the latches.')],
+        cards=[('Hinges and Latches', 'Worn, rusted or broken hinges and latches replaced. Hinges and latches from £65, confirmed after assessment. The quote is free.'), ('Sagging Gate Repair', 'Sagging, sticking or dropped gates adjusted and re-hung so they swing freely and close properly.'), ('Timber and Metal Gates', 'Manual garden and driveway gates in timber and metal, repaired to suit the material.'), ('No Electric Gate Motors', 'Automatic and electric gate motors are not covered. The work is the gate, the hinges and the latches.')],
         faqs=[('Why is my gate sagging or dragging on the ground?', 'This is usually a hinge or post problem rather than the gate itself — worn hinges or a settling post let the gate drop out of alignment over time.'), ('Can you repair the gate instead of replacing it?', 'In most cases, yes — hinge, latch and alignment problems can usually be fixed without replacing the whole gate.'), ('Do you repair metal gates as well as timber?', 'Yes. We repair timber and metal manual garden and driveway gates. We do not repair automatic or electric gate motors.'), ('Do you repair automatic or electric gate motors?', 'No. This service is for manual garden and driveway gates: sagging, sticking and dropped gates, and broken hinges and latches on timber and metal. We do not repair automatic or electric gate motors.'), ('How much does a gate repair cost?', 'From £65 as a guide price, depending on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ('Which areas of Preston do you cover for gate repairs?', "All of Preston, including Penwortham, Hutton, Longton, Fulwood, Ashton-on-Ribble, Ribbleton, Ingol and Lea, plus Leyland. If you're nearby and not listed, call and ask."), ('How much does a gate repair cost in Preston?', 'From £65 as a guide price, confirmed after assessment. The price depends on what needs fixing — a hinge adjustment is a smaller job than replacing a full gate frame.'), ("Can you fix a gate that won't close or latch?", "Yes. A gate that sticks, sags, or won't latch properly is usually a hinge, alignment or frame problem. In most cases that can be fixed without replacing the whole gate."), ('Are you insured?', "Yes, we carry £5M public liability insurance and we're an Environment Agency registered waste carrier.")],
         related=["fence-repairs", "door-repairs", "repairs-and-maintenance"],
         schema_desc="Manual garden and driveway gate repairs in Preston for sagging, sticking and dropped timber and metal gates, hinges and latches. Does not cover automatic or electric gate motors.",
@@ -918,7 +921,7 @@ SERVICES = [
         price="Quotation Required", price_note="tailored to your property and needs",
         meta_title="Residential Property Maintenance Preston | GreenFix",
         meta_description="Residential property maintenance in Preston for homeowners and landlords — grounds care and exterior repairs from one reliable contractor.",
-        intro="Keeping a home looking good and working properly usually means juggling several different trades — a gardener for the grounds, someone else for fencing, another for brickwork. We provide residential property maintenance as a single point of contact for homeowners and landlords across Preston, covering both regular grounds and garden care and one-off exterior repairs, so you're not managing multiple contractors for the outside of your property.",
+        intro="Keeping a home looking good and working properly usually means juggling several different trades — a gardener for the grounds, someone else for fencing, another for guttering or brickwork. We provide residential property maintenance as a single point of contact for homeowners and landlords across Preston, covering both regular grounds and garden care and one-off exterior repairs, so you're not managing multiple contractors for the outside of your property.",
         cards=[
             ("One Point of Contact", "A single contractor for grounds care and exterior repairs, rather than coordinating several different trades yourself."),
             ("Homeowners & Landlords", "Suited to owner-occupied homes and rental properties, including routine upkeep between tenancies."),
@@ -981,7 +984,7 @@ SERVICES = [
         ],
         faqs=[
             ("What can a drone inspection actually show me?",
-             "High-resolution photos and video of roofs, chimneys, gutters and other high or hard-to-reach areas, clear enough to spot slipped tiles or damaged pointing."),
+             "High-resolution photos and video of roofs, chimneys, gutters and other high or hard-to-reach areas, clear enough to spot slipped tiles, damaged pointing or blocked gutters."),
             ("Is this useful if I just want to check before getting a full quote?",
              "Yes — a drone inspection is a good way to see the actual condition of a roof or high area before deciding what work, if any, is needed."),
             ("Do you need special access or permission to fly a drone at my property?",
@@ -1824,9 +1827,10 @@ def render_homepage():
 
     def service_card(slug):
         s = SERVICE_BY_SLUG[slug]
-        name = s["h1"].split(" in ")[0]
+        name = s.get("card_name") or s["h1"].split(" in ")[0]
+        blurb = s.get("card_tagline") or s["tagline"]
         return (f'<a class="card" style="text-decoration:none;display:block;" href="/{slug}">'
-                f'<h3>{esc(name)}</h3><p>{esc(s["tagline"])}</p>'
+                f'<h3>{esc(name)}</h3><p>{esc(blurb)}</p>'
                 f'<p style="color:var(--dark-green);font-weight:700;margin-top:0.5rem;">{esc(s["price"])}</p></a>')
 
     grounds_cards = "\n                ".join(
@@ -3061,6 +3065,7 @@ def render_town_page(town):
     <section class="section-white">
         <div class="container">
             <p class="lede">{esc(town["intro"])}</p>
+            <p class="lede" style="margin-top:0.75rem;">See our <a href="/garden-maintenance-subscription">monthly garden maintenance plans in {esc(town["name"])}</a>. Lawn Package £39/month, Silver Package £59/month and Gold Package £79/month. Fortnightly visits, paid monthly, cancel any time.</p>
         </div>
     </section>
 {render_trust_strip()}
@@ -3382,7 +3387,7 @@ BLOG_BY_SLUG = {p["slug"]: p for p in BLOG_POSTS}
 
 def render_blog_post(post):
     service = SERVICE_BY_SLUG[post["service"]]
-    service_name = service["h1"].split(" in ")[0]
+    service_name = service.get("quote_name") or service["h1"].split(" in ")[0]
     canonical_path = f"/blog/{post['slug']}"
 
     article_schema = {
